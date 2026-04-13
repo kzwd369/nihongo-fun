@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Nav from '../../../components/Nav.astro';
+import Footer from '../../../components/Footer.astro';
 
 const illustrations = import.meta.glob('../../../components/illustrations/*.astro', { eager: true });
 
@@ -92,6 +93,7 @@ const typeColors: Record<string, { bg: string; badge: string; text: string }> = 
       })}
     </div>
   </main>
+  <Footer locale={locale} />
 </BaseLayout>
 
 <style>

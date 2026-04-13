@@ -7,6 +7,22 @@ category: social
 tags: ['pronouns', 'personality', 'anime']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: '俺'
+    romaji: ore
+    meaning: 'I — bold, masculine'
+  - japanese: '僕'
+    romaji: boku
+    meaning: 'I — gentle, youthful'
+  - japanese: '私'
+    romaji: watashi
+    meaning: 'I — neutral, formal'
+  - japanese: 'あたし'
+    romaji: atashi
+    meaning: 'I — feminine, casual'
+  - japanese: 'うち'
+    romaji: uchi
+    meaning: 'I — regional, warm (Kansai)'
 relatedArticles: ['honorifics', 'insults']
 relatedWaseiEigo: ['my-pace', 'skinship']
 relatedOnomatopoeia: ['dokidoki', 'kirakira']

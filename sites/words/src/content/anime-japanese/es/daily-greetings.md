@@ -7,6 +7,22 @@ category: daily
 tags: ['greetings', 'daily', 'anime']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: 'おはよう'
+    romaji: ohayou
+    meaning: 'Buenos días — casual'
+  - japanese: 'おつかれさま'
+    romaji: otsukaresama
+    meaning: 'Buen trabajo — reconocimiento'
+  - japanese: 'ただいま'
+    romaji: tadaima
+    meaning: 'Ya llegué — al volver a casa'
+  - japanese: 'おかえり'
+    romaji: okaeri
+    meaning: 'Bienvenido de vuelta'
+  - japanese: 'もしもし'
+    romaji: moshimoshi
+    meaning: '¿Aló? — saludo por teléfono'
 relatedArticles: ['honorifics', 'food-phrases']
 relatedWaseiEigo: ['salaryman', 'ol']
 relatedOnomatopoeia: ['perapera', 'nikoniko']

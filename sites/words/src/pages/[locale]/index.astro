@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Nav from '../../components/Nav.astro';
+import HeroHome from '../../components/illustrations/HeroHome.astro';
+import Footer from '../../components/Footer.astro';
 
 export function getStaticPaths() {
   return [
@@ -13,33 +15,505 @@ export function getStaticPaths() {
 const { locale } = Astro.params;
 const isNoindex = locale === 'en';
 
-const titles: Record<string, string> = {
-  en: 'Nihongo Fun — Learn Japanese the Fun Way',
-  es: 'Nihongo Fun — Aprende japonés de forma divertida',
-  'zh-tw': 'Nihongo Fun — 讓學日語變得有趣',
+const t: Record<string, Record<string, string>> = {
+  en: {
+    title: 'Nihongo Fun — Learn Japanese the Fun Way',
+    desc: 'Explore Japanese through wasei-eigo, onomatopoeia, and anime — no boring textbooks.',
+    heroHeadline: 'Japanese is more fun than you think.',
+    heroSub: 'Discover the weird, wonderful, and surprisingly deep side of Japanese — from words that don\'t exist in English to sounds that paint emotions.',
+    cta: 'Start Exploring',
+    pillarTitle: 'Three Ways to Explore',
+    waseiTitle: 'Wasei-Eigo',
+    waseiDesc: 'Japanese words that look English but mean something completely different. Prepare for surprises.',
+    waseiCount: '30 words',
+    onoTitle: 'Onomatopoeia',
+    onoDesc: 'Sound words that describe everything from heartbeats to glitter. Japanese has 4,000+ of these.',
+    onoCount: '10 words',
+    animeTitle: 'Anime Japanese',
+    animeDesc: 'The real phrases behind your favorite anime — honorifics, battle cries, love confessions, and more.',
+    animeCount: '8 articles',
+    statsTitle: 'What\'s Inside',
+    stat1: '48',
+    stat1Label: 'Articles & Words',
+    stat2: '3',
+    stat2Label: 'Languages',
+    stat3: '67',
+    stat3Label: 'Illustrations',
+    explore: 'Explore',
+  },
+  es: {
+    title: 'Nihongo Fun — Aprende japonés de forma divertida',
+    desc: 'Explora el japonés a través del wasei-eigo, las onomatopeyas y el anime — sin libros aburridos.',
+    heroHeadline: 'El japonés es mucho mejor de lo que crees.',
+    heroSub: 'Descubre el lado raro, maravilloso y sorprendentemente profundo del japonés — desde palabras que no existen en inglés hasta sonidos que pintan emociones.',
+    cta: 'Empezar a explorar',
+    pillarTitle: 'Tres formas de explorar',
+    waseiTitle: 'Wasei-Eigo',
+    waseiDesc: 'Palabras japonesas que parecen inglés pero significan algo completamente diferente. Prepárate para sorpresas.',
+    waseiCount: '30 palabras',
+    onoTitle: 'Onomatopeyas',
+    onoDesc: 'Palabras sonoras que describen todo, desde latidos del corazón hasta brillos. El japonés tiene más de 4.000.',
+    onoCount: '10 palabras',
+    animeTitle: 'Japonés Anime',
+    animeDesc: 'Las frases reales detrás de tu anime favorito — honoríficos, gritos de batalla, confesiones de amor y más.',
+    animeCount: '8 artículos',
+    statsTitle: 'Qué encontrarás',
+    stat1: '48',
+    stat1Label: 'Artículos y palabras',
+    stat2: '3',
+    stat2Label: 'Idiomas',
+    stat3: '67',
+    stat3Label: 'Ilustraciones',
+    explore: 'Explorar',
+  },
+  'zh-tw': {
+    title: 'Nihongo Fun — 讓學日語變得有趣',
+    desc: '透過和製英語、擬聲擬態詞和動漫來探索日語 — 告別無聊的課本。',
+    heroHeadline: '日語，比你想的有趣一百倍。',
+    heroSub: '從英語中不存在的詞彙，到能畫出情緒的聲音詞 — 發現日語奇妙、精彩、意想不到的深度。',
+    cta: '開始探索',
+    pillarTitle: '三種探索方式',
+    waseiTitle: '和製英語',
+    waseiDesc: '看起來像英語，意思卻完全不同的日語詞彙。準備好被驚到吧。',
+    waseiCount: '30 個詞彙',
+    onoTitle: '擬聲擬態詞',
+    onoDesc: '從心跳到閃亮，用聲音描繪一切的詞彙。日語有超過 4,000 個這類詞。',
+    onoCount: '10 個詞彙',
+    animeTitle: '動漫日語',
+    animeDesc: '你最愛的動漫背後的真實用語 — 敬稱、戰鬥台詞、告白用語，應有盡有。',
+    animeCount: '8 篇文章',
+    statsTitle: '裡面有什麼',
+    stat1: '48',
+    stat1Label: '文章與詞彙',
+    stat2: '3',
+    stat2Label: '語言版本',
+    stat3: '67',
+    stat3Label: '手繪插圖',
+    explore: '探索',
+  },
 };
+
+const i = t[locale!] || t.en;
+
+const pillarCards = [
+  {
+    title: i.waseiTitle,
+    desc: i.waseiDesc,
+    count: i.waseiCount,
+    href: `/${locale}/wasei-eigo/`,
+    gradient: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)',
+    accent: '#2e7d32',
+    icon: '&#x1F504;',
+  },
+  {
+    title: i.onoTitle,
+    desc: i.onoDesc,
+    count: i.onoCount,
+    href: `/${locale}/onomatopoeia/`,
+    gradient: 'linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)',
+    accent: '#e65100',
+    icon: '&#x1F50A;',
+  },
+  {
+    title: i.animeTitle,
+    desc: i.animeDesc,
+    count: i.animeCount,
+    href: `/${locale}/anime-japanese/`,
+    gradient: 'linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%)',
+    accent: '#4527a0',
+    icon: '&#x26A1;',
+  },
+];
 ---
 
 <BaseLayout
-  title={titles[locale!] || titles.en}
-  description="Learn Japanese wasei-eigo, onomatopoeia, and anime vocabulary."
+  title={i.title}
+  description={i.desc}
   locale={locale!}
   noindex={isNoindex}
+  pagePath="/"
 >
   <Nav locale={locale!} />
-  <main class="home">
-    <h1>{titles[locale!]}</h1>
-    <p class="sub">Coming soon...</p>
-  </main>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-illustration">
+      <HeroHome />
+    </div>
+    <h1 class="hero-headline">{i.heroHeadline}</h1>
+    <p class="hero-sub">{i.heroSub}</p>
+    <a href={`/${locale}/wasei-eigo/`} class="hero-cta">{i.cta}</a>
+  </section>
+
+  <!-- Stats ribbon -->
+  <section class="stats-ribbon">
+    <div class="stat">
+      <div class="stat-number">{i.stat1}</div>
+      <div class="stat-label">{i.stat1Label}</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div class="stat-number">{i.stat2}</div>
+      <div class="stat-label">{i.stat2Label}</div>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <div class="stat-number">{i.stat3}</div>
+      <div class="stat-label">{i.stat3Label}</div>
+    </div>
+  </section>
+
+  <!-- Featured words ticker -->
+  <section class="ticker-section">
+    <div class="ticker">
+      <div class="ticker-track">
+        <span class="ticker-item t1">マンション ≠ Mansion</span>
+        <span class="ticker-item t2">ドキドキ</span>
+        <span class="ticker-item t3">テンション = Energy!</span>
+        <span class="ticker-item t4">もふもふ</span>
+        <span class="ticker-item t5">バカ!</span>
+        <span class="ticker-item t6">コンセント ≠ Consent</span>
+        <span class="ticker-item t7">キラキラ</span>
+        <span class="ticker-item t8">いただきます!</span>
+        <span class="ticker-item t1">マンション ≠ Mansion</span>
+        <span class="ticker-item t2">ドキドキ</span>
+        <span class="ticker-item t3">テンション = Energy!</span>
+        <span class="ticker-item t4">もふもふ</span>
+        <span class="ticker-item t5">バカ!</span>
+        <span class="ticker-item t6">コンセント ≠ Consent</span>
+        <span class="ticker-item t7">キラキラ</span>
+        <span class="ticker-item t8">いただきます!</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillar cards -->
+  <section class="pillars">
+    <h2 class="section-title">{i.pillarTitle}</h2>
+    <div class="pillar-grid">
+
+      <!-- Wasei-Eigo card -->
+      <a href={pillarCards[0].href} class="pillar-card pc-wasei">
+        <div class="pc-left">
+          <div class="pc-badge">{pillarCards[0].count}</div>
+          <h3>{pillarCards[0].title}</h3>
+          <p>{pillarCards[0].desc}</p>
+          <span class="pc-cta">{i.explore} &rarr;</span>
+        </div>
+        <div class="pc-right">
+          <svg viewBox="0 0 140 140" width="140" height="140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="70" cy="70" r="64" fill="#c8e6c9" opacity="0.5"/>
+            <rect x="30" y="45" width="80" height="50" rx="8" fill="white" opacity="0.9"/>
+            <text x="70" y="68" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN',sans-serif" font-size="13" font-weight="700" fill="#2e7d32">マンション</text>
+            <text x="70" y="84" text-anchor="middle" font-size="10" fill="#e64a19" font-weight="600">≠ Mansion</text>
+            <path d="M45 100 Q70 115 95 100" fill="none" stroke="#66bb6a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            <circle cx="35" cy="30" r="4" fill="#a5d6a7" opacity="0.6"/>
+            <circle cx="105" cy="25" r="3" fill="#81c784" opacity="0.5"/>
+            <polygon points="95,32 96.5,28 98,32 102,33 98,35 96.5,39 95,35 91,33" fill="#ffd54f" opacity="0.6"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Onomatopoeia card -->
+      <a href={pillarCards[1].href} class="pillar-card pc-ono">
+        <div class="pc-left">
+          <div class="pc-badge">{pillarCards[1].count}</div>
+          <h3>{pillarCards[1].title}</h3>
+          <p>{pillarCards[1].desc}</p>
+          <span class="pc-cta">{i.explore} &rarr;</span>
+        </div>
+        <div class="pc-right">
+          <svg viewBox="0 0 140 140" width="140" height="140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="70" cy="70" r="64" fill="#ffe0b2" opacity="0.5"/>
+            <!-- Heart (dokidoki) -->
+            <path d="M70 95 C70 95 45 75 45 58 C45 48 52 42 62 42 C67 42 70 46 70 46 C70 46 73 42 78 42 C88 42 95 48 95 58 C95 75 70 95 70 95Z" fill="#e91e63" opacity="0.8"/>
+            <path d="M60 52 C56 52 52 56 52 60 C52 62 53 64 55 67" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+            <!-- Sound waves -->
+            <path d="M100 50 Q108 58 100 66" fill="none" stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            <path d="M106 46 Q118 58 106 70" fill="none" stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+            <path d="M40 50 Q32 58 40 66" fill="none" stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+            <!-- Sparkles -->
+            <circle cx="30" cy="35" r="3" fill="#ffab40" opacity="0.6"/>
+            <circle cx="110" cy="30" r="2.5" fill="#ffcc80" opacity="0.5"/>
+            <polygon points="55,28 56.5,23 58,28 63,29.5 58,31 56.5,36 55,31 50,29.5" fill="#ffd54f" opacity="0.7"/>
+            <!-- Text hint -->
+            <text x="70" y="118" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN',sans-serif" font-size="12" font-weight="700" fill="#e65100" opacity="0.8">ドキドキ</text>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Anime Japanese card -->
+      <a href={pillarCards[2].href} class="pillar-card pc-anime">
+        <div class="pc-left">
+          <div class="pc-badge">{pillarCards[2].count}</div>
+          <h3>{pillarCards[2].title}</h3>
+          <p>{pillarCards[2].desc}</p>
+          <span class="pc-cta">{i.explore} &rarr;</span>
+        </div>
+        <div class="pc-right">
+          <svg viewBox="0 0 140 140" width="140" height="140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="70" cy="70" r="64" fill="#d1c4e9" opacity="0.5"/>
+            <!-- Anime-style face -->
+            <circle cx="70" cy="62" r="26" fill="#ffcc80"/>
+            <!-- Big anime eyes -->
+            <ellipse cx="60" cy="58" rx="6" ry="7" fill="white"/>
+            <ellipse cx="80" cy="58" rx="6" ry="7" fill="white"/>
+            <ellipse cx="61" cy="59" rx="4" ry="5" fill="#4527a0"/>
+            <ellipse cx="81" cy="59" rx="4" ry="5" fill="#4527a0"/>
+            <circle cx="59" cy="57" r="1.8" fill="white"/>
+            <circle cx="79" cy="57" r="1.8" fill="white"/>
+            <!-- Blush -->
+            <ellipse cx="52" cy="66" rx="5" ry="3" fill="#ffab91" opacity="0.5"/>
+            <ellipse cx="88" cy="66" rx="5" ry="3" fill="#ffab91" opacity="0.5"/>
+            <!-- Smile -->
+            <path d="M64 70 Q70 76 76 70" fill="none" stroke="#5d4037" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Hair spikes (anime style) -->
+            <path d="M44 52 L48 36 L56 50" fill="#5d4037" opacity="0.7"/>
+            <path d="M54 46 L60 28 L66 44" fill="#5d4037" opacity="0.7"/>
+            <path d="M64 42 L70 24 L76 42" fill="#5d4037" opacity="0.7"/>
+            <path d="M74 46 L80 28 L86 50" fill="#5d4037" opacity="0.7"/>
+            <path d="M84 52 L92 36 L96 52" fill="#5d4037" opacity="0.7"/>
+            <!-- Speech bubble -->
+            <rect x="38" y="92" width="64" height="28" rx="10" fill="white" opacity="0.9"/>
+            <polygon points="62,120 70,120 58,130" fill="white" opacity="0.9"/>
+            <text x="70" y="110" text-anchor="middle" font-family="'Hiragino Kaku Gothic ProN',sans-serif" font-size="11" font-weight="700" fill="#4527a0">先輩！</text>
+            <!-- Stars -->
+            <polygon points="28,45 29.5,40 31,45 36,46.5 31,48 29.5,53 28,48 23,46.5" fill="#ffd54f" opacity="0.6"/>
+            <polygon points="108,40 109.5,36 111,40 115,41 111,42.5 109.5,46 108,42.5 104,41" fill="#ffd54f" opacity="0.5"/>
+          </svg>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <Footer locale={locale} />
 </BaseLayout>
 
 <style>
-  .home {
+  /* Hero */
+  .hero {
     max-width: 720px;
-    margin: 80px auto;
-    padding: 0 24px;
+    margin: 0 auto;
+    padding: 40px 24px 0;
     text-align: center;
   }
-  h1 { font-size: 32px; font-weight: 800; }
-  .sub { color: var(--text-light); margin-top: 12px; }
+  .hero-illustration {
+    margin-bottom: 24px;
+  }
+  .hero-illustration :global(svg) {
+    max-width: 100%;
+    height: auto;
+  }
+  .hero-headline {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #d84315 0%, #c2185b 50%, #4527a0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-sub {
+    margin-top: 16px;
+    font-size: 17px;
+    color: var(--text-light);
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  .hero-cta {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 36px;
+    background: linear-gradient(135deg, #e64a19, #c2185b);
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(198, 40, 40, 0.3);
+    text-decoration: none;
+  }
+
+  /* Stats ribbon */
+  .stats-ribbon {
+    max-width: 480px;
+    margin: 48px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, #fce4ec 0%, #fff3e0 50%, #e8eaf6 100%);
+    border-radius: 16px;
+  }
+  .stat {
+    flex: 1;
+    text-align: center;
+  }
+  .stat-number {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--text);
+  }
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 2px;
+    font-weight: 500;
+  }
+  .stat-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+
+  /* Pillars */
+  .pillars {
+    max-width: 720px;
+    margin: 56px auto 0;
+    padding: 0 24px;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 28px;
+  }
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .pillar-card {
+    border-radius: 24px;
+    padding: 32px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.25s;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+  }
+  .pillar-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    text-decoration: none;
+  }
+  .pc-wasei {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 60%, #a5d6a7 100%);
+  }
+  .pc-ono {
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 60%, #ffcc80 100%);
+  }
+  .pc-anime {
+    background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 60%, #b39ddb 100%);
+  }
+  .pc-left {
+    flex: 1;
+    min-width: 0;
+  }
+  .pc-right {
+    flex-shrink: 0;
+  }
+  .pc-right :global(svg) {
+    display: block;
+  }
+  .pc-badge {
+    display: inline-block;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+  }
+  .pc-wasei .pc-badge { background: #2e7d32; }
+  .pc-ono .pc-badge { background: #e65100; }
+  .pc-anime .pc-badge { background: #4527a0; }
+  .pillar-card h3 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+  .pillar-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+  .pc-cta {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .pc-wasei .pc-cta { color: #2e7d32; }
+  .pc-ono .pc-cta { color: #e65100; }
+  .pc-anime .pc-cta { color: #4527a0; }
+  @media (max-width: 600px) {
+    .pillar-card { flex-direction: column-reverse; text-align: center; padding: 24px; }
+    .pc-right :global(svg) { width: 110px; height: 110px; }
+    .pillar-card h3 { font-size: 20px; }
+  }
+
+  /* Ticker */
+  .ticker-section {
+    margin-top: 48px;
+    overflow: hidden;
+    padding: 16px 0;
+  }
+  .ticker {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .ticker-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 25s linear infinite;
+    width: max-content;
+  }
+  .ticker-item {
+    font-family: var(--jp-font);
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 8px 20px;
+    border-radius: 24px;
+    flex-shrink: 0;
+  }
+  .t1 { background: #e8f5e9; color: #2e7d32; }
+  .t2 { background: #fce4ec; color: #c2185b; }
+  .t3 { background: #fff3e0; color: #e65100; }
+  .t4 { background: #e0f7fa; color: #00838f; }
+  .t5 { background: #fbe9e7; color: #d84315; }
+  .t6 { background: #e8eaf6; color: #283593; }
+  .t7 { background: #f3e5f5; color: #7b1fa2; }
+  .t8 { background: #fff8e1; color: #f57f17; }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .hero-headline { font-size: 26px; }
+    .hero-sub { font-size: 15px; }
+    .stats-ribbon { flex-direction: row; gap: 0; padding: 16px; }
+    .stat-number { font-size: 28px; }
+    .pillar-card { padding: 22px; }
+    .pillar-card h3 { font-size: 19px; }
+    .ticker-item { font-size: 15px; padding: 6px 14px; }
+  }
 </style>

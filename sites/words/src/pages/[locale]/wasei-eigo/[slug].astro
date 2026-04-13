@@ -10,6 +10,7 @@ import SameThingCompare from '../../../components/SameThingCompare.astro';
 import ExampleSentence from '../../../components/ExampleSentence.astro';
 import AnimeCallout from '../../../components/AnimeCallout.astro';
 import RelatedWords from '../../../components/RelatedWords.astro';
+import Footer from '../../../components/Footer.astro';
 
 // Illustration components (add new ones here as words are created)
 const illustrations = import.meta.glob('../../../components/illustrations/*.astro', { eager: true });
@@ -233,9 +234,7 @@ const breadcrumbs = [
     )}
   </div>
 
-  <footer>
-    <p>Nihongo Fun — <a href={`/${locale}/`}>{t.home}</a></p>
-  </footer>
+  <Footer locale={locale} />
 </BaseLayout>
 
 <script>
@@ -392,14 +391,6 @@ const breadcrumbs = [
   }
   .prose :global(strong) {
     font-weight: 700;
-  }
-  footer {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 40px 24px;
-    text-align: center;
-    font-size: 13px;
-    color: var(--text-light);
   }
   @media (max-width: 600px) {
     .meta-grid { grid-template-columns: 1fr; }

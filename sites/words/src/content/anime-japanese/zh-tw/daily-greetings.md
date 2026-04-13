@@ -7,6 +7,22 @@ category: daily
 tags: ['greetings', 'daily', 'anime']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: 'おはよう'
+    romaji: ohayou
+    meaning: '早安 — 最基本的早晨問候'
+  - japanese: 'おつかれさま'
+    romaji: otsukaresama
+    meaning: '辛苦了 — 對努力的認可與慰問'
+  - japanese: 'ただいま'
+    romaji: tadaima
+    meaning: '我回來了 — 到家時的問候'
+  - japanese: 'おかえり'
+    romaji: okaeri
+    meaning: '你回來啦 — 迎接回家的回應'
+  - japanese: 'もしもし'
+    romaji: moshimoshi
+    meaning: '喂 — 接電話時的專用問候'
 relatedArticles: ['honorifics', 'food-phrases']
 relatedWaseiEigo: ['salaryman', 'ol']
 relatedOnomatopoeia: ['perapera', 'nikoniko']

@@ -7,6 +7,22 @@ category: emotion
 tags: ['insults', 'slang', 'emotion']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: 'バカ'
+    romaji: baka
+    meaning: 'Idiot — mild, playful insult'
+  - japanese: 'アホ'
+    romaji: aho
+    meaning: 'Fool — varies by region'
+  - japanese: 'クソ'
+    romaji: kuso
+    meaning: 'Damn / Crap — emotional outburst'
+  - japanese: 'てめえ'
+    romaji: temee
+    meaning: 'You — aggressive, hostile'
+  - japanese: '貴様'
+    romaji: kisama
+    meaning: 'You — sworn-enemy level'
 relatedArticles: ['reaction-words', 'pronouns']
 relatedWaseiEigo: ['tension', 'cunning']
 relatedOnomatopoeia: ['batabata', 'dokidoki']

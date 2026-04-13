@@ -7,6 +7,22 @@ category: action
 tags: ['battle', 'action', 'anime']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: '行くぞ'
+    romaji: ikuzo
+    meaning: '上吧 — 戰鬥開始的號令'
+  - japanese: '負けるもんか'
+    romaji: makeru mon ka
+    meaning: '我才不會輸 — 不服輸的宣言'
+  - japanese: '逃げろ'
+    romaji: nigero
+    meaning: '快逃 — 緊急撤退的命令'
+  - japanese: '助けて'
+    romaji: tasukete
+    meaning: '救命 — 求救時的喊叫'
+  - japanese: 'やる'
+    romaji: yaru
+    meaning: '來吧／開打 — 應戰的決心'
 relatedArticles: ['insults', 'reaction-words']
 relatedWaseiEigo: ['tension']
 relatedOnomatopoeia: ['batabata', 'dokidoki']

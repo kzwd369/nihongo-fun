@@ -7,6 +7,22 @@ category: culture
 tags: ['food', 'culture', 'manners']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: 'いただきます'
+    romaji: itadakimasu
+    meaning: 'I humbly receive (before meals)'
+  - japanese: 'ごちそうさま'
+    romaji: gochisousama
+    meaning: 'Thank you for the feast'
+  - japanese: 'おいしい'
+    romaji: oishii
+    meaning: 'Delicious!'
+  - japanese: 'うまい'
+    romaji: umai
+    meaning: 'So good! (casual, masculine)'
+  - japanese: 'まずい'
+    romaji: mazui
+    meaning: 'Gross / Tastes bad'
 relatedArticles: ['daily-greetings', 'reaction-words']
 relatedWaseiEigo: ['viking', 'morning', 'shortcake']
 relatedOnomatopoeia: ['gorogoro', 'mofumofu']

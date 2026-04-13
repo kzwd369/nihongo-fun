@@ -7,6 +7,22 @@ category: emotion
 tags: ['insults', 'emotion', 'anime']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: 'バカ'
+    romaji: baka
+    meaning: '笨蛋 — 動漫出場率最高的罵詞'
+  - japanese: 'アホ'
+    romaji: aho
+    meaning: '白癡 — 關西地區較親暱的吐槽'
+  - japanese: 'クソ'
+    romaji: kuso
+    meaning: '可惡 — 表達不滿或挫折'
+  - japanese: 'てめえ'
+    romaji: temee
+    meaning: '你（粗魯） — 帶有明顯敵意'
+  - japanese: '貴様'
+    romaji: kisama
+    meaning: '你（極粗魯） — 字面尊實則罵'
 relatedArticles: ['reaction-words', 'pronouns']
 relatedWaseiEigo: ['tension', 'cunning']
 relatedOnomatopoeia: ['batabata', 'dokidoki']

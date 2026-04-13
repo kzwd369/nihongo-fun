@@ -7,6 +7,25 @@ category: social
 tags: ['honorifics', 'social', 'anime']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: 'さん'
+    romaji: san
+    meaning: '先生/小姐 — 通用禮貌稱呼'
+  - japanese: 'ちゃん'
+    romaji: chan
+    meaning: '用於親暱對象或可愛事物'
+  - japanese: 'くん'
+    romaji: kun
+    meaning: '用於男孩或年輕男性同事'
+  - japanese: 'さま'
+    romaji: sama
+    meaning: '最高敬稱，表示深切敬意'
+  - japanese: '先輩'
+    romaji: senpai
+    meaning: '稱呼學長姊或資深前輩'
+  - japanese: '先生'
+    romaji: sensei
+    meaning: '稱呼老師、醫生等專業人士'
 relatedArticles: ['pronouns', 'daily-greetings']
 relatedWaseiEigo: ['tension', 'naive', 'skinship']
 relatedOnomatopoeia: ['dokidoki']

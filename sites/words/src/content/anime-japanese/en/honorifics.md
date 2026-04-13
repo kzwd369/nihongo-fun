@@ -7,6 +7,25 @@ category: social
 tags: ['honorifics', 'social', 'anime']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: 'さん'
+    romaji: san
+    meaning: 'Mr./Ms. — universal polite suffix'
+  - japanese: 'ちゃん'
+    romaji: chan
+    meaning: 'Cute/familiar suffix'
+  - japanese: 'くん'
+    romaji: kun
+    meaning: 'Casual suffix for boys/juniors'
+  - japanese: 'さま'
+    romaji: sama
+    meaning: 'Deep respect or devotion'
+  - japanese: '先輩'
+    romaji: senpai
+    meaning: 'Senior/upperclassman'
+  - japanese: '先生'
+    romaji: sensei
+    meaning: 'Teacher/expert/master'
 relatedArticles: ['pronouns', 'daily-greetings']
 relatedWaseiEigo: ['tension', 'naive', 'skinship']
 relatedOnomatopoeia: ['dokidoki']

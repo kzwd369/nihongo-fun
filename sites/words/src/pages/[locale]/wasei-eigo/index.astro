@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Nav from '../../../components/Nav.astro';
+import Footer from '../../../components/Footer.astro';
 
 const illustrations = import.meta.glob('../../../components/illustrations/*.astro', { eager: true });
 
@@ -97,6 +98,7 @@ const defaultColor = { bg: 'linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%)', 
       })}
     </div>
   </main>
+  <Footer locale={locale} />
 </BaseLayout>
 
 <style>

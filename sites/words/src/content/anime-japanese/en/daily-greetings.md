@@ -7,6 +7,22 @@ category: daily
 tags: ['greetings', 'daily-life', 'manners']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: 'おはよう'
+    romaji: ohayou
+    meaning: 'Good morning — casual form'
+  - japanese: 'おつかれさま'
+    romaji: otsukaresama
+    meaning: 'Good work today — greeting'
+  - japanese: 'ただいま'
+    romaji: tadaima
+    meaning: 'I''m home!'
+  - japanese: 'おかえり'
+    romaji: okaeri
+    meaning: 'Welcome back!'
+  - japanese: 'もしもし'
+    romaji: moshimoshi
+    meaning: 'Hello — phone calls only'
 relatedArticles: ['honorifics', 'food-phrases']
 relatedWaseiEigo: ['salaryman', 'ol']
 relatedOnomatopoeia: ['perapera', 'nikoniko']

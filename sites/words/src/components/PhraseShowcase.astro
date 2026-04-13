@@ -1,0 +1,87 @@
+---
+interface Phrase {
+  japanese: string;
+  romaji: string;
+  meaning: string;
+}
+
+interface Props {
+  phrases: Phrase[];
+  accent?: string;
+  light?: string;
+}
+
+const { phrases, accent = '#5c6bc0', light = '#e8eaf6' } = Astro.props;
+
+const cardColors = [
+  'linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)',
+  'linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%)',
+  'linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%)',
+  'linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%)',
+  'linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%)',
+  'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)',
+];
+---
+
+{phrases.length > 0 && (
+  <div class="phrase-showcase" style={`--ps-accent: ${accent}; --ps-light: ${light};`}>
+    <div class="phrase-grid">
+      {phrases.map((phrase, i) => (
+        <div class="phrase-card" style={`background: ${cardColors[i % cardColors.length]};`}>
+          <div class="phrase-jp">{phrase.japanese}</div>
+          <div class="phrase-romaji">{phrase.romaji}</div>
+          <div class="phrase-meaning">{phrase.meaning}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
+<style>
+  .phrase-showcase {
+    margin-bottom: 24px;
+  }
+  .phrase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+  }
+  .phrase-card {
+    border-radius: 14px;
+    padding: 16px 12px;
+    text-align: center;
+    transition: transform 0.15s;
+  }
+  .phrase-card:hover {
+    transform: translateY(-3px) rotate(-1deg);
+  }
+  .phrase-jp {
+    font-family: var(--jp-font);
+    font-size: 24px;
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-bottom: 2px;
+  }
+  .phrase-romaji {
+    font-size: 11px;
+    color: var(--text-light);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    opacity: 0.7;
+  }
+  .phrase-meaning {
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.3;
+    font-weight: 500;
+  }
+  @media (max-width: 600px) {
+    .phrase-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .phrase-card { padding: 12px 8px; }
+    .phrase-jp { font-size: 20px; }
+  }
+</style>

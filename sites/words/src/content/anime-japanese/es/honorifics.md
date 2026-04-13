@@ -7,6 +7,25 @@ category: social
 tags: ['honorifics', 'social', 'anime']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: 'さん'
+    romaji: san
+    meaning: 'Sr./Sra. — sufijo de cortesía'
+  - japanese: 'ちゃん'
+    romaji: chan
+    meaning: 'Sufijo cariñoso e íntimo'
+  - japanese: 'くん'
+    romaji: kun
+    meaning: 'Sufijo casual para chicos'
+  - japanese: 'さま'
+    romaji: sama
+    meaning: 'Sufijo de máximo respeto'
+  - japanese: '先輩'
+    romaji: senpai
+    meaning: 'Superior con más experiencia'
+  - japanese: '先生'
+    romaji: sensei
+    meaning: 'Maestro, profesor o experto'
 relatedArticles: ['pronouns', 'daily-greetings']
 relatedWaseiEigo: ['tension', 'naive', 'skinship']
 relatedOnomatopoeia: ['dokidoki']

@@ -7,6 +7,22 @@ category: emotion
 tags: ['love', 'confession', 'romance']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: '好き'
+    romaji: suki
+    meaning: 'Like — casual love confession'
+  - japanese: '大好き'
+    romaji: daisuki
+    meaning: 'Really like you / Love you'
+  - japanese: '愛してる'
+    romaji: aishiteru
+    meaning: 'I love you — deep, serious'
+  - japanese: '告白'
+    romaji: kokuhaku
+    meaning: 'Love confession ritual'
+  - japanese: 'ツンデレ'
+    romaji: tsundere
+    meaning: 'Cold outside, warm inside'
 relatedArticles: ['reaction-words', 'honorifics']
 relatedWaseiEigo: ['skinship', 'naive']
 relatedOnomatopoeia: ['dokidoki', 'kirakira']

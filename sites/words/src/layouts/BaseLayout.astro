@@ -50,7 +50,7 @@ const hrefLangEntries = pagePath
     :root {
       --bg: #faf9f7;
       --card: #ffffff;
-      --accent: #e8433e;
+      --accent: #d63631;
       --accent-light: #fff0f0;
       --text: #2d2d2d;
       --text-light: #6b6b6b;
@@ -67,9 +67,13 @@ const hrefLangEntries = pagePath
     }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .prose a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+    .prose a:hover { text-decoration-thickness: 2px; }
   </style>
 </head>
 <body>
-  <slot />
+  <main>
+    <slot />
+  </main>
 </body>
 </html>

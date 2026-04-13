@@ -7,6 +7,22 @@ category: culture
 tags: ['food', 'culture', 'anime']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: 'いただきます'
+    romaji: itadakimasu
+    meaning: 'Recibo con gratitud — antes de comer'
+  - japanese: 'ごちそうさま'
+    romaji: gochisousama
+    meaning: 'Fue un festín — después de comer'
+  - japanese: 'おいしい'
+    romaji: oishii
+    meaning: '¡Delicioso!'
+  - japanese: 'うまい'
+    romaji: umai
+    meaning: '¡Rico! — masculino e informal'
+  - japanese: 'まずい'
+    romaji: mazui
+    meaning: '¡Asqueroso! — sabe mal'
 relatedArticles: ['daily-greetings', 'reaction-words']
 relatedWaseiEigo: ['viking', 'morning', 'shortcake']
 relatedOnomatopoeia: ['gorogoro', 'mofumofu']

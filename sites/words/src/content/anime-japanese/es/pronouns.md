@@ -7,6 +7,22 @@ category: social
 tags: ['pronouns', 'social', 'anime']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: '俺'
+    romaji: ore
+    meaning: 'Yo — masculino y agresivo'
+  - japanese: '僕'
+    romaji: boku
+    meaning: 'Yo — masculino y modesto'
+  - japanese: '私'
+    romaji: watashi
+    meaning: 'Yo — neutro y formal'
+  - japanese: 'あたし'
+    romaji: atashi
+    meaning: 'Yo — femenino y casual'
+  - japanese: 'うち'
+    romaji: uchi
+    meaning: 'Yo — femenino, dialecto Kansai'
 relatedArticles: ['honorifics', 'insults']
 relatedWaseiEigo: ['my-pace', 'skinship']
 relatedOnomatopoeia: ['dokidoki', 'kirakira']

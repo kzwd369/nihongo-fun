@@ -7,6 +7,22 @@ category: action
 tags: ['battle', 'shonen', 'action']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: '行くぞ'
+    romaji: ikuzo
+    meaning: 'Let''s go! — battle opener'
+  - japanese: '負けるもんか'
+    romaji: makeru mon ka
+    meaning: 'No way I''m losing!'
+  - japanese: '逃げろ'
+    romaji: nigero
+    meaning: 'Run away! — command form'
+  - japanese: '助けて'
+    romaji: tasukete
+    meaning: 'Help me! / Save me!'
+  - japanese: 'やる'
+    romaji: yaru
+    meaning: 'Bring it on — fight challenge'
 relatedArticles: ['insults', 'reaction-words']
 relatedWaseiEigo: ['tension']
 relatedOnomatopoeia: ['batabata', 'dokidoki']

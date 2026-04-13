@@ -7,6 +7,22 @@ category: culture
 tags: ['food', 'culture', 'anime']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: 'いただきます'
+    romaji: itadakimasu
+    meaning: '我開動了 — 用餐前的感謝'
+  - japanese: 'ごちそうさま'
+    romaji: gochisousama
+    meaning: '多謝款待 — 用餐後的感謝'
+  - japanese: 'おいしい'
+    romaji: oishii
+    meaning: '好好吃 — 最直接的美味表達'
+  - japanese: 'うまい'
+    romaji: umai
+    meaning: '好吃 — 較粗獷直率的說法'
+  - japanese: 'まずい'
+    romaji: mazui
+    meaning: '難吃 — 也可指情況不妙'
 relatedArticles: ['daily-greetings', 'reaction-words']
 relatedWaseiEigo: ['viking', 'morning', 'shortcake']
 relatedOnomatopoeia: ['gorogoro', 'mofumofu']

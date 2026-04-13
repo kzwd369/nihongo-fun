@@ -7,6 +7,22 @@ category: emotion
 tags: ['love', 'emotion', 'anime']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: '好き'
+    romaji: suki
+    meaning: 'Me gustas — confesión básica'
+  - japanese: '大好き'
+    romaji: daisuki
+    meaning: 'Te quiero mucho'
+  - japanese: '愛してる'
+    romaji: aishiteru
+    meaning: 'Te amo — muy intenso'
+  - japanese: '告白'
+    romaji: kokuhaku
+    meaning: 'Confesión de amor formal'
+  - japanese: 'ツンデレ'
+    romaji: tsundere
+    meaning: 'Frío por fuera, cariñoso por dentro'
 relatedArticles: ['reaction-words', 'honorifics']
 relatedWaseiEigo: ['skinship', 'naive']
 relatedOnomatopoeia: ['dokidoki', 'kirakira']

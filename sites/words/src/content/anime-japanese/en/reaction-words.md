@@ -7,6 +7,25 @@ category: emotion
 tags: ['reactions', 'slang', 'anime']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: 'なに'
+    romaji: nani
+    meaning: 'What?! — shock, disbelief'
+  - japanese: 'マジ'
+    romaji: maji
+    meaning: 'Seriously?! / For real?!'
+  - japanese: 'うそ'
+    romaji: uso
+    meaning: 'No way! / Liar!'
+  - japanese: 'すごい'
+    romaji: sugoi
+    meaning: 'Amazing! / Wow!'
+  - japanese: 'やばい'
+    romaji: yabai
+    meaning: 'Crazy! / Awesome! / Oh no!'
+  - japanese: 'かわいい'
+    romaji: kawaii
+    meaning: 'Cute!'
 relatedArticles: ['insults', 'pronouns']
 relatedWaseiEigo: ['tension', 'naive']
 relatedOnomatopoeia: ['dokidoki', 'batabata']

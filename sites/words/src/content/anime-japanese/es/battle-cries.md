@@ -7,6 +7,22 @@ category: action
 tags: ['battle', 'action', 'anime']
 draft: false
 publishedAt: '2026-04-13'
+keyPhrases:
+  - japanese: '行くぞ'
+    romaji: ikuzo
+    meaning: '¡Allá vamos! — grito de partida'
+  - japanese: '負けるもんか'
+    romaji: makeru mon ka
+    meaning: '¡No voy a perder!'
+  - japanese: '逃げろ'
+    romaji: nigero
+    meaning: '¡Huye! — orden urgente'
+  - japanese: '助けて'
+    romaji: tasukete
+    meaning: '¡Ayuda! — pedir socorro'
+  - japanese: 'やる'
+    romaji: yaru
+    meaning: '¡Vamos a hacerlo! — determinación'
 relatedArticles: ['insults', 'reaction-words']
 relatedWaseiEigo: ['tension']
 relatedOnomatopoeia: ['batabata', 'dokidoki']

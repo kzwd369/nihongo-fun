@@ -110,6 +110,13 @@ const animeJapaneseSchema = z.object({
   publishedAt: z.string().optional(),
   updatedAt: z.string().optional(),
 
+  /** Key phrases displayed as visual cards */
+  keyPhrases: z.array(z.object({
+    japanese: z.string(),
+    romaji: z.string(),
+    meaning: z.string(),
+  })).default([]),
+
   /** Related article slugs */
   relatedArticles: z.array(z.string()).default([]),
   /** Related wasei-eigo / onomatopoeia slugs for cross-pillar linking */
