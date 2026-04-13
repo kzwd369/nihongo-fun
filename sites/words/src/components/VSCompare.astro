@@ -1,0 +1,57 @@
+---
+interface Props {
+  leftLabel: string;
+  leftWord: string;
+  leftMeaning: string;
+  rightLabel: string;
+  rightWord: string;
+  rightMeaning: string;
+}
+
+const { leftLabel, leftWord, leftMeaning, rightLabel, rightWord, rightMeaning } = Astro.props;
+---
+
+<div class="vs-box">
+  <div class="vs-side">
+    <div class="vs-label">{leftLabel}</div>
+    <slot name="left-svg" />
+    <div class="vs-word">{leftWord}</div>
+    <div class="vs-meaning">= {leftMeaning}</div>
+  </div>
+  <div class="vs-divider">VS</div>
+  <div class="vs-side">
+    <div class="vs-label">{rightLabel}</div>
+    <slot name="right-svg" />
+    <div class="vs-word">{rightWord}</div>
+    <div class="vs-meaning">= {rightMeaning}</div>
+  </div>
+</div>
+
+<style>
+  .vs-box {
+    background: var(--accent-light);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .vs-side { flex: 1; text-align: center; }
+  .vs-label { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; }
+  .vs-word { font-size: 18px; font-weight: 700; margin-top: 4px; }
+  .vs-meaning { font-size: 13px; color: var(--text-light); margin-top: 2px; }
+  .vs-divider {
+    width: 40px; height: 40px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 14px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 600px) {
+    .vs-box { flex-direction: column; }
+    .vs-divider { width: 32px; height: 32px; font-size: 12px; }
+  }
+</style>

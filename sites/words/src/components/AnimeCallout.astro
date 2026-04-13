@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<div class="anime-callout">
+  <div class="anime-icon">🎬</div>
+  <div class="anime-text">
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>
+</div>
+
+<style>
+  .anime-callout {
+    background: linear-gradient(135deg, #ede9fe 0%, #e0e7ff 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 12px 0;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .anime-icon { font-size: 32px; flex-shrink: 0; }
+  .anime-text h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .anime-text p { font-size: 14px; color: var(--text-light); margin: 0; }
+</style>

@@ -1,0 +1,54 @@
+---
+interface RelatedWord {
+  slug: string;
+  japanese: string;
+  label: string;
+}
+
+interface Props {
+  words: RelatedWord[];
+  locale: string;
+  collection: string;
+}
+
+const { words, locale, collection } = Astro.props;
+---
+
+{words.length > 0 && (
+  <div class="related-grid">
+    {words.map(word => (
+      <a href={`/${locale}/${collection}/${word.slug}/`} class="related-card">
+        <div class="related-jp">{word.japanese}</div>
+        <div class="related-label">{word.label}</div>
+      </a>
+    ))}
+  </div>
+)}
+
+<style>
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .related-card {
+    background: var(--tag-bg);
+    border-radius: 12px;
+    padding: 16px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.2s;
+  }
+  .related-card:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+  .related-jp {
+    font-family: var(--jp-font);
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .related-label { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+</style>

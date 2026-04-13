@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.astro/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+
+# Wrangler
+.wrangler/
+
+# IDE
+.vscode/
+.idea/
+
+# Claude
+.claude/

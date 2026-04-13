@@ -1,0 +1,68 @@
+---
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+
+const labels: Record<string, { waseiEigo: string; onomatopoeia: string; anime: string }> = {
+  en: { waseiEigo: 'Wasei-Eigo', onomatopoeia: 'Onomatopoeia', anime: 'Anime Japanese' },
+  es: { waseiEigo: 'Wasei-Eigo', onomatopoeia: 'Onomatopeyas', anime: 'Japonés Anime' },
+  'zh-tw': { waseiEigo: '和製英語', onomatopoeia: '擬聲擬態詞', anime: '動漫日語' },
+};
+
+const langNames: Record<string, string> = {
+  en: 'English',
+  es: 'Español',
+  'zh-tw': '繁體中文',
+};
+
+const t = labels[locale] || labels.en;
+---
+
+<nav>
+  <a href={`/${locale}/`} class="logo">Nihongo<span>Fun</span></a>
+  <div class="nav-links">
+    <a href={`/${locale}/wasei-eigo/`}>{t.waseiEigo}</a>
+    <a href={`/${locale}/onomatopoeia/`}>{t.onomatopoeia}</a>
+    <a href={`/${locale}/anime-japanese/`}>{t.anime}</a>
+  </div>
+  <span class="lang-switch">{langNames[locale]} ▾</span>
+</nav>
+
+<style>
+  nav {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+  }
+  .logo span { color: var(--text); }
+  .nav-links { display: flex; gap: 24px; font-size: 14px; }
+  .nav-links a { color: var(--text-light); text-decoration: none; }
+  .nav-links a:hover { color: var(--accent); }
+  .lang-switch {
+    font-size: 13px;
+    background: var(--tag-bg);
+    padding: 4px 12px;
+    border-radius: 20px;
+    color: var(--text-light);
+    cursor: pointer;
+  }
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+  }
+</style>

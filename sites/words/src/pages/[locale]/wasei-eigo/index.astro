@@ -1,0 +1,148 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Nav from '../../../components/Nav.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params: { locale: 'en' } },
+    { params: { locale: 'es' } },
+    { params: { locale: 'zh-tw' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const isNoindex = locale === 'en';
+
+const allEntries = await getCollection('wasei-eigo');
+const entries = allEntries
+  .filter(e => e.data.locale === locale && !e.data.draft)
+  .sort((a, b) => a.data.slug.localeCompare(b.data.slug));
+
+const labels: Record<string, Record<string, string>> = {
+  en: { title: 'Wasei-Eigo — Japanese-Made English', subtitle: 'Words that look English but mean something completely different in Japanese.', home: 'Home' },
+  es: { title: 'Wasei-Eigo — Inglés hecho en Japón', subtitle: 'Palabras que parecen inglés pero significan algo completamente diferente en japonés.', home: 'Inicio' },
+  'zh-tw': { title: '和製英語 — 日本人自創的英語', subtitle: '看起來像英文，但在日語中意思完全不同的詞彙。', home: '首頁' },
+};
+const t = labels[locale!] || labels.en;
+---
+
+<BaseLayout
+  title={`${t.title} | Nihongo Fun`}
+  description={t.subtitle}
+  locale={locale!}
+  noindex={isNoindex}
+  pagePath="/wasei-eigo/"
+>
+  <Nav locale={locale!} />
+
+  <main class="pillar">
+    <div class="pillar-hero">
+      <h1>{t.title}</h1>
+      <p>{t.subtitle}</p>
+    </div>
+
+    <div class="word-grid">
+      {entries.map(entry => (
+        <a href={`/${locale}/wasei-eigo/${entry.data.slug}/`} class="word-card">
+          <div class="word-jp">{entry.data.japanese}</div>
+          <div class="word-romaji">{entry.data.romaji}</div>
+          <div class="word-vs">
+            <span class="vs-jp">{entry.data.japaneseMeaning}</span>
+            <span class="vs-arrow">≠</span>
+            <span class="vs-en">{entry.data.originalEnglish}</span>
+          </div>
+          {entry.data.jlpt && <span class="word-jlpt">{entry.data.jlpt}</span>}
+        </a>
+      ))}
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .pillar {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .pillar-hero {
+    text-align: center;
+    padding: 48px 0 32px;
+  }
+  .pillar-hero h1 {
+    font-size: 28px;
+    font-weight: 800;
+  }
+  .pillar-hero p {
+    color: var(--text-light);
+    margin-top: 8px;
+    font-size: 16px;
+  }
+  .word-grid {
+    display: grid;
+    gap: 16px;
+    padding-bottom: 60px;
+  }
+  .word-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.2s;
+    position: relative;
+  }
+  .word-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    text-decoration: none;
+  }
+  .word-jp {
+    font-family: var(--jp-font);
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .word-romaji {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-top: 2px;
+  }
+  .word-vs {
+    margin-top: 12px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .vs-jp {
+    background: var(--accent-light);
+    padding: 2px 10px;
+    border-radius: 6px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .vs-arrow {
+    color: var(--text-light);
+    font-weight: 700;
+  }
+  .vs-en {
+    background: var(--tag-bg);
+    padding: 2px 10px;
+    border-radius: 6px;
+    color: var(--text-light);
+  }
+  .word-jlpt {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--tag-bg);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    color: var(--text-light);
+    font-weight: 600;
+  }
+</style>

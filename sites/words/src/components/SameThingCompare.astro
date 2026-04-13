@@ -1,0 +1,85 @@
+---
+/**
+ * Pattern A: Same object, different names
+ * One illustration in the center, two labels pointing to it
+ * Used for: コンセント/outlet, ノートパソコン/laptop, etc.
+ */
+interface Props {
+  leftLabel: string;
+  leftWord: string;
+  rightLabel: string;
+  rightWord: string;
+  description: string;
+}
+
+const { leftLabel, leftWord, rightLabel, rightWord, description } = Astro.props;
+---
+
+<div class="same-box">
+  <div class="same-label-row">
+    <div class="same-side left">
+      <div class="same-flag">{leftLabel}</div>
+      <div class="same-word">{leftWord}</div>
+    </div>
+    <div class="same-side right">
+      <div class="same-flag">{rightLabel}</div>
+      <div class="same-word">{rightWord}</div>
+    </div>
+  </div>
+
+  <div class="same-arrows">
+    <div class="arrow-left">↘</div>
+    <div class="arrow-right">↙</div>
+  </div>
+
+  <div class="same-illustration">
+    <slot />
+  </div>
+
+  <div class="same-desc">{description}</div>
+</div>
+
+<style>
+  .same-box {
+    background: linear-gradient(135deg, #e8f5e9 0%, #e0f2f1 100%);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .same-label-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 4px;
+  }
+  .same-side { text-align: center; }
+  .same-flag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-light);
+  }
+  .same-word {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .same-arrows {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    font-size: 20px;
+    color: var(--text-light);
+    margin: 2px 0;
+  }
+  .same-illustration {
+    margin: 8px auto;
+  }
+  .same-desc {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-top: 8px;
+    font-weight: 500;
+  }
+</style>

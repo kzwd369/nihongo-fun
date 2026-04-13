@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>マンション (Manshon) — 和製英語 | Nihongo Fun</title>
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --card: #ffffff;
+      --accent: #e8433e;
+      --accent-light: #fff0f0;
+      --text: #2d2d2d;
+      --text-light: #6b6b6b;
+      --border: #e8e5e1;
+      --tag-bg: #f3f0ec;
+      --jp-font: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Inter", "Noto Sans TC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* --- Nav --- */
+    nav {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .logo span { color: var(--text); }
+    .nav-links { display: flex; gap: 24px; font-size: 14px; }
+    .nav-links a { color: var(--text-light); text-decoration: none; }
+    .nav-links a:hover { color: var(--accent); }
+    .lang-switch {
+      font-size: 13px;
+      background: var(--tag-bg);
+      padding: 4px 12px;
+      border-radius: 20px;
+      color: var(--text-light);
+      text-decoration: none;
+    }
+
+    /* --- Breadcrumb --- */
+    .breadcrumb {
+      max-width: 720px;
+      margin: 24px auto 0;
+      padding: 0 24px;
+      font-size: 13px;
+      color: var(--text-light);
+    }
+    .breadcrumb a { color: var(--text-light); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* --- Hero Card --- */
+    .hero-card {
+      max-width: 720px;
+      margin: 16px auto 0;
+      padding: 0 24px;
+    }
+    .hero-inner {
+      background: var(--card);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .hero-top {
+      background: linear-gradient(135deg, #e8433e 0%, #ff6b6b 100%);
+      color: white;
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .hero-japanese {
+      font-family: var(--jp-font);
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: 4px;
+    }
+    .hero-reading {
+      font-size: 18px;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+    .hero-meaning-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 6px 20px;
+      border-radius: 24px;
+      margin-top: 16px;
+      font-size: 15px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-meta {
+      padding: 24px 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .meta-item { font-size: 14px; }
+    .meta-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+    .vs-box {
+      grid-column: 1 / -1;
+      background: var(--accent-light);
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .vs-side { flex: 1; text-align: center; }
+    .vs-label { font-size: 11px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; }
+    .vs-word { font-size: 18px; font-weight: 700; margin-top: 4px; }
+    .vs-meaning { font-size: 13px; color: var(--text-light); margin-top: 2px; }
+    .vs-divider {
+      width: 40px; height: 40px;
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    /* --- Audio Player --- */
+    .audio-compare {
+      grid-column: 1 / -1;
+      background: var(--tag-bg);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .audio-compare-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-light);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .audio-row {
+      display: flex;
+      gap: 12px;
+    }
+    .audio-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--card);
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .audio-btn:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+    .audio-btn.playing {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+    .play-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.15s;
+    }
+    .audio-btn:hover .play-icon {
+      transform: scale(1.08);
+    }
+    .audio-btn.playing .play-icon {
+      background: #c62828;
+    }
+    .audio-info { flex: 1; }
+    .audio-lang {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-light);
+    }
+    .audio-word {
+      font-size: 16px;
+      font-weight: 700;
+      margin-top: 1px;
+    }
+    .audio-phonetic {
+      font-size: 12px;
+      color: var(--text-light);
+      margin-top: 1px;
+    }
+    /* Waveform animation */
+    .wave-bars {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      height: 20px;
+    }
+    .wave-bar {
+      width: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      opacity: 0.3;
+    }
+    .playing .wave-bar {
+      opacity: 1;
+      animation: wave 0.6s ease-in-out infinite alternate;
+    }
+    .playing .wave-bar:nth-child(1) { animation-delay: 0s; }
+    .playing .wave-bar:nth-child(2) { animation-delay: 0.1s; }
+    .playing .wave-bar:nth-child(3) { animation-delay: 0.2s; }
+    .playing .wave-bar:nth-child(4) { animation-delay: 0.15s; }
+    .playing .wave-bar:nth-child(5) { animation-delay: 0.05s; }
+    @keyframes wave {
+      from { height: 4px; }
+      to { height: 18px; }
+    }
+    @media (max-width: 600px) {
+      .audio-row { flex-direction: column; }
+    }
+
+    /* --- Content --- */
+    .content {
+      max-width: 720px;
+      margin: 24px auto;
+      padding: 0 24px;
+    }
+    .content-card {
+      background: var(--card);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 32px;
+      margin-bottom: 20px;
+    }
+    .content-card h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+    .content-card p {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    /* Example sentences */
+    .example {
+      background: var(--tag-bg);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      border-left: 3px solid var(--accent);
+    }
+    .example-jp {
+      font-family: var(--jp-font);
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .example-reading {
+      font-size: 13px;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+    .example-translation {
+      font-size: 14px;
+      margin-top: 8px;
+      color: var(--text-light);
+    }
+
+    /* Fun fact box */
+    .fun-fact {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+    .fun-fact-title {
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    /* Tags */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .tag {
+      background: var(--tag-bg);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      color: var(--text-light);
+      text-decoration: none;
+    }
+    .tag:hover { background: var(--accent-light); color: var(--accent); }
+
+    /* Related words */
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .related-card {
+      background: var(--tag-bg);
+      border-radius: 12px;
+      padding: 16px;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+    .related-card:hover {
+      background: var(--accent-light);
+      transform: translateY(-2px);
+    }
+    .related-jp {
+      font-family: var(--jp-font);
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .related-en { font-size: 13px; color: var(--text-light); margin-top: 4px; }
+
+    /* Anime callout */
+    .anime-callout {
+      background: linear-gradient(135deg, #ede9fe 0%, #e0e7ff 100%);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 16px 0;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .anime-icon { font-size: 32px; flex-shrink: 0; }
+    .anime-text h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .anime-text p { font-size: 14px; color: var(--text-light); margin: 0; }
+
+    /* Pillar CTA */
+    .pillar-cta {
+      background: linear-gradient(135deg, var(--accent) 0%, #ff6b6b 100%);
+      border-radius: 16px;
+      padding: 32px;
+      color: white;
+      text-align: center;
+    }
+    .pillar-cta h2 { font-size: 22px; margin-bottom: 8px; border: none; padding: 0; color: white; }
+    .pillar-cta p { font-size: 15px; opacity: 0.9; margin-bottom: 20px; }
+    .pillar-cta a {
+      display: inline-block;
+      background: white;
+      color: var(--accent);
+      padding: 10px 28px;
+      border-radius: 24px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    /* Footer */
+    footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-light);
+    }
+    footer a { color: var(--text-light); }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .hero-japanese { font-size: 36px; }
+      .hero-meta { grid-template-columns: 1fr; }
+      .content-card { padding: 20px; }
+      .vs-box { flex-direction: column; }
+      .vs-divider { width: 32px; height: 32px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <a href="#" class="logo">Nihongo<span>Fun</span></a>
+    <div class="nav-links">
+      <a href="#">和製英語</a>
+      <a href="#">擬聲擬態詞</a>
+      <a href="#">動漫日語</a>
+    </div>
+    <a href="#" class="lang-switch">繁體中文 ▾</a>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="#">首頁</a><span>›</span>
+    <a href="#">和製英語</a><span>›</span>
+    <a href="#">住居</a><span>›</span>
+    マンション
+  </div>
+
+  <!-- Hero Card -->
+  <div class="hero-card">
+    <div class="hero-inner">
+      <div class="hero-top">
+        <div class="hero-japanese">マンション</div>
+        <div class="hero-reading">manshon</div>
+        <div class="hero-meaning-badge">和製英語 · 住居カテゴリ</div>
+      </div>
+      <div class="hero-meta">
+        <div class="meta-item">
+          <div class="meta-label">日語意思</div>
+          <div>公寓大樓（通常指較高級的）</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">英語原意</div>
+          <div>Mansion = 豪宅、大廈</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">JLPT 等級</div>
+          <div>N3</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">常見場景</div>
+          <div>租屋、不動產、日常對話</div>
+        </div>
+
+        <!-- Audio pronunciation compare -->
+        <div class="audio-compare">
+          <div class="audio-compare-title">發音比較 — 聽聽看差別</div>
+          <div class="audio-row">
+            <button class="audio-btn" onclick="toggleAudio(this, 'jp')">
+              <div class="play-icon">
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
+                  <path d="M1 1.5L13 8L1 14.5V1.5Z" fill="white" class="play-path"/>
+                </svg>
+              </div>
+              <div class="audio-info">
+                <div class="audio-lang">🇯🇵 日語</div>
+                <div class="audio-word">マンション</div>
+                <div class="audio-phonetic">man-shon</div>
+              </div>
+              <div class="wave-bars">
+                <div class="wave-bar" style="height:6px"></div>
+                <div class="wave-bar" style="height:12px"></div>
+                <div class="wave-bar" style="height:8px"></div>
+                <div class="wave-bar" style="height:14px"></div>
+                <div class="wave-bar" style="height:5px"></div>
+              </div>
+            </button>
+            <button class="audio-btn" onclick="toggleAudio(this, 'en')">
+              <div class="play-icon">
+                <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
+                  <path d="M1 1.5L13 8L1 14.5V1.5Z" fill="white" class="play-path"/>
+                </svg>
+              </div>
+              <div class="audio-info">
+                <div class="audio-lang">🇺🇸 英語</div>
+                <div class="audio-word">Mansion</div>
+                <div class="audio-phonetic">ˈmæn·ʃən</div>
+              </div>
+              <div class="wave-bars">
+                <div class="wave-bar" style="height:8px"></div>
+                <div class="wave-bar" style="height:5px"></div>
+                <div class="wave-bar" style="height:14px"></div>
+                <div class="wave-bar" style="height:10px"></div>
+                <div class="wave-bar" style="height:6px"></div>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="vs-box">
+          <div class="vs-side">
+            <div class="vs-label">在日本</div>
+            <!-- Japanese apartment building SVG -->
+            <svg viewBox="0 0 200 160" width="200" height="160" xmlns="http://www.w3.org/2000/svg" style="margin: 8px auto; display: block;">
+              <!-- Sky -->
+              <rect width="200" height="160" fill="#f0f7ff" rx="8"/>
+              <!-- Clouds -->
+              <ellipse cx="40" cy="25" rx="20" ry="10" fill="white" opacity="0.7"/>
+              <ellipse cx="55" cy="22" rx="15" ry="8" fill="white" opacity="0.7"/>
+              <ellipse cx="155" cy="18" rx="18" ry="9" fill="white" opacity="0.7"/>
+              <!-- Building body -->
+              <rect x="40" y="35" width="120" height="110" fill="#b0bec5" rx="3"/>
+              <!-- Roof -->
+              <rect x="38" y="32" width="124" height="6" fill="#78909c" rx="2"/>
+              <!-- Floors divider lines -->
+              <line x1="40" y1="62" x2="160" y2="62" stroke="#90a4ae" stroke-width="1"/>
+              <line x1="40" y1="89" x2="160" y2="89" stroke="#90a4ae" stroke-width="1"/>
+              <line x1="40" y1="116" x2="160" y2="116" stroke="#90a4ae" stroke-width="1"/>
+              <!-- Windows row 1 -->
+              <rect x="52" y="40" width="14" height="16" fill="#e3f2fd" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <rect x="74" y="40" width="14" height="16" fill="#bbdefb" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <rect x="96" y="40" width="14" height="16" fill="#e3f2fd" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <rect x="118" y="40" width="14" height="16" fill="#fff9c4" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <rect x="140" y="40" width="14" height="16" fill="#e3f2fd" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <!-- Windows row 2 -->
+              <rect x="52" y="67" width="14" height="16" fill="#fff9c4" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <rect x="74" y="67" width="14" height="16" fill="#e3f2fd" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <rect x="96" y="67" width="14" height="16" fill="#e3f2fd" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <rect x="118" y="67" width="14" height="16" fill="#bbdefb" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <rect x="140" y="67" width="14" height="16" fill="#fff9c4" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <!-- Windows row 3 -->
+              <rect x="52" y="94" width="14" height="16" fill="#e3f2fd" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <rect x="74" y="94" width="14" height="16" fill="#fff9c4" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <rect x="96" y="94" width="14" height="16" fill="#bbdefb" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <rect x="118" y="94" width="14" height="16" fill="#e3f2fd" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <rect x="140" y="94" width="14" height="16" fill="#e3f2fd" rx="1" stroke="#78909c" stroke-width="0.5"/>
+              <!-- Entrance -->
+              <rect x="88" y="122" width="24" height="23" fill="#546e7a" rx="2"/>
+              <rect x="92" y="125" width="7" height="20" fill="#37474f" rx="1"/>
+              <rect x="101" y="125" width="7" height="20" fill="#37474f" rx="1"/>
+              <!-- Balcony railings -->
+              <line x1="48" y1="62" x2="48" y2="56" stroke="#90a4ae" stroke-width="1"/>
+              <line x1="166" y1="62" x2="166" y2="56" stroke="#90a4ae" stroke-width="1"/>
+              <line x1="48" y1="89" x2="48" y2="83" stroke="#90a4ae" stroke-width="1"/>
+              <line x1="166" y1="89" x2="166" y2="83" stroke="#90a4ae" stroke-width="1"/>
+              <!-- Ground -->
+              <rect x="0" y="145" width="200" height="15" fill="#c8e6c9" rx="0"/>
+              <!-- Small tree -->
+              <circle cx="25" cy="130" r="12" fill="#66bb6a"/>
+              <rect x="23" y="135" width="4" height="10" fill="#795548"/>
+              <circle cx="175" cy="132" r="10" fill="#81c784"/>
+              <rect x="173" y="137" width="4" height="8" fill="#795548"/>
+            </svg>
+            <div class="vs-word">マンション</div>
+            <div class="vs-meaning">= 普通的公寓大樓</div>
+          </div>
+          <div class="vs-divider">VS</div>
+          <div class="vs-side">
+            <div class="vs-label">在英語圈</div>
+            <!-- English mansion SVG -->
+            <svg viewBox="0 0 200 160" width="200" height="160" xmlns="http://www.w3.org/2000/svg" style="margin: 8px auto; display: block;">
+              <!-- Sky -->
+              <rect width="200" height="160" fill="#f0f7ff" rx="8"/>
+              <!-- Clouds -->
+              <ellipse cx="50" cy="20" rx="22" ry="10" fill="white" opacity="0.7"/>
+              <ellipse cx="150" cy="15" rx="18" ry="8" fill="white" opacity="0.7"/>
+              <!-- Main house body -->
+              <rect x="35" y="65" width="130" height="80" fill="#f5e6d0" rx="2"/>
+              <!-- Roof -->
+              <polygon points="25,65 100,20 175,65" fill="#8d6e63"/>
+              <!-- Roof trim -->
+              <line x1="25" y1="65" x2="175" y2="65" stroke="#6d4c41" stroke-width="2"/>
+              <!-- Chimney -->
+              <rect x="130" y="30" width="16" height="35" fill="#a1887f"/>
+              <rect x="127" y="28" width="22" height="5" fill="#8d6e63"/>
+              <!-- Left wing -->
+              <rect x="10" y="75" width="35" height="70" fill="#efe0cc" rx="2"/>
+              <polygon points="10,75 27,55 45,75" fill="#a1887f"/>
+              <!-- Right wing -->
+              <rect x="155" y="75" width="35" height="70" fill="#efe0cc" rx="2"/>
+              <polygon points="155,75 172,55 190,75" fill="#a1887f"/>
+              <!-- Grand entrance -->
+              <rect x="78" y="100" width="44" height="45" fill="#6d4c41" rx="3"/>
+              <!-- Door arch -->
+              <ellipse cx="100" cy="100" rx="22" ry="12" fill="#6d4c41"/>
+              <!-- Door panels -->
+              <rect x="84" y="105" width="14" height="40" fill="#5d4037" rx="1"/>
+              <rect x="102" y="105" width="14" height="40" fill="#5d4037" rx="1"/>
+              <!-- Door handles -->
+              <circle cx="96" cy="128" r="1.5" fill="#ffd54f"/>
+              <circle cx="104" cy="128" r="1.5" fill="#ffd54f"/>
+              <!-- Columns -->
+              <rect x="72" y="90" width="5" height="55" fill="#e8d5bf" rx="1"/>
+              <rect x="123" y="90" width="5" height="55" fill="#e8d5bf" rx="1"/>
+              <!-- Column tops -->
+              <rect x="70" y="87" width="9" height="5" fill="#d7c4ae" rx="1"/>
+              <rect x="121" y="87" width="9" height="5" fill="#d7c4ae" rx="1"/>
+              <!-- Windows main -->
+              <rect x="45" y="75" width="18" height="22" fill="#bbdefb" rx="2" stroke="#8d6e63" stroke-width="1"/>
+              <line x1="54" y1="75" x2="54" y2="97" stroke="#8d6e63" stroke-width="0.5"/>
+              <line x1="45" y1="86" x2="63" y2="86" stroke="#8d6e63" stroke-width="0.5"/>
+              <rect x="137" y="75" width="18" height="22" fill="#bbdefb" rx="2" stroke="#8d6e63" stroke-width="1"/>
+              <line x1="146" y1="75" x2="146" y2="97" stroke="#8d6e63" stroke-width="0.5"/>
+              <line x1="137" y1="86" x2="155" y2="86" stroke="#8d6e63" stroke-width="0.5"/>
+              <!-- Dormer window -->
+              <rect x="88" y="38" width="24" height="18" fill="#bbdefb" rx="1" stroke="#8d6e63" stroke-width="1"/>
+              <polygon points="85,38 100,26 115,38" fill="#a1887f"/>
+              <!-- Wing windows -->
+              <rect x="17" y="85" width="12" height="14" fill="#bbdefb" rx="1" stroke="#8d6e63" stroke-width="0.5"/>
+              <rect x="17" y="108" width="12" height="14" fill="#fff9c4" rx="1" stroke="#8d6e63" stroke-width="0.5"/>
+              <rect x="162" y="85" width="12" height="14" fill="#bbdefb" rx="1" stroke="#8d6e63" stroke-width="0.5"/>
+              <rect x="162" y="108" width="12" height="14" fill="#fff9c4" rx="1" stroke="#8d6e63" stroke-width="0.5"/>
+              <!-- Ground / lawn -->
+              <rect x="0" y="145" width="200" height="15" fill="#a5d6a7" rx="0"/>
+              <!-- Fountain -->
+              <ellipse cx="100" cy="152" rx="12" ry="4" fill="#90caf9" opacity="0.6"/>
+              <rect x="98" y="147" width="4" height="5" fill="#bdbdbd"/>
+              <!-- Hedges -->
+              <ellipse cx="20" cy="144" rx="14" ry="5" fill="#4caf50"/>
+              <ellipse cx="180" cy="144" rx="14" ry="5" fill="#4caf50"/>
+              <!-- Gate pillars -->
+              <rect x="2" y="138" width="6" height="12" fill="#bdbdbd"/>
+              <rect x="192" y="138" width="6" height="12" fill="#bdbdbd"/>
+            </svg>
+            <div class="vs-word">Mansion</div>
+            <div class="vs-meaning">= 超大豪宅</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+
+    <!-- Explanation -->
+    <div class="content-card">
+      <h2>為什麼日本人說「マンション」？</h2>
+      <p>在日本，「マンション」指的是鋼筋混凝土建造的公寓大樓，通常比「アパート」（apartment，木造或輕鋼架的公寓）更高級一些。但跟英語中的 mansion（豪宅）完全是兩回事。</p>
+      <p>這個詞最早出現在1960年代的日本房地產廣告中。開發商為了讓普通的公寓聽起來更高級，借用了英語的「mansion」——畢竟誰不想住在「豪宅」裡呢？這個行銷策略太成功了，結果這個詞就這樣留在日語中。</p>
+
+      <div class="fun-fact">
+        <div class="fun-fact-title">有趣小知識</div>
+        如果你在日本跟房東說「I live in a mansion」，他們會覺得很正常。但如果你跟美國人說同樣的話，他們會以為你是億萬富翁！
+      </div>
+    </div>
+
+    <!-- Example sentences -->
+    <div class="content-card">
+      <h2>例句</h2>
+      <div class="example">
+        <div class="example-jp">駅前の新しいマンションに引っ越しました。</div>
+        <div class="example-reading">えきまえの あたらしい マンションに ひっこしました。</div>
+        <div class="example-translation">我搬到了車站前面新建的公寓大樓。</div>
+      </div>
+      <div class="example">
+        <div class="example-jp">このマンションはペット可ですか？</div>
+        <div class="example-reading">この マンションは ペットかですか？</div>
+        <div class="example-translation">這棟公寓可以養寵物嗎？</div>
+      </div>
+    </div>
+
+    <!-- Anime connection -->
+    <div class="content-card">
+      <h2>動漫裡的「マンション」</h2>
+      <div class="anime-callout">
+        <div class="anime-icon">🎬</div>
+        <div class="anime-text">
+          <h3>《SPY×FAMILY 間諜家家酒》</h3>
+          <p>佛傑一家住在「マンション」裡。在日語版中這只是普通公寓，但如果直譯成英語的 mansion，感覺就變成住在城堡裡了。</p>
+        </div>
+      </div>
+      <div class="anime-callout">
+        <div class="anime-icon">🎬</div>
+        <div class="anime-text">
+          <h3>《名偵探柯南》</h3>
+          <p>很多案件發生在「高級マンション」裡。注意：這裡的「高級マンション」也只是比較貴的公寓，不是豪宅。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related wasei-eigo -->
+    <div class="content-card">
+      <h2>相關和製英語</h2>
+      <div class="related-grid">
+        <a href="#" class="related-card">
+          <div class="related-jp">アパート</div>
+          <div class="related-en">apartment → 木造公寓</div>
+        </a>
+        <a href="#" class="related-card">
+          <div class="related-jp">サラリーマン</div>
+          <div class="related-en">salary man → 上班族</div>
+        </a>
+        <a href="#" class="related-card">
+          <div class="related-jp">コンセント</div>
+          <div class="related-en">consent? → 插座</div>
+        </a>
+        <a href="#" class="related-card">
+          <div class="related-jp">ノートパソコン</div>
+          <div class="related-en">note personal computer → 筆電</div>
+        </a>
+      </div>
+
+      <div class="tags">
+        <a href="#" class="tag">#和製英語</a>
+        <a href="#" class="tag">#住居</a>
+        <a href="#" class="tag">#JLPT N3</a>
+        <a href="#" class="tag">#日常會話</a>
+        <a href="#" class="tag">#不動產</a>
+      </div>
+    </div>
+
+    <!-- Pillar CTA -->
+    <div class="content-card pillar-cta">
+      <h2>和製英語完全指南</h2>
+      <p>探索更多日本人自創的有趣英語！完整收錄100+個和製英語。</p>
+      <a href="#">查看完整指南 →</a>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleAudio(btn, lang) {
+      const wasPlaying = btn.classList.contains('playing');
+      // Stop all
+      document.querySelectorAll('.audio-btn').forEach(b => {
+        b.classList.remove('playing');
+        b.querySelector('.play-path').setAttribute('d', 'M1 1.5L13 8L1 14.5V1.5Z');
+      });
+      if (!wasPlaying) {
+        btn.classList.add('playing');
+        // Switch to pause icon
+        btn.querySelector('.play-path').setAttribute('d', 'M2 1H5V15H2V1ZM9 1H12V15H9V1Z');
+        // Auto-stop after 1.5s (simulated)
+        setTimeout(() => {
+          btn.classList.remove('playing');
+          btn.querySelector('.play-path').setAttribute('d', 'M1 1.5L13 8L1 14.5V1.5Z');
+        }, 1500);
+      }
+    }
+  </script>
+
+  <footer>
+    <p>Nihongo Fun — 讓學日語變得有趣 · <a href="#">關於我們</a> · <a href="#">隱私政策</a></p>
+  </footer>
+
+</body>
+</html>

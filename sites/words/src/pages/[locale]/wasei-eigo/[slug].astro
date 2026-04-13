@@ -1,0 +1,409 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Nav from '../../../components/Nav.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import HeroCard from '../../../components/HeroCard.astro';
+import AudioCompare from '../../../components/AudioCompare.astro';
+import VSCompare from '../../../components/VSCompare.astro';
+import SameThingCompare from '../../../components/SameThingCompare.astro';
+import ExampleSentence from '../../../components/ExampleSentence.astro';
+import AnimeCallout from '../../../components/AnimeCallout.astro';
+import RelatedWords from '../../../components/RelatedWords.astro';
+
+// Illustration components (add new ones here as words are created)
+const illustrations = import.meta.glob('../../../components/illustrations/*.astro', { eager: true });
+
+function getIllustration(slug: string, suffix: string) {
+  // Try capitalized slug first (e.g. "Mansion"), then as-is for hyphenated (e.g. "Note-pasokon")
+  const capitalize = slug.charAt(0).toUpperCase() + slug.slice(1);
+  const key = `../../../components/illustrations/${capitalize}${suffix}.astro`;
+  const mod = illustrations[key] as { default: any } | undefined;
+  return mod?.default;
+}
+
+export async function getStaticPaths() {
+  const entries = await getCollection('wasei-eigo');
+  return entries.map(entry => ({
+    params: { locale: entry.data.locale, slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const { Content } = await render(entry);
+
+const locale = data.locale;
+
+// Resolve related words to real data
+const allEntries = await getCollection('wasei-eigo');
+const localeEntries = allEntries.filter(e => e.data.locale === locale);
+const resolvedRelated = data.relatedWords
+  .map(slug => localeEntries.find(e => e.data.slug === slug))
+  .filter(Boolean)
+  .map(e => ({
+    slug: e!.data.slug,
+    japanese: e!.data.japanese,
+    label: `${e!.data.originalEnglish} → ${e!.data.japaneseMeaning}`,
+  }));
+
+// Load SVG illustrations based on vsPattern
+const isSamePattern = data.vsPattern === 'same';
+const isUniquePattern = data.vsPattern === 'unique';
+const isDifferentPattern = data.vsPattern === 'different';
+const IllustrationJP = getIllustration(data.slug, 'JP');
+const IllustrationEN = getIllustration(data.slug, 'EN');
+const IllustrationSame = isSamePattern ? getIllustration(data.slug, 'Same') : null;
+// Hero SVG: all patterns show illustration in hero
+const HeroSVG = isSamePattern ? IllustrationSame : IllustrationJP;
+const isNoindex = locale === 'en';
+
+// i18n labels
+const labels: Record<string, Record<string, string>> = {
+  en: { home: 'Home', waseiEigo: 'Wasei-Eigo', examples: 'Examples', anime: 'In Anime', related: 'Related Wasei-Eigo', pronCompare: 'Pronunciation Compare', inJapan: 'In Japan', inEnglish: 'In English' },
+  es: { home: 'Inicio', waseiEigo: 'Wasei-Eigo', examples: 'Ejemplos', anime: 'En el Anime', related: 'Wasei-Eigo Relacionados', pronCompare: 'Comparar Pronunciación', inJapan: 'En Japón', inEnglish: 'En inglés' },
+  'zh-tw': { home: '首頁', waseiEigo: '和製英語', examples: '例句', anime: '動漫裡的用法', related: '相關和製英語', pronCompare: '發音比較', inJapan: '在日本', inEnglish: '在英語圈' },
+};
+const t = labels[locale] || labels.en;
+
+// JSON-LD: DefinedTerm + BreadcrumbList
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'DefinedTerm',
+      name: data.japanese,
+      alternateName: data.romaji,
+      description: data.metaDescription,
+      inDefinedTermSet: {
+        '@type': 'DefinedTermSet',
+        name: 'Wasei-Eigo (和製英語)',
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: t.home, item: `https://nihongo-fun.com/${locale}/` },
+        { '@type': 'ListItem', position: 2, name: t.waseiEigo, item: `https://nihongo-fun.com/${locale}/wasei-eigo/` },
+        { '@type': 'ListItem', position: 3, name: data.japanese },
+      ],
+    },
+  ],
+};
+
+const breadcrumbs = [
+  { label: t.home, href: `/${locale}/` },
+  { label: t.waseiEigo, href: `/${locale}/wasei-eigo/` },
+  { label: data.category },
+  { label: data.japanese },
+];
+---
+
+<BaseLayout
+  title={`${data.japanese} (${data.romaji}) — ${t.waseiEigo} | Nihongo Fun`}
+  description={data.metaDescription}
+  locale={locale}
+  noindex={isNoindex}
+  jsonLd={jsonLd}
+  pagePath={`/wasei-eigo/${data.slug}/`}
+>
+  <Nav locale={locale} />
+  <Breadcrumb items={breadcrumbs} />
+
+  <HeroCard
+    japanese={data.japanese}
+    romaji={data.romaji}
+    category={data.category}
+    collectionLabel={t.waseiEigo}
+    jlpt={data.jlpt}
+  >
+    {HeroSVG && <HeroSVG slot="hero-svg" />}
+
+    <!-- Meta grid -->
+    <div class="meta-grid">
+      <div class="meta-item">
+        <div class="meta-label">{locale === 'zh-tw' ? '日語意思' : locale === 'es' ? 'Significado en japonés' : 'Japanese meaning'}</div>
+        <div>{data.japaneseMeaning}</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">{locale === 'zh-tw' ? '英語原意' : locale === 'es' ? 'Significado original en inglés' : 'Original English meaning'}</div>
+        <div>{data.englishMeaning}</div>
+      </div>
+    </div>
+
+    <!-- Pattern C: audio + "doesn't exist in English" badge side by side -->
+    {isUniquePattern && (
+      <div class="unique-row">
+        <button class="unique-audio-btn" data-lang="ja" data-word={data.japanese}>
+          <div class="play-icon">
+            <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
+              <path d="M1 1.5L13 8L1 14.5V1.5Z" fill="white" class="play-path"/>
+            </svg>
+          </div>
+          <div class="unique-audio-info">
+            <div class="unique-audio-lang">🇯🇵</div>
+            <div class="unique-audio-word">{data.japanese}</div>
+            <div class="unique-audio-phonetic">{data.romaji}</div>
+          </div>
+          <div class="wave-bars">
+            <div class="wave-bar" style="height:6px"></div>
+            <div class="wave-bar" style="height:12px"></div>
+            <div class="wave-bar" style="height:8px"></div>
+            <div class="wave-bar" style="height:14px"></div>
+            <div class="wave-bar" style="height:5px"></div>
+          </div>
+        </button>
+        <div class="unique-badge">
+          <span class="unique-icon">💡</span>
+          <span>{locale === 'zh-tw' ? '這個詞在英語中不存在！' : locale === 'es' ? '¡Esta palabra no existe en inglés!' : "This word doesn't exist in English!"}</span>
+        </div>
+      </div>
+    )}
+
+    <!-- Audio compare (Pattern A & B only — Pattern C has no meaningful English equivalent) -->
+    {!isUniquePattern && (
+      <AudioCompare
+        japaneseWord={data.japanese}
+        japaneseRomaji={data.romaji}
+        englishWord={data.originalEnglish}
+        englishPhonetic={data.originalEnglish}
+      >
+        <span slot="title">{t.pronCompare}</span>
+      </AudioCompare>
+    )}
+
+    <!-- VS compare: Pattern B only (different objects) -->
+    {isDifferentPattern && (
+      <VSCompare
+        leftLabel={t.inJapan}
+        leftWord={data.japanese}
+        leftMeaning={data.japaneseMeaning}
+        rightLabel={t.inEnglish}
+        rightWord={data.originalEnglish.charAt(0).toUpperCase() + data.originalEnglish.slice(1)}
+        rightMeaning={data.englishMeaning}
+      >
+        {IllustrationJP && <IllustrationJP slot="left-svg" />}
+        {IllustrationEN && <IllustrationEN slot="right-svg" />}
+      </VSCompare>
+    )}
+  </HeroCard>
+
+
+  <!-- Main content from markdown -->
+  <div class="content">
+    <div class="content-card prose">
+      <Content />
+    </div>
+
+    <!-- Examples -->
+    {data.examples.length > 0 && (
+      <div class="content-card">
+        <h2>{t.examples}</h2>
+        {data.examples.map(ex => (
+          <ExampleSentence
+            japanese={ex.japanese}
+            reading={ex.reading}
+            translation={ex.translation}
+          />
+        ))}
+      </div>
+    )}
+
+    <!-- Anime appearances -->
+    {data.animeAppearances.length > 0 && (
+      <div class="content-card">
+        <h2>{t.anime}</h2>
+        {data.animeAppearances.map(a => (
+          <AnimeCallout title={a.title} description={a.description} />
+        ))}
+      </div>
+    )}
+
+    <!-- Related words -->
+    {data.relatedWords.length > 0 && (
+      <div class="content-card">
+        <h2>{t.related}</h2>
+        <RelatedWords
+          words={resolvedRelated}
+          locale={locale}
+          collection="wasei-eigo"
+        />
+      </div>
+    )}
+  </div>
+
+  <footer>
+    <p>Nihongo Fun — <a href={`/${locale}/`}>{t.home}</a></p>
+  </footer>
+</BaseLayout>
+
+<script>
+  function initUniqueAudio() {
+    document.querySelectorAll<HTMLButtonElement>('.unique-audio-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const word = btn.dataset.word || '';
+        const wasPlaying = btn.classList.contains('playing');
+
+        // Stop all audio buttons (including AudioCompare ones if any)
+        document.querySelectorAll('.unique-audio-btn, .audio-btn').forEach(b => {
+          b.classList.remove('playing');
+          const path = b.querySelector('.play-path');
+          if (path) path.setAttribute('d', 'M1 1.5L13 8L1 14.5V1.5Z');
+        });
+
+        if (!wasPlaying && 'speechSynthesis' in window) {
+          const utterance = new SpeechSynthesisUtterance(word);
+          utterance.lang = 'ja-JP';
+          utterance.rate = 0.85;
+
+          btn.classList.add('playing');
+          const path = btn.querySelector('.play-path');
+          if (path) path.setAttribute('d', 'M2 1H5V15H2V1ZM9 1H12V15H9V1Z');
+
+          utterance.onend = () => {
+            btn.classList.remove('playing');
+            if (path) path.setAttribute('d', 'M1 1.5L13 8L1 14.5V1.5Z');
+          };
+
+          window.speechSynthesis.cancel();
+          window.speechSynthesis.speak(utterance);
+        }
+      });
+    });
+  }
+  initUniqueAudio();
+</script>
+
+<style>
+  .unique-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    align-items: stretch;
+  }
+  .unique-audio-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    color: var(--text);
+  }
+  .unique-audio-btn:hover { border-color: var(--accent); background: var(--accent-light); }
+  .unique-audio-btn.playing { border-color: var(--accent); background: var(--accent-light); }
+  .unique-audio-btn .play-icon {
+    width: 36px; height: 36px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.15s;
+  }
+  .unique-audio-btn:hover .play-icon { transform: scale(1.08); }
+  .unique-audio-btn.playing .play-icon { background: #c62828; }
+  .unique-audio-info { flex: 1; text-align: left; }
+  .unique-audio-lang { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-light); }
+  .unique-audio-word { font-size: 16px; font-weight: 700; margin-top: 1px; }
+  .unique-audio-phonetic { font-size: 12px; color: var(--text-light); margin-top: 1px; }
+  .unique-audio-btn .wave-bars { display: flex; align-items: center; gap: 2px; height: 20px; }
+  .unique-audio-btn .wave-bar { width: 3px; background: var(--accent); border-radius: 2px; opacity: 0.3; }
+  .unique-audio-btn.playing .wave-bar { opacity: 1; animation: wave 0.6s ease-in-out infinite alternate; }
+  .unique-audio-btn.playing .wave-bar:nth-child(1) { animation-delay: 0s; }
+  .unique-audio-btn.playing .wave-bar:nth-child(2) { animation-delay: 0.1s; }
+  .unique-audio-btn.playing .wave-bar:nth-child(3) { animation-delay: 0.2s; }
+  .unique-audio-btn.playing .wave-bar:nth-child(4) { animation-delay: 0.15s; }
+  .unique-audio-btn.playing .wave-bar:nth-child(5) { animation-delay: 0.05s; }
+  @keyframes wave { from { height: 4px; } to { height: 18px; } }
+  .unique-badge {
+    flex: 1;
+    background: linear-gradient(135deg, #fff3e0 0%, #fce4ec 100%);
+    border-radius: 12px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    text-align: center;
+  }
+  .unique-icon {
+    margin-right: 8px;
+  }
+  .meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .meta-item { font-size: 14px; }
+  .meta-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    margin-bottom: 4px;
+  }
+  .content {
+    max-width: 720px;
+    margin: 24px auto;
+    padding: 0 24px;
+  }
+  .content-card {
+    background: var(--card);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 32px;
+    margin-bottom: 20px;
+  }
+  .content-card h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+  }
+  .prose :global(h2) {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 24px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+  }
+  .prose :global(p) {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  .prose :global(ul), .prose :global(ol) {
+    margin-bottom: 16px;
+    padding-left: 24px;
+  }
+  .prose :global(li) {
+    margin-bottom: 8px;
+  }
+  .prose :global(strong) {
+    font-weight: 700;
+  }
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-light);
+  }
+  @media (max-width: 600px) {
+    .meta-grid { grid-template-columns: 1fr; }
+    .content-card { padding: 20px; }
+    .unique-row { flex-direction: column; }
+  }
+</style>

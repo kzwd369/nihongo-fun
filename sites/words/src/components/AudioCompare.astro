@@ -1,0 +1,152 @@
+---
+interface Props {
+  japaneseWord: string;
+  japaneseRomaji: string;
+  englishWord: string;
+  englishPhonetic: string;
+}
+
+const { japaneseWord, japaneseRomaji, englishWord, englishPhonetic } = Astro.props;
+---
+
+<div class="audio-compare">
+  <div class="audio-compare-title">
+    <slot name="title">Pronunciation Compare</slot>
+  </div>
+  <div class="audio-row">
+    <button class="audio-btn" data-lang="ja" data-word={japaneseWord}>
+      <div class="play-icon">
+        <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
+          <path d="M1 1.5L13 8L1 14.5V1.5Z" fill="white" class="play-path"/>
+        </svg>
+      </div>
+      <div class="audio-info">
+        <div class="audio-lang">🇯🇵</div>
+        <div class="audio-word">{japaneseWord}</div>
+        <div class="audio-phonetic">{japaneseRomaji}</div>
+      </div>
+      <div class="wave-bars">
+        <div class="wave-bar" style="height:6px"></div>
+        <div class="wave-bar" style="height:12px"></div>
+        <div class="wave-bar" style="height:8px"></div>
+        <div class="wave-bar" style="height:14px"></div>
+        <div class="wave-bar" style="height:5px"></div>
+      </div>
+    </button>
+    <button class="audio-btn" data-lang="en" data-word={englishWord}>
+      <div class="play-icon">
+        <svg width="14" height="16" viewBox="0 0 14 16" fill="none">
+          <path d="M1 1.5L13 8L1 14.5V1.5Z" fill="white" class="play-path"/>
+        </svg>
+      </div>
+      <div class="audio-info">
+        <div class="audio-lang">🇺🇸</div>
+        <div class="audio-word">{englishWord}</div>
+        <div class="audio-phonetic">{englishPhonetic}</div>
+      </div>
+      <div class="wave-bars">
+        <div class="wave-bar" style="height:8px"></div>
+        <div class="wave-bar" style="height:5px"></div>
+        <div class="wave-bar" style="height:14px"></div>
+        <div class="wave-bar" style="height:10px"></div>
+        <div class="wave-bar" style="height:6px"></div>
+      </div>
+    </button>
+  </div>
+</div>
+
+<script>
+  function initAudioButtons() {
+    document.querySelectorAll<HTMLButtonElement>('.audio-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang || 'ja';
+        const word = btn.dataset.word || '';
+        const wasPlaying = btn.classList.contains('playing');
+
+        // Stop all
+        document.querySelectorAll('.audio-btn').forEach(b => {
+          b.classList.remove('playing');
+          const path = b.querySelector('.play-path');
+          if (path) path.setAttribute('d', 'M1 1.5L13 8L1 14.5V1.5Z');
+        });
+
+        if (!wasPlaying && 'speechSynthesis' in window) {
+          const utterance = new SpeechSynthesisUtterance(word);
+          utterance.lang = lang === 'ja' ? 'ja-JP' : 'en-US';
+          utterance.rate = 0.85;
+
+          btn.classList.add('playing');
+          const path = btn.querySelector('.play-path');
+          if (path) path.setAttribute('d', 'M2 1H5V15H2V1ZM9 1H12V15H9V1Z');
+
+          utterance.onend = () => {
+            btn.classList.remove('playing');
+            if (path) path.setAttribute('d', 'M1 1.5L13 8L1 14.5V1.5Z');
+          };
+
+          window.speechSynthesis.cancel();
+          window.speechSynthesis.speak(utterance);
+        }
+      });
+    });
+  }
+  initAudioButtons();
+</script>
+
+<style>
+  .audio-compare {
+    background: var(--tag-bg);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .audio-compare-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  .audio-row { display: flex; gap: 12px; }
+  .audio-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--card);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    color: var(--text);
+  }
+  .audio-btn:hover { border-color: var(--accent); background: var(--accent-light); }
+  .audio-btn.playing { border-color: var(--accent); background: var(--accent-light); }
+  .play-icon {
+    width: 36px; height: 36px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.15s;
+  }
+  .audio-btn:hover .play-icon { transform: scale(1.08); }
+  .audio-btn.playing .play-icon { background: #c62828; }
+  .audio-info { flex: 1; text-align: left; }
+  .audio-lang { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-light); }
+  .audio-word { font-size: 16px; font-weight: 700; margin-top: 1px; }
+  .audio-phonetic { font-size: 12px; color: var(--text-light); margin-top: 1px; }
+  .wave-bars { display: flex; align-items: center; gap: 2px; height: 20px; }
+  .wave-bar { width: 3px; background: var(--accent); border-radius: 2px; opacity: 0.3; }
+  .playing .wave-bar { opacity: 1; animation: wave 0.6s ease-in-out infinite alternate; }
+  .playing .wave-bar:nth-child(1) { animation-delay: 0s; }
+  .playing .wave-bar:nth-child(2) { animation-delay: 0.1s; }
+  .playing .wave-bar:nth-child(3) { animation-delay: 0.2s; }
+  .playing .wave-bar:nth-child(4) { animation-delay: 0.15s; }
+  .playing .wave-bar:nth-child(5) { animation-delay: 0.05s; }
+  @keyframes wave { from { height: 4px; } to { height: 18px; } }
+  @media (max-width: 600px) { .audio-row { flex-direction: column; } }
+</style>

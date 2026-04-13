@@ -1,0 +1,75 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  locale: string;
+  canonicalUrl?: string;
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown>;
+  /** Path after locale prefix, e.g. "/wasei-eigo/mansion/" */
+  pagePath?: string;
+}
+
+const { title, description, locale, canonicalUrl, noindex = false, jsonLd, pagePath } = Astro.props;
+
+const langMap: Record<string, string> = {
+  en: 'en',
+  es: 'es',
+  'zh-tw': 'zh-Hant',
+};
+const htmlLang = langMap[locale] || locale;
+
+const site = 'https://nihongo-fun.com';
+const allLocales = ['en', 'es', 'zh-tw'] as const;
+const hrefLangEntries = pagePath
+  ? allLocales.map(loc => ({
+      lang: langMap[loc] || loc,
+      href: `${site}/${loc}${pagePath}`,
+    }))
+  : [];
+---
+
+<!DOCTYPE html>
+<html lang={htmlLang}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
+  {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  {hrefLangEntries.map(({ lang, href }) => (
+    <link rel="alternate" hreflang={lang} href={href} />
+  ))}
+  {pagePath && <link rel="alternate" hreflang="x-default" href={`${site}/zh-tw${pagePath}`} />}
+  {jsonLd && (
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  )}
+  <style is:global>
+    :root {
+      --bg: #faf9f7;
+      --card: #ffffff;
+      --accent: #e8433e;
+      --accent-light: #fff0f0;
+      --text: #2d2d2d;
+      --text-light: #6b6b6b;
+      --border: #e8e5e1;
+      --tag-bg: #f3f0ec;
+      --jp-font: "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Inter", "Noto Sans TC", "Noto Sans SC", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <slot />
+</body>
+</html>

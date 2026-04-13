@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'en' } },
+    { params: { locale: 'es' } },
+    { params: { locale: 'zh-tw' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const isNoindex = locale === 'en';
+
+const titles: Record<string, string> = {
+  en: 'Nihongo Fun — Learn Japanese the Fun Way',
+  es: 'Nihongo Fun — Aprende japonés de forma divertida',
+  'zh-tw': 'Nihongo Fun — 讓學日語變得有趣',
+};
+---
+
+<BaseLayout
+  title={titles[locale!] || titles.en}
+  description="Learn Japanese wasei-eigo, onomatopoeia, and anime vocabulary."
+  locale={locale!}
+  noindex={isNoindex}
+>
+  <Nav locale={locale!} />
+  <main class="home">
+    <h1>{titles[locale!]}</h1>
+    <p class="sub">Coming soon...</p>
+  </main>
+</BaseLayout>
+
+<style>
+  .home {
+    max-width: 720px;
+    margin: 80px auto;
+    padding: 0 24px;
+    text-align: center;
+  }
+  h1 { font-size: 32px; font-weight: 800; }
+  .sub { color: var(--text-light); margin-top: 12px; }
+</style>
