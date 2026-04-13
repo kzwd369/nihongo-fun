@@ -53,6 +53,7 @@ const labels: Record<string, Record<string, string>> = {
   en: { home: 'Home', onomatopoeia: 'Onomatopoeia', examples: 'Examples', anime: 'In Anime', related: 'Related Onomatopoeia', meaning: 'Meaning', type: 'Type', listenPron: 'Listen' },
   es: { home: 'Inicio', onomatopoeia: 'Onomatopeyas', examples: 'Ejemplos', anime: 'En el Anime', related: 'Onomatopeyas Relacionadas', meaning: 'Significado', type: 'Tipo', listenPron: 'Escuchar' },
   'zh-tw': { home: '首頁', onomatopoeia: '擬聲擬態詞', examples: '例句', anime: '動漫裡的用法', related: '相關擬聲擬態詞', meaning: '意思', type: '類型', listenPron: '聆聽' },
+  th: { home: 'หน้าแรก', onomatopoeia: 'คำเลียนเสียง', examples: 'ตัวอย่างประโยค', anime: 'ในอนิเมะ', related: 'คำเลียนเสียงที่เกี่ยวข้อง', meaning: 'ความหมาย', type: 'ประเภท', listenPron: 'ฟัง' },
 };
 const t = labels[locale] || labels.en;
 
@@ -60,6 +61,7 @@ const typeLabels: Record<string, Record<string, string>> = {
   en: { giongo: 'Giongo — Actual sounds', giseigo: 'Giseigo — Voiced sounds', gitaigo: 'Gitaigo — States & textures', giyougo: 'Giyougo — Manner of action', gijougo: 'Gijougo — Emotions & feelings' },
   es: { giongo: 'Giongo — Sonidos reales', giseigo: 'Giseigo — Sonidos de voz', gitaigo: 'Gitaigo — Estados y texturas', giyougo: 'Giyougo — Manera de actuar', gijougo: 'Gijougo — Emociones y sentimientos' },
   'zh-tw': { giongo: '擬音語 — 實際聲音', giseigo: '擬聲語 — 模仿聲響', gitaigo: '擬態語 — 狀態與質感', giyougo: '擬容語 — 動作方式', gijougo: '擬情語 — 情緒與感受' },
+  th: { giongo: 'กิอนโกะ — เสียงจริง', giseigo: 'กิเซโกะ — เสียงพูด', gitaigo: 'กิไตโกะ — สถานะและพื้นผิว', giyougo: 'กิโยโกะ — ลักษณะการกระทำ', gijougo: 'กิโจโกะ — อารมณ์และความรู้สึก' },
 };
 const tTypeLabel = typeLabels[locale] || typeLabels.en;
 

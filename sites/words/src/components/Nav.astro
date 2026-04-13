@@ -9,24 +9,27 @@ const labels: Record<string, { waseiEigo: string; onomatopoeia: string; anime: s
   en: { waseiEigo: 'Wasei-Eigo', onomatopoeia: 'Onomatopoeia', anime: 'Anime Japanese' },
   es: { waseiEigo: 'Wasei-Eigo', onomatopoeia: 'Onomatopeyas', anime: 'Japonés Anime' },
   'zh-tw': { waseiEigo: '和製英語', onomatopoeia: '擬聲擬態詞', anime: '動漫日語' },
+  th: { waseiEigo: 'วาเซอิ-เอโกะ', onomatopoeia: 'คำเลียนเสียง', anime: 'ภาษาญี่ปุ่นจากอนิเมะ' },
 };
 
 const langNames: Record<string, string> = {
   en: 'EN',
   es: 'ES',
   'zh-tw': '繁中',
+  th: 'TH',
 };
 
 const langFull: Record<string, string> = {
   en: 'English',
   es: 'Español',
   'zh-tw': '繁體中文',
+  th: 'ภาษาไทย',
 };
 
 const t = labels[locale] || labels.en;
 
 const path = Astro.url.pathname;
-const allLocales = ['en', 'es', 'zh-tw'] as const;
+const allLocales = ['en', 'es', 'zh-tw', 'th'] as const;
 
 function switchLocalePath(targetLocale: string): string {
   return path.replace(new RegExp(`^/${locale}/`), `/${targetLocale}/`).replace(new RegExp(`^/${locale}$`), `/${targetLocale}/`);

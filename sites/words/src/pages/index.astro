@@ -1,4 +1,10 @@
 ---
 // Root redirects to zh-tw (primary target locale)
-return Astro.redirect('/zh-tw/');
 ---
+
+<html>
+  <head>
+    <meta http-equiv="refresh" content="0;url=/zh-tw/" />
+    <link rel="canonical" href="/zh-tw/" />
+  </head>
+</html>

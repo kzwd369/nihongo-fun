@@ -65,6 +65,7 @@ const labels: Record<string, Record<string, string>> = {
   en: { home: 'Home', waseiEigo: 'Wasei-Eigo', examples: 'Examples', anime: 'In Anime', related: 'Related Wasei-Eigo', pronCompare: 'Pronunciation Compare', inJapan: 'In Japan', inEnglish: 'In English' },
   es: { home: 'Inicio', waseiEigo: 'Wasei-Eigo', examples: 'Ejemplos', anime: 'En el Anime', related: 'Wasei-Eigo Relacionados', pronCompare: 'Comparar Pronunciación', inJapan: 'En Japón', inEnglish: 'En inglés' },
   'zh-tw': { home: '首頁', waseiEigo: '和製英語', examples: '例句', anime: '動漫裡的用法', related: '相關和製英語', pronCompare: '發音比較', inJapan: '在日本', inEnglish: '在英語圈' },
+  th: { home: 'หน้าแรก', waseiEigo: 'วาเซอิ-เอโกะ', examples: 'ตัวอย่างประโยค', anime: 'ในอนิเมะ', related: 'วาเซอิ-เอโกะที่เกี่ยวข้อง', pronCompare: 'เปรียบเทียบการออกเสียง', inJapan: 'ในญี่ปุ่น', inEnglish: 'ในภาษาอังกฤษ' },
 };
 const t = labels[locale] || labels.en;
 
@@ -124,11 +125,11 @@ const breadcrumbs = [
     <!-- Meta grid -->
     <div class="meta-grid">
       <div class="meta-item">
-        <div class="meta-label">{locale === 'zh-tw' ? '日語意思' : locale === 'es' ? 'Significado en japonés' : 'Japanese meaning'}</div>
+        <div class="meta-label">{locale === 'zh-tw' ? '日語意思' : locale === 'es' ? 'Significado en japonés' : locale === 'th' ? 'ความหมายในญี่ปุ่น' : 'Japanese meaning'}</div>
         <div>{data.japaneseMeaning}</div>
       </div>
       <div class="meta-item">
-        <div class="meta-label">{locale === 'zh-tw' ? '英語原意' : locale === 'es' ? 'Significado original en inglés' : 'Original English meaning'}</div>
+        <div class="meta-label">{locale === 'zh-tw' ? '英語原意' : locale === 'es' ? 'Significado original en inglés' : locale === 'th' ? 'ความหมายภาษาอังกฤษดั้งเดิม' : 'Original English meaning'}</div>
         <div>{data.englishMeaning}</div>
       </div>
     </div>
@@ -157,7 +158,7 @@ const breadcrumbs = [
         </button>
         <div class="unique-badge">
           <span class="unique-icon">💡</span>
-          <span>{locale === 'zh-tw' ? '這個詞在英語中不存在！' : locale === 'es' ? '¡Esta palabra no existe en inglés!' : "This word doesn't exist in English!"}</span>
+          <span>{locale === 'zh-tw' ? '這個詞在英語中不存在！' : locale === 'es' ? '¡Esta palabra no existe en inglés!' : locale === 'th' ? 'คำนี้ไม่มีในภาษาอังกฤษ!' : "This word doesn't exist in English!"}</span>
         </div>
       </div>
     )}

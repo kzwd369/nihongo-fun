@@ -1,7 +1,7 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-const locales = ['en', 'es', 'zh-tw'] as const;
+const locales = ['en', 'es', 'zh-tw', 'th'] as const;
 const localeEnum = z.enum(locales);
 
 /** Shared fields across all word-type collections */

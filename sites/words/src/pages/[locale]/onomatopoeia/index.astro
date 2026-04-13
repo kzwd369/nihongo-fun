@@ -18,6 +18,7 @@ export async function getStaticPaths() {
     { params: { locale: 'en' } },
     { params: { locale: 'es' } },
     { params: { locale: 'zh-tw' } },
+    { params: { locale: 'th' } },
   ];
 }
 
@@ -33,6 +34,7 @@ const labels: Record<string, Record<string, string>> = {
   en: { title: 'Onomatopoeia — Japanese Sound Words', subtitle: 'Expressive words that mimic sounds, feelings, and textures — a uniquely rich part of Japanese.', home: 'Home' },
   es: { title: 'Onomatopeyas — Palabras de sonido japonesas', subtitle: 'Palabras expresivas que imitan sonidos, sentimientos y texturas — una parte única del japonés.', home: 'Inicio' },
   'zh-tw': { title: '擬聲擬態詞 — 日語的聲音詞彙', subtitle: '模仿聲音、感覺和質感的表達詞彙 — 日語中獨特而豐富的一部分。', home: '首頁' },
+  th: { title: 'คำเลียนเสียง — คำเสียงในภาษาญี่ปุ่น', subtitle: 'คำที่สื่อความรู้สึกเลียนแบบเสียง ความรู้สึก และพื้นผิว — ส่วนที่เป็นเอกลักษณ์ของภาษาญี่ปุ่น', home: 'หน้าแรก' },
 };
 const t = labels[locale!] || labels.en;
 
@@ -40,6 +42,7 @@ const typeLabels: Record<string, Record<string, string>> = {
   en: { giongo: 'Sound', giseigo: 'Voice', gitaigo: 'State', giyougo: 'Action', gijougo: 'Emotion' },
   es: { giongo: 'Sonido', giseigo: 'Voz', gitaigo: 'Estado', giyougo: 'Acción', gijougo: 'Emoción' },
   'zh-tw': { giongo: '聲音', giseigo: '聲響', gitaigo: '狀態', giyougo: '動作', gijougo: '情感' },
+  th: { giongo: 'เสียง', giseigo: 'เสียงพูด', gitaigo: 'สถานะ', giyougo: 'การกระทำ', gijougo: 'อารมณ์' },
 };
 const tType = typeLabels[locale!] || typeLabels.en;
 

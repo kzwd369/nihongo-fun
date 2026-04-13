@@ -16,11 +16,12 @@ const langMap: Record<string, string> = {
   en: 'en',
   es: 'es',
   'zh-tw': 'zh-Hant',
+  th: 'th',
 };
 const htmlLang = langMap[locale] || locale;
 
 const site = 'https://nihongo-fun.com';
-const allLocales = ['en', 'es', 'zh-tw'] as const;
+const allLocales = ['en', 'es', 'zh-tw', 'th'] as const;
 const hrefLangEntries = pagePath
   ? allLocales.map(loc => ({
       lang: langMap[loc] || loc,

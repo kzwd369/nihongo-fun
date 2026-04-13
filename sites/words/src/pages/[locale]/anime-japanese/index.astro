@@ -18,6 +18,7 @@ export async function getStaticPaths() {
     { params: { locale: 'en' } },
     { params: { locale: 'es' } },
     { params: { locale: 'zh-tw' } },
+    { params: { locale: 'th' } },
   ];
 }
 
@@ -33,6 +34,7 @@ const labels: Record<string, Record<string, string>> = {
   en: { title: 'Anime Japanese — Learn Japanese Through Anime', subtitle: 'Essential Japanese words and phrases you\'ll actually hear in anime — explained with real context.', home: 'Home' },
   es: { title: 'Japonés Anime — Aprende japonés con anime', subtitle: 'Palabras y frases esenciales del japonés que realmente escucharás en el anime — explicadas con contexto real.', home: 'Inicio' },
   'zh-tw': { title: '動漫日語 — 透過動漫學日語', subtitle: '你在動漫中真正會聽到的日語單字和片語 — 搭配真實語境解說。', home: '首頁' },
+  th: { title: 'ภาษาญี่ปุ่นจากอนิเมะ — เรียนญี่ปุ่นผ่านอนิเมะ', subtitle: 'คำและวลีภาษาญี่ปุ่นที่จำเป็นที่คุณจะได้ยินจริงในอนิเมะ — อธิบายพร้อมบริบทจริง', home: 'หน้าแรก' },
 };
 const t = labels[locale!] || labels.en;
 
@@ -40,6 +42,7 @@ const categoryLabels: Record<string, Record<string, string>> = {
   en: { social: 'Social', emotion: 'Emotion', daily: 'Daily Life', culture: 'Culture', action: 'Action' },
   es: { social: 'Social', emotion: 'Emoción', daily: 'Vida Diaria', culture: 'Cultura', action: 'Acción' },
   'zh-tw': { social: '社交', emotion: '情感', daily: '日常生活', culture: '文化', action: '動作' },
+  th: { social: 'สังคม', emotion: 'อารมณ์', daily: 'ชีวิตประจำวัน', culture: 'วัฒนธรรม', action: 'แอ็คชัน' },
 };
 const tCat = categoryLabels[locale!] || categoryLabels.en;
 
