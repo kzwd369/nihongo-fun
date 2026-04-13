@@ -1,0 +1,196 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Nav from '../../../components/Nav.astro';
+
+const illustrations = import.meta.glob('../../../components/illustrations/*Anime.astro', { eager: true });
+
+function getIllustration(slug: string) {
+  const name = slug.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join('');
+  const key = `../../../components/illustrations/${name}Anime.astro`;
+  const mod = illustrations[key] as { default: any } | undefined;
+  return mod?.default;
+}
+
+export async function getStaticPaths() {
+  return [
+    { params: { locale: 'en' } },
+    { params: { locale: 'es' } },
+    { params: { locale: 'zh-tw' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const isNoindex = locale === 'en';
+
+const allEntries = await getCollection('anime-japanese');
+const entries = allEntries
+  .filter(e => e.data.locale === locale && !e.data.draft)
+  .sort((a, b) => a.data.slug.localeCompare(b.data.slug));
+
+const labels: Record<string, Record<string, string>> = {
+  en: { title: 'Anime Japanese — Learn Japanese Through Anime', subtitle: 'Essential Japanese words and phrases you\'ll actually hear in anime — explained with real context.', home: 'Home' },
+  es: { title: 'Japonés Anime — Aprende japonés con anime', subtitle: 'Palabras y frases esenciales del japonés que realmente escucharás en el anime — explicadas con contexto real.', home: 'Inicio' },
+  'zh-tw': { title: '動漫日語 — 透過動漫學日語', subtitle: '你在動漫中真正會聽到的日語單字和片語 — 搭配真實語境解說。', home: '首頁' },
+};
+const t = labels[locale!] || labels.en;
+
+const categoryLabels: Record<string, Record<string, string>> = {
+  en: { social: 'Social', emotion: 'Emotion', daily: 'Daily Life', culture: 'Culture', action: 'Action' },
+  es: { social: 'Social', emotion: 'Emoción', daily: 'Vida Diaria', culture: 'Cultura', action: 'Acción' },
+  'zh-tw': { social: '社交', emotion: '情感', daily: '日常生活', culture: '文化', action: '動作' },
+};
+const tCat = categoryLabels[locale!] || categoryLabels.en;
+
+const categoryColors: Record<string, { bg: string; badge: string; text: string }> = {
+  social:  { bg: 'linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%)', badge: 'linear-gradient(135deg, #5c6bc0, #3949ab)', text: '#1a237e' },
+  emotion: { bg: 'linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%)', badge: 'linear-gradient(135deg, #e91e63, #c2185b)', text: '#880e4f' },
+  daily:   { bg: 'linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)', badge: 'linear-gradient(135deg, #ff9800, #f57c00)', text: '#e65100' },
+  culture: { bg: 'linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%)', badge: 'linear-gradient(135deg, #00bcd4, #0097a7)', text: '#006064' },
+  action:  { bg: 'linear-gradient(135deg, #fbe9e7 0%, #ffccbc 100%)', badge: 'linear-gradient(135deg, #ff5722, #e64a19)', text: '#bf360c' },
+};
+---
+
+<BaseLayout
+  title={`${t.title} | Nihongo Fun`}
+  description={t.subtitle}
+  locale={locale!}
+  noindex={isNoindex}
+  pagePath="/anime-japanese/"
+>
+  <Nav locale={locale!} />
+
+  <main class="pillar">
+    <div class="pillar-hero">
+      <h1>{t.title}</h1>
+      <p>{t.subtitle}</p>
+    </div>
+
+    <div class="word-grid">
+      {entries.map(entry => {
+        const Illust = getIllustration(entry.data.slug);
+        const colors = categoryColors[entry.data.category] || categoryColors.culture;
+        return (
+          <a href={`/${locale}/anime-japanese/${entry.data.slug}/`} class="word-card" style={`--card-bg: ${colors.bg}; --type-badge: ${colors.badge}; --type-text: ${colors.text};`}>
+            <div class="card-layout">
+              {Illust && (
+                <div class="card-icon">
+                  <Illust />
+                </div>
+              )}
+              <div class="card-text">
+                <div class="article-title">{entry.data.title}</div>
+                <div class="article-desc">{entry.data.metaDescription}</div>
+                <span class="word-type">{tCat[entry.data.category] || entry.data.category}</span>
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .pillar {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .pillar-hero {
+    text-align: center;
+    padding: 48px 0 32px;
+  }
+  .pillar-hero h1 {
+    font-size: 28px;
+    font-weight: 800;
+  }
+  .pillar-hero p {
+    color: var(--text-light);
+    margin-top: 8px;
+    font-size: 16px;
+  }
+  .word-grid {
+    display: grid;
+    gap: 16px;
+    padding-bottom: 60px;
+  }
+  .word-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 16px;
+    padding: 24px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .word-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    text-decoration: none;
+  }
+  .card-layout {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .card-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .card-icon :global(svg) {
+    width: 72px;
+    height: 58px;
+    border-radius: 8px;
+  }
+  .card-text {
+    flex: 1;
+    min-width: 0;
+  }
+  .article-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .article-desc {
+    margin-top: 6px;
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .word-type {
+    display: inline-block;
+    margin-top: 8px;
+    background: var(--type-badge);
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+  @media (max-width: 600px) {
+    .card-icon {
+      width: 64px;
+      height: 64px;
+    }
+    .card-icon :global(svg) {
+      width: 56px;
+      height: 45px;
+    }
+    .article-title { font-size: 16px; }
+  }
+</style>

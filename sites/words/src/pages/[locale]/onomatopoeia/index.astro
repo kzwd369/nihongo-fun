@@ -5,10 +5,9 @@ import Nav from '../../../components/Nav.astro';
 
 const illustrations = import.meta.glob('../../../components/illustrations/*.astro', { eager: true });
 
-function getIllustration(slug: string, vsPattern: string) {
+function getIllustration(slug: string) {
   const capitalize = slug.charAt(0).toUpperCase() + slug.slice(1);
-  const suffix = vsPattern === 'same' ? 'Same' : 'JP';
-  const key = `../../../components/illustrations/${capitalize}${suffix}.astro`;
+  const key = `../../../components/illustrations/${capitalize}Ono.astro`;
   const mod = illustrations[key] as { default: any } | undefined;
   return mod?.default;
 }
@@ -24,33 +23,33 @@ export async function getStaticPaths() {
 const { locale } = Astro.params;
 const isNoindex = locale === 'en';
 
-const allEntries = await getCollection('wasei-eigo');
+const allEntries = await getCollection('onomatopoeia');
 const entries = allEntries
   .filter(e => e.data.locale === locale && !e.data.draft)
   .sort((a, b) => a.data.slug.localeCompare(b.data.slug));
 
 const labels: Record<string, Record<string, string>> = {
-  en: { title: 'Wasei-Eigo — Japanese-Made English', subtitle: 'Words that look English but mean something completely different in Japanese.', home: 'Home' },
-  es: { title: 'Wasei-Eigo — Inglés hecho en Japón', subtitle: 'Palabras que parecen inglés pero significan algo completamente diferente en japonés.', home: 'Inicio' },
-  'zh-tw': { title: '和製英語 — 日本人自創的英語', subtitle: '看起來像英文，但在日語中意思完全不同的詞彙。', home: '首頁' },
+  en: { title: 'Onomatopoeia — Japanese Sound Words', subtitle: 'Expressive words that mimic sounds, feelings, and textures — a uniquely rich part of Japanese.', home: 'Home' },
+  es: { title: 'Onomatopeyas — Palabras de sonido japonesas', subtitle: 'Palabras expresivas que imitan sonidos, sentimientos y texturas — una parte única del japonés.', home: 'Inicio' },
+  'zh-tw': { title: '擬聲擬態詞 — 日語的聲音詞彙', subtitle: '模仿聲音、感覺和質感的表達詞彙 — 日語中獨特而豐富的一部分。', home: '首頁' },
 };
 const t = labels[locale!] || labels.en;
 
-// Category → color map
-const catColors: Record<string, { bg: string; badge: string }> = {
-  housing:       { bg: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)', badge: '#2e7d32' },
-  work:          { bg: 'linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)', badge: '#1565c0' },
-  'daily-life':  { bg: 'linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)', badge: '#e65100' },
-  technology:    { bg: 'linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%)', badge: '#283593' },
-  food:          { bg: 'linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%)', badge: '#c2185b' },
-  education:     { bg: 'linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%)', badge: '#f57f17' },
-  business:      { bg: 'linear-gradient(135deg, #eceff1 0%, #cfd8dc 100%)', badge: '#37474f' },
-  fashion:       { bg: 'linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%)', badge: '#7b1fa2' },
-  entertainment: { bg: 'linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%)', badge: '#00838f' },
-  personality:   { bg: 'linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%)', badge: '#ad1457' },
-  culture:       { bg: 'linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)', badge: '#e65100' },
+const typeLabels: Record<string, Record<string, string>> = {
+  en: { giongo: 'Sound', giseigo: 'Voice', gitaigo: 'State', giyougo: 'Action', gijougo: 'Emotion' },
+  es: { giongo: 'Sonido', giseigo: 'Voz', gitaigo: 'Estado', giyougo: 'Acción', gijougo: 'Emoción' },
+  'zh-tw': { giongo: '聲音', giseigo: '聲響', gitaigo: '狀態', giyougo: '動作', gijougo: '情感' },
 };
-const defaultColor = { bg: 'linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%)', badge: '#616161' };
+const tType = typeLabels[locale!] || typeLabels.en;
+
+// Type → gradient color map
+const typeColors: Record<string, { bg: string; badge: string; text: string }> = {
+  giongo:  { bg: 'linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)', badge: 'linear-gradient(135deg, #ff9800, #f57c00)', text: '#e65100' },
+  giseigo: { bg: 'linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%)', badge: 'linear-gradient(135deg, #e91e63, #c2185b)', text: '#880e4f' },
+  gitaigo: { bg: 'linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%)', badge: 'linear-gradient(135deg, #5c6bc0, #3949ab)', text: '#1a237e' },
+  giyougo: { bg: 'linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%)', badge: 'linear-gradient(135deg, #00bcd4, #0097a7)', text: '#006064' },
+  gijougo: { bg: 'linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%)', badge: 'linear-gradient(135deg, #e91e63, #9c27b0)', text: '#880e4f' },
+};
 ---
 
 <BaseLayout
@@ -58,7 +57,7 @@ const defaultColor = { bg: 'linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%)', 
   description={t.subtitle}
   locale={locale!}
   noindex={isNoindex}
-  pagePath="/wasei-eigo/"
+  pagePath="/onomatopoeia/"
 >
   <Nav locale={locale!} />
 
@@ -70,10 +69,10 @@ const defaultColor = { bg: 'linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%)', 
 
     <div class="word-grid">
       {entries.map(entry => {
-        const Illust = getIllustration(entry.data.slug, entry.data.vsPattern);
-        const colors = catColors[entry.data.category] || defaultColor;
+        const Illust = getIllustration(entry.data.slug);
+        const colors = typeColors[entry.data.type] || typeColors.giongo;
         return (
-          <a href={`/${locale}/wasei-eigo/${entry.data.slug}/`} class="word-card" style={`--card-bg: ${colors.bg}; --cat-color: ${colors.badge};`}>
+          <a href={`/${locale}/onomatopoeia/${entry.data.slug}/`} class="word-card" style={`--card-bg: ${colors.bg}; --type-badge: ${colors.badge}; --type-text: ${colors.text};`}>
             <div class="card-layout">
               {Illust && (
                 <div class="card-icon">
@@ -83,12 +82,8 @@ const defaultColor = { bg: 'linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%)', 
               <div class="card-text">
                 <div class="word-jp">{entry.data.japanese}</div>
                 <div class="word-romaji">{entry.data.romaji}</div>
-                <div class="word-vs">
-                  <span class="vs-jp">{entry.data.japaneseMeaning}</span>
-                  <span class="vs-arrow">≠</span>
-                  <span class="vs-en">{entry.data.originalEnglish}</span>
-                </div>
-                <span class="word-cat">{entry.data.category}</span>
+                <div class="word-meaning">{entry.data.meaning}</div>
+                <span class="word-type">{tType[entry.data.type]}</span>
               </div>
             </div>
             {entry.data.jlpt && <span class="word-jlpt">{entry.data.jlpt}</span>}
@@ -174,44 +169,22 @@ const defaultColor = { bg: 'linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%)', 
     color: var(--text-light);
     margin-top: 2px;
   }
-  .word-vs {
+  .word-meaning {
     margin-top: 8px;
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .vs-jp {
-    background: rgba(255,255,255,0.7);
-    padding: 2px 10px;
-    border-radius: 6px;
-    font-weight: 500;
+    font-size: 14px;
     color: var(--text);
-    backdrop-filter: blur(4px);
+    line-height: 1.4;
   }
-  .vs-arrow {
-    color: var(--text-light);
-    font-weight: 700;
-  }
-  .vs-en {
-    background: rgba(255,255,255,0.5);
-    padding: 2px 10px;
-    border-radius: 6px;
-    color: var(--text-light);
-    backdrop-filter: blur(4px);
-  }
-  .word-cat {
+  .word-type {
     display: inline-block;
     margin-top: 8px;
-    background: var(--cat-color);
-    color: #fff;
+    background: var(--type-badge);
     padding: 3px 12px;
     border-radius: 20px;
     font-size: 11px;
     font-weight: 700;
+    color: #fff;
     letter-spacing: 0.5px;
-    text-transform: capitalize;
   }
   .word-jlpt {
     position: absolute;
@@ -235,6 +208,5 @@ const defaultColor = { bg: 'linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%)', 
       height: 45px;
     }
     .word-jp { font-size: 22px; }
-    .word-vs { font-size: 12px; }
   }
 </style>

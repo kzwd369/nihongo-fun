@@ -1,0 +1,356 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Nav from '../../../components/Nav.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import RelatedWords from '../../../components/RelatedWords.astro';
+
+const illustrations = import.meta.glob('../../../components/illustrations/*Anime.astro', { eager: true });
+
+function getIllustration(slug: string) {
+  const name = slug.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join('');
+  const key = `../../../components/illustrations/${name}Anime.astro`;
+  const mod = illustrations[key] as { default: any } | undefined;
+  return mod?.default;
+}
+
+export async function getStaticPaths() {
+  const entries = await getCollection('anime-japanese');
+  return entries.map(entry => ({
+    params: { locale: entry.data.locale, slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const { Content } = await render(entry);
+
+const locale = data.locale;
+const HeroSVG = getIllustration(data.slug);
+const isNoindex = locale === 'en';
+
+// Resolve cross-pillar links
+const allWasei = await getCollection('wasei-eigo');
+const allOno = await getCollection('onomatopoeia');
+const allAnime = await getCollection('anime-japanese');
+
+const resolvedWasei = data.relatedWaseiEigo
+  .map(slug => allWasei.find(e => e.data.locale === locale && e.data.slug === slug))
+  .filter(Boolean)
+  .map(e => ({
+    slug: e!.data.slug,
+    japanese: e!.data.japanese,
+    label: e!.data.japaneseMeaning,
+  }));
+
+const resolvedOno = data.relatedOnomatopoeia
+  .map(slug => allOno.find(e => e.data.locale === locale && e.data.slug === slug))
+  .filter(Boolean)
+  .map(e => ({
+    slug: e!.data.slug,
+    japanese: e!.data.japanese,
+    label: e!.data.meaning,
+  }));
+
+const resolvedArticles = data.relatedArticles
+  .map(slug => allAnime.find(e => e.data.locale === locale && e.data.slug === slug))
+  .filter(Boolean)
+  .map(e => ({
+    slug: e!.data.slug,
+    title: e!.data.title,
+  }));
+
+// i18n labels
+const labels: Record<string, Record<string, string>> = {
+  en: { home: 'Home', anime: 'Anime Japanese', relatedWasei: 'Related Wasei-Eigo', relatedOno: 'Related Onomatopoeia', relatedArticles: 'More Anime Japanese' },
+  es: { home: 'Inicio', anime: 'Japonés Anime', relatedWasei: 'Wasei-Eigo Relacionado', relatedOno: 'Onomatopeyas Relacionadas', relatedArticles: 'Más Japonés Anime' },
+  'zh-tw': { home: '首頁', anime: '動漫日語', relatedWasei: '相關和製英語', relatedOno: '相關擬聲擬態詞', relatedArticles: '更多動漫日語' },
+};
+const t = labels[locale] || labels.en;
+
+const categoryLabels: Record<string, Record<string, string>> = {
+  en: { social: 'Social', emotion: 'Emotion', daily: 'Daily Life', culture: 'Culture', action: 'Action' },
+  es: { social: 'Social', emotion: 'Emoción', daily: 'Vida Diaria', culture: 'Cultura', action: 'Acción' },
+  'zh-tw': { social: '社交', emotion: '情感', daily: '日常生活', culture: '文化', action: '動作' },
+};
+const tCat = categoryLabels[locale] || categoryLabels.en;
+
+const categoryThemes: Record<string, { accent: string; light: string; gradient: string }> = {
+  social:  { accent: '#3949ab', light: '#e8eaf6', gradient: 'linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%)' },
+  emotion: { accent: '#c2185b', light: '#fce4ec', gradient: 'linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%)' },
+  daily:   { accent: '#f57c00', light: '#fff3e0', gradient: 'linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)' },
+  culture: { accent: '#00897b', light: '#e0f2f1', gradient: 'linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%)' },
+  action:  { accent: '#e64a19', light: '#fbe9e7', gradient: 'linear-gradient(135deg, #fbe9e7 0%, #ffccbc 100%)' },
+};
+const theme = categoryThemes[data.category] || categoryThemes.culture;
+
+// JSON-LD
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Article',
+      headline: data.title,
+      description: data.metaDescription,
+      publisher: { '@type': 'Organization', name: 'Nihongo Fun' },
+      ...(data.publishedAt && { datePublished: data.publishedAt }),
+      ...(data.updatedAt && { dateModified: data.updatedAt }),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: t.home, item: `https://nihongo-fun.com/${locale}/` },
+        { '@type': 'ListItem', position: 2, name: t.anime, item: `https://nihongo-fun.com/${locale}/anime-japanese/` },
+        { '@type': 'ListItem', position: 3, name: data.title },
+      ],
+    },
+  ],
+};
+
+const breadcrumbs = [
+  { label: t.home, href: `/${locale}/` },
+  { label: t.anime, href: `/${locale}/anime-japanese/` },
+  { label: tCat[data.category] || data.category },
+  { label: data.title },
+];
+---
+
+<BaseLayout
+  title={`${data.title} | Nihongo Fun`}
+  description={data.metaDescription}
+  locale={locale}
+  noindex={isNoindex}
+  jsonLd={jsonLd}
+  pagePath={`/anime-japanese/${data.slug}/`}
+>
+  <Nav locale={locale} />
+  <Breadcrumb items={breadcrumbs} />
+
+  <!-- Hero -->
+  <div class="article-hero">
+    <div class="hero-inner" style={`--theme-gradient: ${theme.gradient};`}>
+      {HeroSVG && (
+        <div class="hero-illustration">
+          <HeroSVG />
+        </div>
+      )}
+      <h1>{data.title}</h1>
+      <div class="hero-badge-row">
+        <span class="hero-badge" style={`background: ${theme.accent}; color: #fff;`}>{tCat[data.category] || data.category}</span>
+        {data.tags.slice(0, 3).map(tag => (
+          <span class="hero-tag">{tag}</span>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="content" style={`--theme-accent: ${theme.accent}; --theme-light: ${theme.light};`}>
+    <div class="content-card content-card--prose prose">
+      <Content />
+    </div>
+
+    <!-- Cross-pillar: Related Wasei-Eigo -->
+    {resolvedWasei.length > 0 && (
+      <div class="content-card">
+        <h2>{t.relatedWasei}</h2>
+        <RelatedWords
+          words={resolvedWasei}
+          locale={locale}
+          collection="wasei-eigo"
+        />
+      </div>
+    )}
+
+    <!-- Cross-pillar: Related Onomatopoeia -->
+    {resolvedOno.length > 0 && (
+      <div class="content-card">
+        <h2>{t.relatedOno}</h2>
+        <RelatedWords
+          words={resolvedOno}
+          locale={locale}
+          collection="onomatopoeia"
+        />
+      </div>
+    )}
+
+    <!-- Related Anime Articles -->
+    {resolvedArticles.length > 0 && (
+      <div class="content-card">
+        <h2>{t.relatedArticles}</h2>
+        <div class="related-articles">
+          {resolvedArticles.map(a => (
+            <a href={`/${locale}/anime-japanese/${a.slug}/`} class="related-article-link">
+              {a.title}
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+
+  <footer>
+    <p>Nihongo Fun — <a href={`/${locale}/`}>{t.home}</a></p>
+  </footer>
+</BaseLayout>
+
+<style>
+  .article-hero {
+    max-width: 720px;
+    margin: 16px auto 0;
+    padding: 0 24px;
+  }
+  .hero-inner {
+    background: var(--theme-gradient);
+    border-radius: 16px;
+    padding: 48px 32px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+  .hero-illustration {
+    margin-bottom: 16px;
+  }
+  .hero-inner h1 {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+  .hero-badge-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .hero-badge {
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .hero-tag {
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    background: rgba(0,0,0,0.06);
+    color: var(--text-light);
+  }
+  .content {
+    max-width: 720px;
+    margin: 24px auto;
+    padding: 0 24px;
+  }
+  .content-card {
+    background: var(--card);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    padding: 32px;
+    margin-bottom: 20px;
+  }
+  .content-card--prose {
+    border-top: 3px solid var(--theme-accent);
+  }
+  .content-card h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--theme-accent, var(--accent));
+    display: inline-block;
+  }
+  .prose :global(h2) {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 24px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--theme-accent, var(--accent));
+    display: inline-block;
+    color: var(--theme-accent, var(--text));
+  }
+  .prose :global(h3) {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 20px 0 8px;
+    color: var(--text);
+  }
+  .prose :global(p) {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  .prose :global(ul), .prose :global(ol) {
+    margin-bottom: 16px;
+    padding-left: 24px;
+  }
+  .prose :global(li) {
+    margin-bottom: 8px;
+  }
+  .prose :global(strong) {
+    font-weight: 700;
+  }
+  .prose :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+  .prose :global(th) {
+    text-align: left;
+    padding: 10px 12px;
+    background: var(--theme-light, var(--tag-bg));
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .prose :global(td) {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .prose :global(blockquote) {
+    background: linear-gradient(135deg, #f3e5f5 0%, #fce4ec 100%);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0;
+    font-style: normal;
+  }
+  .prose :global(blockquote p) {
+    margin-bottom: 0;
+  }
+  .related-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .related-article-link {
+    display: block;
+    padding: 12px 16px;
+    background: var(--tag-bg);
+    border-radius: 10px;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .related-article-link:hover {
+    background: var(--theme-light, var(--accent-light));
+    color: var(--theme-accent, var(--accent));
+    text-decoration: none;
+  }
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-light);
+  }
+  @media (max-width: 600px) {
+    .hero-inner { padding: 32px 20px; }
+    .hero-inner h1 { font-size: 22px; }
+    .content-card { padding: 20px; }
+  }
+</style>
