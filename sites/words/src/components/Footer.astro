@@ -5,11 +5,11 @@ interface Props {
 
 const { locale } = Astro.props;
 
-const labels: Record<string, { home: string; sister: string }> = {
-  en: { home: 'Home', sister: 'Sister Site' },
-  es: { home: 'Inicio', sister: 'Sitio Hermano' },
-  'zh-tw': { home: '首頁', sister: '姊妹站' },
-  th: { home: 'หน้าแรก', sister: 'เว็บไซต์พี่น้อง' },
+const labels: Record<string, { home: string; about: string; privacy: string; disclaimer: string; sister: string }> = {
+  en: { home: 'Home', about: 'About', privacy: 'Privacy', disclaimer: 'Disclaimer', sister: 'Sister Site' },
+  es: { home: 'Inicio', about: 'Sobre el autor', privacy: 'Privacidad', disclaimer: 'Aviso legal', sister: 'Sitio Hermano' },
+  'zh-tw': { home: '首頁', about: '關於我', privacy: '隱私權', disclaimer: '免責聲明', sister: '姊妹站' },
+  th: { home: 'หน้าแรก', about: 'เกี่ยวกับผู้เขียน', privacy: 'ความเป็นส่วนตัว', disclaimer: 'ข้อจำกัดความรับผิดชอบ', sister: 'เว็บไซต์พี่น้อง' },
 };
 
 const t = labels[locale] || labels.en;
@@ -17,7 +17,16 @@ const t = labels[locale] || labels.en;
 
 <footer>
   <div class="footer-inner">
-    <p>Nihongo Fun — <a href={`/${locale}/`}>{t.home}</a></p>
+    <nav class="footer-nav">
+      <a href={`/${locale}/`}>{t.home}</a>
+      <span class="dot">·</span>
+      <a href={`/${locale}/about/`}>{t.about}</a>
+      <span class="dot">·</span>
+      <a href={`/${locale}/privacy/`}>{t.privacy}</a>
+      <span class="dot">·</span>
+      <a href={`/${locale}/disclaimer/`}>{t.disclaimer}</a>
+    </nav>
+    <p class="brand">Nihongo Fun</p>
     <p class="sister">
       {t.sister}: <a href="https://japanmanners.com" target="_blank" rel="noopener">JapanManners.com</a>
     </p>
@@ -36,7 +45,31 @@ const t = labels[locale] || labels.en;
   .footer-inner {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
+  }
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+  }
+  .footer-nav a {
+    color: var(--text-light);
+    text-decoration: none;
+  }
+  .footer-nav a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  .dot {
+    color: var(--border);
+  }
+  .brand {
+    font-weight: 700;
+    color: var(--text);
+    font-size: 13px;
   }
   .sister {
     font-size: 12px;

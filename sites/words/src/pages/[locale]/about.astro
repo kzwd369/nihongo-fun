@@ -1,0 +1,362 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'en' } },
+    { params: { locale: 'es' } },
+    { params: { locale: 'zh-tw' } },
+    { params: { locale: 'th' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const isNoindex = locale === 'en';
+const contactFormUrl = 'https://forms.gle/PLACEHOLDER';
+
+const t: Record<string, {
+  title: string; desc: string; heading: string;
+  penNameLabel: string; penName: string;
+  intro: string; paragraphs: string[];
+  missionHeading: string; mission: string;
+  siteInfoHeading: string;
+  siteNameLabel: string; siteName: string;
+  locationLabel: string; location: string;
+  sisterLabel: string; sister: string;
+  contactHeading: string; contactP: string; contactBtn: string;
+}> = {
+  en: {
+    title: 'About — Nihongo Fun',
+    desc: 'The story behind Nihongo Fun and the person writing it.',
+    heading: 'About',
+    penNameLabel: 'Pen name',
+    penName: 'Meikyō Shisui (明鏡止水)',
+    intro: 'Born and raised in Japan. 40+ countries traveled. Living between Japan and Thailand.',
+    paragraphs: [
+      'I grew up in Japan. For as long as I can remember, I have been curious about the world beyond it — and over the years that curiosity has taken me to more than forty countries.',
+      'English has been the steady thread through all of it. It is the bridge that turned strangers into friends, and the language I still reach for whenever I am far from home.',
+      'Living in Mexico for a while made me fall for Spanish — the rhythm of the language, and the open, sun-warm personalities of the people who speak it.',
+      'Taiwan keeps pulling me back. I have visited many times, and the quiet kindness of the people there has stayed with me long after every trip.',
+      'In France, I met people who, from the other side of the world, love Japanese anime and culture with a sincerity that moved me more than I expected.',
+      'Today I split my life between Japan and Thailand. My partner is Thai.',
+    ],
+    missionHeading: 'Why this site exists',
+    mission: 'To every friend around the world who ever told me they love Japan — this site is for you. I wanted to share the fun, strange, and quietly beautiful side of the Japanese language that textbooks do not get to. That is how Nihongo Fun began.',
+    siteInfoHeading: 'Site information',
+    siteNameLabel: 'Site name',
+    siteName: 'Nihongo Fun',
+    locationLabel: 'Based in',
+    location: 'Japan',
+    sisterLabel: 'Sister site',
+    sister: 'JapanManners.com',
+    contactHeading: 'Contact',
+    contactP: 'Questions, corrections, or just want to say hi? The form below comes straight to me.',
+    contactBtn: 'Open contact form',
+  },
+  es: {
+    title: 'Sobre el autor — Nihongo Fun',
+    desc: 'La historia detrás de Nihongo Fun y la persona que lo escribe.',
+    heading: 'Sobre el autor',
+    penNameLabel: 'Seudónimo',
+    penName: 'Meikyō Shisui (明鏡止水)',
+    intro: 'Nacido y criado en Japón. Más de 40 países recorridos. Viviendo entre Japón y Tailandia.',
+    paragraphs: [
+      'Crecí en Japón. Desde que tengo memoria, el mundo de afuera me ha dado curiosidad — y con los años esa curiosidad me ha llevado a más de cuarenta países.',
+      'El inglés ha sido el hilo constante de todo el camino: el puente que convirtió a desconocidos en amigos, y el idioma al que sigo recurriendo cuando estoy lejos de casa.',
+      'Vivir un tiempo en México me hizo enamorarme del español — el ritmo del idioma y el carácter abierto y cálido, como el sol, de quienes lo hablan.',
+      'Taiwán me sigue llamando de vuelta. He ido muchas veces y la amabilidad serena de su gente me acompaña mucho después de cada viaje.',
+      'En Francia conocí a personas que, desde el otro lado del mundo, aman el anime y la cultura japonesa con una sinceridad que me conmovió más de lo que esperaba.',
+      'Hoy divido mi vida entre Japón y Tailandia. Mi pareja es tailandesa.',
+    ],
+    missionHeading: 'Por qué existe este sitio',
+    mission: 'A cada amigo alrededor del mundo que alguna vez me dijo que ama Japón — este sitio es para ti. Quería compartir el lado divertido, raro y silenciosamente hermoso del idioma japonés que los libros de texto no alcanzan a contar. Así nació Nihongo Fun.',
+    siteInfoHeading: 'Información del sitio',
+    siteNameLabel: 'Nombre del sitio',
+    siteName: 'Nihongo Fun',
+    locationLabel: 'Ubicación',
+    location: 'Japón',
+    sisterLabel: 'Sitio hermano',
+    sister: 'JapanManners.com',
+    contactHeading: 'Contacto',
+    contactP: '¿Dudas, correcciones o solo quieres saludar? El formulario llega directamente a mí.',
+    contactBtn: 'Abrir formulario de contacto',
+  },
+  'zh-tw': {
+    title: '關於我 — Nihongo Fun',
+    desc: 'Nihongo Fun 背後的故事，以及執筆者的自我介紹。',
+    heading: '關於我',
+    penNameLabel: '筆名',
+    penName: '明鏡止水（Meikyō Shisui）',
+    intro: '生於日本、長於日本。旅行過 40 多個國家，現在往來於日本與泰國之間生活。',
+    paragraphs: [
+      '我在日本出生、長大。從有記憶以來，外面的世界就一直讓我好奇——這份好奇，一路把我帶到了 40 多個國家的土地上。',
+      '英語是這段漫長旅程裡最穩定的陪伴。讓素未謀面的陌生人變成朋友的那座橋，也是我出門在外最依賴的語言。',
+      '曾經在墨西哥住過一段時間，從此愛上西班牙語。愛它的節奏，也愛講西語的人那份陽光般開朗、毫無隔閡的性格。',
+      '台灣是我一去再去的地方。每一次旅行，都會被台灣人那份不張揚的溫柔打動，餘韻久久不散。',
+      '在法國，我遇見了來自世界另一端、卻如此真摯地熱愛著日本動漫與文化的人們。那份純粹的喜愛，遠遠超出了我的想像。',
+      '現在的我，往來於日本與泰國之間生活，伴侶是泰國人。',
+    ],
+    missionHeading: '為什麼做這個網站',
+    mission: '獻給在世界各地，曾經對我說過「喜歡日本」的每一位朋友——這個網站是為你們而寫的。我想把那些課本來不及教的、有趣、奇妙、又悄悄地美好的日語，分享給你們。這就是 Nihongo Fun 的起點。',
+    siteInfoHeading: '網站資訊',
+    siteNameLabel: '網站名稱',
+    siteName: 'Nihongo Fun',
+    locationLabel: '所在地',
+    location: '日本',
+    sisterLabel: '姊妹站',
+    sister: 'JapanManners.com',
+    contactHeading: '聯絡方式',
+    contactP: '有疑問、發現錯誤、或只是想打個招呼——透過下方的表單，訊息會直接送到我手上。',
+    contactBtn: '開啟聯絡表單',
+  },
+  th: {
+    title: 'เกี่ยวกับผู้เขียน — Nihongo Fun',
+    desc: 'เรื่องราวเบื้องหลัง Nihongo Fun และตัวผู้เขียน',
+    heading: 'เกี่ยวกับผู้เขียน',
+    penNameLabel: 'นามปากกา',
+    penName: 'Meikyō Shisui (明鏡止水)',
+    intro: 'เกิดและเติบโตในญี่ปุ่น เดินทางมาแล้วกว่า 40 ประเทศ ปัจจุบันใช้ชีวิตระหว่างญี่ปุ่นและไทย',
+    paragraphs: [
+      'ผมเติบโตที่ญี่ปุ่น ตั้งแต่จำความได้ โลกภายนอกก็ทำให้ผมอยากรู้อยากเห็นอยู่เสมอ — และความอยากรู้นั้นก็พาผมเดินทางไปมากกว่า 40 ประเทศแล้วจนถึงวันนี้',
+      'ภาษาอังกฤษคือเพื่อนคู่ทางที่มั่นคงที่สุดตลอดการเดินทาง เป็นสะพานที่ทำให้คนแปลกหน้ากลายเป็นเพื่อน และเป็นภาษาที่ผมยังพึ่งพาทุกครั้งที่อยู่ไกลบ้าน',
+      'ผมเคยใช้ชีวิตอยู่ที่เม็กซิโกช่วงหนึ่ง และตกหลุมรักภาษาสเปนไปตั้งแต่นั้น — ทั้งจังหวะของภาษา และนิสัยอบอุ่น เปิดกว้างเหมือนแสงแดดของคนที่พูดภาษาสเปน',
+      'ไต้หวันเป็นที่ที่ผมกลับไปแล้วกลับไปอีก ทุกครั้งจะได้สัมผัสความใจดีอย่างเงียบ ๆ ของคนไต้หวัน และความรู้สึกนั้นก็อยู่กับผมไปอีกนานหลังทริปจบ',
+      'ที่ฝรั่งเศส ผมได้พบคนที่อยู่อีกฟากหนึ่งของโลก แต่รักอนิเมะและวัฒนธรรมญี่ปุ่นอย่างจริงใจ ความรักที่บริสุทธิ์นั้นสะเทือนใจผมเกินกว่าที่คาดไว้',
+      'ทุกวันนี้ผมใช้ชีวิตอยู่ระหว่างญี่ปุ่นกับไทย คู่ของผมเป็นคนไทย',
+    ],
+    missionHeading: 'ทำไมถึงมีเว็บไซต์นี้',
+    mission: 'สำหรับเพื่อน ๆ ทั่วโลกทุกคนที่เคยบอกผมว่ารักญี่ปุ่น — เว็บไซต์นี้สร้างขึ้นเพื่อพวกคุณ ผมอยากแบ่งปันด้านที่สนุก แปลก และงดงามอย่างเงียบ ๆ ของภาษาญี่ปุ่นที่ตำราเรียนไม่มีโอกาสได้เล่า และนั่นคือจุดเริ่มต้นของ Nihongo Fun',
+    siteInfoHeading: 'ข้อมูลเว็บไซต์',
+    siteNameLabel: 'ชื่อเว็บไซต์',
+    siteName: 'Nihongo Fun',
+    locationLabel: 'ที่ตั้ง',
+    location: 'ประเทศญี่ปุ่น',
+    sisterLabel: 'เว็บไซต์พี่น้อง',
+    sister: 'JapanManners.com',
+    contactHeading: 'ติดต่อ',
+    contactP: 'มีคำถาม พบข้อผิดพลาด หรืออยากทักทาย — ส่งผ่านฟอร์มด้านล่าง จะถึงผมโดยตรง',
+    contactBtn: 'เปิดฟอร์มติดต่อ',
+  },
+};
+
+const i = t[locale!] || t.en;
+---
+
+<BaseLayout
+  title={i.title}
+  description={i.desc}
+  locale={locale!}
+  noindex={isNoindex}
+  pagePath="/about/"
+>
+  <Nav locale={locale!} />
+
+  <article class="about">
+    <header class="about-header">
+      <div class="kanji-mark">明鏡止水</div>
+      <h1>{i.heading}</h1>
+      <p class="intro">{i.intro}</p>
+    </header>
+
+    <section class="profile-card">
+      <div class="profile-row">
+        <span class="profile-label">{i.penNameLabel}</span>
+        <span class="profile-value">{i.penName}</span>
+      </div>
+    </section>
+
+    <section class="story">
+      {i.paragraphs.map((p) => <p>{p}</p>)}
+    </section>
+
+    <section class="mission">
+      <h2>{i.missionHeading}</h2>
+      <p>{i.mission}</p>
+    </section>
+
+    <section class="site-info">
+      <h2>{i.siteInfoHeading}</h2>
+      <dl>
+        <div class="info-row">
+          <dt>{i.siteNameLabel}</dt>
+          <dd>{i.siteName}</dd>
+        </div>
+        <div class="info-row">
+          <dt>{i.locationLabel}</dt>
+          <dd>{i.location}</dd>
+        </div>
+        <div class="info-row">
+          <dt>{i.sisterLabel}</dt>
+          <dd><a href="https://japanmanners.com" target="_blank" rel="noopener">{i.sister}</a></dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="contact">
+      <h2>{i.contactHeading}</h2>
+      <p>{i.contactP}</p>
+      <a href={contactFormUrl} class="contact-btn" target="_blank" rel="noopener">{i.contactBtn}</a>
+    </section>
+  </article>
+
+  <Footer locale={locale!} />
+</BaseLayout>
+
+<style>
+  .about {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px 0;
+  }
+  .about-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .kanji-mark {
+    font-family: var(--jp-font);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    background: linear-gradient(135deg, #d84315 0%, #c2185b 50%, #4527a0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 16px;
+  }
+  .about h1 {
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+  }
+  .intro {
+    font-size: 16px;
+    color: var(--text-light);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .profile-card {
+    background: linear-gradient(135deg, #fce4ec 0%, #fff3e0 50%, #e8eaf6 100%);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 36px;
+  }
+  .profile-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .profile-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-light);
+  }
+  .profile-value {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .story p {
+    font-size: 16px;
+    line-height: 1.85;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+  .story p:last-child { margin-bottom: 0; }
+
+  .mission {
+    background: var(--accent-light);
+    border-radius: 16px;
+    padding: 28px;
+    margin: 40px 0;
+  }
+  .mission h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--accent);
+  }
+  .mission p {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .site-info {
+    margin: 40px 0;
+  }
+  .site-info h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+  .site-info dl {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .info-row {
+    display: flex;
+    padding: 14px 20px;
+    gap: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .info-row:last-child { border-bottom: none; }
+  .info-row dt {
+    flex: 0 0 130px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding-top: 2px;
+  }
+  .info-row dd {
+    flex: 1;
+    font-size: 15px;
+  }
+
+  .contact {
+    text-align: center;
+    padding: 40px 0 20px;
+  }
+  .contact h2 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  .contact p {
+    color: var(--text-light);
+    margin-bottom: 22px;
+  }
+  .contact-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #e64a19, #c2185b);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(198,40,40,0.3);
+    text-decoration: none;
+  }
+
+  @media (max-width: 600px) {
+    .about h1 { font-size: 26px; }
+    .kanji-mark { font-size: 22px; letter-spacing: 4px; }
+    .info-row { flex-direction: column; gap: 4px; padding: 12px 16px; }
+    .info-row dt { flex: none; }
+  }
+</style>

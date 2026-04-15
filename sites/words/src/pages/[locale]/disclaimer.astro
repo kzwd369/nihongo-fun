@@ -1,0 +1,318 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'en' } },
+    { params: { locale: 'es' } },
+    { params: { locale: 'zh-tw' } },
+    { params: { locale: 'th' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const isNoindex = locale === 'en';
+const lastUpdated = '2026-04-14';
+
+type Section = { heading: string; body: string[] };
+type Copy = {
+  title: string; desc: string; pageTitle: string;
+  lead: string; lastUpdatedLabel: string;
+  sections: Section[];
+  contactLink: { label: string; href: string };
+};
+
+const t: Record<string, Copy> = {
+  en: {
+    title: 'Disclaimer — Nihongo Fun',
+    desc: 'Notes on accuracy, external links, and copyright for content on Nihongo Fun.',
+    pageTitle: 'Disclaimer',
+    lead: 'A few honest notes about how we write, what we can and cannot promise, and how we handle outside content.',
+    lastUpdatedLabel: 'Last updated',
+    sections: [
+      {
+        heading: 'Accuracy of information',
+        body: [
+          'We take care when researching and writing about Japanese words, phrases, and cultural context. That said, language is alive: nuances shift, new expressions appear, and regional usage varies.',
+          'Content on this site is provided for general informational purposes only. We make no warranty that every explanation is complete, current, or suitable for any specific purpose. If you spot something that feels off, please let us know — corrections are welcome.',
+        ],
+      },
+      {
+        heading: 'Educational, not professional advice',
+        body: [
+          'Nihongo Fun is a casual learning resource, not a substitute for professional language instruction, certified translation, or legal/business guidance. Please consult a qualified professional for any decision that requires one.',
+        ],
+      },
+      {
+        heading: 'External links',
+        body: [
+          'The site includes links to external websites for reference and context. We do not control those sites, and we are not responsible for their content, accuracy, or privacy practices. Visiting them is at your own discretion.',
+        ],
+      },
+      {
+        heading: 'Copyright',
+        body: [
+          'Unless otherwise noted, text and illustrations on Nihongo Fun are the work of the site operator. Please do not reproduce them without permission.',
+          'Names of works, characters, brands, and related terms mentioned on the site belong to their respective rights holders. They appear here only for educational and referential purposes.',
+          'If you believe your rights have been affected by content on this site, please reach out through the contact form so we can look into it.',
+        ],
+      },
+      {
+        heading: 'Liability',
+        body: [
+          'To the fullest extent permitted by law, the site operator is not liable for any direct or indirect loss or damage arising from the use of, or inability to use, this site.',
+        ],
+      },
+      {
+        heading: 'Changes',
+        body: [
+          'We may update this notice from time to time. The date at the top reflects the most recent revision.',
+        ],
+      },
+    ],
+    contactLink: { label: 'Questions or a correction? Contact us', href: `/${locale}/about/#contact` },
+  },
+  es: {
+    title: 'Aviso legal — Nihongo Fun',
+    desc: 'Notas sobre exactitud, enlaces externos y derechos de autor del contenido de Nihongo Fun.',
+    pageTitle: 'Aviso legal',
+    lead: 'Unas notas honestas sobre cómo escribimos, qué podemos y qué no podemos garantizar, y cómo manejamos el contenido ajeno.',
+    lastUpdatedLabel: 'Última actualización',
+    sections: [
+      {
+        heading: 'Exactitud de la información',
+        body: [
+          'Ponemos cuidado al investigar y escribir sobre palabras, frases y contexto cultural del japonés. Aun así, el idioma está vivo: los matices cambian, aparecen expresiones nuevas y el uso varía según la región.',
+          'El contenido de este sitio se ofrece solo con fines informativos generales. No garantizamos que cada explicación sea completa, esté actualizada o sea adecuada para un propósito específico. Si encuentras algo que no te cuadre, avísanos: agradecemos las correcciones.',
+        ],
+      },
+      {
+        heading: 'Educativo, no asesoramiento profesional',
+        body: [
+          'Nihongo Fun es un recurso de aprendizaje informal, no un sustituto de la enseñanza profesional de idiomas, la traducción certificada o la asesoría legal o empresarial. Consulta a un profesional cualificado para cualquier decisión que lo requiera.',
+        ],
+      },
+      {
+        heading: 'Enlaces externos',
+        body: [
+          'El sitio incluye enlaces a páginas externas como referencia y contexto. No controlamos esos sitios y no nos hacemos responsables de su contenido, exactitud ni prácticas de privacidad. Visitarlos queda bajo tu propio criterio.',
+        ],
+      },
+      {
+        heading: 'Derechos de autor',
+        body: [
+          'Salvo que se indique lo contrario, los textos e ilustraciones de Nihongo Fun son obra del responsable del sitio. Por favor no los reproduzcas sin permiso.',
+          'Los nombres de obras, personajes, marcas y términos relacionados mencionados en el sitio pertenecen a sus respectivos titulares de derechos. Aparecen aquí únicamente con fines educativos y de referencia.',
+          'Si crees que tus derechos se han visto afectados por algún contenido del sitio, por favor contáctanos a través del formulario para que podamos revisarlo.',
+        ],
+      },
+      {
+        heading: 'Responsabilidad',
+        body: [
+          'En la máxima medida permitida por la ley, el responsable del sitio no será responsable de ningún daño directo o indirecto derivado del uso, o la imposibilidad de uso, de este sitio.',
+        ],
+      },
+      {
+        heading: 'Cambios',
+        body: [
+          'Podemos actualizar este aviso ocasionalmente. La fecha en la parte superior refleja la revisión más reciente.',
+        ],
+      },
+    ],
+    contactLink: { label: '¿Dudas o una corrección? Contáctanos', href: `/${locale}/about/#contact` },
+  },
+  'zh-tw': {
+    title: '免責聲明 — Nihongo Fun',
+    desc: 'Nihongo Fun 在內容準確性、外部連結與版權方面的說明。',
+    pageTitle: '免責聲明',
+    lead: '以下是關於本站撰寫方式、能與不能保證的事項、以及對外部內容處理方式的幾點誠實說明。',
+    lastUpdatedLabel: '最後更新',
+    sections: [
+      {
+        heading: '資訊的準確性',
+        body: [
+          '本站在撰寫日語詞彙、表達與文化背景時，會盡可能仔細查證。不過語言是活的，語感會改變、新的表達會出現，各地的用法也可能有所不同。',
+          '本站內容僅作為一般資訊提供，我們無法保證每一項說明都完整、最新、或適合您的具體用途。若您發現可疑或錯誤之處，歡迎告訴我們，非常樂意接受指正。',
+        ],
+      },
+      {
+        heading: '教育資訊，非專業意見',
+        body: [
+          'Nihongo Fun 是一個輕鬆的語言學習資源，不能取代正式的語言教學、認證翻譯、以及法律或商務上的專業建議。需要做重要決定時，請諮詢合格的專業人士。',
+        ],
+      },
+      {
+        heading: '外部連結',
+        body: [
+          '本站內含通往外部網站的連結，作為參考與補充之用。本站無法控制這些網站的內容，對其準確性與隱私權處理方式不負任何責任，是否造訪請自行斟酌。',
+        ],
+      },
+      {
+        heading: '版權',
+        body: [
+          '除另有說明者外，Nihongo Fun 網站上的文字與插圖皆由網站營運者原創，未經許可請勿轉載或重製。',
+          '本站提及的作品名稱、角色、品牌及相關名詞之權利，皆歸原權利人所有，本站僅作為教育與參考用途引用。',
+          '若您認為本站內容侵害了您的權利，請透過聯絡表單與我們聯繫，我們會盡快處理。',
+        ],
+      },
+      {
+        heading: '責任限制',
+        body: [
+          '在法律允許的最大範圍內，本站營運者對因使用本站、或無法使用本站而造成的直接或間接損失，不負任何賠償責任。',
+        ],
+      },
+      {
+        heading: '內容修訂',
+        body: [
+          '本聲明可能隨時更新，頁首日期即為最新修訂日期。',
+        ],
+      },
+    ],
+    contactLink: { label: '有疑問或想指正？請聯絡我們', href: `/${locale}/about/#contact` },
+  },
+  th: {
+    title: 'ข้อจำกัดความรับผิดชอบ — Nihongo Fun',
+    desc: 'หมายเหตุเรื่องความถูกต้องของข้อมูล ลิงก์ภายนอก และลิขสิทธิ์ของเนื้อหาใน Nihongo Fun',
+    pageTitle: 'ข้อจำกัดความรับผิดชอบ',
+    lead: 'หมายเหตุสั้น ๆ แบบตรงไปตรงมาเกี่ยวกับวิธีเขียนของเรา สิ่งที่รับรองและรับรองไม่ได้ และวิธีจัดการกับเนื้อหาภายนอก',
+    lastUpdatedLabel: 'ปรับปรุงล่าสุด',
+    sections: [
+      {
+        heading: 'ความถูกต้องของข้อมูล',
+        body: [
+          'เราตั้งใจค้นคว้าและเขียนเกี่ยวกับคำ วลี และบริบททางวัฒนธรรมของภาษาญี่ปุ่นอย่างรอบคอบ แต่ภาษาเป็นสิ่งมีชีวิต ความหมายเปลี่ยนแปลงได้ มีสำนวนใหม่ ๆ เกิดขึ้น และการใช้งานในแต่ละพื้นที่ก็แตกต่างกัน',
+          'เนื้อหาในเว็บไซต์นี้เป็นข้อมูลทั่วไปเท่านั้น เราไม่อาจรับประกันว่าคำอธิบายทุกส่วนจะครบถ้วน เป็นปัจจุบัน หรือเหมาะสมกับวัตถุประสงค์ของคุณ หากพบจุดผิดพลาด กรุณาแจ้งเราได้เลย เรายินดีรับคำแนะนำเสมอ',
+        ],
+      },
+      {
+        heading: 'เพื่อการศึกษา ไม่ใช่คำแนะนำจากผู้เชี่ยวชาญ',
+        body: [
+          'Nihongo Fun เป็นแหล่งเรียนรู้แบบสบาย ๆ ไม่ใช่การสอนภาษาอย่างเป็นทางการ การแปลที่ได้รับการรับรอง หรือคำแนะนำทางกฎหมายหรือธุรกิจ หากต้องตัดสินใจในเรื่องเหล่านั้น กรุณาปรึกษาผู้เชี่ยวชาญโดยตรง',
+        ],
+      },
+      {
+        heading: 'ลิงก์ภายนอก',
+        body: [
+          'ในเว็บไซต์นี้มีลิงก์ไปยังเว็บไซต์ภายนอกเพื่อใช้อ้างอิงและเสริมบริบท เราไม่สามารถควบคุมเว็บเหล่านั้นได้ และไม่รับผิดชอบต่อเนื้อหา ความถูกต้อง หรือนโยบายความเป็นส่วนตัวของเว็บปลายทาง การเข้าชมเป็นดุลยพินิจของคุณเอง',
+        ],
+      },
+      {
+        heading: 'ลิขสิทธิ์',
+        body: [
+          'หากไม่ได้ระบุไว้เป็นอย่างอื่น ข้อความและภาพประกอบใน Nihongo Fun เป็นผลงานของผู้ดูแลเว็บไซต์ กรุณาอย่านำไปใช้ซ้ำโดยไม่ได้รับอนุญาต',
+          'ชื่อผลงาน ตัวละคร แบรนด์ และคำศัพท์ที่เกี่ยวข้องซึ่งกล่าวถึงในเว็บไซต์เป็นของเจ้าของสิทธิ์แต่ละราย เราอ้างอิงเพื่อวัตถุประสงค์ทางการศึกษาเท่านั้น',
+          'หากคุณเห็นว่าเนื้อหาในเว็บไซต์นี้กระทบต่อสิทธิ์ของคุณ กรุณาแจ้งผ่านฟอร์มติดต่อเพื่อให้เราตรวจสอบและดำเนินการ',
+        ],
+      },
+      {
+        heading: 'ความรับผิด',
+        body: [
+          'ภายใต้ขอบเขตสูงสุดที่กฎหมายอนุญาต ผู้ดูแลเว็บไซต์ไม่รับผิดชอบต่อความเสียหายใด ๆ ทั้งทางตรงและทางอ้อมที่อาจเกิดจากการใช้งานหรือไม่สามารถใช้งานเว็บไซต์นี้ได้',
+        ],
+      },
+      {
+        heading: 'การเปลี่ยนแปลง',
+        body: [
+          'ข้อกำหนดนี้อาจปรับปรุงเป็นครั้งคราว วันที่ด้านบนคือวันที่ปรับปรุงล่าสุด',
+        ],
+      },
+    ],
+    contactLink: { label: 'มีคำถามหรืออยากแจ้งแก้ไข? ติดต่อเรา', href: `/${locale}/about/#contact` },
+  },
+};
+
+const i = t[locale!] || t.en;
+---
+
+<BaseLayout
+  title={i.title}
+  description={i.desc}
+  locale={locale!}
+  noindex={isNoindex}
+  pagePath="/disclaimer/"
+>
+  <Nav locale={locale!} />
+
+  <article class="legal">
+    <header>
+      <h1>{i.pageTitle}</h1>
+      <p class="meta">{i.lastUpdatedLabel}: {lastUpdated}</p>
+      <p class="lead">{i.lead}</p>
+    </header>
+
+    {i.sections.map((section) => (
+      <section>
+        <h2>{section.heading}</h2>
+        {section.body.map((p) => <p>{p}</p>)}
+      </section>
+    ))}
+
+    <p class="contact-link">
+      <a href={i.contactLink.href}>{i.contactLink.label} &rarr;</a>
+    </p>
+  </article>
+
+  <Footer locale={locale!} />
+</BaseLayout>
+
+<style>
+  .legal {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px 20px;
+  }
+  .legal header {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .legal h1 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+  .meta {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 16px;
+  }
+  .lead {
+    font-size: 16px;
+    color: var(--text-light);
+    line-height: 1.65;
+  }
+  .legal section {
+    margin-bottom: 32px;
+  }
+  .legal h2 {
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+  .legal p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+  .contact-link {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 15px;
+    text-align: center;
+  }
+  .contact-link a {
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  @media (max-width: 600px) {
+    .legal h1 { font-size: 26px; }
+    .legal h2 { font-size: 17px; }
+  }
+</style>

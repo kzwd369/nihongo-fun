@@ -1,0 +1,318 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: 'en' } },
+    { params: { locale: 'es' } },
+    { params: { locale: 'zh-tw' } },
+    { params: { locale: 'th' } },
+  ];
+}
+
+const { locale } = Astro.params;
+const isNoindex = locale === 'en';
+const lastUpdated = '2026-04-14';
+
+type Section = { heading: string; body: string[] };
+type Copy = {
+  title: string; desc: string; pageTitle: string;
+  lead: string; lastUpdatedLabel: string;
+  sections: Section[];
+  contactLink: { label: string; href: string };
+};
+
+const t: Record<string, Copy> = {
+  en: {
+    title: 'Privacy Policy — Nihongo Fun',
+    desc: 'How Nihongo Fun handles cookies, analytics, and third-party advertising.',
+    pageTitle: 'Privacy Policy',
+    lead: 'This page explains what information Nihongo Fun collects, why, and the third-party services involved.',
+    lastUpdatedLabel: 'Last updated',
+    sections: [
+      {
+        heading: 'Information we collect',
+        body: [
+          'Nihongo Fun does not ask for or store personal information such as names, email addresses, or payment details on its own servers.',
+          'When you visit the site, your browser automatically transmits standard technical data (IP address, browser type, referrer, pages viewed) to the services listed below. We use this data in aggregate to understand how the site is used and to improve it.',
+        ],
+      },
+      {
+        heading: 'Google Analytics',
+        body: [
+          'We use Google Analytics to understand site traffic and visitor behavior. Google Analytics uses cookies to collect anonymous usage data. This data is processed by Google under its own privacy policy.',
+          'You can opt out of Google Analytics tracking by installing the Google Analytics Opt-out Browser Add-on (https://tools.google.com/dlpage/gaoptout).',
+        ],
+      },
+      {
+        heading: 'Google AdSense',
+        body: [
+          'This site uses Google AdSense, a third-party advertising service provided by Google. Google may use cookies or device identifiers to serve ads based on your prior visits to this and other websites.',
+          'You can disable personalized advertising by visiting Google\'s Ads Settings (https://www.google.com/settings/ads). For more information about how Google uses data, see Google\'s Privacy & Terms (https://policies.google.com/technologies/partner-sites).',
+        ],
+      },
+      {
+        heading: 'Contact form',
+        body: [
+          'Our contact form is hosted on Google Forms. Messages you send through the form are delivered to the site operator. Please do not include sensitive personal information. Google\'s own privacy terms apply to form submissions.',
+        ],
+      },
+      {
+        heading: 'Cookies',
+        body: [
+          'Cookies are small text files stored on your device by the services described above. You can disable or delete cookies in your browser settings; some features of third-party services may not work correctly without them.',
+        ],
+      },
+      {
+        heading: 'Changes to this policy',
+        body: [
+          'We may update this policy from time to time. Significant changes will be reflected here with an updated date at the top of the page.',
+        ],
+      },
+    ],
+    contactLink: { label: 'Questions about this policy? Contact us', href: `/${locale}/about/#contact` },
+  },
+  es: {
+    title: 'Política de privacidad — Nihongo Fun',
+    desc: 'Cómo Nihongo Fun maneja cookies, análisis y publicidad de terceros.',
+    pageTitle: 'Política de privacidad',
+    lead: 'Esta página explica qué información recopila Nihongo Fun, por qué lo hace, y qué servicios de terceros están involucrados.',
+    lastUpdatedLabel: 'Última actualización',
+    sections: [
+      {
+        heading: 'Información que recopilamos',
+        body: [
+          'Nihongo Fun no solicita ni almacena información personal como nombres, direcciones de correo o datos de pago en sus propios servidores.',
+          'Cuando visitas el sitio, tu navegador transmite automáticamente datos técnicos estándar (dirección IP, tipo de navegador, referente, páginas vistas) a los servicios enumerados más abajo. Utilizamos estos datos de forma agregada para entender cómo se usa el sitio y mejorarlo.',
+        ],
+      },
+      {
+        heading: 'Google Analytics',
+        body: [
+          'Usamos Google Analytics para analizar el tráfico del sitio y el comportamiento de los visitantes. Google Analytics utiliza cookies para recopilar datos de uso de forma anónima. Estos datos son procesados por Google según su propia política de privacidad.',
+          'Puedes desactivar el seguimiento de Google Analytics instalando el complemento de inhabilitación (https://tools.google.com/dlpage/gaoptout).',
+        ],
+      },
+      {
+        heading: 'Google AdSense',
+        body: [
+          'Este sitio utiliza Google AdSense, un servicio publicitario de terceros proporcionado por Google. Google puede usar cookies o identificadores de dispositivo para mostrar anuncios basados en tus visitas anteriores a este y otros sitios web.',
+          'Puedes desactivar la publicidad personalizada en la configuración de anuncios de Google (https://www.google.com/settings/ads). Para más información sobre cómo Google usa los datos, consulta su Privacidad y Condiciones (https://policies.google.com/technologies/partner-sites).',
+        ],
+      },
+      {
+        heading: 'Formulario de contacto',
+        body: [
+          'Nuestro formulario de contacto está alojado en Google Forms. Los mensajes enviados a través del formulario llegan al responsable del sitio. Por favor, no incluyas información personal sensible. Las condiciones de privacidad de Google se aplican a los envíos del formulario.',
+        ],
+      },
+      {
+        heading: 'Cookies',
+        body: [
+          'Las cookies son pequeños archivos de texto que los servicios descritos almacenan en tu dispositivo. Puedes desactivarlas o eliminarlas desde la configuración de tu navegador; algunas funciones de terceros pueden no funcionar correctamente sin ellas.',
+        ],
+      },
+      {
+        heading: 'Cambios en esta política',
+        body: [
+          'Podemos actualizar esta política ocasionalmente. Los cambios importantes se reflejarán aquí, con la fecha actualizada en la parte superior de la página.',
+        ],
+      },
+    ],
+    contactLink: { label: '¿Dudas sobre esta política? Contáctanos', href: `/${locale}/about/#contact` },
+  },
+  'zh-tw': {
+    title: '隱私權政策 — Nihongo Fun',
+    desc: 'Nihongo Fun 如何處理 cookie、分析工具與第三方廣告。',
+    pageTitle: '隱私權政策',
+    lead: '本頁說明 Nihongo Fun 會收集哪些資訊、為什麼收集，以及會使用到哪些第三方服務。',
+    lastUpdatedLabel: '最後更新',
+    sections: [
+      {
+        heading: '本站收集的資訊',
+        body: [
+          'Nihongo Fun 不會在本站伺服器上索取或儲存姓名、電子郵件或付款資訊等個人資料。',
+          '當您造訪本站時，您的瀏覽器會自動向下方列出的第三方服務傳送標準技術資訊（IP 位址、瀏覽器類型、來源網址、瀏覽頁面）。這些資料會以彙整後的形式用於了解網站使用情況與改善內容。',
+        ],
+      },
+      {
+        heading: 'Google Analytics',
+        body: [
+          '本站使用 Google Analytics 來分析網站流量與訪客行為。Google Analytics 會透過 cookie 匿名收集使用資訊，資料依據 Google 自身的隱私權政策處理。',
+          '如希望停用 Google Analytics 追蹤，可安裝官方提供的停用外掛（https://tools.google.com/dlpage/gaoptout）。',
+        ],
+      },
+      {
+        heading: 'Google AdSense',
+        body: [
+          '本站使用 Google 提供的第三方廣告服務 Google AdSense。Google 可能會使用 cookie 或裝置識別碼，依據您先前造訪本站及其他網站的紀錄，投放個人化廣告。',
+          '您可以透過 Google 廣告設定頁面（https://www.google.com/settings/ads）關閉個人化廣告。詳細的資料使用方式請參閱 Google 的隱私權與條款（https://policies.google.com/technologies/partner-sites）。',
+        ],
+      },
+      {
+        heading: '聯絡表單',
+        body: [
+          '本站的聯絡表單由 Google Forms 提供。透過表單送出的訊息會直接送達網站營運者，請勿填寫敏感個人資訊。Google 自身的隱私權條款同樣適用於表單送出的資料。',
+        ],
+      },
+      {
+        heading: 'Cookie',
+        body: [
+          'Cookie 是上述服務儲存在您裝置中的小型文字檔。您可在瀏覽器設定中停用或刪除 cookie，但某些第三方服務的功能可能因此無法正常運作。',
+        ],
+      },
+      {
+        heading: '政策修訂',
+        body: [
+          '本政策可能隨時更新。重大變更將反映在本頁，並同步更新頁首的最後更新日期。',
+        ],
+      },
+    ],
+    contactLink: { label: '對本政策有疑問？請聯絡我們', href: `/${locale}/about/#contact` },
+  },
+  th: {
+    title: 'นโยบายความเป็นส่วนตัว — Nihongo Fun',
+    desc: 'วิธีที่ Nihongo Fun จัดการคุกกี้ เครื่องมือวิเคราะห์ และโฆษณาจากบุคคลที่สาม',
+    pageTitle: 'นโยบายความเป็นส่วนตัว',
+    lead: 'หน้านี้อธิบายข้อมูลที่ Nihongo Fun เก็บ เหตุผลที่เก็บ และบริการของบุคคลที่สามที่เกี่ยวข้อง',
+    lastUpdatedLabel: 'ปรับปรุงล่าสุด',
+    sections: [
+      {
+        heading: 'ข้อมูลที่เราเก็บ',
+        body: [
+          'Nihongo Fun ไม่ขอหรือเก็บข้อมูลส่วนบุคคล เช่น ชื่อ อีเมล หรือข้อมูลการชำระเงินไว้บนเซิร์ฟเวอร์ของเราเอง',
+          'เมื่อคุณเยี่ยมชมเว็บไซต์ เบราว์เซอร์ของคุณจะส่งข้อมูลเชิงเทคนิคมาตรฐาน (IP, ชนิดเบราว์เซอร์, ที่มา, หน้าที่เปิด) ให้กับบริการที่ระบุไว้ด้านล่างโดยอัตโนมัติ เราใช้ข้อมูลเหล่านี้ในรูปแบบรวมเพื่อทำความเข้าใจการใช้งานเว็บและปรับปรุงเว็บให้ดีขึ้น',
+        ],
+      },
+      {
+        heading: 'Google Analytics',
+        body: [
+          'เราใช้ Google Analytics เพื่อวิเคราะห์การเข้าชมและพฤติกรรมของผู้เยี่ยมชม Google Analytics ใช้คุกกี้เก็บข้อมูลการใช้งานแบบไม่ระบุตัวตน และประมวลผลโดย Google ตามนโยบายความเป็นส่วนตัวของ Google เอง',
+          'หากต้องการหยุดการติดตามของ Google Analytics คุณสามารถติดตั้งส่วนขยายเบราว์เซอร์ที่ Google จัดเตรียมไว้ให้ (https://tools.google.com/dlpage/gaoptout)',
+        ],
+      },
+      {
+        heading: 'Google AdSense',
+        body: [
+          'เว็บไซต์นี้ใช้ Google AdSense ซึ่งเป็นบริการโฆษณาของบุคคลที่สามจาก Google โดย Google อาจใช้คุกกี้หรือรหัสอุปกรณ์เพื่อแสดงโฆษณาตามประวัติการเข้าชมของคุณที่เว็บนี้และเว็บอื่น ๆ',
+          'คุณสามารถปิดโฆษณาแบบเฉพาะบุคคลได้ที่หน้าตั้งค่าโฆษณาของ Google (https://www.google.com/settings/ads) และอ่านรายละเอียดเพิ่มเติมได้ที่นโยบายความเป็นส่วนตัวของ Google (https://policies.google.com/technologies/partner-sites)',
+        ],
+      },
+      {
+        heading: 'ฟอร์มติดต่อ',
+        body: [
+          'ฟอร์มติดต่อของเราใช้บริการ Google Forms ข้อความที่ส่งผ่านฟอร์มจะไปถึงผู้ดูแลเว็บไซต์ กรุณาอย่ากรอกข้อมูลส่วนบุคคลที่ละเอียดอ่อน เงื่อนไขความเป็นส่วนตัวของ Google จะถูกนำมาใช้กับข้อมูลที่ส่งผ่านฟอร์มด้วย',
+        ],
+      },
+      {
+        heading: 'คุกกี้',
+        body: [
+          'คุกกี้คือไฟล์ข้อความขนาดเล็กที่บริการข้างต้นบันทึกไว้บนอุปกรณ์ของคุณ คุณสามารถปิดหรือลบคุกกี้ได้จากการตั้งค่าเบราว์เซอร์ แต่บางฟังก์ชันของบริการบุคคลที่สามอาจทำงานไม่สมบูรณ์',
+        ],
+      },
+      {
+        heading: 'การแก้ไขนโยบาย',
+        body: [
+          'นโยบายนี้อาจมีการปรับปรุงเป็นครั้งคราว การเปลี่ยนแปลงที่สำคัญจะสะท้อนอยู่ในหน้านี้ พร้อมอัปเดตวันที่ด้านบน',
+        ],
+      },
+    ],
+    contactLink: { label: 'มีคำถามเกี่ยวกับนโยบายนี้? ติดต่อเรา', href: `/${locale}/about/#contact` },
+  },
+};
+
+const i = t[locale!] || t.en;
+---
+
+<BaseLayout
+  title={i.title}
+  description={i.desc}
+  locale={locale!}
+  noindex={isNoindex}
+  pagePath="/privacy/"
+>
+  <Nav locale={locale!} />
+
+  <article class="legal">
+    <header>
+      <h1>{i.pageTitle}</h1>
+      <p class="meta">{i.lastUpdatedLabel}: {lastUpdated}</p>
+      <p class="lead">{i.lead}</p>
+    </header>
+
+    {i.sections.map((section) => (
+      <section>
+        <h2>{section.heading}</h2>
+        {section.body.map((p) => <p>{p}</p>)}
+      </section>
+    ))}
+
+    <p class="contact-link">
+      <a href={i.contactLink.href}>{i.contactLink.label} &rarr;</a>
+    </p>
+  </article>
+
+  <Footer locale={locale!} />
+</BaseLayout>
+
+<style>
+  .legal {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px 20px;
+  }
+  .legal header {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .legal h1 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+  .meta {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 16px;
+  }
+  .lead {
+    font-size: 16px;
+    color: var(--text-light);
+    line-height: 1.65;
+  }
+  .legal section {
+    margin-bottom: 32px;
+  }
+  .legal h2 {
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text);
+  }
+  .legal p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+  .contact-link {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 15px;
+    text-align: center;
+  }
+  .contact-link a {
+    font-weight: 600;
+    color: var(--accent);
+  }
+
+  @media (max-width: 600px) {
+    .legal h1 { font-size: 26px; }
+    .legal h2 { font-size: 17px; }
+  }
+</style>
