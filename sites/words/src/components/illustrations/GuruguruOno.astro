@@ -1,0 +1,31 @@
+<!-- Spinning spiral — ぐるぐる (going in circles) -->
+<svg viewBox="0 0 200 160" width="200" height="160" xmlns="http://www.w3.org/2000/svg" style="margin: 8px auto; display: block;">
+  <rect width="200" height="160" fill="#e0f7fa" rx="8"/>
+  <!-- Outer spiral path -->
+  <path d="M100 80
+           m -55 0
+           a 55 55 0 1 1 110 0
+           a 45 45 0 1 0 -90 0
+           a 35 35 0 1 1 70 0
+           a 25 25 0 1 0 -50 0
+           a 15 15 0 1 1 30 0
+           a 8 8 0 1 0 -16 0"
+        fill="none" stroke="#00897b" stroke-width="4" stroke-linecap="round"/>
+  <!-- Center dot -->
+  <circle cx="100" cy="80" r="4" fill="#004d40"/>
+  <!-- Motion arrows around -->
+  <path d="M165 80 L175 75 L175 85 Z" fill="#00897b" opacity="0.8"/>
+  <path d="M35 80 L25 85 L25 75 Z" fill="#00897b" opacity="0.8"/>
+  <path d="M100 15 L95 5 L105 5 Z" fill="#00897b" opacity="0.6"/>
+  <path d="M100 145 L105 155 L95 155 Z" fill="#00897b" opacity="0.6"/>
+  <!-- Curved motion lines (corners) -->
+  <path d="M20 30 Q15 20 25 15" fill="none" stroke="#26a69a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <path d="M180 30 Q185 20 175 15" fill="none" stroke="#26a69a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <path d="M20 130 Q15 140 25 145" fill="none" stroke="#26a69a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <path d="M180 130 Q185 140 175 145" fill="none" stroke="#26a69a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <!-- Sparkle dots -->
+  <circle cx="30" cy="50" r="2" fill="#26a69a" opacity="0.6"/>
+  <circle cx="170" cy="50" r="2" fill="#26a69a" opacity="0.6"/>
+  <circle cx="30" cy="115" r="2" fill="#26a69a" opacity="0.5"/>
+  <circle cx="170" cy="115" r="2" fill="#26a69a" opacity="0.5"/>
+</svg>

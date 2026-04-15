@@ -28,7 +28,7 @@ animeAppearances:
     description: The iconic transformation sequences are the definition of キラキラ — showers of light, sparkles, and glittering effects surround the characters as they transform.
   - title: Demon Slayer (鬼滅の刃)
     description: Mitsuri Kanroji (the Love Hashira) is often depicted with キラキラ eyes, emphasizing her bright, sparkling personality.
-relatedWords: ['dokidoki', 'wakuwaku', 'mofumofu', 'nikoniko']
+relatedWords: ['dokidoki', 'wakuwaku', 'mofumofu', 'nikoniko', 'pikapika']
 ---
 
 ## The Sparkle Word

@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Nav from '../../components/Nav.astro';
 import HeroHome from '../../components/illustrations/HeroHome.astro';
@@ -15,6 +16,37 @@ export function getStaticPaths() {
 
 const { locale } = Astro.params;
 const isNoindex = locale === 'en';
+
+// Dynamic counts per locale (only published, non-draft entries)
+const [waseiAll, onoAll, animeAll] = await Promise.all([
+  getCollection('wasei-eigo', (e) => e.data.locale === locale && !e.data.draft),
+  getCollection('onomatopoeia', (e) => e.data.locale === locale && !e.data.draft),
+  getCollection('anime-japanese', (e) => e.data.locale === locale && !e.data.draft),
+]);
+const waseiCount = waseiAll.length;
+const onoCount = onoAll.length;
+const animeCount = animeAll.length;
+const totalCount = waseiCount + onoCount + animeCount;
+
+const countLabels: Record<string, { word: (n: number) => string; article: (n: number) => string }> = {
+  en: {
+    word: (n) => `${n} ${n === 1 ? 'word' : 'words'}`,
+    article: (n) => `${n} ${n === 1 ? 'article' : 'articles'}`,
+  },
+  es: {
+    word: (n) => `${n} ${n === 1 ? 'palabra' : 'palabras'}`,
+    article: (n) => `${n} ${n === 1 ? 'artículo' : 'artículos'}`,
+  },
+  'zh-tw': {
+    word: (n) => `${n} 個詞彙`,
+    article: (n) => `${n} 篇文章`,
+  },
+  th: {
+    word: (n) => `${n} คำ`,
+    article: (n) => `${n} บทความ`,
+  },
+};
+const cl = countLabels[locale!] || countLabels.en;
 
 const t: Record<string, Record<string, string>> = {
   en: {
@@ -125,7 +157,7 @@ const pillarCards = [
   {
     title: i.waseiTitle,
     desc: i.waseiDesc,
-    count: i.waseiCount,
+    count: cl.word(waseiCount),
     href: `/${locale}/wasei-eigo/`,
     gradient: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)',
     accent: '#2e7d32',
@@ -134,7 +166,7 @@ const pillarCards = [
   {
     title: i.onoTitle,
     desc: i.onoDesc,
-    count: i.onoCount,
+    count: cl.word(onoCount),
     href: `/${locale}/onomatopoeia/`,
     gradient: 'linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)',
     accent: '#e65100',
@@ -143,7 +175,7 @@ const pillarCards = [
   {
     title: i.animeTitle,
     desc: i.animeDesc,
-    count: i.animeCount,
+    count: cl.article(animeCount),
     href: `/${locale}/anime-japanese/`,
     gradient: 'linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%)',
     accent: '#4527a0',
@@ -174,7 +206,7 @@ const pillarCards = [
   <!-- Stats ribbon -->
   <section class="stats-ribbon">
     <div class="stat">
-      <div class="stat-number">{i.stat1}</div>
+      <div class="stat-number">{totalCount}</div>
       <div class="stat-label">{i.stat1Label}</div>
     </div>
     <div class="stat-divider"></div>
@@ -464,7 +496,7 @@ const pillarCards = [
     letter-spacing: 0.5px;
   }
   .pc-wasei .pc-badge { background: #2e7d32; }
-  .pc-ono .pc-badge { background: #e65100; }
+  .pc-ono .pc-badge { background: #c43e00; }
   .pc-anime .pc-badge { background: #4527a0; }
   .pillar-card h3 {
     font-size: 24px;
@@ -519,12 +551,12 @@ const pillarCards = [
   }
   .t1 { background: #e8f5e9; color: #2e7d32; }
   .t2 { background: #fce4ec; color: #c2185b; }
-  .t3 { background: #fff3e0; color: #e65100; }
-  .t4 { background: #e0f7fa; color: #00838f; }
-  .t5 { background: #fbe9e7; color: #d84315; }
+  .t3 { background: #fff3e0; color: #c43e00; }
+  .t4 { background: #e0f7fa; color: #006064; }
+  .t5 { background: #fbe9e7; color: #bf360c; }
   .t6 { background: #e8eaf6; color: #283593; }
   .t7 { background: #f3e5f5; color: #7b1fa2; }
-  .t8 { background: #fff8e1; color: #f57f17; }
+  .t8 { background: #fff8e1; color: #8c5e00; }
 
   @keyframes scroll {
     0% { transform: translateX(0); }

@@ -28,7 +28,7 @@ animeAppearances:
     description: ฉากพายุฝนอันโด่งดังมีเสียงฟ้า ゴロゴロ สร้างบรรยากาศตึงเครียดก่อนที่จะนำไปสู่ฉากป้ายรถเมล์อันเป็นเอกลักษณ์ที่โทโทโร่ปรากฏตัว
   - title: Nichijou (日常)
     description: อนิเมะแนวชีวิตประจำวันจับช่วงเวลา ゴロゴロ ได้อย่างยอดเยี่ยม — ตัวละครนอนเกียจคร้านไม่ทำอะไรเลย ถูกยกระดับเป็นมุกตลกแบบเหนือจริง
-relatedWords: ['batabata', 'wakuwaku', 'mofumofu', 'shiin']
+relatedWords: ['batabata', 'wakuwaku', 'mofumofu', 'shiin', 'zaazaa']
 ---
 
 ## หนึ่งคำ สามความหมาย

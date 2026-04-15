@@ -28,7 +28,7 @@ animeAppearances:
     description: 著名的暴風雨場景中天空ゴロゴロ地轟鳴，營造出緊張的氣氛，最終帶出龍貓在公車站的經典登場。
   - title: 日常（日常）
     description: 這部日常喜劇完美捕捉了日常的ゴロゴロ時刻——角色們懶洋洋地什麼都不做，被提升到荒謬的喜劇高度。
-relatedWords: ['batabata', 'wakuwaku', 'mofumofu', 'shiin']
+relatedWords: ['batabata', 'wakuwaku', 'mofumofu', 'shiin', 'zaazaa']
 ---
 
 ## 一個詞，三種含義

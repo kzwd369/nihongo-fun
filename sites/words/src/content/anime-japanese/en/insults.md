@@ -23,7 +23,7 @@ keyPhrases:
   - japanese: '貴様'
     romaji: kisama
     meaning: 'You — sworn-enemy level'
-relatedArticles: ['reaction-words', 'pronouns']
+relatedArticles: ['reaction-words', 'pronouns', 'battle-cries']
 relatedWaseiEigo: ['tension', 'cunning']
 relatedOnomatopoeia: ['batabata', 'dokidoki']
 ---

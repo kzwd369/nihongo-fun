@@ -29,7 +29,7 @@ animeAppearances:
     description: ครอบครัวฟอร์เจอร์อาศัยอยู่ใน "マンション" แต่ในเวอร์ชันภาษาญี่ปุ่น มันก็แค่อพาร์ตเมนต์ธรรมดา ไม่ใช่คฤหาสน์หรูอย่างที่คำภาษาอังกฤษสื่อ
   - title: Detective Conan
     description: หลายคดีเกิดขึ้นใน "高級マンション" (แมนชั่นหรู) แต่อย่าหลงคิด — มันก็แค่อพาร์ตเมนต์ระดับดี ไม่ใช่คฤหาสน์ใหญ่โตอะไรเลย
-relatedWords: ['apart', 'salaryman', 'consent', 'note-pasokon']
+relatedWords: ['reform', 'salaryman', 'consent', 'note-pasokon']
 ---
 
 ## ทำไมคนญี่ปุ่นถึงเรียกว่า "แมนชั่น"?

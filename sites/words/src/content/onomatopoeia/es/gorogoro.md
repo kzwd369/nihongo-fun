@@ -28,7 +28,7 @@ animeAppearances:
     description: Las famosas escenas de tormenta presentan cielos retumbando ゴロゴロ, creando la tensión atmosférica que lleva a la icónica aparición de Totoro en la parada de autobús.
   - title: Nichijou (日常)
     description: Esta comedia de la vida cotidiana captura momentos ゴロゴロ del día a día — personajes holgazaneando sin hacer absolutamente nada, elevado a alturas cómicas absurdas.
-relatedWords: ['batabata', 'wakuwaku', 'mofumofu', 'shiin']
+relatedWords: ['batabata', 'wakuwaku', 'mofumofu', 'shiin', 'zaazaa']
 ---
 
 ## Una palabra, tres significados

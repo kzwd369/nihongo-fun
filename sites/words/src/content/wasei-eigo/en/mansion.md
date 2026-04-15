@@ -29,7 +29,7 @@ animeAppearances:
     description: The Forger family lives in a "mansion" — but in the Japanese version, it's just a regular apartment, not the grand estate the English word suggests.
   - title: Detective Conan
     description: Many cases take place in a "luxury mansion" (高級マンション). Don't be fooled — it's still just an upscale apartment, not a sprawling estate.
-relatedWords: ['apart', 'salaryman', 'consent', 'note-pasokon']
+relatedWords: ['reform', 'salaryman', 'consent', 'note-pasokon']
 ---
 
 ## Why Do Japanese People Say "Mansion"?

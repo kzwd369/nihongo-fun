@@ -28,7 +28,7 @@ animeAppearances:
     description: The characters frequently encounter ガチャガチャ machines, and Gintoki's obsession with getting specific prizes perfectly captures the addictive nature of capsule toys.
   - title: Doraemon
     description: Doraemon's four-dimensional pocket works like the ultimate ガチャガチャ — you never quite know what gadget will come out, much like the surprise element of capsule toys.
-relatedWords: ['batabata', 'gorogoro', 'shiin', 'kirakira']
+relatedWords: ['batabata', 'gorogoro', 'shiin', 'kirakira', 'mechakucha']
 ---
 
 ## What Does ガチャガチャ Mean?

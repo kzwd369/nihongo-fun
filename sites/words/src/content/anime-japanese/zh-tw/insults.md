@@ -23,7 +23,7 @@ keyPhrases:
   - japanese: '貴様'
     romaji: kisama
     meaning: '你（極粗魯） — 字面尊實則罵'
-relatedArticles: ['reaction-words', 'pronouns']
+relatedArticles: ['reaction-words', 'pronouns', 'battle-cries']
 relatedWaseiEigo: ['tension', 'cunning']
 relatedOnomatopoeia: ['batabata', 'dokidoki']
 ---

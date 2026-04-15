@@ -28,7 +28,7 @@ animeAppearances:
     description: The famous thunderstorm scenes feature ゴロゴロ rumbling skies, creating the atmospheric tension that leads to Totoro's iconic bus stop appearance.
   - title: Nichijou (日常)
     description: The slice-of-life comedy captures everyday ゴロゴロ moments — characters lounging around doing absolutely nothing, elevated to absurd comedic heights.
-relatedWords: ['batabata', 'wakuwaku', 'mofumofu', 'shiin']
+relatedWords: ['batabata', 'wakuwaku', 'mofumofu', 'shiin', 'zaazaa']
 ---
 
 ## One Word, Three Meanings

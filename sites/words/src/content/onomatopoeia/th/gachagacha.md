@@ -28,7 +28,7 @@ animeAppearances:
     description: ตัวละครเจอตู้ ガチャガチャ บ่อยๆ และความหมกมุ่นของกินโตกิที่อยากได้รางวัลเฉพาะตัวสะท้อนความเสพติดของกาชาปองได้อย่างสมบูรณ์แบบ
   - title: Doraemon
     description: กระเป๋าสี่มิติของโดราเอมอนทำงานเหมือน ガチャガチャ สุดยอด — ไม่มีทางรู้ว่าของวิเศษอะไรจะออกมา เหมือนกับเซอร์ไพรส์ของกาชาปอง
-relatedWords: ['batabata', 'gorogoro', 'shiin', 'kirakira']
+relatedWords: ['batabata', 'gorogoro', 'shiin', 'kirakira', 'mechakucha']
 ---
 
 ## ガチャガチャ แปลว่าอะไร?

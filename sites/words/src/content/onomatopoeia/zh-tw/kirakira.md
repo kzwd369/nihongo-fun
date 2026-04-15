@@ -28,7 +28,7 @@ animeAppearances:
     description: 標誌性的變身場景就是キラキラ的定義——光雨、閃光和閃爍效果在角色變身時環繞著她們。
   - title: 鬼滅之刃（鬼滅の刃）
     description: 甘露寺蜜璃（戀柱）經常被描繪成擁有キラキラ的眼睛，強調她明亮而閃耀的個性。
-relatedWords: ['dokidoki', 'wakuwaku', 'mofumofu', 'nikoniko']
+relatedWords: ['dokidoki', 'wakuwaku', 'mofumofu', 'nikoniko', 'pikapika']
 ---
 
 ## 閃耀之詞

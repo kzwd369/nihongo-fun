@@ -28,7 +28,7 @@ animeAppearances:
     description: Las icónicas secuencias de transformación son la definición de キラキラ — lluvias de luz, destellos y efectos brillantes rodean a los personajes mientras se transforman.
   - title: Demon Slayer (鬼滅の刃)
     description: Mitsuri Kanroji (el Pilar del Amor) es frecuentemente representada con ojos キラキラ, enfatizando su personalidad brillante y chispeante.
-relatedWords: ['dokidoki', 'wakuwaku', 'mofumofu', 'nikoniko']
+relatedWords: ['dokidoki', 'wakuwaku', 'mofumofu', 'nikoniko', 'pikapika']
 ---
 
 ## La palabra del brillo

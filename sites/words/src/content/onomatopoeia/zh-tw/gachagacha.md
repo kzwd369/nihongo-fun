@@ -28,7 +28,7 @@ animeAppearances:
     description: 角色們經常遇到 ガチャガチャ 機器，銀時對特定獎品的執著完美呈現了扭蛋的成癮性。
   - title: 哆啦A夢
     description: 哆啦A夢的四次元口袋就像終極版 ガチャガチャ——你永遠不知道會拿出什麼道具，就像扭蛋的驚喜元素一樣。
-relatedWords: ['batabata', 'gorogoro', 'shiin', 'kirakira']
+relatedWords: ['batabata', 'gorogoro', 'shiin', 'kirakira', 'mechakucha']
 ---
 
 ## ガチャガチャ 是什麼意思？

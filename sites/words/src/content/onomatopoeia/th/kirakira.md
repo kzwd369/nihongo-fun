@@ -28,7 +28,7 @@ animeAppearances:
     description: ฉากแปลงร่างอันเป็นเอกลักษณ์คือนิยามของ キラキラ — ฝนแสง ประกาย และเอฟเฟกต์ระยิบระยับห้อมล้อมตัวละครขณะแปลงร่าง
   - title: Demon Slayer (鬼滅の刃)
     description: มิตสึริ คันโรจิ (เสาหลักแห่งความรัก) มักถูกวาดด้วยดวงตา キラキラ เพื่อเน้นบุคลิกที่สดใสและเปล่งประกายของเธอ
-relatedWords: ['dokidoki', 'wakuwaku', 'mofumofu', 'nikoniko']
+relatedWords: ['dokidoki', 'wakuwaku', 'mofumofu', 'nikoniko', 'pikapika']
 ---
 
 ## คำแห่งประกาย

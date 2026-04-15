@@ -28,7 +28,7 @@ animeAppearances:
     description: Los personajes se encuentran frecuentemente con máquinas ガチャガチャ, y la obsesión de Gintoki por conseguir premios específicos captura perfectamente la naturaleza adictiva de las cápsulas de juguete.
   - title: Doraemon
     description: El bolsillo de cuarta dimensión de Doraemon funciona como el ガチャガチャ definitivo — nunca sabes exactamente qué aparato va a salir, igual que el elemento sorpresa de las cápsulas de juguete.
-relatedWords: ['batabata', 'gorogoro', 'shiin', 'kirakira']
+relatedWords: ['batabata', 'gorogoro', 'shiin', 'kirakira', 'mechakucha']
 ---
 
 ## ¿Qué significa ガチャガチャ?

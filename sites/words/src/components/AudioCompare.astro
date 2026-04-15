@@ -56,10 +56,35 @@ const { japaneseWord, japaneseRomaji, englishWord, englishPhonetic } = Astro.pro
 </div>
 
 <script>
+  function pickVoice(lang: 'ja' | 'en'): SpeechSynthesisVoice | null {
+    const voices = window.speechSynthesis.getVoices();
+    if (!voices.length) return null;
+    if (lang === 'ja') {
+      return voices.find(v => v.lang === 'ja-JP') || voices.find(v => v.lang.startsWith('ja')) || null;
+    }
+    // English: prefer native en-US/en-GB voices. Avoid voices whose name contains
+    // Japanese/localized hints (e.g. iOS picks a JP-accented voice if OS lang is ja).
+    const enVoices = voices.filter(v => v.lang.toLowerCase().startsWith('en'));
+    if (!enVoices.length) return null;
+    // Prefer high-quality known native voices
+    const preferred = [
+      'Samantha', 'Alex', 'Karen', 'Daniel', 'Moira', 'Tessa',
+      'Google US English', 'Google UK English Female', 'Google UK English Male',
+      'Microsoft Aria', 'Microsoft Jenny', 'Microsoft Guy',
+    ];
+    for (const name of preferred) {
+      const v = enVoices.find(v => v.name.includes(name));
+      if (v) return v;
+    }
+    return enVoices.find(v => v.lang === 'en-US')
+      || enVoices.find(v => v.lang === 'en-GB')
+      || enVoices[0];
+  }
+
   function initAudioButtons() {
     document.querySelectorAll<HTMLButtonElement>('.audio-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        const lang = btn.dataset.lang || 'ja';
+        const lang = (btn.dataset.lang || 'ja') as 'ja' | 'en';
         const word = btn.dataset.word || '';
         const wasPlaying = btn.classList.contains('playing');
 
@@ -73,6 +98,8 @@ const { japaneseWord, japaneseRomaji, englishWord, englishPhonetic } = Astro.pro
         if (!wasPlaying && 'speechSynthesis' in window) {
           const utterance = new SpeechSynthesisUtterance(word);
           utterance.lang = lang === 'ja' ? 'ja-JP' : 'en-US';
+          const voice = pickVoice(lang);
+          if (voice) utterance.voice = voice;
           utterance.rate = 0.85;
 
           btn.classList.add('playing');
@@ -89,6 +116,11 @@ const { japaneseWord, japaneseRomaji, englishWord, englishPhonetic } = Astro.pro
         }
       });
     });
+  }
+  // Preload voices (Chrome/Safari load them asynchronously)
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.getVoices();
+    window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
   }
   initAudioButtons();
 </script>

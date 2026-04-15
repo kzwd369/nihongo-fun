@@ -28,7 +28,7 @@ animeAppearances:
     description: 佛傑一家住在「マンション」裡。在日語版中這只是普通公寓，但如果直譯成英語的 mansion，感覺就變成住在城堡裡了。
   - title: 名偵探柯南
     description: 很多案件發生在「高級マンション」裡。注意：這裡的「高級マンション」也只是比較貴的公寓，不是豪宅。
-relatedWords: ['apart', 'salaryman', 'consent', 'note-pasokon']
+relatedWords: ['reform', 'salaryman', 'consent', 'note-pasokon']
 ---
 
 ## 為什麼日本人說「マンション」？

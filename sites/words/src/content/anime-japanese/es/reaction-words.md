@@ -26,7 +26,7 @@ keyPhrases:
   - japanese: 'かわいい'
     romaji: kawaii
     meaning: '¡Lindo! — ternura'
-relatedArticles: ['insults', 'pronouns']
+relatedArticles: ['insults', 'pronouns', 'love-confessions']
 relatedWaseiEigo: ['tension', 'naive']
 relatedOnomatopoeia: ['dokidoki', 'batabata']
 ---

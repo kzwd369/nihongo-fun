@@ -26,7 +26,7 @@ keyPhrases:
   - japanese: 'かわいい'
     romaji: kawaii
     meaning: 'Cute!'
-relatedArticles: ['insults', 'pronouns']
+relatedArticles: ['insults', 'pronouns', 'love-confessions']
 relatedWaseiEigo: ['tension', 'naive']
 relatedOnomatopoeia: ['dokidoki', 'batabata']
 ---
