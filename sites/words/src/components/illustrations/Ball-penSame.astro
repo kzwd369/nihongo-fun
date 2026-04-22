@@ -1,0 +1,35 @@
+<!-- ボールペン = ballpoint pen -->
+<svg viewBox="0 0 200 160" width="200" height="160" xmlns="http://www.w3.org/2000/svg" style="margin: 8px auto; display: block;">
+  <rect width="200" height="160" fill="#f0f7ff" rx="8"/>
+  <!-- Notebook page background -->
+  <rect x="20" y="100" width="160" height="50" fill="#fffde7" rx="3" stroke="#fff59d" stroke-width="0.8"/>
+  <line x1="30" y1="115" x2="170" y2="115" stroke="#fff176" stroke-width="0.6"/>
+  <line x1="30" y1="125" x2="170" y2="125" stroke="#fff176" stroke-width="0.6"/>
+  <line x1="30" y1="135" x2="170" y2="135" stroke="#fff176" stroke-width="0.6"/>
+  <!-- Hand-written ink line on page (squiggle) -->
+  <path d="M40 120 Q55 117 70 120 T100 120 T130 120" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Pen body (rotated diagonally) -->
+  <g transform="rotate(-25 100 70)">
+    <!-- Barrel -->
+    <rect x="40" y="65" width="100" height="14" fill="#1976d2" rx="3"/>
+    <!-- Grip section -->
+    <rect x="135" y="66" width="14" height="12" fill="#37474f" rx="2"/>
+    <!-- Cone tip -->
+    <polygon points="149,66 149,78 162,72" fill="#90a4ae"/>
+    <!-- Ink ball tip -->
+    <circle cx="163" cy="72" r="1.8" fill="#1565c0"/>
+    <!-- Top cap -->
+    <rect x="32" y="64" width="10" height="16" fill="#0d47a1" rx="2"/>
+    <!-- Push button -->
+    <rect x="28" y="68" width="6" height="8" fill="#bbdefb" rx="1"/>
+    <!-- Clip -->
+    <path d="M60 79 L62 95 L66 95 L66 79 Z" fill="#90a4ae"/>
+    <!-- Brand stripe -->
+    <rect x="80" y="70" width="40" height="2.5" fill="#bbdefb" rx="1"/>
+    <!-- Highlight -->
+    <rect x="42" y="66" width="95" height="2" fill="#42a5f5" rx="1" opacity="0.7"/>
+  </g>
+  <!-- Sparkle -->
+  <text x="155" y="40" font-size="11" fill="#90caf9" opacity="0.7">✦</text>
+  <text x="40" y="55" font-size="8" fill="#90caf9" opacity="0.5">✦</text>
+</svg>
