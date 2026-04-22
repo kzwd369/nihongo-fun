@@ -1,0 +1,49 @@
+<!-- Clapping hands with sparks — パチパチ (clap / crackle) -->
+<svg viewBox="0 0 200 160" width="200" height="160" xmlns="http://www.w3.org/2000/svg" style="margin: 8px auto; display: block;">
+  <rect width="200" height="160" fill="#fff3e0" rx="8"/>
+
+  <!-- Motion lines / sparks around the hands -->
+  <g stroke="#ff9800" stroke-width="2" stroke-linecap="round" opacity="0.75">
+    <line x1="50" y1="45" x2="58" y2="55"/>
+    <line x1="35" y1="65" x2="50" y2="68"/>
+    <line x1="40" y1="90" x2="55" y2="85"/>
+    <line x1="150" y1="45" x2="142" y2="55"/>
+    <line x1="165" y1="65" x2="150" y2="68"/>
+    <line x1="160" y1="90" x2="145" y2="85"/>
+  </g>
+  <!-- Star sparkles -->
+  <g fill="#ffb300">
+    <polygon points="100,28 102,35 109,37 102,39 100,46 98,39 91,37 98,35"/>
+    <polygon points="30,110 31,114 35,115 31,116 30,120 29,116 25,115 29,114"/>
+    <polygon points="170,110 171,114 175,115 171,116 170,120 169,116 165,115 169,114"/>
+  </g>
+
+  <!-- Left hand (palm facing right, fingers up) -->
+  <g transform="translate(0,0)">
+    <!-- Palm -->
+    <path d="M60 115 Q55 95 65 78 Q72 72 82 80 L88 105 Q85 118 75 120 Z" fill="#ffcc80" stroke="#ef6c00" stroke-width="1.5" stroke-linejoin="round"/>
+    <!-- Fingers -->
+    <rect x="68" y="62" width="6" height="20" rx="3" fill="#ffcc80" stroke="#ef6c00" stroke-width="1"/>
+    <rect x="76" y="58" width="6" height="24" rx="3" fill="#ffcc80" stroke="#ef6c00" stroke-width="1"/>
+    <rect x="84" y="62" width="6" height="22" rx="3" fill="#ffcc80" stroke="#ef6c00" stroke-width="1"/>
+    <!-- Thumb -->
+    <ellipse cx="58" cy="90" rx="6" ry="9" fill="#ffcc80" stroke="#ef6c00" stroke-width="1.2" transform="rotate(-20 58 90)"/>
+  </g>
+
+  <!-- Right hand mirrored -->
+  <g transform="translate(200,0) scale(-1,1)">
+    <path d="M60 115 Q55 95 65 78 Q72 72 82 80 L88 105 Q85 118 75 120 Z" fill="#ffcc80" stroke="#ef6c00" stroke-width="1.5" stroke-linejoin="round"/>
+    <rect x="68" y="62" width="6" height="20" rx="3" fill="#ffcc80" stroke="#ef6c00" stroke-width="1"/>
+    <rect x="76" y="58" width="6" height="24" rx="3" fill="#ffcc80" stroke="#ef6c00" stroke-width="1"/>
+    <rect x="84" y="62" width="6" height="22" rx="3" fill="#ffcc80" stroke="#ef6c00" stroke-width="1"/>
+    <ellipse cx="58" cy="90" rx="6" ry="9" fill="#ffcc80" stroke="#ef6c00" stroke-width="1.2" transform="rotate(-20 58 90)"/>
+  </g>
+
+  <!-- Impact burst between palms -->
+  <g fill="#ffb300" opacity="0.9">
+    <polygon points="100,82 105,92 116,92 107,98 111,109 100,102 89,109 93,98 84,92 95,92"/>
+  </g>
+
+  <!-- パチパチ text -->
+  <text x="100" y="148" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="900" fill="#e65100">パチパチ!</text>
+</svg>

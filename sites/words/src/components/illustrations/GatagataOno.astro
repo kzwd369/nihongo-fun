@@ -1,0 +1,54 @@
+<!-- Train on tracks shaking — ガタガタ (rattle / shake) -->
+<svg viewBox="0 0 200 160" width="200" height="160" xmlns="http://www.w3.org/2000/svg" style="margin: 8px auto; display: block;">
+  <rect width="200" height="160" fill="#eceff1" rx="8"/>
+  <!-- Motion lines (behind train) -->
+  <g stroke="#90a4ae" stroke-width="2" stroke-linecap="round" opacity="0.6">
+    <line x1="10" y1="70" x2="28" y2="70"/>
+    <line x1="8" y1="85" x2="25" y2="85"/>
+    <line x1="12" y1="100" x2="30" y2="100"/>
+  </g>
+  <!-- Track -->
+  <rect x="0" y="128" width="200" height="5" fill="#6d4c41"/>
+  <g stroke="#4e342e" stroke-width="2">
+    <line x1="20" y1="128" x2="20" y2="135"/>
+    <line x1="55" y1="128" x2="55" y2="135"/>
+    <line x1="90" y1="128" x2="90" y2="135"/>
+    <line x1="125" y1="128" x2="125" y2="135"/>
+    <line x1="160" y1="128" x2="160" y2="135"/>
+  </g>
+  <line x1="0" y1="132" x2="200" y2="132" stroke="#8d6e63" stroke-width="1.5"/>
+
+  <!-- Train body (slightly tilted to imply shaking) -->
+  <g transform="rotate(-1 100 95)">
+    <!-- Main body -->
+    <rect x="40" y="65" width="130" height="55" rx="8" fill="#4fc3f7" stroke="#01579b" stroke-width="2"/>
+    <!-- Front section -->
+    <rect x="158" y="72" width="18" height="45" rx="4" fill="#0288d1" stroke="#01579b" stroke-width="1.5"/>
+    <!-- Windows -->
+    <rect x="50" y="75" width="20" height="18" rx="2" fill="#e1f5fe" stroke="#01579b" stroke-width="1"/>
+    <rect x="78" y="75" width="20" height="18" rx="2" fill="#e1f5fe" stroke="#01579b" stroke-width="1"/>
+    <rect x="106" y="75" width="20" height="18" rx="2" fill="#e1f5fe" stroke="#01579b" stroke-width="1"/>
+    <rect x="134" y="75" width="20" height="18" rx="2" fill="#e1f5fe" stroke="#01579b" stroke-width="1"/>
+    <!-- Yellow strip -->
+    <rect x="40" y="98" width="130" height="4" fill="#ffc107"/>
+    <!-- Door handles / bolts -->
+    <circle cx="55" cy="112" r="1.8" fill="#01579b"/>
+    <circle cx="155" cy="112" r="1.8" fill="#01579b"/>
+  </g>
+  <!-- Wheels -->
+  <circle cx="65" cy="125" r="10" fill="#37474f" stroke="#263238" stroke-width="1.5"/>
+  <circle cx="65" cy="125" r="4" fill="#90a4ae"/>
+  <circle cx="135" cy="125" r="10" fill="#37474f" stroke="#263238" stroke-width="1.5"/>
+  <circle cx="135" cy="125" r="4" fill="#90a4ae"/>
+
+  <!-- Shake / rattle arcs around train -->
+  <g fill="none" stroke="#f57c00" stroke-width="1.8" stroke-linecap="round" opacity="0.8">
+    <path d="M32 55 Q36 50 40 55"/>
+    <path d="M180 55 Q176 50 172 55"/>
+    <path d="M32 130 Q36 135 40 130"/>
+    <path d="M180 130 Q176 135 172 130"/>
+  </g>
+
+  <!-- ガタガタ text -->
+  <text x="100" y="30" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="900" fill="#ef6c00">ガタガタ!</text>
+</svg>
