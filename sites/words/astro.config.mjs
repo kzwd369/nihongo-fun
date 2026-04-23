@@ -7,7 +7,7 @@ export default defineConfig({
 
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'es', 'zh-tw', 'th'],
+    locales: ['en', 'es', 'zh-tw', 'th', 'id'],
     routing: {
       prefixDefaultLocale: true,
     },

@@ -9,6 +9,7 @@ export function getStaticPaths() {
     { params: { locale: 'es' } },
     { params: { locale: 'zh-tw' } },
     { params: { locale: 'th' } },
+    { params: { locale: 'id' } },
   ];
 }
 
@@ -220,6 +221,55 @@ const t: Record<string, Copy> = {
       },
     ],
     contactLink: { label: 'มีคำถามเกี่ยวกับนโยบายนี้? ติดต่อเรา', href: `/${locale}/about/#contact` },
+  },
+  id: {
+    title: 'Kebijakan Privasi — Nihongo Fun',
+    desc: 'Bagaimana Nihongo Fun menangani cookie, analitik, dan iklan dari pihak ketiga.',
+    pageTitle: 'Kebijakan Privasi',
+    lead: 'Halaman ini menjelaskan informasi apa yang dikumpulkan Nihongo Fun, mengapa, dan layanan pihak ketiga yang terlibat.',
+    lastUpdatedLabel: 'Terakhir diperbarui',
+    sections: [
+      {
+        heading: 'Informasi yang kami kumpulkan',
+        body: [
+          'Nihongo Fun tidak meminta atau menyimpan informasi pribadi seperti nama, alamat email, atau detail pembayaran di servernya sendiri.',
+          'Saat Anda mengunjungi situs, peramban Anda secara otomatis mengirim data teknis standar (alamat IP, jenis peramban, referrer, halaman yang dilihat) ke layanan-layanan yang terdaftar di bawah. Kami menggunakan data ini secara agregat untuk memahami penggunaan situs dan meningkatkannya.',
+        ],
+      },
+      {
+        heading: 'Google Analytics',
+        body: [
+          'Kami menggunakan Google Analytics untuk memahami lalu lintas situs dan perilaku pengunjung. Google Analytics menggunakan cookie untuk mengumpulkan data penggunaan secara anonim. Data ini diproses oleh Google berdasarkan kebijakan privasinya sendiri.',
+          'Anda dapat menonaktifkan pelacakan Google Analytics dengan memasang Google Analytics Opt-out Browser Add-on (https://tools.google.com/dlpage/gaoptout).',
+        ],
+      },
+      {
+        heading: 'Google AdSense',
+        body: [
+          'Situs ini menggunakan Google AdSense, layanan iklan pihak ketiga yang disediakan oleh Google. Google dapat menggunakan cookie atau pengenal perangkat untuk menayangkan iklan berdasarkan kunjungan sebelumnya ke situs ini dan situs lain.',
+          'Anda dapat menonaktifkan iklan yang dipersonalisasi di Pengaturan Iklan Google (https://www.google.com/settings/ads). Untuk informasi lebih lanjut tentang bagaimana Google menggunakan data, lihat Privasi & Ketentuan Google (https://policies.google.com/technologies/partner-sites).',
+        ],
+      },
+      {
+        heading: 'Formulir kontak',
+        body: [
+          'Formulir kontak kami di-host di Google Forms. Pesan yang Anda kirim melalui formulir akan sampai kepada pengelola situs. Mohon jangan sertakan informasi pribadi yang sensitif. Ketentuan privasi Google berlaku untuk pengiriman formulir.',
+        ],
+      },
+      {
+        heading: 'Cookie',
+        body: [
+          'Cookie adalah file teks kecil yang disimpan di perangkat Anda oleh layanan yang dijelaskan di atas. Anda dapat menonaktifkan atau menghapus cookie di pengaturan peramban Anda; beberapa fitur layanan pihak ketiga mungkin tidak berfungsi dengan benar tanpa cookie.',
+        ],
+      },
+      {
+        heading: 'Perubahan kebijakan',
+        body: [
+          'Kami dapat memperbarui kebijakan ini dari waktu ke waktu. Perubahan yang signifikan akan dicerminkan di sini dengan tanggal yang diperbarui di bagian atas halaman.',
+        ],
+      },
+    ],
+    contactLink: { label: 'Ada pertanyaan tentang kebijakan ini? Hubungi kami', href: `/${locale}/about/#contact` },
   },
 };
 

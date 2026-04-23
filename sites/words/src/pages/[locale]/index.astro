@@ -11,6 +11,7 @@ export function getStaticPaths() {
     { params: { locale: 'es' } },
     { params: { locale: 'zh-tw' } },
     { params: { locale: 'th' } },
+    { params: { locale: 'id' } },
   ];
 }
 
@@ -44,6 +45,10 @@ const countLabels: Record<string, { word: (n: number) => string; article: (n: nu
   th: {
     word: (n) => `${n} คำ`,
     article: (n) => `${n} บทความ`,
+  },
+  id: {
+    word: (n) => `${n} kata`,
+    article: (n) => `${n} artikel`,
   },
 };
 const cl = countLabels[locale!] || countLabels.en;
@@ -148,6 +153,31 @@ const t: Record<string, Record<string, string>> = {
     stat3: '67',
     stat3Label: 'ภาพประกอบ',
     explore: 'สำรวจ',
+  },
+  id: {
+    title: 'Nihongo Fun — Belajar Bahasa Jepang dengan Seru',
+    desc: 'Jelajahi bahasa Jepang lewat wasei-eigo, onomatope, dan anime — tanpa buku teks yang membosankan.',
+    heroHeadline: 'Bahasa Jepang jauh lebih seru dari yang kamu kira.',
+    heroSub: 'Temukan sisi unik, menakjubkan, dan mengejutkan dari bahasa Jepang — dari kata-kata yang tidak ada di bahasa Inggris sampai suara yang melukiskan emosi.',
+    cta: 'Mulai Menjelajah',
+    pillarTitle: 'Tiga Cara Menjelajah',
+    waseiTitle: 'Wasei-Eigo',
+    waseiDesc: 'Kata-kata Jepang yang terlihat seperti bahasa Inggris tapi artinya benar-benar berbeda. Bersiaplah untuk kejutan.',
+    waseiCount: '30 kata',
+    onoTitle: 'Onomatope',
+    onoDesc: 'Kata-kata bunyi yang menggambarkan segala hal dari detak jantung sampai kerlap-kerlip. Jepang punya lebih dari 4.000 kata ini.',
+    onoCount: '10 kata',
+    animeTitle: 'Bahasa Jepang Anime',
+    animeDesc: 'Frasa asli di balik anime favoritmu — panggilan hormat, teriakan pertarungan, pernyataan cinta, dan banyak lagi.',
+    animeCount: '8 artikel',
+    statsTitle: 'Apa yang Ada di Dalam',
+    stat1: '48',
+    stat1Label: 'Artikel & Kata',
+    stat2: '4',
+    stat2Label: 'Bahasa',
+    stat3: '67',
+    stat3Label: 'Ilustrasi',
+    explore: 'Jelajahi',
   },
 };
 

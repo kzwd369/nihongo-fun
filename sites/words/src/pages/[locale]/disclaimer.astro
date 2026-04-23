@@ -9,6 +9,7 @@ export function getStaticPaths() {
     { params: { locale: 'es' } },
     { params: { locale: 'zh-tw' } },
     { params: { locale: 'th' } },
+    { params: { locale: 'id' } },
   ];
 }
 
@@ -220,6 +221,55 @@ const t: Record<string, Copy> = {
       },
     ],
     contactLink: { label: 'มีคำถามหรืออยากแจ้งแก้ไข? ติดต่อเรา', href: `/${locale}/about/#contact` },
+  },
+  id: {
+    title: 'Sanggahan — Nihongo Fun',
+    desc: 'Catatan tentang akurasi, tautan eksternal, dan hak cipta untuk konten di Nihongo Fun.',
+    pageTitle: 'Sanggahan',
+    lead: 'Beberapa catatan jujur tentang cara kami menulis, apa yang bisa dan tidak bisa kami janjikan, dan bagaimana kami menangani konten dari luar.',
+    lastUpdatedLabel: 'Terakhir diperbarui',
+    sections: [
+      {
+        heading: 'Keakuratan informasi',
+        body: [
+          'Kami berhati-hati saat meneliti dan menulis tentang kata, frasa, dan konteks budaya Jepang. Namun, bahasa itu hidup: nuansa berubah, ungkapan baru muncul, dan penggunaan regional bervariasi.',
+          'Konten di situs ini disediakan hanya untuk tujuan informasi umum. Kami tidak menjamin bahwa setiap penjelasan lengkap, mutakhir, atau sesuai untuk tujuan tertentu. Jika Anda menemukan sesuatu yang terasa janggal, mohon beri tahu kami — koreksi sangat kami hargai.',
+        ],
+      },
+      {
+        heading: 'Bersifat edukatif, bukan nasihat profesional',
+        body: [
+          'Nihongo Fun adalah sumber belajar santai, bukan pengganti instruksi bahasa profesional, terjemahan bersertifikat, atau panduan hukum/bisnis. Silakan konsultasikan dengan profesional yang berkualifikasi untuk keputusan yang memerlukannya.',
+        ],
+      },
+      {
+        heading: 'Tautan eksternal',
+        body: [
+          'Situs ini mencantumkan tautan ke situs web eksternal untuk referensi dan konteks. Kami tidak mengendalikan situs-situs tersebut, dan kami tidak bertanggung jawab atas konten, keakuratan, atau praktik privasinya. Mengunjungi situs tersebut adalah atas kebijakan Anda sendiri.',
+        ],
+      },
+      {
+        heading: 'Hak cipta',
+        body: [
+          'Kecuali dinyatakan lain, teks dan ilustrasi di Nihongo Fun adalah karya pengelola situs. Mohon untuk tidak memproduksi ulang tanpa izin.',
+          'Nama karya, karakter, merek, dan istilah terkait yang disebutkan di situs ini milik pemegang hak masing-masing. Mereka ditampilkan di sini hanya untuk tujuan edukatif dan referensial.',
+          'Jika Anda merasa hak Anda telah terpengaruh oleh konten di situs ini, silakan hubungi kami melalui formulir kontak agar kami dapat menindaklanjutinya.',
+        ],
+      },
+      {
+        heading: 'Tanggung jawab',
+        body: [
+          'Sejauh diizinkan oleh hukum, pengelola situs tidak bertanggung jawab atas kerugian atau kerusakan langsung maupun tidak langsung yang timbul dari penggunaan, atau ketidakmampuan menggunakan, situs ini.',
+        ],
+      },
+      {
+        heading: 'Perubahan',
+        body: [
+          'Kami dapat memperbarui pemberitahuan ini dari waktu ke waktu. Tanggal di bagian atas mencerminkan revisi terbaru.',
+        ],
+      },
+    ],
+    contactLink: { label: 'Ada pertanyaan atau koreksi? Hubungi kami', href: `/${locale}/about/#contact` },
   },
 };
 

@@ -19,6 +19,7 @@ export async function getStaticPaths() {
     { params: { locale: 'es' } },
     { params: { locale: 'zh-tw' } },
     { params: { locale: 'th' } },
+    { params: { locale: 'id' } },
   ];
 }
 
@@ -35,6 +36,7 @@ const labels: Record<string, Record<string, string>> = {
   es: { title: 'Japonés Anime — Aprende japonés con anime', subtitle: 'Palabras y frases esenciales del japonés que realmente escucharás en el anime — explicadas con contexto real.', home: 'Inicio' },
   'zh-tw': { title: '動漫日語 — 透過動漫學日語', subtitle: '你在動漫中真正會聽到的日語單字和片語 — 搭配真實語境解說。', home: '首頁' },
   th: { title: 'ภาษาญี่ปุ่นจากอนิเมะ — เรียนญี่ปุ่นผ่านอนิเมะ', subtitle: 'คำและวลีภาษาญี่ปุ่นที่จำเป็นที่คุณจะได้ยินจริงในอนิเมะ — อธิบายพร้อมบริบทจริง', home: 'หน้าแรก' },
+  id: { title: 'Bahasa Jepang Anime — Belajar Jepang Lewat Anime', subtitle: 'Kata dan frasa bahasa Jepang penting yang benar-benar akan kamu dengar di anime — dijelaskan dengan konteks nyata.', home: 'Beranda' },
 };
 const t = labels[locale!] || labels.en;
 
@@ -43,6 +45,7 @@ const categoryLabels: Record<string, Record<string, string>> = {
   es: { social: 'Social', emotion: 'Emoción', daily: 'Vida Diaria', culture: 'Cultura', action: 'Acción' },
   'zh-tw': { social: '社交', emotion: '情感', daily: '日常生活', culture: '文化', action: '動作' },
   th: { social: 'สังคม', emotion: 'อารมณ์', daily: 'ชีวิตประจำวัน', culture: 'วัฒนธรรม', action: 'แอ็คชัน' },
+  id: { social: 'Sosial', emotion: 'Emosi', daily: 'Kehidupan Sehari-hari', culture: 'Budaya', action: 'Aksi' },
 };
 const tCat = categoryLabels[locale!] || categoryLabels.en;
 

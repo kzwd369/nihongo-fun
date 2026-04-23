@@ -20,6 +20,7 @@ export async function getStaticPaths() {
     { params: { locale: 'es' } },
     { params: { locale: 'zh-tw' } },
     { params: { locale: 'th' } },
+    { params: { locale: 'id' } },
   ];
 }
 
@@ -36,6 +37,7 @@ const labels: Record<string, Record<string, string>> = {
   es: { title: 'Wasei-Eigo — Inglés hecho en Japón', subtitle: 'Palabras que parecen inglés pero significan algo completamente diferente en japonés.', home: 'Inicio' },
   'zh-tw': { title: '和製英語 — 日本人自創的英語', subtitle: '看起來像英文，但在日語中意思完全不同的詞彙。', home: '首頁' },
   th: { title: 'วาเซอิ-เอโกะ — ภาษาอังกฤษฉบับญี่ปุ่น', subtitle: 'คำที่ดูเหมือนภาษาอังกฤษแต่มีความหมายต่างกันโดยสิ้นเชิงในภาษาญี่ปุ่น', home: 'หน้าแรก' },
+  id: { title: 'Wasei-Eigo — Bahasa Inggris Buatan Jepang', subtitle: 'Kata-kata yang terlihat seperti bahasa Inggris tapi punya arti benar-benar berbeda dalam bahasa Jepang.', home: 'Beranda' },
 };
 const t = labels[locale!] || labels.en;
 
