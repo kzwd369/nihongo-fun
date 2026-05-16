@@ -13,10 +13,8 @@ tags: ['leisure', 'amusement', 'idiom']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: jet coaster
-japaneseMeaning: >-
-  Wahana pemacu adrenalin yang Anda antre satu jam di taman hiburan Jepang mana pun — coaster dengan loop, jatuh, dan pembuka tutup botol. Kata ini juga sangat produktif sebagai metafora: "ジェットコースターのような展開" (perkembangan seperti roller-coaster) adalah bahasa Jepang standar untuk apa pun dengan naik-turun memusingkan — drama TV, comeback olahraga, kuartal bisnis, bahkan hubungan.
-englishMeaning: >-
-  Penutur bahasa Inggris menyebut wahana ini "roller coaster" — secara universal, di setiap benua. Jika Anda mengatakan "jet coaster" ke penutur bahasa Inggris, mereka akan membayangkan semacam kereta luncur bertenaga roket, mungkin mobil konsep taman tema yang tidak pernah dibangun. Kata itu bukan bagian dari kosakata taman hiburan bahasa Inggris, meskipun berfungsi sempurna sebagai bahasa Jepang.
+japaneseMeaning: Wahana roller coaster di taman hiburan
+englishMeaning: Roller coaster
 examples:
   - japanese: 昨日、遊園地でジェットコースターに乗った。
     reading: きのう、ゆうえんちで ジェットコースターに のった。

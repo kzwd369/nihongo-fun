@@ -13,8 +13,8 @@ tags: ['slang', 'media', 'tv']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: happening
-japaneseMeaning: Kecelakaan atau insiden tak terduga, biasanya dengan nuansa komedi atau memalukan. Digunakan untuk kesalahan di siaran langsung, malfungsi kostum, bencana pernikahan, dan kekacauan slapstick yang gemar diputar ulang dalam slow motion oleh TV variety show Jepang. Kata ini hampir selalu mengandung nuansa "ada yang tidak beres".
-englishMeaning: Dalam bahasa Inggris, "a happening" hanya berarti kejadian atau peristiwa — sepenuhnya netral. Di dunia seni tahun 1960-an, kata itu juga dipakai untuk pertunjukan avant-garde improvisasi ("Happenings" karya Allan Kaprow). Bahasa Inggris tidak pernah memuat kata ini dengan arti "kecelakaan" atau "kesalahan memalukan" seperti bahasa Jepang.
+japaneseMeaning: Insiden tak terduga / kecelakaan kecil (biasanya bernuansa komedi atau memalukan)
+englishMeaning: Kejadian / peristiwa (netral, tanpa nuansa kecelakaan memalukan)
 examples:
   - japanese: 結婚式でちょっとしたハプニングがあった。
     reading: けっこんしきで ちょっとした ハプニングが あった。

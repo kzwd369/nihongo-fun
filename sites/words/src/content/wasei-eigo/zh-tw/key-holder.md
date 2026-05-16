@@ -13,10 +13,8 @@ tags: ['時尚', '周邊', '動漫', '配件']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: key holder
-japaneseMeaning: >-
-  繫在金屬圈上、用來掛鑰匙——或者如今更常用來裝飾包包——的小吊飾、墜飾或裝飾物。涵蓋範圍從廉價的溫泉木牌紀念品、精品品牌的皮革吊飾，到 アクリルキーホルダー（動漫角色的壓克力吊飾）與扭蛋獎品。在日本，キーホルダー 是規模最龐大的周邊商品類別之一。
-englishMeaning: >-
-  在英語裡，「key holder」通常指：(1) 掛在玄關牆上用來收納家用鑰匙的壁掛架、(2) 裡面可以收納多支鑰匙的皮革式鑰匙包，或 (3) 被託付鑰匙的人——「the keyholder of the shop」（店鋪的持鑰人）。日本人心裡想的那個吊著鏈圈的小吊飾，英語叫作 **key chain** 或 **key ring**。（科技領域裡，「keyring」也引申為密碼管理工具的比喻。）
+japaneseMeaning: 鑰匙圈、壓克力吊飾
+englishMeaning: 鑰匙圈（key chain / key ring）
 examples:
   - japanese: アニメショップで可愛いキーホルダーを買った。
     reading: アニメ ショップで かわいい キーホルダーを かった。

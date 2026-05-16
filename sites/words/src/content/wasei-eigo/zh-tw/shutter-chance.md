@@ -13,9 +13,8 @@ tags: ['日常生活', '興趣', '攝影']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: shutter chance
-japaneseMeaning: 拍照的完美瞬間；光線、表情、構圖與時機全部對齊、能拍出一張好照片的那一刻。
-englishMeaning: >-
-  「Shutter chance」並不是真正的英語複合詞。英語母語者會說「photo opportunity」（常縮寫為「photo op」）、「perfect shot」、「the right moment」或「the perfect shot」。這個日語詞把「shutter」和「chance」拼成了英語從不會有的組合。
+japaneseMeaning: 拍照的絕佳瞬間
+englishMeaning: 拍照時機（photo opportunity / photo op / perfect shot / the right moment）
 examples:
   - japanese: ここはシャッターチャンスだ！
     reading: ここは シャッターチャンスだ！

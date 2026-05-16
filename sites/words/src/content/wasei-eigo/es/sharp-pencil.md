@@ -13,8 +13,8 @@ tags: ['papelería', 'escuela', 'vida-diaria']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: sharp pencil (de "Ever-Ready Sharp Pencil")
-japaneseMeaning: Un portaminas (lápiz con mina extensible)
-englishMeaning: En inglés se dice "mechanical pencil" o (en el Reino Unido) "propelling pencil". "Sharp pencil" en inglés significa simplemente un lápiz bien afilado
+japaneseMeaning: Portaminas (lápiz con mina extensible)
+englishMeaning: Portaminas (mechanical pencil / propelling pencil)
 examples:
   - japanese: シャープペンシルの芯が折れた。
     reading: シャープペンシルの しんが おれた。

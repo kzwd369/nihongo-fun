@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: free + Arbeiter
 japaneseMeaning: A person who moves between part-time jobs without pursuing a career (typically young adults)
-englishMeaning: '"Freeter" doesn''t exist in English — it''s a Japanese blend of English "free" and German "Arbeiter" (worker)'
+englishMeaning: A young part-time worker without a fixed career path
 examples:
   - japanese: 大学を卒業してからずっとフリーターをしている。
     reading: だいがくを そつぎょうしてから ずっと フリーターを している。

@@ -13,10 +13,8 @@ tags: ['transporte', 'vida-cotidiana', 'conducción']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: front glass
-japaneseMeaning: >-
-  La ventana delantera de un coche. Forma pareja con リアガラス (rear glass) para la luneta trasera. En inglés se usan términos específicos: windshield (EE. UU.) o windscreen (Reino Unido).
-englishMeaning: >-
-  "Front glass" no es un término estándar en inglés para el parabrisas. Los estadounidenses dicen "windshield" y los británicos "windscreen". La luneta trasera es simplemente "rear window", no "rear glass".
+japaneseMeaning: Parabrisas (la ventana delantera del coche)
+englishMeaning: Parabrisas (windshield / windscreen)
 examples:
   - japanese: フロントガラスに虫がついた。
     reading: フロントガラスに むしが ついた。

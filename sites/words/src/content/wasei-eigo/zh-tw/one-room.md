@@ -13,8 +13,8 @@ tags: ['居住', '房地產', '日常生活']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: one room
-japaneseMeaning: 套房（studio）——臥室、客廳、廚房合一的單間空間，通常另外有個小浴室。日本學生與社會新鮮人最常見的入門型租屋。
-englishMeaning: 英文裡「one-room」並不是標準的住宅類別。對應的說法是「studio」或「studio apartment」。英式英語有時會用「bedsit」。「one-bedroom」則不同——那是另有獨立臥室加上客廳的格局。
+japaneseMeaning: 套房（studio，臥室／客廳／廚房合一，浴室另計）
+englishMeaning: 套房（studio / studio apartment / bedsit）
 examples:
   - japanese: 大学の近くのワンルームに住んでいる。
     reading: だいがくの ちかくの ワンルームに すんでいる。

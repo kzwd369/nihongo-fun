@@ -13,10 +13,8 @@ tags: ['transporte', 'vida-cotidiana', 'conducción']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: winker
-japaneseMeaning: >-
-  La luz intermitente direccional de un coche que se usa para señalar un giro o un cambio de carril; el intermitente. Se usa con 出す (sacar / encender) como en ウィンカーを出す.
-englishMeaning: >-
-  "Winker" en inglés significa "persona que guiña el ojo" o, históricamente, las anteojeras de cuero que se colocan a los caballos de carreras. No es la palabra cotidiana para el intermitente de un coche. Los estadounidenses dicen "turn signal" o "blinker"; los británicos dicen "indicator".
+japaneseMeaning: Intermitente del coche
+englishMeaning: Intermitente (turn signal / blinker / indicator)
 examples:
   - japanese: 右折するのでウィンカーを出した。
     reading: うせつするので ウィンカーを だした。

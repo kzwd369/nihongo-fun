@@ -13,9 +13,8 @@ tags: ['交通', '日常生活', '駕駛']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: handle
-japaneseMeaning: 汽車的方向盤，或自行車、機車的車把。也出現在 ハンドル操作（操控方向盤）、急ハンドル（急打方向）等複合詞中。
-englishMeaning: >-
-  在英語中，「handle」指的是門把、杯耳、鍋柄、行李箱提把或工具的握柄——是用手握住的小東西。當動詞用時，表示「處理」或「應付」。英語母語者從不把方向盤叫做「handle」。
+japaneseMeaning: 汽車方向盤；自行車、機車的車把
+englishMeaning: 把手、門把、提把（handle＝steering wheel／handlebar 才是方向盤／車把）
 examples:
   - japanese: 彼はハンドルを握るのが好きだ。
     reading: かれは ハンドルを にぎるのが すきだ。

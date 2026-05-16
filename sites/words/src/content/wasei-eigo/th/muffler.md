@@ -13,8 +13,8 @@ tags: ['แฟชั่น', 'เสื้อผ้า', 'ฤดูหนาว'
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: muffler
-japaneseMeaning: ผ้าพันคอหน้าหนาว (ผ้าพันคอทำจากขนสัตว์หรือถักยาวเพื่อให้อบอุ่น)
-englishMeaning: ในภาษาอังกฤษสมัยใหม่ "muffler" หมายถึงท่อไอเสียที่ลดเสียงของรถยนต์ ความหมายเก่าว่า "ผ้าพันคอ" เป็นภาษาโบราณไปแล้ว
+japaneseMeaning: ผ้าพันคอหน้าหนาว
+englishMeaning: A car exhaust muffler
 examples:
   - japanese: 寒いのでマフラーを巻いた。
     reading: さむいので マフラーを まいた。

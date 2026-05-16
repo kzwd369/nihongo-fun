@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: paper driver
 japaneseMeaning: 擁有駕照但很少或從不開車的人
-englishMeaning: 英語中沒有「paper driver」這個說法，英語會說「I have a license but I don't drive」（我有駕照但不開車）
+englishMeaning: 有駕照但不開車的人（英語無對應單字，需描述）
 examples:
   - japanese: ペーパードライバーなので運転が怖いです。
     reading: ペーパードライバーなので うんてんが こわいです。

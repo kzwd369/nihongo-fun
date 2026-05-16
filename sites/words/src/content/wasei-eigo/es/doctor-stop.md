@@ -13,10 +13,8 @@ tags: ['vida-cotidiana', 'salud', 'deportes']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: doctor stop
-japaneseMeaning: >-
-  Orden médica de detener una actividad —trabajo, deporte, alcohol, tabaco, etc.— por motivos de salud. Se usa como sustantivo, frecuentemente con かかる (recibir una orden) o がかかる (emitirse).
-englishMeaning: >-
-  "Doctor stop" no es un sustantivo real en inglés. Los nativos dicen "under doctor's orders", "the doctor told me to stop" o, en un combate, "doctor stoppage" / "medical stoppage". El inglés no tiene un sustantivo compacto que abarque el uso japonés.
+japaneseMeaning: Orden médica de detener una actividad por salud
+englishMeaning: Orden del médico (doctor's orders / medical stoppage)
 examples:
   - japanese: 働きすぎてドクターストップがかかった。
     reading: はたらきすぎて ドクターストップが かかった。

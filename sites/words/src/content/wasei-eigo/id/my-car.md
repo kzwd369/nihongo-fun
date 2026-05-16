@@ -13,8 +13,8 @@ tags: ['transportation', 'lifestyle', 'daily-life']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: my car
-japaneseMeaning: Mobil milik pribadi seseorang — sebuah kategori yang dikontraskan dengan mobil perusahaan, taksi, atau transportasi umum.
-englishMeaning: Dalam bahasa Inggris, "my car" hanyalah frasa posesif. Itu tidak digunakan sebagai kategori konseptual untuk kepemilikan mobil pribadi.
+japaneseMeaning: Mobil milik pribadi (sebagai kategori, bukan mobil dinas/umum)
+englishMeaning: One's own car / privately owned car (my car hanya frasa posesif)
 examples:
   - japanese: マイカーで通勤している。
     reading: マイカーで つうきんしている。

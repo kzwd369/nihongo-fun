@@ -13,10 +13,8 @@ tags: ['slang', 'encouragement', 'sports']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: fight
-japaneseMeaning: >-
-  Sorakan semangat mandiri yang diteriakkan pada seseorang yang akan berusaha keras atau sedang berjuang. Setara dengan "Go for it!", "You can do it!", "Hang in there!", atau "Good luck!" dalam bahasa Inggris. Inilah yang diteriakkan orang Jepang pada pelari maraton, tim bisbol, rekan yang menuju presentasi besar, dan teman yang menghadapi ujian — tidak pernah sebagai seruan untuk pertarungan fisik sebenarnya.
-englishMeaning: >-
-  Dalam bahasa Inggris, "Fight!" hanya berarti pertarungan fisik harfiah — pembawa acara ring yang memulai pertandingan tinju, kerumunan yang mendorong perkelahian halaman sekolah, pelatih yang membentak pemain yang ragu. Meneriakkan "Fight!" pada teman yang lari maraton akan terdengar agresif, membingungkan, atau sarkastis gelap, seolah Anda menantangnya untuk menabrak pelari berikutnya.
+japaneseMeaning: Sorakan semangat — "Ayo!" / "Kamu pasti bisa!" / "Semangat!"
+englishMeaning: Go for it! / You can do it! / Good luck! (bukan ajakan berkelahi)
 examples:
   - japanese: 明日の試験、ファイト！
     reading: あしたの しけん、ファイト！

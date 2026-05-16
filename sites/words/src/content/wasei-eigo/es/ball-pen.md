@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: ball(point) pen
 japaneseMeaning: Un bolígrafo
-englishMeaning: Los angloparlantes dicen "ballpoint pen" (o "ballpoint"). "Ball pen" se usa en algunos ingleses asiáticos, pero no es estándar en EE. UU. ni en el Reino Unido
+englishMeaning: Bolígrafo (ballpoint pen / ballpoint)
 examples:
   - japanese: 黒いボールペンで書いてください。
     reading: くろい ボールペンで かいてください。

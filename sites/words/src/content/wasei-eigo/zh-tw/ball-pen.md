@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: ball(point) pen
 japaneseMeaning: 原子筆
-englishMeaning: 英語母語者稱為「ballpoint pen」（或「ballpoint」）。「Ball pen」在部分亞洲英語中有人用，但在美式或英式英語中非標準
+englishMeaning: 原子筆（ballpoint pen / ballpoint）
 examples:
   - japanese: 黒いボールペンで書いてください。
     reading: くろい ボールペンで かいてください。

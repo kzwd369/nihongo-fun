@@ -13,10 +13,8 @@ tags: ['music', 'entertainment', 'nightlife']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: live house
-japaneseMeaning: >-
-  Tempat pertunjukan musik live berukuran kecil hingga menengah, biasanya menampung 50-500 orang. Umumnya terselip di basement atau gedung multi-tenant di distrik kota seperti Shimokitazawa, Shinjuku, atau Amemura Osaka. Lantai berdiri, bar counter, wajib ドリンク代 (drink charge) 500-600 yen di atas tiket 2000-4000 yen. Batu loncatan bagi band indie, rock, punk, dan visual-kei di Jepang.
-englishMeaning: >-
-  Penutur bahasa Inggris tidak mengatakan "live house". Padanannya adalah "music venue", "club", "small concert venue", atau "dive bar (dengan panggung)". Katakan "live house" pada penutur asli Inggris dan kemungkinan kamu akan mendapat tanggapan bingung "rumah tempat orang melakukan streaming live?"
+japaneseMeaning: Tempat pertunjukan musik live kecil / klub musik
+englishMeaning: Tempat pertunjukan musik live kecil / klub musik
 examples:
   - japanese: 今夜、下北沢のライブハウスで友達のバンドを見る。
     reading: こんや、しもきたざわの ライブハウスで ともだちの バンドを みる。

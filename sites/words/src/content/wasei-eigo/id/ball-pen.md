@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-23'
 originalEnglish: ball(point) pen
 japaneseMeaning: Pulpen (ballpoint pen)
-englishMeaning: Penutur bahasa Inggris mengatakan "ballpoint pen" (atau "ballpoint"). "Ball pen" digunakan di beberapa Bahasa Inggris Asia tetapi bukan standar di AS atau UK
+englishMeaning: Ballpoint pen / ballpoint
 examples:
   - japanese: 黒いボールペンで書いてください。
     reading: くろい ボールペンで かいてください。

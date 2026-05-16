@@ -13,8 +13,8 @@ tags: ['food', 'sweets', 'breakfast']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: hot cake
-japaneseMeaning: Pancake yang tebal, manis, dan empuk — biasanya setinggi 2-3 cm, dimakan sebagai camilan atau pencuci mulut, sering dilapisi mentega, sirup, atau krim kocok. Berbeda dari パンケーキ yang lebih tipis dan berorientasi sarapan yang menjadi tren pada tahun 2010-an.
-englishMeaning: Bahasa Inggris menggunakan "pancake" untuk kategori makanan ini. "Hotcake" hanya ada dalam idiom "selling like hotcakes" atau sebagai kata regional kuno. Penutur bahasa Inggris tidak menyebut pancake sarapan sebagai "hot cakes" dalam percakapan sehari-hari.
+japaneseMeaning: Pancake tebal manis ala pencuci mulut (sekitar 2-3 cm)
+englishMeaning: Pancake (hot cake hanya muncul di idiom "selling like hotcakes")
 examples:
   - japanese: 日曜の朝はホットケーキを焼く。
     reading: にちようの あさは ホットケーキを やく。

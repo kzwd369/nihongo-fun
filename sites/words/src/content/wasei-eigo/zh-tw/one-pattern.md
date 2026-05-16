@@ -13,10 +13,8 @@ tags: ['俚語', '慣用語', '行為']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: one pattern
-japaneseMeaning: >-
-  可預測、重複、單調——永遠用同一套節奏的笑話、每季都在重複同一個劇情的偶像劇、每週五都帶你去同一間店的男友。語感略帶貶意，但常常也帶著親暱，從爸爸的冷笑話、穿搭風格，到長壽動畫或創作瓶頸都能用。
-englishMeaning: >-
-  「One pattern」在英語裡不是慣用語，單獨使用毫無意義。英語母語者會視情境選擇「predictable」「formulaic」「cookie-cutter」「a one-trick pony」「the same old thing」或「repetitive」。概念到處都有，但這個說法本身就是純粹的和製英語。中文最接近的對應是「一成不變」或「老梗」。
+japaneseMeaning: 一成不變、老梗、單調重複
+englishMeaning: 可預測的、千篇一律的（predictable / formulaic / repetitive / one-trick pony）
 examples:
   - japanese: 彼のギャグはワンパターンだ。
     reading: かれの ギャグは ワンパターンだ。

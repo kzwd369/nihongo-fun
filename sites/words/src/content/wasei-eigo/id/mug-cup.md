@@ -13,10 +13,8 @@ tags: ['home', 'tableware', 'daily']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: mug (cup)
-japaneseMeaning: >-
-  Cangkir silindris bergagang tanpa tatakan, berkisar antara 200-400 ml, digunakan terutama untuk minuman panas seperti kopi, teh, cokelat panas, atau sup. Sering diberikan sebagai oleh-oleh, dijual sebagai keramik seniman, atau digunakan untuk "resep mug" microwave.
-englishMeaning: >-
-  Dalam bahasa Inggris, objek itu hanya disebut "mug". "Mug cup" berlebihan — mug sudah merupakan jenis cangkir, jadi penutur bahasa Inggris merasa frasa itu canggung. Selain itu, "mug" saja membawa makna lain (to mug = merampok, a mug = wajah, mug shot = foto polisi) yang diam-diam dihindari penutur bahasa Jepang dengan menempelkan カップ.
+japaneseMeaning: Cangkir silindris bergagang tanpa tatakan untuk minuman panas
+englishMeaning: Mug
 examples:
   - japanese: 新しいマグカップを買った。
     reading: あたらしい マグカップを かった。

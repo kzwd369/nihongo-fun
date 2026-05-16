@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: muffler
 japaneseMeaning: 冬天的圍巾（以羊毛或編織布做成的長條頸部保暖用品）
-englishMeaning: 現代英語中「muffler」通常指汽車的消音器。英語中「圍巾」的古義現已算古文用法
+englishMeaning: 汽車消音器（圍巾的古義已罕用）
 examples:
   - japanese: 寒いのでマフラーを巻いた。
     reading: さむいので マフラーを まいた。

@@ -13,10 +13,8 @@ tags: ['transporte', 'vida-cotidiana', 'conducción']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: back mirror
-japaneseMeaning: >-
-  Los espejos que se usan para mirar hacia atrás al conducir. La palabra cubre a la vez el retrovisor interior y los espejos laterales bajo un mismo término paraguas.
-englishMeaning: >-
-  "Back mirror" no es un compuesto real del inglés. Los nativos dicen "rearview mirror" para el espejo interior y "side mirror" o "wing mirror" para los de las puertas. Ningún manual de conducción ni anuncio de coches usa jamás "back mirror".
+japaneseMeaning: Espejo retrovisor del coche (interior y lateral)
+englishMeaning: Espejo retrovisor (rearview mirror / side mirror)
 examples:
   - japanese: バックミラーで後ろを確認する。
     reading: バックミラーで うしろを かくにんする。

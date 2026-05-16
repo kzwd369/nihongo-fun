@@ -13,10 +13,8 @@ tags: ['交通', '日常生活', '駕駛']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: front glass
-japaneseMeaning: >-
-  汽車的前面窗戶玻璃。與 リアガラス（rear glass）成對使用，指後窗。英語則有專門用語 windshield（美）或 windscreen（英）。
-englishMeaning: >-
-  「Front glass」並非英語中指稱汽車前擋的標準用語。美國人說「windshield」，英國人說「windscreen」。後窗則直接稱為「rear window」，不會叫「rear glass」。
+japaneseMeaning: 汽車前擋風玻璃
+englishMeaning: 擋風玻璃（windshield / windscreen）
 examples:
   - japanese: フロントガラスに虫がついた。
     reading: フロントガラスに むしが ついた。

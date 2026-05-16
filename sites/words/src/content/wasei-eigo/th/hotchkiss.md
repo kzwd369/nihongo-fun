@@ -13,8 +13,8 @@ tags: ['เครื่องเขียน', 'ออฟฟิศ', 'ชีว�
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: Hotchkiss (ชื่อแบรนด์)
-japaneseMeaning: เครื่องเย็บกระดาษ (อุปกรณ์ตั้งโต๊ะที่ใช้ลวดเย็บเข้ากระดาษ)
-englishMeaning: '"Hotchkiss" เป็นผู้ผลิตเครื่องเย็บกระดาษอเมริกันในอดีตและเป็นนามสกุลคนละกลุ่ม ไม่ใช่คำสามัญของ stapler ในภาษาอังกฤษ'
+japaneseMeaning: เครื่องเย็บกระดาษ
+englishMeaning: A stapler
 examples:
   - japanese: ホッチキスで書類をとめてください。
     reading: ホッチキスで しょるいを とめてください。

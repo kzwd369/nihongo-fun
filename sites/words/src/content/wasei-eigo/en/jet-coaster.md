@@ -13,10 +13,8 @@ tags: ['leisure', 'amusement', 'idiom']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: jet coaster
-japaneseMeaning: >-
-  The thrill ride you line up an hour for at any Japanese amusement park — the coaster with the loops, drops, and corkscrews. The word is also wildly productive as a metaphor: "ジェットコースターのような展開" (a roller-coaster turn of events) is standard Japanese for anything with dizzying ups and downs — TV dramas, sports comebacks, business quarters, even relationships.
-englishMeaning: >-
-  English speakers call this ride a "roller coaster" — universally, on every continent. If you say "jet coaster" to an English speaker, they will picture some kind of rocket-powered sled, maybe a theme-park concept car that never got built. The word simply isn't part of the English amusement-park vocabulary, despite being perfectly functional Japanese.
+japaneseMeaning: A roller coaster (also used metaphorically for dizzying ups and downs)
+englishMeaning: A roller coaster
 examples:
   - japanese: 昨日、遊園地でジェットコースターに乗った。
     reading: きのう、ゆうえんちで ジェットコースターに のった。

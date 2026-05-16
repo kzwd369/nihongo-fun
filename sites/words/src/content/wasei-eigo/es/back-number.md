@@ -13,10 +13,8 @@ tags: ['medios', 'revista', 'deportes']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: back number
-japaneseMeaning: >-
-  Una palabra comodín con tres usos principales: (1) números atrasados de una revista o boletín, (2) episodios de archivo de un podcast, programa de radio o serie de TV, y (3) el número del dorsal de una camiseta deportiva. Los tres significados son comunes y totalmente neutros en japonés cotidiano.
-englishMeaning: >-
-  "Back number" existe técnicamente en inglés, pero suena antiguo y ambiguo. El inglés moderno usa "back issue" para publicaciones, "jersey number" o "uniform number" para deporte, y "past episodes" o "the archive" para programas. Peor aún: en argot inglés "she's a back number" significa "es una figura acabada, alguien que ya pasó" — un matiz despectivo que el japonés nunca implica.
+japaneseMeaning: Número atrasado de una revista; episodio de archivo; dorsal deportivo
+englishMeaning: Número atrasado / dorsal (back issue / jersey number)
 examples:
   - japanese: この雑誌のバックナンバーを探している。
     reading: この ざっしの バックナンバーを さがしている。

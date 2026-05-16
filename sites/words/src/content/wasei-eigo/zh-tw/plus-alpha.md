@@ -13,10 +13,8 @@ tags: ['商業', '慣用語', '數學']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: plus alpha
-japaneseMeaning: >-
-  在既定基準之上再加上一個未明說的額外金額——一點紅利、一點附贈、讓提案或待遇顯得更吸引人的那個「多出來的什麼」。日式商務日語極度仰賴這個詞：薪資（「月給25万円プラスアルファ」）、收費（「基本料金プラスアルファ」）、努力程度（「プラスアルファの努力」）都在用。模糊正是重點——告訴你「不只這個數字」，卻不必承諾究竟多多少。
-englishMeaning: >-
-  在英語中，希臘字母 α 只出現在數學、物理與金融（「alpha returns」）領域，從來沒有跨進日常用語或商業慣用語。日語這個語感在英文裡的對應說法包括「plus a little extra」「plus bonuses」「above and beyond」「that extra something」「the X factor」或「X and then some」。對英語母語者說「25 man yen plus alpha」，聽起來像是半條物理公式沒寫完。
+japaneseMeaning: 再加上額外的一點（基準之上的加給或附贈）
+englishMeaning: 額外加給（plus a little extra / plus bonuses / above and beyond / the X factor）
 examples:
   - japanese: 月給25万円プラスアルファで募集しています。
     reading: げっきゅう 25まんえん プラスアルファで ぼしゅう しています。

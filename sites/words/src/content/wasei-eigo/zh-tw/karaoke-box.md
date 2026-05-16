@@ -13,10 +13,8 @@ tags: ['音樂', '娛樂', '休閒']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: karaoke box
-japaneseMeaning: >-
-  按小時出租的隔音包廂式卡拉OK——通常容納 2 到 20 人，以 30 分鐘為計費單位，附飲料吧、Free Time 吃到飽方案、「早晨卡拉」優惠與深夜通宵方案等多樣計費選擇，是日本唱卡拉OK 的預設方式。
-englishMeaning: >-
-  英語母語者其實不講「karaoke box」。他們會說「karaoke room」、「private karaoke room」，或乾脆只講「karaoke」。歐美傳統上所謂的「karaoke」是指在 pub 或 bar 的舞台上對著陌生人開唱的公開式卡拉OK，不是租來的私人包廂。
+japaneseMeaning: 包廂式卡拉OK
+englishMeaning: 卡拉OK 包廂（karaoke room / private karaoke room）
 examples:
   - japanese: 週末に友達とカラオケボックスへ行った。
     reading: しゅうまつに ともだちと カラオケボックスへ いった。

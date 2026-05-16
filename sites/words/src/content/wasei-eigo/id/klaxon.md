@@ -13,9 +13,8 @@ tags: ['transportation', 'daily-life', 'driving']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: klaxon
-japaneseMeaning: Klakson peringatan di mobil; alat yang ditekan pengemudi untuk membunyikan peringatan ke mobil lain atau pejalan kaki. Selalu digunakan untuk klakson kendaraan dalam bahasa Jepang.
-englishMeaning: >-
-  "Klaxon" dalam bahasa Inggris biasanya merujuk pada sirene peringatan yang keras — jenis yang ada di kapal, kapal selam, pabrik, atau alarm darurat. Klakson di mobil hampir selalu disebut "car horn" atau sekadar "horn", dan pengemudi "honk the horn" atau "beep the horn". Menggunakan "klaxon" untuk klakson mobil terdengar kuno atau terlalu dramatis dalam bahasa Inggris modern.
+japaneseMeaning: Klakson mobil
+englishMeaning: Car horn / horn (klaxon dalam bahasa Inggris = sirene peringatan keras)
 examples:
   - japanese: クラクションを鳴らして注意を促した。
     reading: クラクションを ならして ちゅういを うながした。

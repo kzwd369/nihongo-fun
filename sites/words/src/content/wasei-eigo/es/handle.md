@@ -13,10 +13,8 @@ tags: ['transporte', 'vida-cotidiana', 'conducción']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: handle
-japaneseMeaning: >-
-  El volante de un coche, o el manillar de una bicicleta o moto. También aparece en compuestos como ハンドル操作 (manejo del volante) y 急ハンドル (volantazo brusco).
-englishMeaning: >-
-  En inglés, "handle" significa la empuñadura de una puerta, taza, sartén, maleta o herramienta — algo pequeño que se agarra con la mano. Como verbo, significa manejar o gestionar algo. Ningún angloparlante llama "handle" al volante de un coche.
+japaneseMeaning: Volante del coche / manillar de bici o moto
+englishMeaning: Asa, pomo, mango (handle = grip de puerta o utensilio)
 examples:
   - japanese: 彼はハンドルを握るのが好きだ。
     reading: かれは ハンドルを にぎるのが すきだ。

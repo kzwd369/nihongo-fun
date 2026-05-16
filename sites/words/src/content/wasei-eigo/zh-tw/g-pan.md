@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: jeans pants（也可能來自 G.I. pants）
 japaneseMeaning: 牛仔褲（丹寧褲）
-englishMeaning: 英語母語者只說「jeans」，英文裡並不使用「G-pan」
+englishMeaning: 牛仔褲（jeans）
 examples:
   - japanese: ジーパンをはいて出かける。
     reading: ジーパンを はいて でかける。

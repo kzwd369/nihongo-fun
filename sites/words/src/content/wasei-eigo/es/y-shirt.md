@@ -13,8 +13,8 @@ tags: ['moda', 'ropa', 'negocios']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: white shirt
-japaneseMeaning: Camisa de vestir / camisa con botones (la que se usa con traje)
-englishMeaning: '"Y-shirt" no existe en inglés — viene de una confusión auditiva con "white shirt"'
+japaneseMeaning: Camisa de vestir (camisa con botones, la del traje)
+englishMeaning: Camisa de vestir (dress shirt / button-down shirt)
 examples:
   - japanese: ワイシャツにアイロンをかける。
     reading: ワイシャツに アイロンを かける。

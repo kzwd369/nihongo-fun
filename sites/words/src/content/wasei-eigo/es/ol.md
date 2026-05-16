@@ -13,8 +13,8 @@ tags: ['trabajo', 'negocios', 'cultura']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: office lady
-japaneseMeaning: Trabajadora de oficina femenina (generalmente en roles administrativos)
-englishMeaning: '"Office lady" no se usa en inglés — el término se consideraría anticuado y sexista'
+japaneseMeaning: Oficinista mujer (rol administrativo)
+englishMeaning: Oficinista mujer (female office worker)
 examples:
   - japanese: 姉はOLとして銀行で働いています。
     reading: あねは オーエルとして ぎんこうで はたらいています。

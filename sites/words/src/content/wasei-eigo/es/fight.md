@@ -13,10 +13,8 @@ tags: ['argot', 'ánimo', 'deportes']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: fight
-japaneseMeaning: >-
-  Un grito de ánimo autónomo que se dirige a alguien que está a punto de esforzarse o que está pasando un mal momento. Equivalente a "¡Ánimo!", "¡Tú puedes!", "¡Aguanta!" o "¡Suerte!" en español. Es lo que los japoneses le gritan a un corredor de maratón, a un equipo de béisbol, a un compañero antes de una presentación importante o a un amigo frente a un examen — nunca como una llamada al combate real.
-englishMeaning: >-
-  En inglés, "Fight!" significa únicamente combate físico literal — el árbitro que abre un combate de boxeo, la multitud que jalea una pelea callejera, un entrenador gritándole a un equipo blando. Gritárselo a un amigo que corre una maratón sonaría agresivo, confuso o sarcástico, como si lo retaras a pegarle al siguiente corredor.
+japaneseMeaning: Grito de ánimo equivalente a "¡Ánimo!" o "¡Tú puedes!"
+englishMeaning: ¡Pelea! / ¡A pelear! (combate literal — fight)
 examples:
   - japanese: 明日の試験、ファイト！
     reading: あしたの しけん、ファイト！

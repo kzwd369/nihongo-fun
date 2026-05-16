@@ -13,8 +13,8 @@ tags: ['stationery', 'office', 'daily-life']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: Hotchkiss (brand name)
-japaneseMeaning: Stapler (alat meja yang menyatukan kertas dengan staples logam)
-englishMeaning: '"Hotchkiss" adalah produsen stapler Amerika historis dan nama keluarga yang tidak berhubungan — tidak digunakan sebagai kata umum untuk stapler dalam bahasa Inggris'
+japaneseMeaning: Stapler (alat penyatu kertas)
+englishMeaning: Stapler (Hotchkiss adalah nama merek/keluarga, bukan kata umum)
 examples:
   - japanese: ホッチキスで書類をとめてください。
     reading: ホッチキスで しょるいを とめてください。

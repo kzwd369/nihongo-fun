@@ -13,8 +13,8 @@ tags: ['飲料', '甜點', '復古']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: cream soda
-japaneseMeaning: 高腳玻璃杯裡裝著鮮豔翠綠的哈密瓜汽水，上頭漂浮一球香草冰淇淋，再點綴一顆鮮紅色的糖漬櫻桃。是日本昭和時代純喫茶（老派咖啡店）的招牌飲品，也是當前令和復古風潮中的寵兒。
-englishMeaning: 在美國，「cream soda」是一種香草或墨西哥菝葜（sarsaparilla）風味的甜味碳酸飲料，通常呈淡金色、琥珀色或透明（A&W Cream Soda、Dr Brown's 等）。用瓶裝或罐裝販售，裡頭沒有冰淇淋，也不是綠色的。
+japaneseMeaning: 哈密瓜汽水加香草冰淇淋的漂浮飲料（昭和喫茶店招牌）
+englishMeaning: 香草風味的甜味碳酸飲料（cream soda，瓶裝、無冰淇淋）
 examples:
   - japanese: 喫茶店でクリームソーダを頼んだ。
     reading: きっさてんで クリームソーダを たのんだ。

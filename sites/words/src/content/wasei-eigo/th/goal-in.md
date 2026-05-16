@@ -13,10 +13,8 @@ tags: ['ชีวิตประจำวัน', 'กีฬา', 'ความ�
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: goal in
-japaneseMeaning: >-
-  (1) การถึงเส้นชัยหรือวิ่งเข้าเส้นชัยในการแข่งขันกีฬา (2) ในเชิงเปรียบเทียบหมายถึง "แต่งงาน" — "二人はゴールインした" แปลว่า "ทั้งสองคนแต่งงานกันในที่สุด"
-englishMeaning: >-
-  "Goal in" ไม่ใช่คำกริยาประสมที่เป็นธรรมชาติในภาษาอังกฤษ ในฟุตบอลใช้ว่า "score a goal"; ในกรีฑาใช้ว่า "cross the finish line" หรือ "reach the goal" ส่วนการเปรียบเทียบ "แต่งงาน" ในลักษณะนี้ไม่มีอยู่ในภาษาอังกฤษเลย เจ้าของภาษาจะพูดว่า "get married", "tie the knot" หรือ "walk down the aisle"
+japaneseMeaning: เข้าเส้นชัย / (เชิงเปรียบเทียบ) แต่งงาน
+englishMeaning: To cross the finish line / to get married
 examples:
   - japanese: 選手が1位でゴールインした。
     reading: せんしゅが いちいで ゴールインした。

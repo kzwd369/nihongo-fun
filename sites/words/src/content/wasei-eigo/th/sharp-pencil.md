@@ -13,8 +13,8 @@ tags: ['เครื่องเขียน', 'โรงเรียน', 'ช�
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: sharp pencil (จาก "Ever-Ready Sharp Pencil")
-japaneseMeaning: ดินสอกด (ดินสอที่เลื่อนไส้ออกมาเขียนได้)
-englishMeaning: ผู้พูดภาษาอังกฤษเรียกว่า "mechanical pencil" หรือ (ในอังกฤษ) "propelling pencil" ส่วน "sharp pencil" ในภาษาอังกฤษหมายถึงดินสอปลายแหลมเท่านั้น
+japaneseMeaning: ดินสอกด
+englishMeaning: A mechanical pencil / propelling pencil
 examples:
   - japanese: シャープペンシルの芯が折れた。
     reading: シャープペンシルの しんが おれた。

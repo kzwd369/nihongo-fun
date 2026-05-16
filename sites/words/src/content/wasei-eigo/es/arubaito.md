@@ -12,8 +12,8 @@ tags: ['trabajo', 'vida-diaria', 'vida-estudiantil']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: arbeit
-japaneseMeaning: Trabajo de medio tiempo, especialmente para estudiantes o jóvenes
-englishMeaning: '"Arbeit" es alemán para "trabajo/labor" — no es una palabra inglesa en absoluto!'
+japaneseMeaning: Trabajo de medio tiempo (sobre todo de estudiantes)
+englishMeaning: Trabajo de medio tiempo (part-time job)
 examples:
   - japanese: 来月から新しいアルバイトを始めます。
     reading: らいげつから あたらしい アルバイトを はじめます。

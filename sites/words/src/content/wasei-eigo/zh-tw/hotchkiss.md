@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: Hotchkiss（品牌名）
 japaneseMeaning: 釘書機（用金屬釘把紙張釘在一起的桌上工具）
-englishMeaning: 「Hotchkiss」是已經走入歷史的美國釘書機製造商與另一個同姓家族，並非英語中泛指釘書機的用詞
+englishMeaning: 釘書機（stapler；Hotchkiss 為昔日美國品牌名）
 examples:
   - japanese: ホッチキスで書類をとめてください。
     reading: ホッチキスで しょるいを とめてください。

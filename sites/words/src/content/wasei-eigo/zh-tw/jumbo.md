@@ -13,8 +13,8 @@ tags: ['尺寸', '俚語', '日常']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: jumbo
-japaneseMeaning: 一個帶有形容詞性質的前綴，意為「超大」「巨型」「Mega」。在日語裡可以自由接在名詞前——不只是物理上的大（ジャンボパフェ、ジャンボ機），也可以形容抽象的「大」（ジャンボ宝くじ＝獎金高達數億日圓的彩券）。甚至能當作氣場非凡人物的暱稱（ジャンボ尾崎、ジャンボ鶴田）。
-englishMeaning: 英語中「jumbo」幾乎只用來形容體積異常龐大的事物——jumbo jet、jumbo shrimp、jumbo size。很少修飾像獎金、名氣這種抽象概念，更不會像日語那樣拿來當人的暱稱。
+japaneseMeaning: 超大、巨型（前綴；可形容物品、獎金、人物暱稱）
+englishMeaning: 巨型（jumbo，僅限實體物的尺寸）
 examples:
   - japanese: 年末ジャンボ宝くじを10枚買った。
     reading: ねんまつ ジャンボ たからくじを じゅうまい かった。

@@ -13,8 +13,8 @@ tags: ['飲料', '咖啡', '昭和復古']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: American coffee
-japaneseMeaning: 一杯口感清淡、香氣柔和的手沖咖啡——可能是使用淺焙豆沖泡，也可能是把一般咖啡再加熱水稀釋而成。是昭和時代老派喫茶店（喫茶店）的招牌菜單品項，至今仍保留在日本家庭餐廳的菜單上。
-englishMeaning: 「American coffee」在英語系國家並不是一個真正的說法。美國人只會說「coffee」或「drip coffee」。它也不同於 Americano——Americano 是濃縮咖啡加熱水稀釋而成，是完全不同的一種飲品。
+japaneseMeaning: 淺焙或稀釋的清淡手沖咖啡（昭和喫茶店招牌）
+englishMeaning: 一般手沖咖啡（drip coffee），與 Americano（濃縮加熱水）不同
 examples:
   - japanese: アメリカンコーヒーを一杯ください。
     reading: アメリカンコーヒーを いっぱい ください。

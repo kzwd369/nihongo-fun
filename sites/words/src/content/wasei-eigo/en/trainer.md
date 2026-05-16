@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: trainer
 japaneseMeaning: A crewneck sweatshirt (cotton pullover without a hood)
-englishMeaning: In British English, "trainer" = sneaker/athletic shoe. In American English, "trainer" = a fitness coach or a training aid. Neither means "sweatshirt"
+englishMeaning: A sneaker (British) or a fitness coach (American)
 examples:
   - japanese: 寒くなってきたのでトレーナーを着た。
     reading: さむく なってきたので トレーナーを きた。

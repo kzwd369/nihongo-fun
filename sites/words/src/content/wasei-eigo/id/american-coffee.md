@@ -13,9 +13,8 @@ tags: ['drinks', 'coffee', 'retro']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: American coffee
-japaneseMeaning: Secangkir kopi drip yang ringan dan lembut — diseduh dari biji panggang ringan atau dibuat dengan mengencerkan kopi biasa dengan air panas tambahan. Pesanan klasik di kissaten (喫茶店) bergaya Shōwa lama dan masih ada di menu restoran keluarga Jepang hingga kini.
-englishMeaning: >-
-  "American coffee" bukan istilah asli di negara-negara berbahasa Inggris. Orang Amerika hanya menyebutnya "coffee" atau "drip coffee". Ia juga BUKAN sama dengan Americano, yaitu espresso yang diencerkan dengan air panas — minuman yang sepenuhnya berbeda.
+japaneseMeaning: Kopi drip yang ringan dan encer (panggang ringan atau diencerkan air panas)
+englishMeaning: Light/weak drip coffee (bukan Americano, bukan istilah baku)
 examples:
   - japanese: アメリカンコーヒーを一杯ください。
     reading: アメリカンコーヒーを いっぱい ください。

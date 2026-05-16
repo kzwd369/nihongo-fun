@@ -13,10 +13,8 @@ tags: ['交通', '日常生活', '駕駛']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: back mirror
-japaneseMeaning: >-
-  駕駛時用來確認後方的鏡子。這個詞同時涵蓋車內後照鏡和車門兩側的側後視鏡，是一個統稱。
-englishMeaning: >-
-  「Back mirror」並不是真正的英語複合詞。英語母語者會把車內那面叫 rearview mirror，車門兩側那兩面叫 side mirror（美式）或 wing mirror（英式）。沒有任何駕駛手冊、行車記錄器廣告會用 back mirror 這個說法。
+japaneseMeaning: 汽車後照鏡／側後視鏡
+englishMeaning: 後照鏡（rearview mirror / side mirror / wing mirror）
 examples:
   - japanese: バックミラーで後ろを確認する。
     reading: バックミラーで うしろを かくにんする。

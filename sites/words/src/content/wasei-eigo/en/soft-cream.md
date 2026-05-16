@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: soft cream
 japaneseMeaning: Soft-serve ice cream served in a cone
-englishMeaning: English speakers say "soft serve" or "soft-serve ice cream" — "soft cream" is not standard English
+englishMeaning: Soft-serve ice cream
 examples:
   - japanese: 夏は毎日ソフトクリームが食べたくなる。
     reading: なつは まいにち ソフトクリームが たべたくなる。

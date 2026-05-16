@@ -13,10 +13,8 @@ tags: ['work', 'daily-life', 'student-life']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: arbeit
-japaneseMeaning: >-
-  A part-time job, especially for students or young people
-englishMeaning: >-
-  "Arbeit" is German for "work/labor" — not an English word at all!
+japaneseMeaning: A part-time job (especially for students or young people)
+englishMeaning: 'A part-time job (note: "Arbeit" is German for "work/labor")'
 examples:
   - japanese: 来月から新しいアルバイトを始めます。
     reading: らいげつから あたらしい アルバイトを はじめます。

@@ -13,10 +13,8 @@ tags: ['transportation', 'daily-life', 'driving']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: winker
-japaneseMeaning: >-
-  The blinking directional light on a car used to signal a turn or lane change; the turn signal. Used with 出す (to put out / turn on) as in ウィンカーを出す.
-englishMeaning: >-
-  "Winker" in English means "a person who winks" or — historically — the leather blinders put on racehorses' eyes. It is not the everyday word for a car's turn indicator. Americans say "turn signal" or "blinker"; Brits say "indicator".
+japaneseMeaning: A car's turn signal / blinker / indicator
+englishMeaning: A turn signal (US) / blinker (US) / indicator (UK)
 examples:
   - japanese: 右折するのでウィンカーを出した。
     reading: うせつするので ウィンカーを だした。

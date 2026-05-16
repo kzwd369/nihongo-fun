@@ -13,8 +13,8 @@ tags: ['fashion', 'clothing', 'daily-life']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: one-piece
-japaneseMeaning: Terusan wanita (pakaian wanita dengan atasan dan rok yang tersambung menjadi satu bagian)
-englishMeaning: Baju renang satu bagian, atau lebih jarang pakaian satu potong lainnya
+japaneseMeaning: Terusan wanita / dress
+englishMeaning: Baju renang satu bagian (one-piece swimsuit)
 examples:
   - japanese: 今日はワンピースを着て出かけたい。
     reading: きょうは ワンピースを きて でかけたい。

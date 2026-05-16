@@ -13,9 +13,8 @@ tags: ['แฟชั่น', 'ช้อปปิ้ง', 'ธุรกิจ']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: order made
-japaneseMeaning: สั่งตัด/สั่งทำเฉพาะบุคคล ใช้กับเสื้อผ้า (โดยเฉพาะสูท) รองเท้า เครื่องประดับ เฟอร์นิเจอร์ แว่นตา และของทุกอย่างที่ทำตามสเปกของลูกค้าแต่ละคน
-englishMeaning: >-
-  "Order-made" ไม่ใช่อังกฤษมาตรฐาน คำที่ถูกต้องคือ "custom-made", "made-to-order", "made-to-measure", "bespoke" (อังกฤษแบบไฮเอนด์) หรือ "tailor-made"
+japaneseMeaning: สั่งตัด / สั่งทำเฉพาะบุคคล
+englishMeaning: Custom-made / made-to-order / bespoke
 examples:
   - japanese: 結婚式のスーツをオーダーメイドで作った。
     reading: けっこんしきの スーツを オーダーメイドで つくった。

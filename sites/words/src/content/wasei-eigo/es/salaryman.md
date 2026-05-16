@@ -12,8 +12,8 @@ tags: ['trabajo', 'negocios', 'cultura']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: salary man
-japaneseMeaning: Trabajador de oficina masculino, empleado asalariado de una empresa (generalmente a tiempo completo)
-englishMeaning: '"Salary man" no es una expresión real en inglés — los angloparlantes dirían "office worker" o "white-collar worker"'
+japaneseMeaning: Oficinista asalariado (varón, empleado a tiempo completo)
+englishMeaning: Oficinista / empleado de cuello blanco (office worker / white-collar worker)
 examples:
   - japanese: 父はサラリーマンとして30年間働いています。
     reading: ちちは サラリーマンとして さんじゅうねんかん はたらいています。

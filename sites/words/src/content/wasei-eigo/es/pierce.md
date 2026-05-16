@@ -13,10 +13,8 @@ tags: ['moda', 'joyería', 'accesorios']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: pierce
-japaneseMeaning: >-
-  Sustantivo que significa pendientes perforados — dormilonas, aros, colgantes, cualquier cosa que pase por un agujero en el lóbulo. Se extiende a otras joyas de piercing corporal como 鼻ピアス (piercing de nariz) y 軟骨ピアス (piercing de cartílago). Crucialmente distinto de イヤリング, que en japonés solo significa pendientes de clip.
-englishMeaning: >-
-  En inglés, "pierce" es un verbo ("to pierce the ear") y puede ser adjetivo ("pierced"), pero nunca es sustantivo para la joya. El sustantivo es "earrings" (en general, perforados por defecto) o "piercing" con el sufijo -ing para joyas corporales no auriculares. "I bought a pierce" suena agramatical al oído angloparlante.
+japaneseMeaning: Pendientes perforados / piercing corporal
+englishMeaning: Perforar (pierce = verbo; la joya = earrings / piercing)
 examples:
   - japanese: 可愛いピアスを買った。
     reading: かわいい ピアスを かった。

@@ -13,10 +13,8 @@ tags: ['商業', '購物', '金錢']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: cost performance
-japaneseMeaning: >-
-  付出金額相對於得到的價值或滿足感的比例。用「コスパがいい」（CP 值高）或「コスパが悪い」（CP 值低）來評價幾乎任何東西——食物、3C、電影、旅行，甚至感情關係。是現代日本最日常、最萬能的詞彙之一。
-englishMeaning: >-
-  在英語裡，「cost performance」只是工程或 IT 領域的術語（例如 CPU 的性價比）。日常會話中，英語母語者會說「value for money」「bang for your buck」「worth the money」「good deal」或「cost-effective」——絕對不會說「cost performance」。
+japaneseMeaning: CP 值、性價比（コスパ）
+englishMeaning: 性價比、划算度（value for money / bang for your buck / cost-effective）
 examples:
   - japanese: このラーメン屋、ボリュームもあってコスパ最高だよ。
     reading: この ラーメンや、ボリュームも あって コスパ さいこうだよ。

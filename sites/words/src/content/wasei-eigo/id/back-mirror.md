@@ -13,10 +13,8 @@ tags: ['transportation', 'daily-life', 'driving']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: back mirror
-japaneseMeaning: >-
-  Kaca spion yang digunakan untuk mengecek belakang saat mengemudi — mencakup kaca spion interior maupun kaca spion samping/sayap eksterior di bawah satu istilah payung.
-englishMeaning: >-
-  "Back mirror" bukan kata majemuk asli dalam bahasa Inggris. Penutur asli mengatakan "rearview mirror" untuk yang di dalam mobil dan "side mirror" atau "wing mirror" untuk yang di pintu. Tidak ada manual mengemudi atau iklan dashcam yang pernah menggunakan "back mirror".
+japaneseMeaning: Kaca spion mobil (spion tengah maupun spion samping)
+englishMeaning: Rearview mirror / side mirror / wing mirror
 examples:
   - japanese: バックミラーで後ろを確認する。
     reading: バックミラーで うしろを かくにんする。

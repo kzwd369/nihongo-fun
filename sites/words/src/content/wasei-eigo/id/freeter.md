@@ -13,8 +13,8 @@ tags: ['work', 'culture', 'society']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: free + Arbeiter
-japaneseMeaning: Orang yang berpindah antar pekerjaan paruh waktu tanpa mengejar karier (biasanya dewasa muda)
-englishMeaning: '"Freeter" tidak ada dalam bahasa Inggris — ini campuran Jepang dari "free" Inggris dan "Arbeiter" Jerman (pekerja)'
+japaneseMeaning: Pekerja paruh waktu tanpa karier tetap (biasanya dewasa muda)
+englishMeaning: Part-timer / job-hopper (freeter bukan kata bahasa Inggris)
 examples:
   - japanese: 大学を卒業してからずっとフリーターをしている。
     reading: だいがくを そつぎょうしてから ずっと フリーターを している。

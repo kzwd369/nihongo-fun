@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: sharp pencil（出自「Ever-Ready Sharp Pencil」）
 japaneseMeaning: 自動鉛筆（以推桿補充筆芯的鉛筆）
-englishMeaning: 英語母語者稱為「mechanical pencil」或（英國）「propelling pencil」。英文中的「sharp pencil」僅指筆尖削得很尖的鉛筆
+englishMeaning: 自動鉛筆（mechanical pencil / propelling pencil）
 examples:
   - japanese: シャープペンシルの芯が折れた。
     reading: シャープペンシルの しんが おれた。

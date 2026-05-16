@@ -13,8 +13,8 @@ tags: ['fashion', 'clothing', 'business']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: white shirt
-japaneseMeaning: เสื้อเชิ้ต / เสื้อเชิ้ตแบบมีกระดุม (แบบที่ใส่กับสูท)
-englishMeaning: '"Y-shirt" doesn''t exist in English — it comes from a mishearing of "white shirt"'
+japaneseMeaning: เสื้อเชิ้ต / เสื้อเชิ้ตติดกระดุม
+englishMeaning: A dress shirt (no direct English equivalent for "Y-shirt")
 examples:
   - japanese: ワイシャツにアイロンをかける。
     reading: ワイシャツに アイロンを かける。

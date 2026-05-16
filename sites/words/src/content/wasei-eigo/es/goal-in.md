@@ -13,10 +13,8 @@ tags: ['vida-cotidiana', 'deportes', 'relaciones']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: goal in
-japaneseMeaning: >-
-  (1) Llegar a la meta o cruzar la línea de llegada en una carrera o competición deportiva. (2) En sentido figurado, casarse: "二人はゴールインした" significa "los dos por fin se casaron".
-englishMeaning: >-
-  "Goal in" no es un verbo compuesto natural del inglés. En fútbol se dice "score a goal"; en atletismo, "cross the finish line" o "reach the goal". La metáfora del matrimonio simplemente no existe en inglés: los nativos dicen "get married", "tie the knot" o "walk down the aisle".
+japaneseMeaning: Cruzar la meta; (figurado) casarse
+englishMeaning: Cruzar la línea de meta / casarse (cross the finish line / get married)
 examples:
   - japanese: 選手が1位でゴールインした。
     reading: せんしゅが いちいで ゴールインした。

@@ -13,8 +13,8 @@ tags: ['俚語', '媒體', '電視']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: happening
-japaneseMeaning: 預料之外的意外或小事故，通常帶有搞笑或尷尬的色彩。用於直播出包、衣裝走光、婚禮災難，以及日本綜藝節目最愛用慢動作重播的那種戲劇性失誤。這個詞幾乎總是帶著「出了點狀況」的語感。
-englishMeaning: 在英語裡，「a happening」單純是指發生的事或事件——完全中性。1960 年代藝術圈也曾用它指稱前衛的即興表演（艾倫·卡普羅的「Happenings」）。英語從來沒有像日語那樣給它加上「意外」或「失態」的含義。
+japaneseMeaning: 突發小意外、出包（帶搞笑或尷尬色彩）
+englishMeaning: 發生的事、事件（happening，無「意外」之意）
 examples:
   - japanese: 結婚式でちょっとしたハプニングがあった。
     reading: けっこんしきで ちょっとした ハプニングが あった。

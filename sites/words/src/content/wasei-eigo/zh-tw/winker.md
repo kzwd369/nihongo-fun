@@ -13,9 +13,8 @@ tags: ['交通', '日常生活', '駕駛']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: winker
-japaneseMeaning: 汽車用來表示轉彎或變換車道的閃爍方向燈；方向指示燈。常與「出す」搭配使用，如「ウィンカーを出す」（打方向燈）。
-englishMeaning: >-
-  「Winker」在英語中意指「眨眼的人」，或從歷史上看，指的是賽馬戴的皮製眼罩。它不是英語中稱呼汽車方向燈的日常用語。美國人說「turn signal」或「blinker」；英國人說「indicator」。
+japaneseMeaning: 汽車方向燈
+englishMeaning: 方向燈（turn signal / blinker / indicator）
 examples:
   - japanese: 右折するのでウィンカーを出した。
     reading: うせつするので ウィンカーを だした。

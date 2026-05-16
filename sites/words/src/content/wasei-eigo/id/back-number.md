@@ -13,10 +13,8 @@ tags: ['media', 'magazine', 'sports']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: back number
-japaneseMeaning: >-
-  Istilah serba-bisa dengan tiga penggunaan utama: (1) edisi lama majalah atau newsletter, (2) episode arsip podcast, acara radio, atau program TV, dan (3) nomor di punggung seragam olahraga. Ketiganya umum dan sepenuhnya netral dalam bahasa Jepang sehari-hari.
-englishMeaning: >-
-  "Back number" secara teknis ada dalam bahasa Inggris tetapi terdengar kuno dan ambigu. Bahasa Inggris modern menggunakan "back issue" untuk publikasi, "jersey number" atau "uniform number" untuk olahraga, dan "past episodes" atau "the archive" untuk acara. Lebih buruk lagi, slang Inggris masih menggunakan "she's a back number" untuk berarti "seseorang yang sudah ketinggalan zaman" — nuansa merendahkan yang tidak pernah dimiliki kata Jepang.
+japaneseMeaning: Edisi lama majalah / episode arsip / nomor punggung jersey olahraga
+englishMeaning: Back issue (majalah) / jersey number (olahraga) / past episodes (acara)
 examples:
   - japanese: この雑誌のバックナンバーを探している。
     reading: この ざっしの バックナンバーを さがしている。

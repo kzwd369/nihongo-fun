@@ -13,9 +13,8 @@ tags: ['business', 'work', 'manufacturing']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: cost down
-japaneseMeaning: Mengurangi biaya manufaktur atau operasional; pengurangan biaya (digunakan sebagai kata benda, sering dengan する seperti di コストダウンする)
-englishMeaning: >-
-  "Cost down" bukan bahasa Inggris standar sebagai kata benda. Penutur asli mengatakan "cost reduction", "cost cutting", atau "reduce/lower costs". Frasa itu kadang muncul sebagai penggunaan kata kerja informal dalam bisnis, tetapi tidak pernah sebagai kata benda.
+japaneseMeaning: Pengurangan biaya manufaktur atau operasional
+englishMeaning: Cost reduction / cost cutting / reduce costs
 examples:
   - japanese: 工場のコストダウンを進めている。
     reading: こうじょうの コストダウンを すすめている。

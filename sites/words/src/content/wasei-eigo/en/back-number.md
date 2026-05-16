@@ -13,10 +13,8 @@ tags: ['media', 'magazine', 'sports']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: back number
-japaneseMeaning: >-
-  A catch-all term with three main uses: (1) past issues of a magazine or newsletter, (2) archived episodes of a podcast, radio show, or TV program, and (3) the number on the back of a sports uniform. All three meanings are common and completely neutral in everyday Japanese.
-englishMeaning: >-
-  "Back number" technically exists in English but sounds old-fashioned and ambiguous. Modern English uses "back issue" for publications, "jersey number" or "uniform number" for sports, and "past episodes" or "the archive" for shows. Worse, English slang still uses "she's a back number" to mean "a has-been / someone past their prime" — a dismissive sense the Japanese word never carries.
+japaneseMeaning: A back issue (magazine), past episode (show/podcast), or jersey number (sports)
+englishMeaning: Back issue (publications) / past episode (shows) / jersey number (sports)
 examples:
   - japanese: この雑誌のバックナンバーを探している。
     reading: この ざっしの バックナンバーを さがしている。

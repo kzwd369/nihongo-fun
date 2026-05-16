@@ -13,10 +13,8 @@ tags: ['vida-cotidiana', 'afición', 'fotografía']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: shutter chance
-japaneseMeaning: >-
-  El instante perfecto para hacer una fotografía; el momento ideal en el que la luz, la expresión, la composición y el timing se alinean para lograr una toma excelente.
-englishMeaning: >-
-  "Shutter chance" no es un compuesto real en inglés. Los nativos dicen "photo opportunity" (abreviado a menudo como "photo op"), "perfect shot", "the right moment" o "the perfect shot". La palabra japonesa fusiona "shutter" y "chance" de un modo que el inglés nunca hace.
+japaneseMeaning: Momento perfecto para hacer una foto
+englishMeaning: Oportunidad fotográfica (photo opportunity / perfect shot)
 examples:
   - japanese: ここはシャッターチャンスだ！
     reading: ここは シャッターチャンスだ！

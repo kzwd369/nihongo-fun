@@ -13,8 +13,8 @@ tags: ['美食', '甜點', '早餐']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: hot cake
-japaneseMeaning: 厚實、香甜、鬆軟的鬆餅——通常有 2-3 公分厚，當作點心或甜點來吃，常搭配奶油、糖漿或鮮奶油。與 2010 年代走紅、較薄、偏早餐定位的 パンケーキ 有明顯區別。
-englishMeaning: 英語用「pancake」指稱這類食物。「Hotcake」僅在慣用語「selling like hotcakes（熱賣到不行）」或作為過時的地區性用詞才會出現，英語母語者日常不會把早餐鬆餅叫做「hot cakes」。
+japaneseMeaning: 厚實香甜的日式鬆餅（甜點定位）
+englishMeaning: 鬆餅（pancake，英語日常不說 hot cake）
 examples:
   - japanese: 日曜の朝はホットケーキを焼く。
     reading: にちようの あさは ホットケーキを やく。

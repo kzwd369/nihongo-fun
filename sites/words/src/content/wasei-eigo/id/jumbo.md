@@ -13,8 +13,8 @@ tags: ['size', 'slang', 'everyday']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: jumbo
-japaneseMeaning: Prefiks mirip adjektiva yang berarti "ekstra besar", "raksasa", atau "mega". Dalam bahasa Jepang dilekatkan dengan bebas ke kata benda — tidak hanya ukuran fisik (ジャンボパフェ, ジャンボ機) tetapi juga kebesaran abstrak (ジャンボ宝くじ = lotere dengan jackpot ratusan juta yen). Bahkan berfungsi sebagai nama panggilan untuk kepribadian yang lebih besar dari kehidupan (ジャンボ尾崎, ジャンボ鶴田).
-englishMeaning: Dalam bahasa Inggris, "jumbo" adalah kata sifat yang digunakan hampir secara eksklusif untuk hal-hal yang berukuran fisik besar — jumbo jet, jumbo shrimp, jumbo size. Jarang mengubah konsep abstrak seperti hadiah uang atau ketenaran, dan tidak digunakan sebagai nama panggilan pribadi seperti yang dilakukan bahasa Jepang.
+japaneseMeaning: Prefiks "ekstra besar" / "raksasa" (fisik maupun abstrak)
+englishMeaning: Berukuran fisik sangat besar (jumbo jet, jumbo shrimp)
 examples:
   - japanese: 年末ジャンボ宝くじを10枚買った。
     reading: ねんまつ ジャンボ たからくじを じゅうまい かった。

@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: muffler
 japaneseMeaning: A winter scarf (a long woolen or knitted neck wrap for warmth)
-englishMeaning: In modern English, "muffler" usually means a car's exhaust silencer. The old English sense of "neck scarf" is now archaic
+englishMeaning: A car's exhaust silencer (the "scarf" sense is now archaic)
 examples:
   - japanese: 寒いのでマフラーを巻いた。
     reading: さむいので マフラーを まいた。

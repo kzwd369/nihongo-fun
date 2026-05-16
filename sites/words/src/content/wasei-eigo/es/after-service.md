@@ -13,10 +13,8 @@ tags: ['negocios', 'servicio', 'tecnología']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: after service
-japaneseMeaning: >-
-  El soporte posventa que ofrece un fabricante o comerciante — reparaciones en garantía, revisiones periódicas, actualizaciones de software, recambio de piezas y atención al cliente. En Japón, un "手厚いアフターサービス" (servicio posventa atento) es un argumento de venta enorme, sobre todo en coches, electrodomésticos y vivienda.
-englishMeaning: >-
-  Los angloparlantes no usan "after-service" como sustantivo suelto en inglés de negocios cotidiano — incluso puede sonar a "después del servicio militar". Los términos habituales son "after-sales service", "customer service", "warranty service" o "post-purchase support". El concepto es universal, pero la etiqueta japonesa es wasei-eigo.
+japaneseMeaning: Servicio posventa / soporte tras la compra
+englishMeaning: Servicio posventa / atención al cliente (after-sales service / customer service)
 examples:
   - japanese: この家電はアフターサービスがしっかりしている。
     reading: この かでんは アフターサービスが しっかりしている。

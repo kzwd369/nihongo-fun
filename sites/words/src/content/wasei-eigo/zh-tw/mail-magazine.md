@@ -13,9 +13,8 @@ tags: ['科技', '商業', '網路']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: mail + magazine
-japaneseMeaning: 由公司、媒體或個人創作者定期寄送給註冊訂閱者的電子郵件通訊，常簡稱為「メルマガ」。用途涵蓋行銷、公告、付費訂閱內容以及個人專欄等。
-englishMeaning: >-
-  英文會說「email newsletter」或直接說「newsletter」。「mail magazine」這個說法幾乎沒人使用，聽起來反而像是用郵政寄送的紙本雜誌。Substack 等平台讓「newsletter」這個詞在全球流行，但「mail magazine」仍然是一個純粹的日式英語。
+japaneseMeaning: 電子報（メルマガ）
+englishMeaning: 電子報（email newsletter / newsletter）
 examples:
   - japanese: 会社のメルマガに登録してください。
     reading: かいしゃの メルマガに とうろくして ください。

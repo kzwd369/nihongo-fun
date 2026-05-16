@@ -13,10 +13,8 @@ tags: ['運動', '棒球', '媒體']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: night game
-japaneseMeaning: >-
-  在球場照明下於夜間進行的運動比賽——幾乎都是職業棒球（プロ野球）。延伸之後，這個詞也涵蓋任何在天黑後以人工照明持續營業的活動：夜間滑雪場、高爾夫練習場、打擊練習籠等。當日本人說「今日はナイターだ」時，幾乎可以肯定他指的是今晚電視上有讀賣巨人或阪神虎的比賽。
-englishMeaning: >-
-  英語母語者絕不會用「nighter」來指稱夜間體育賽事。標準說法是「night game」（兩個字）。「under the lights」則是常見的詩意變體。「Nighter」單獨出現，要嘛聽起來像半成品，要嘛像是「all-nighter」被切掉一截。這個概念在所有打棒球的國家都存在——但這個詞本身是純粹的日本造語。
+japaneseMeaning: 夜間棒球比賽（在燈光下舉行）
+englishMeaning: 夜間比賽（night game / under the lights）
 examples:
   - japanese: 今夜のナイターは延長戦になった。
     reading: こんやの ナイターは えんちょうせんに なった。

@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: white shirt
 japaneseMeaning: A dress shirt / button-down shirt (the kind worn with suits)
-englishMeaning: '"Y-shirt" doesn''t exist in English — it comes from a mishearing of "white shirt"'
+englishMeaning: A dress shirt / button-down shirt
 examples:
   - japanese: ワイシャツにアイロンをかける。
     reading: ワイシャツに アイロンを かける。

@@ -13,10 +13,8 @@ tags: ['休閒', '遊樂園', '慣用語']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: jet coaster
-japaneseMeaning: >-
-  在任何日本遊樂園都會讓人排上一小時隊的刺激遊樂設施——有迴旋、俯衝、螺旋轉體的那種雲霄飛車。這個詞作為比喻用法也極其活躍：「ジェットコースターのような展開」（雲霄飛車般的發展）是標準日語，用來形容任何高低起伏令人暈眩的事——日劇、體育逆轉戰、企業季報，甚至戀愛關係。
-englishMeaning: >-
-  英語母語者普遍稱這種設施為「roller coaster」——全球通用。如果對英語人士說「jet coaster」，對方會聯想到某種火箭動力的滑車，也許是從沒實際造出來的遊樂園概念車。這個詞完全不在英文的遊樂園詞彙裡，儘管在日語裡卻完全通用。台灣中文則直接稱之為「雲霄飛車」，和英文「roller coaster」的意象一致（如雲中翱翔的飛車），沒有走日式的「噴射」路線。
+japaneseMeaning: 雲霄飛車
+englishMeaning: 雲霄飛車（roller coaster）
 examples:
   - japanese: 昨日、遊園地でジェットコースターに乗った。
     reading: きのう、ゆうえんちで ジェットコースターに のった。

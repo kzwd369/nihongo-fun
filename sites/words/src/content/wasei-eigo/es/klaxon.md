@@ -13,10 +13,8 @@ tags: ['transporte', 'vida-cotidiana', 'conducción']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: klaxon
-japaneseMeaning: >-
-  La bocina de aviso de un coche; el dispositivo que los conductores pulsan para avisar a otros vehículos o peatones. En japonés siempre se usa para referirse a la bocina del automóvil.
-englishMeaning: >-
-  En inglés, "klaxon" suele referirse a una sirena de aviso potente — la de los barcos, submarinos, fábricas o alarmas de emergencia. La bocina del coche se llama casi siempre "car horn" o simplemente "horn", y los conductores "honk the horn" o "beep the horn". Usar "klaxon" para la bocina del coche suena arcaico o exageradamente dramático en inglés moderno.
+japaneseMeaning: Claxon / bocina del coche
+englishMeaning: Sirena de alarma fuerte (klaxon = ship/factory siren; bocina de coche = car horn)
 examples:
   - japanese: クラクションを鳴らして注意を促した。
     reading: クラクションを ならして ちゅういを うながした。

@@ -13,10 +13,8 @@ tags: ['daily-life', 'travel', 'hotel']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: morning call
-japaneseMeaning: >-
-  A scheduled phone call that wakes you up at a specific time — typically requested at a hotel front desk, or exchanged between family members, friends, or romantic partners as a sweet gesture.
-englishMeaning: >-
-  "Morning call" does exist in English but sounds old-fashioned and slightly archaic today. Modern hotels and everyday speech use "wake-up call." The English "wake-up call" also carries a figurative meaning — a shocking event that makes you realize something important — which モーニングコール does not have in Japanese.
+japaneseMeaning: A scheduled wake-up phone call
+englishMeaning: A wake-up phone call
 examples:
   - japanese: 明日の朝7時にモーニングコールをお願いします。
     reading: あしたの あさ しちじに モーニングコールを おねがいします。

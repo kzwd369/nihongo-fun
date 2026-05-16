@@ -1,0 +1,234 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Nav from '../../../../components/Nav.astro';
+import Breadcrumb from '../../../../components/Breadcrumb.astro';
+import Footer from '../../../../components/Footer.astro';
+import { categoryLabel, categoryIntro, MIN_HUB_COUNT } from '../../../../lib/categories';
+
+const illustrations = import.meta.glob('../../../../components/illustrations/*.astro', { eager: true });
+
+function getIllustration(slug: string, vsPattern: string) {
+  const capitalize = slug.charAt(0).toUpperCase() + slug.slice(1);
+  const suffix = vsPattern === 'same' ? 'Same' : 'JP';
+  const key = `../../../../components/illustrations/${capitalize}${suffix}.astro`;
+  const mod = illustrations[key] as { default: any } | undefined;
+  return mod?.default;
+}
+
+export async function getStaticPaths() {
+  const all = await getCollection('wasei-eigo');
+  const locales = ['en', 'es', 'zh-tw', 'th', 'id'];
+  const paths: { params: { locale: string; category: string } }[] = [];
+
+  for (const locale of locales) {
+    const entries = all.filter(e => e.data.locale === locale && !e.data.draft);
+    const counts: Record<string, number> = {};
+    for (const e of entries) counts[e.data.category] = (counts[e.data.category] || 0) + 1;
+    for (const [cat, n] of Object.entries(counts)) {
+      if (n >= MIN_HUB_COUNT) paths.push({ params: { locale, category: cat } });
+    }
+  }
+  return paths;
+}
+
+const { locale, category } = Astro.params;
+const isNoindex = locale === 'en';
+
+const all = await getCollection('wasei-eigo');
+const entries = all
+  .filter(e => e.data.locale === locale && !e.data.draft && e.data.category === category)
+  .sort((a, b) => a.data.slug.localeCompare(b.data.slug));
+
+// Sibling categories (for cross-category exploration)
+const allLocaleEntries = all.filter(e => e.data.locale === locale && !e.data.draft);
+const siblingCounts: Record<string, number> = {};
+for (const e of allLocaleEntries) siblingCounts[e.data.category] = (siblingCounts[e.data.category] || 0) + 1;
+const siblings = Object.entries(siblingCounts)
+  .filter(([cat, n]) => cat !== category && n >= MIN_HUB_COUNT)
+  .sort((a, b) => b[1] - a[1])
+  .map(([cat, n]) => ({ cat, n, label: categoryLabel(locale!, cat) }));
+
+const labels: Record<string, Record<string, string>> = {
+  en: { home: 'Home', waseiEigo: 'Wasei-Eigo', otherCategories: 'Other Categories', backToAll: 'Browse all wasei-eigo' },
+  es: { home: 'Inicio', waseiEigo: 'Wasei-Eigo', otherCategories: 'Otras categorías', backToAll: 'Ver todos los wasei-eigo' },
+  'zh-tw': { home: '首頁', waseiEigo: '和製英語', otherCategories: '其他分類', backToAll: '瀏覽全部和製英語' },
+  th: { home: 'หน้าแรก', waseiEigo: 'วาเซอิ-เอโกะ', otherCategories: 'หมวดอื่นๆ', backToAll: 'ดูวาเซอิ-เอโกะทั้งหมด' },
+  id: { home: 'Beranda', waseiEigo: 'Wasei-Eigo', otherCategories: 'Kategori Lainnya', backToAll: 'Jelajahi semua wasei-eigo' },
+};
+const t = labels[locale!] || labels.en;
+const catLabel = categoryLabel(locale!, category!);
+const intro = categoryIntro(locale!, 'wasei-eigo', category!, entries.length);
+
+const breadcrumbs = [
+  { label: t.home, href: `/${locale}/` },
+  { label: t.waseiEigo, href: `/${locale}/wasei-eigo/` },
+  { label: catLabel },
+];
+
+const pageTitle = `${catLabel} — ${t.waseiEigo} | Nihongo Fun`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      name: pageTitle,
+      description: intro,
+      numberOfItems: entries.length,
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: t.home, item: `https://nihongo-fun.com/${locale}/` },
+        { '@type': 'ListItem', position: 2, name: t.waseiEigo, item: `https://nihongo-fun.com/${locale}/wasei-eigo/` },
+        { '@type': 'ListItem', position: 3, name: catLabel },
+      ],
+    },
+  ],
+};
+
+const catColors: Record<string, { bg: string; badge: string }> = {
+  housing:       { bg: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)', badge: '#2e7d32' },
+  work:          { bg: 'linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%)', badge: '#1565c0' },
+  'daily-life':  { bg: 'linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%)', badge: '#c43e00' },
+  technology:    { bg: 'linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%)', badge: '#283593' },
+  food:          { bg: 'linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%)', badge: '#c2185b' },
+  business:      { bg: 'linear-gradient(135deg, #eceff1 0%, #cfd8dc 100%)', badge: '#37474f' },
+  fashion:       { bg: 'linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%)', badge: '#7b1fa2' },
+  entertainment: { bg: 'linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%)', badge: '#00838f' },
+  transportation:{ bg: 'linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%)', badge: '#0277bd' },
+  stationery:    { bg: 'linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%)', badge: '#a86400' },
+};
+const defaultColor = { bg: 'linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%)', badge: '#616161' };
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={intro}
+  locale={locale!}
+  noindex={isNoindex}
+  jsonLd={jsonLd}
+  pagePath={`/wasei-eigo/category/${category}/`}
+>
+  <Nav locale={locale!} />
+  <Breadcrumb items={breadcrumbs} />
+
+  <main class="pillar">
+    <div class="pillar-hero">
+      <h1>{catLabel}</h1>
+      <p>{intro}</p>
+    </div>
+
+    <div class="word-grid">
+      {entries.map(entry => {
+        const Illust = getIllustration(entry.data.slug, entry.data.vsPattern);
+        const colors = catColors[entry.data.category] || defaultColor;
+        return (
+          <a href={`/${locale}/wasei-eigo/${entry.data.slug}/`} class="word-card" style={`--card-bg: ${colors.bg}; --cat-color: ${colors.badge};`}>
+            <div class="card-layout">
+              {Illust && (
+                <div class="card-icon">
+                  <Illust />
+                </div>
+              )}
+              <div class="card-text">
+                <div class="word-jp">{entry.data.japanese}</div>
+                <div class="word-romaji">{entry.data.romaji}</div>
+                <div class="word-vs">
+                  <span class="vs-jp">{entry.data.japaneseMeaning}</span>
+                  <span class="vs-arrow">≠</span>
+                  <span class="vs-en">{entry.data.originalEnglish}</span>
+                </div>
+              </div>
+            </div>
+            {entry.data.jlpt && <span class="word-jlpt">{entry.data.jlpt}</span>}
+          </a>
+        );
+      })}
+    </div>
+
+    {siblings.length > 0 && (
+      <section class="siblings">
+        <h2>{t.otherCategories}</h2>
+        <div class="sibling-chips">
+          {siblings.map(s => (
+            <a href={`/${locale}/wasei-eigo/category/${s.cat}/`} class="sibling-chip">
+              <span>{s.label}</span>
+              <span class="sibling-count">{s.n}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <div class="back-row">
+      <a href={`/${locale}/wasei-eigo/`} class="back-link">← {t.backToAll}</a>
+    </div>
+  </main>
+  <Footer locale={locale!} />
+</BaseLayout>
+
+<style>
+  .pillar { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  .pillar-hero { text-align: center; padding: 32px 0 24px; }
+  .pillar-hero h1 { font-size: 28px; font-weight: 800; }
+  .pillar-hero p { color: var(--text-light); margin-top: 12px; font-size: 15px; line-height: 1.6; }
+  .word-grid { display: grid; gap: 16px; padding-bottom: 32px; }
+  .word-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 16px;
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .word-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    text-decoration: none;
+  }
+  .card-layout { display: flex; align-items: center; gap: 18px; }
+  .card-icon {
+    flex-shrink: 0; width: 72px; height: 72px;
+    border-radius: 14px; background: rgba(255,255,255,0.6);
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
+  }
+  .card-icon :global(svg) { width: 64px; height: 52px; border-radius: 8px; }
+  .card-text { flex: 1; min-width: 0; }
+  .word-jp { font-family: var(--jp-font); font-size: 22px; font-weight: 700; }
+  .word-romaji { font-size: 12px; color: var(--text-light); margin-top: 2px; }
+  .word-vs { margin-top: 6px; font-size: 12px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .vs-jp { background: rgba(255,255,255,0.7); padding: 2px 10px; border-radius: 6px; font-weight: 500; }
+  .vs-arrow { color: var(--text-light); font-weight: 700; }
+  .vs-en { background: rgba(255,255,255,0.5); padding: 2px 10px; border-radius: 6px; color: var(--text-light); }
+  .word-jlpt {
+    position: absolute; top: 14px; right: 14px;
+    background: rgba(255,255,255,0.7); padding: 2px 10px; border-radius: 12px;
+    font-size: 12px; color: var(--text-light); font-weight: 600;
+  }
+  .siblings { margin: 32px 0 8px; }
+  .siblings h2 { font-size: 16px; font-weight: 700; margin-bottom: 12px; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
+  .sibling-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .sibling-chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--tag-bg); padding: 8px 14px; border-radius: 20px;
+    font-size: 14px; color: var(--text); text-decoration: none; transition: all 0.15s;
+  }
+  .sibling-chip:hover { background: var(--accent-light); color: var(--accent); text-decoration: none; }
+  .sibling-count {
+    background: rgba(0,0,0,0.08); padding: 1px 8px; border-radius: 10px;
+    font-size: 11px; color: var(--text-light); font-weight: 700;
+  }
+  .back-row { text-align: center; padding: 32px 0 60px; }
+  .back-link { color: var(--text-light); font-size: 14px; text-decoration: none; }
+  .back-link:hover { color: var(--accent); text-decoration: underline; }
+  @media (max-width: 600px) {
+    .card-icon { width: 60px; height: 60px; }
+    .card-icon :global(svg) { width: 52px; height: 42px; }
+    .word-jp { font-size: 20px; }
+  }
+</style>

@@ -13,10 +13,8 @@ tags: ['vida-cotidiana', 'compras', 'negocios']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: service
-japaneseMeaning: >-
-  En japonés, サービス suele significar "gratis", "regalo" o "descuento". "これサービスしときますね" equivale a "te lo pongo sin cargo". El sentido inglés original de "service" (trabajo, ayuda, oficio religioso) derivó hacia un uso exclusivamente japonés.
-englishMeaning: >-
-  En inglés, "service" significa trabajo, asistencia, ceremonia religiosa, servicio militar o un sector económico. No significa "gratis". Para algo invitado por la casa se dice "on the house", "complimentary", "freebie" o "free of charge".
+japaneseMeaning: Gratis / de regalo / invitado por la casa
+englishMeaning: Servicio / trabajo / asistencia (service — no significa "gratis")
 examples:
   - japanese: 今日はビールを一杯サービスします。
     reading: きょうは ビールを いっぱい サービスします。

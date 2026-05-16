@@ -11,6 +11,8 @@ import ExampleSentence from '../../../components/ExampleSentence.astro';
 import AnimeCallout from '../../../components/AnimeCallout.astro';
 import RelatedWords from '../../../components/RelatedWords.astro';
 import Footer from '../../../components/Footer.astro';
+import { pickCrossLinks } from '../../../lib/crossLinks';
+import { MIN_HUB_COUNT } from '../../../lib/categories';
 
 // Illustration components (add new ones here as words are created)
 const illustrations = import.meta.glob('../../../components/illustrations/*.astro', { eager: true });
@@ -49,6 +51,34 @@ const resolvedRelated = data.relatedWords
     label: `${e!.data.originalEnglish} → ${e!.data.japaneseMeaning}`,
   }));
 
+// Cross-pillar: auto-pick onomatopoeia + anime-japanese for this locale
+const allOno = await getCollection('onomatopoeia');
+const allAnime = await getCollection('anime-japanese');
+
+const onoCandidates = allOno
+  .filter(e => e.data.locale === locale && !e.data.draft)
+  .map(e => ({
+    slug: e.data.slug,
+    category: e.data.category,
+    tags: e.data.tags,
+    primary: e.data.japanese,
+    secondary: e.data.meaning,
+  }));
+
+const animeCandidates = allAnime
+  .filter(e => e.data.locale === locale && !e.data.draft)
+  .map(e => ({
+    slug: e.data.slug,
+    category: e.data.category,
+    tags: e.data.tags,
+    primary: e.data.title,
+    secondary: e.data.metaDescription,
+  }));
+
+const source = { slug: data.slug, category: data.category, tags: data.tags };
+const crossOno = pickCrossLinks(source, onoCandidates, 3);
+const crossAnime = pickCrossLinks(source, animeCandidates, 2);
+
 // Load SVG illustrations based on vsPattern
 const isSamePattern = data.vsPattern === 'same';
 const isUniquePattern = data.vsPattern === 'unique';
@@ -62,11 +92,11 @@ const isNoindex = locale === 'en';
 
 // i18n labels
 const labels: Record<string, Record<string, string>> = {
-  en: { home: 'Home', waseiEigo: 'Wasei-Eigo', examples: 'Examples', anime: 'In Anime', related: 'Related Wasei-Eigo', pronCompare: 'Pronunciation Compare', inJapan: 'In Japan', inEnglish: 'In English' },
-  es: { home: 'Inicio', waseiEigo: 'Wasei-Eigo', examples: 'Ejemplos', anime: 'En el Anime', related: 'Wasei-Eigo Relacionados', pronCompare: 'Comparar Pronunciación', inJapan: 'En Japón', inEnglish: 'En inglés' },
-  'zh-tw': { home: '首頁', waseiEigo: '和製英語', examples: '例句', anime: '動漫裡的用法', related: '相關和製英語', pronCompare: '發音比較', inJapan: '在日本', inEnglish: '在英語圈' },
-  th: { home: 'หน้าแรก', waseiEigo: 'วาเซอิ-เอโกะ', examples: 'ตัวอย่างประโยค', anime: 'ในอนิเมะ', related: 'วาเซอิ-เอโกะที่เกี่ยวข้อง', pronCompare: 'เปรียบเทียบการออกเสียง', inJapan: 'ในญี่ปุ่น', inEnglish: 'ในภาษาอังกฤษ' },
-  id: { home: 'Beranda', waseiEigo: 'Wasei-Eigo', examples: 'Contoh Kalimat', anime: 'Di Anime', related: 'Wasei-Eigo Terkait', pronCompare: 'Perbandingan Pelafalan', inJapan: 'Di Jepang', inEnglish: 'Di Bahasa Inggris' },
+  en: { home: 'Home', waseiEigo: 'Wasei-Eigo', examples: 'Examples', anime: 'In Anime', related: 'Related Wasei-Eigo', pronCompare: 'Pronunciation Compare', inJapan: 'In Japan', inEnglish: 'In English', exploreOno: 'Explore Japanese Onomatopoeia', exploreAnime: 'Anime Japanese to Read Next' },
+  es: { home: 'Inicio', waseiEigo: 'Wasei-Eigo', examples: 'Ejemplos', anime: 'En el Anime', related: 'Wasei-Eigo Relacionados', pronCompare: 'Comparar Pronunciación', inJapan: 'En Japón', inEnglish: 'En inglés', exploreOno: 'Explora las onomatopeyas japonesas', exploreAnime: 'Lee también: Japonés del anime' },
+  'zh-tw': { home: '首頁', waseiEigo: '和製英語', examples: '例句', anime: '動漫裡的用法', related: '相關和製英語', pronCompare: '發音比較', inJapan: '在日本', inEnglish: '在英語圈', exploreOno: '探索日語擬聲擬態詞', exploreAnime: '延伸閱讀：動漫日語' },
+  th: { home: 'หน้าแรก', waseiEigo: 'วาเซอิ-เอโกะ', examples: 'ตัวอย่างประโยค', anime: 'ในอนิเมะ', related: 'วาเซอิ-เอโกะที่เกี่ยวข้อง', pronCompare: 'เปรียบเทียบการออกเสียง', inJapan: 'ในญี่ปุ่น', inEnglish: 'ในภาษาอังกฤษ', exploreOno: 'สำรวจคำเลียนเสียงญี่ปุ่น', exploreAnime: 'อ่านต่อ: ภาษาญี่ปุ่นจากอนิเมะ' },
+  id: { home: 'Beranda', waseiEigo: 'Wasei-Eigo', examples: 'Contoh Kalimat', anime: 'Di Anime', related: 'Wasei-Eigo Terkait', pronCompare: 'Perbandingan Pelafalan', inJapan: 'Di Jepang', inEnglish: 'Di Bahasa Inggris', exploreOno: 'Jelajahi Onomatope Jepang', exploreAnime: 'Baca Berikutnya: Bahasa Jepang Anime' },
 };
 const t = labels[locale] || labels.en;
 
@@ -95,10 +125,17 @@ const jsonLd = {
   ],
 };
 
+// Link category to its hub when it has enough entries
+const sameLocaleEntries = allEntries.filter(e => e.data.locale === locale && !e.data.draft);
+const sameCategoryCount = sameLocaleEntries.filter(e => e.data.category === data.category).length;
+const categoryHasHub = sameCategoryCount >= MIN_HUB_COUNT;
+
 const breadcrumbs = [
   { label: t.home, href: `/${locale}/` },
   { label: t.waseiEigo, href: `/${locale}/wasei-eigo/` },
-  { label: data.category },
+  categoryHasHub
+    ? { label: data.category, href: `/${locale}/wasei-eigo/category/${data.category}/` }
+    : { label: data.category },
   { label: data.japanese },
 ];
 ---
@@ -232,6 +269,33 @@ const breadcrumbs = [
           locale={locale}
           collection="wasei-eigo"
         />
+      </div>
+    )}
+
+    <!-- Cross-pillar: Onomatopoeia -->
+    {crossOno.length > 0 && (
+      <div class="content-card">
+        <h2>{t.exploreOno}</h2>
+        <RelatedWords
+          words={crossOno}
+          locale={locale}
+          collection="onomatopoeia"
+        />
+      </div>
+    )}
+
+    <!-- Cross-pillar: Anime Japanese -->
+    {crossAnime.length > 0 && (
+      <div class="content-card">
+        <h2>{t.exploreAnime}</h2>
+        <div class="related-articles">
+          {crossAnime.map(a => (
+            <a href={`/${locale}/anime-japanese/${a.slug}/`} class="related-article-link">
+              <div class="related-article-title">{a.japanese}</div>
+              {a.label && <div class="related-article-desc">{a.label}</div>}
+            </a>
+          ))}
+        </div>
       </div>
     )}
   </div>
@@ -393,6 +457,35 @@ const breadcrumbs = [
   }
   .prose :global(strong) {
     font-weight: 700;
+  }
+  .related-articles {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .related-article-link {
+    display: block;
+    padding: 14px 16px;
+    background: var(--tag-bg);
+    border-radius: 12px;
+    color: var(--text);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .related-article-link:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+  .related-article-title {
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .related-article-desc {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 4px;
+    line-height: 1.4;
   }
   @media (max-width: 600px) {
     .meta-grid { grid-template-columns: 1fr; }

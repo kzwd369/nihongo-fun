@@ -13,10 +13,8 @@ tags: ['transportation', 'daily-life', 'driving']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: handle
-japaneseMeaning: >-
-  Roda kemudi mobil, atau handlebar sepeda atau motor. Juga digunakan dalam majemuk seperti ハンドル操作 (menyetir) dan 急ハンドル (belokan tiba-tiba).
-englishMeaning: >-
-  Dalam bahasa Inggris, "handle" berarti pegangan di pintu, cangkir, panci, koper, atau alat — benda kecil yang Anda pegang dengan tangan. Sebagai kata kerja, itu berarti menangani atau mengelola sesuatu. Penutur asli tidak pernah menyebut roda kemudi sebagai "handle".
+japaneseMeaning: Roda kemudi mobil / setang sepeda atau motor
+englishMeaning: Steering wheel (mobil) / handlebars (sepeda, motor)
 examples:
   - japanese: 彼はハンドルを握るのが好きだ。
     reading: かれは ハンドルを にぎるのが すきだ。

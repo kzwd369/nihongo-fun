@@ -13,8 +13,8 @@ tags: ['moda', 'ropa', 'invierno']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: muffler
-japaneseMeaning: Una bufanda de invierno (larga, de lana o tejida, para abrigar el cuello)
-englishMeaning: En inglés moderno, "muffler" significa habitualmente el silenciador del tubo de escape de un coche. El antiguo sentido inglés de "bufanda" está hoy en desuso
+japaneseMeaning: Bufanda de invierno (larga, de lana o tejida)
+englishMeaning: Bufanda (scarf — en inglés moderno, "muffler" suele significar silenciador del coche)
 examples:
   - japanese: 寒いのでマフラーを巻いた。
     reading: さむいので マフラーを まいた。

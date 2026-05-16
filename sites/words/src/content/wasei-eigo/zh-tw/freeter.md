@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: free + Arbeiter
 japaneseMeaning: 沒有正職、靠打工維生的人（通常指年輕人）
-englishMeaning: 英語中沒有「freeter」這個詞——這是日語融合英語「free」和德語「Arbeiter」（工人）的原創詞彙
+englishMeaning: 靠打工維生的年輕人（英語無對應詞，free＋德語 Arbeiter 的造詞）
 examples:
   - japanese: 大学を卒業してからずっとフリーターをしている。
     reading: だいがくを そつぎょうしてから ずっと フリーターを している。

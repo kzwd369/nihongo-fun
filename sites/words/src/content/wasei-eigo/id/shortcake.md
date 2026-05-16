@@ -13,8 +13,8 @@ tags: ['food', 'sweets', 'culture']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: shortcake
-japaneseMeaning: Kue sponge dengan krim kocok dan stroberi (kue khas Jepang yang ikonik)
-englishMeaning: Kue pastry mirip biscuit yang rapuh, sering disajikan dengan buah (Amerika) atau kue yang kaya (Inggris British)
+japaneseMeaning: Kue sponge dengan krim kocok dan stroberi
+englishMeaning: Kue pastry rapuh mirip biscuit (Amerika) / kue kaya (UK)
 examples:
   - japanese: 誕生日にショートケーキを買った。
     reading: たんじょうびに ショートケーキを かった。

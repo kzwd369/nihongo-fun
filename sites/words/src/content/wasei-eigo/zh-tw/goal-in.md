@@ -13,10 +13,8 @@ tags: ['日常生活', '運動', '戀愛']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: goal in
-japaneseMeaning: >-
-  （1）在比賽或運動項目中抵達終點、衝過終點線。（2）比喻意義上的「結婚」——「二人はゴールインした」意思是「兩個人終於結婚了」。
-englishMeaning: >-
-  「Goal in」在英語中並不是自然的複合動詞。足球進球是「score a goal」；田徑抵達終點是「cross the finish line」或「reach the goal」。把結婚比喻成這樣的用法在英語中根本不存在——英語母語者會說「get married」「tie the knot」或「walk down the aisle」。
+japaneseMeaning: 衝過終點線；比喻「結婚」
+englishMeaning: 抵達終點／結婚（cross the finish line / get married / tie the knot）
 examples:
   - japanese: 選手が1位でゴールインした。
     reading: せんしゅが いちいで ゴールインした。

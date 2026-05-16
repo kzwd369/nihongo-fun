@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: skinship
 japaneseMeaning: Physical closeness or contact between people, especially parent-child bonding through touch
-englishMeaning: '"Skinship" doesn''t exist in English — it was coined in Japan combining "skin" + "-ship"'
+englishMeaning: Physical bonding through touch / physical affection
 examples:
   - japanese: 親子のスキンシップは大切です。
     reading: おやこの スキンシップは たいせつです。

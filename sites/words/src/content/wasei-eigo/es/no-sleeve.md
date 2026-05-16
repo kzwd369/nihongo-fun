@@ -13,8 +13,8 @@ tags: ['moda', 'ropa', 'vida-diaria']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: no sleeve
-japaneseMeaning: Sin mangas (ropa sin mangas)
-englishMeaning: El inglés usa el adjetivo "sleeveless". "No-sleeve" no es una construcción natural en inglés
+japaneseMeaning: Sin mangas (prenda sin mangas)
+englishMeaning: Sin mangas (sleeveless)
 examples:
   - japanese: 夏はノースリーブの服が楽だ。
     reading: なつは ノースリーブの ふくが らくだ。

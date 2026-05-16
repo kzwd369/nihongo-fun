@@ -13,10 +13,8 @@ tags: ['音樂', '娛樂', '夜生活']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: live house
-japaneseMeaning: >-
-  中小型的現場音樂展演空間，容量通常在 50 到 500 人之間。多半藏身於下北澤、新宿、大阪美國村等都心的地下室或雜居大樓。採站位為主、附設吧台，門票 2000-4000 日圓之外，還要另付 500-600 日圓的 ドリンク代（低消飲料費）。也是日本獨立、搖滾、龐克、視覺系樂團出道的必經之地。
-englishMeaning: >-
-  英語母語者並不說「live house」。對應的詞是「music venue」、「club」、「small concert venue」或帶有舞台的「dive bar」。如果你跟英語母語者說「live house」，他們多半會一臉困惑地反問：「是直播房嗎？」
+japaneseMeaning: 小型現場音樂展演空間 / 小型音樂俱樂部
+englishMeaning: 小型現場音樂展演空間 / 小型音樂俱樂部
 examples:
   - japanese: 今夜、下北沢のライブハウスで友達のバンドを見る。
     reading: こんや、しもきたざわの ライブハウスで ともだちの バンドを みる。

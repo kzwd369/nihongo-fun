@@ -13,8 +13,8 @@ tags: ['cultura', 'vacaciones', 'viaje']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: Golden Week
-japaneseMeaning: Un conjunto de días festivos nacionales desde finales de abril hasta principios de mayo (aprox. 29 de abril – 5 de mayo)
-englishMeaning: '"Golden Week" no se usa en inglés — es un periodo vacacional exclusivamente japonés'
+japaneseMeaning: Semana de festivos nacionales de finales de abril a principios de mayo
+englishMeaning: Periodo vacacional japonés de finales de abril (Golden Week — término propio de Japón)
 examples:
   - japanese: ゴールデンウィークに沖縄に旅行する予定です。
     reading: ゴールデンウィークに おきなわに りょこうする よていです。

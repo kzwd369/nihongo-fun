@@ -13,10 +13,8 @@ tags: ['daily-life', 'shopping', 'business']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: service
-japaneseMeaning: >-
-  Dalam bahasa Jepang, サービス sering berarti "gratis," "bonus," atau "diskon." "これサービスしときますね" berarti "saya kasih gratis yang ini." Makna asli Inggris "service" (kerja, bantuan, layanan keagamaan) bergeser menjadi penggunaan khas Jepang.
-englishMeaning: >-
-  "Service" dalam bahasa Inggris berarti pekerjaan, bantuan, upacara keagamaan, dinas militer, atau sektor industri. Tidak berarti "gratis." Untuk sesuatu yang gratis, penutur asli bilang "on the house", "complimentary", "freebie", atau "free of charge".
+japaneseMeaning: Gratis / bonus / diskon (selain makna umum "layanan")
+englishMeaning: Layanan / pekerjaan (TIDAK berarti gratis — gratis = on the house, complimentary)
 examples:
   - japanese: 今日はビールを一杯サービスします。
     reading: きょうは ビールを いっぱい サービスします。

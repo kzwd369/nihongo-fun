@@ -13,9 +13,8 @@ tags: ['bebidas', 'café', 'retro']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: American coffee
-japaneseMeaning: Un café de filtro ligero y suave — preparado con granos de tueste claro o diluyendo el café normal con agua caliente extra. Un clásico de los kissaten (喫茶店) de la era Shōwa, que sigue hoy en las cartas de los family restaurants japoneses.
-englishMeaning: >-
-  "American coffee" no es un término real en los países angloparlantes. Los estadounidenses lo llaman simplemente "coffee" o "drip coffee". Tampoco es lo mismo que un Americano, que es espresso diluido con agua caliente — una bebida completamente distinta.
+japaneseMeaning: Café de filtro ligero y suave (tueste claro o diluido)
+englishMeaning: Café de filtro / café aguado (drip coffee / weak coffee)
 examples:
   - japanese: アメリカンコーヒーを一杯ください。
     reading: アメリカンコーヒーを いっぱい ください。

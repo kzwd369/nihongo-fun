@@ -13,7 +13,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: arbeit
 japaneseMeaning: 打工，兼職工作（特別指學生或年輕人的兼職）
-englishMeaning: 「Arbeit」是德語的「工作/勞動」——根本不是英語！
+englishMeaning: 工作、勞動（德語 Arbeit，並非英語）
 examples:
   - japanese: 来月から新しいアルバイトを始めます。
     reading: らいげつから あたらしい アルバイトを はじめます。

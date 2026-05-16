@@ -13,10 +13,8 @@ tags: ['sports', 'baseball', 'media']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: night game
-japaneseMeaning: >-
-  A sports match — almost always pro baseball (プロ野球) — played at night under stadium lights. By extension, the word covers anything that runs after dark under artificial lighting: night-time ski slopes, driving ranges, batting cages. When a Japanese person says "今日はナイターだ," they almost certainly mean the Giants or Tigers game is on TV tonight.
-englishMeaning: >-
-  Native English speakers never say "nighter" for a night-time sporting event. The standard term is "night game" (two words). "Under the lights" is a common poetic variant. "Nighter" by itself sounds either like an incomplete word or like "all-nighter" with a piece missing. The concept exists everywhere baseball is played — the coinage is pure Japanese.
+japaneseMeaning: A night game (sports match played at night, especially baseball)
+englishMeaning: A night game (no English use of "nighter" alone)
 examples:
   - japanese: 今夜のナイターは延長戦になった。
     reading: こんやの ナイターは えんちょうせんに なった。

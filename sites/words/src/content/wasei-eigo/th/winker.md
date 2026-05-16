@@ -13,10 +13,8 @@ tags: ['การขนส่ง', 'ชีวิตประจำวัน', '�
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: winker
-japaneseMeaning: >-
-  ไฟกะพริบบอกทิศทางของรถที่ใช้ส่งสัญญาณเลี้ยวหรือเปลี่ยนเลน ใช้คู่กับ 出す (เปิด/เปิดใช้) เช่น ウィンカーを出す (เปิดไฟเลี้ยว)
-englishMeaning: >-
-  "Winker" ในภาษาอังกฤษแปลว่า "คนที่ขยิบตา" หรือในอดีตหมายถึงที่บังตาหนังที่ใส่ให้ม้าแข่ง ไม่ใช่คำที่ใช้เรียกไฟเลี้ยวของรถในชีวิตประจำวัน คนอเมริกันพูดว่า "turn signal" หรือ "blinker" คนอังกฤษพูดว่า "indicator"
+japaneseMeaning: ไฟเลี้ยวของรถยนต์
+englishMeaning: A turn signal / blinker (US) / indicator (UK)
 examples:
   - japanese: 右折するのでウィンカーを出した。
     reading: うせつするので ウィンカーを だした。

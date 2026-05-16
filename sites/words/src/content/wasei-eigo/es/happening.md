@@ -13,8 +13,8 @@ tags: ['argot', 'medios', 'tv']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: happening
-japaneseMeaning: Un accidente o contratiempo inesperado, normalmente con un matiz cómico o vergonzoso. Se usa para patinazos en directo, fallos de vestuario, desastres de boda y las meteduras de pata slapstick que la tele variety japonesa adora repetir a cámara lenta. Casi siempre implica que "algo salió mal".
-englishMeaning: En inglés, "a happening" significa simplemente un acontecimiento o suceso — totalmente neutro. También se usó en el mundo del arte de los años 60 para performances improvisadas de vanguardia (los "Happenings" de Allan Kaprow). El inglés nunca carga la palabra con el sentido de "accidente" o "metedura de pata" que le da el japonés.
+japaneseMeaning: Percance o contratiempo cómico inesperado
+englishMeaning: Un acontecimiento o suceso (happening / incident / mishap)
 examples:
   - japanese: 結婚式でちょっとしたハプニングがあった。
     reading: けっこんしきで ちょっとした ハプニングが あった。

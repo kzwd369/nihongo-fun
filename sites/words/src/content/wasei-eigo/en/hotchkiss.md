@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: Hotchkiss (brand name)
 japaneseMeaning: A stapler (the desktop tool that binds paper with metal staples)
-englishMeaning: '"Hotchkiss" is a historical American stapler manufacturer and an unrelated family name — not used as a generic word for stapler in English'
+englishMeaning: A historical American stapler brand / a family name
 examples:
   - japanese: ホッチキスで書類をとめてください。
     reading: ホッチキスで しょるいを とめてください。

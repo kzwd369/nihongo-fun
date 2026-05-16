@@ -13,9 +13,8 @@ tags: ['transportation', 'daily-life', 'driving']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: klaxon
-japaneseMeaning: The warning horn on a car; the device drivers press to beep at other cars or pedestrians. Always used for a vehicle horn in Japanese.
-englishMeaning: >-
-  "Klaxon" in English usually refers to a loud warning siren — the kind on ships, submarines, factories, or emergency alarms. The horn on a car is almost always called a "car horn" or just "horn", and drivers "honk the horn" or "beep the horn". Using "klaxon" for a car horn sounds archaic or overly dramatic in modern English.
+japaneseMeaning: A car horn
+englishMeaning: A loud warning siren (on ships, factories, emergency alarms)
 examples:
   - japanese: クラクションを鳴らして注意を促した。
     reading: クラクションを ならして ちゅういを うながした。

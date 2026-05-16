@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: one-piece
 japaneseMeaning: 洋裝（上衣與裙子連成一件的女性服裝）
-englishMeaning: 連身泳衣，或較少見地指任何一件式服裝
+englishMeaning: 連身泳衣或一件式服裝（one-piece）
 examples:
   - japanese: 今日はワンピースを着て出かけたい。
     reading: きょうは ワンピースを きて でかけたい。

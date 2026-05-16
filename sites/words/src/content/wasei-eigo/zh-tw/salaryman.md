@@ -13,7 +13,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: salary man
 japaneseMeaning: 男性上班族、白領公司職員（通常指正式雇用的全職員工）
-englishMeaning: 英語中沒有「salary man」這個說法，英語母語者會說「office worker」或「white-collar worker」
+englishMeaning: 上班族、白領職員（office worker / white-collar worker）
 examples:
   - japanese: 父はサラリーマンとして30年間働いています。
     reading: ちちは サラリーマンとして さんじゅうねんかん はたらいています。

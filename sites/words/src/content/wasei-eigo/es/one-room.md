@@ -13,8 +13,8 @@ tags: ['vivienda', 'inmobiliario', 'vida-diaria']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: one room
-japaneseMeaning: Un apartamento tipo estudio — un único espacio que combina dormitorio, sala de estar y cocina, normalmente con un pequeño baño separado. Alquiler común de entrada para estudiantes y jóvenes trabajadores en Japón.
-englishMeaning: En inglés, "one-room" no es una categoría estándar de apartamento. El equivalente es "studio" o "studio apartment". En inglés británico a veces se usa "bedsit". "One-bedroom" es distinto — tiene un dormitorio separado más un salón.
+japaneseMeaning: Apartamento tipo estudio (único espacio con baño separado)
+englishMeaning: Studio / studio apartment / bedsit (en inglés británico)
 examples:
   - japanese: 大学の近くのワンルームに住んでいる。
     reading: だいがくの ちかくの ワンルームに すんでいる。

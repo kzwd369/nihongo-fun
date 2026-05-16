@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: fried potato
 japaneseMeaning: 薯條（油炸馬鈴薯條，作為配餐或點心）
-englishMeaning: 美式英語說「French fries」，英式英語說「chips」，「fried potato」並不是標準英語說法
+englishMeaning: 薯條（French fries 美式 / chips 英式）
 examples:
   - japanese: マックでフライドポテトのLサイズを頼んだ。
     reading: マックで フライドポテトの エルサイズを たのんだ。

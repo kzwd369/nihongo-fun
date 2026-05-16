@@ -13,8 +13,8 @@ tags: ['時尚', '購物', '商業']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: order made
-japaneseMeaning: 量身訂做、訂製。用於服裝（特別是西裝）、鞋子、珠寶、家具、眼鏡，以及任何依客人需求量身打造的物品。
-englishMeaning: 「Order-made」不是標準英語。正確的說法是「custom-made」、「made-to-order」、「made-to-measure」、「bespoke」（英式高端用語）或「tailor-made」。
+japaneseMeaning: 量身訂做、訂製
+englishMeaning: 訂製（custom-made / made-to-order / bespoke）
 examples:
   - japanese: 結婚式のスーツをオーダーメイドで作った。
     reading: けっこんしきの スーツを オーダーメイドで つくった。

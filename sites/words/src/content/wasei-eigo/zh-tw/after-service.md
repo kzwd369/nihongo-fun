@@ -13,10 +13,8 @@ tags: ['商業', '服務', '科技']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: after service
-japaneseMeaning: >-
-  由製造商或販售店提供的購買後支援——包含保固維修、定期點檢、軟體更新、零件更換、客服諮詢等。在日本，「手厚いアフターサービス（無微不至的售後服務）」是極重要的賣點，尤其在汽車、家電和住宅領域。
-englishMeaning: >-
-  英語母語者在日常商務英語中並不會把「after-service」當單獨名詞使用——甚至容易被誤解成「退役後（after military service）」。正確用法是「after-sales service」「customer service」「warranty service」或「post-purchase support」。概念雖通用，但這個日式說法本身就是和製英語。
+japaneseMeaning: 售後服務（購買後的保固、維修、客服支援）
+englishMeaning: 售後服務（after-sales service / customer service / warranty service）
 examples:
   - japanese: この家電はアフターサービスがしっかりしている。
     reading: この かでんは アフターサービスが しっかりしている。

@@ -13,10 +13,8 @@ tags: ['媒體', '雜誌', '運動']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: back number
-japaneseMeaning: >-
-  一個萬用詞，主要有三個用法：(1) 雜誌或電子報的過期刊號，(2) Podcast、廣播節目、電視節目的過往集數，(3) 運動球衣上的背號。三種用法在日常日語中都常見且完全中性，沒有任何負面語感。
-englishMeaning: >-
-  「back number」在英語中雖然存在，但聽起來陳舊又曖昧。現代英語用「back issue」指過期刊號，用「jersey number」或「uniform number」指球衣號碼，用「past episodes」或「the archive」指節目過往集數。更糟的是：英語俚語至今仍用「she's a back number」指「已經過氣、過了全盛期的人」——這種貶義日語從來沒有。
+japaneseMeaning: 雜誌過期刊號／節目過往集數／運動員球衣背號
+englishMeaning: 過期刊號／背號（back issue / jersey number / past episodes）
 examples:
   - japanese: この雑誌のバックナンバーを探している。
     reading: この ざっしの バックナンバーを さがしている。

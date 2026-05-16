@@ -12,8 +12,8 @@ tags: ['美食', '咖啡廳', '文化']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: morning
-japaneseMeaning: 喫茶店的早餐套餐（咖啡＋吐司＋雞蛋，通常只要一杯咖啡的錢）
-englishMeaning: 英語的「morning」只是指一天中的早晨時段——不是早餐套餐
+japaneseMeaning: 喫茶店的早餐套餐（咖啡附吐司、蛋等）
+englishMeaning: 早晨時段（morning，英語不指早餐套餐）
 examples:
   - japanese: 喫茶店でモーニングを食べよう。
     reading: きっさてんで モーニングを たべよう。

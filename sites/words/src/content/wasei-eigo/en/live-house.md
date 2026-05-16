@@ -13,10 +13,8 @@ tags: ['music', 'entertainment', 'nightlife']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: live house
-japaneseMeaning: >-
-  A small-to-mid-sized live music venue, typically holding 50-500 people. Usually tucked into basements or multi-tenant buildings in city districts like Shimokitazawa, Shinjuku, or Osaka's Amemura. Standing-room floors, a bar counter, a mandatory ドリンク代 (drink charge) of 500-600 yen on top of a 2000-4000 yen ticket. The springboard for indie, rock, punk, and visual-kei bands in Japan.
-englishMeaning: >-
-  English speakers do not say "live house." The equivalents are "music venue," "club," "small concert venue," or "dive bar (with a stage)." Say "live house" to a native English speaker and you'll probably get a confused "a house where people stream live?" in return.
+japaneseMeaning: A small live music venue / club
+englishMeaning: A small live music venue / club
 examples:
   - japanese: 今夜、下北沢のライブハウスで友達のバンドを見る。
     reading: こんや、しもきたざわの ライブハウスで ともだちの バンドを みる。

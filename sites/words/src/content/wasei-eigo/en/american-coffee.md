@@ -13,9 +13,8 @@ tags: ['drinks', 'coffee', 'retro']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: American coffee
-japaneseMeaning: A light, mild cup of drip coffee — either brewed from lightly roasted beans or made by diluting regular coffee with extra hot water. A classic order at old-school Shōwa-era kissaten (喫茶店) and still on menus at Japanese family restaurants today.
-englishMeaning: >-
-  "American coffee" is not a real term in English-speaking countries. Americans simply call it "coffee" or "drip coffee." It is also NOT the same as an Americano, which is espresso diluted with hot water — a completely different drink.
+japaneseMeaning: A light, mild drip coffee (lightly roasted or diluted with hot water)
+englishMeaning: Drip coffee / regular coffee (not the same as an espresso-based Americano)
 examples:
   - japanese: アメリカンコーヒーを一杯ください。
     reading: アメリカンコーヒーを いっぱい ください。

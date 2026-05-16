@@ -13,10 +13,8 @@ tags: ['hogar', 'vajilla', 'cotidiano']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: mug (cup)
-japaneseMeaning: >-
-  Una taza cilíndrica con asa y sin platillo, de unos 200-400 ml, usada sobre todo para bebidas calientes como café, té, chocolate o sopa. Muy habitual como souvenir, como pieza de cerámica de autor, o para las "recetas en taza" al microondas.
-englishMeaning: >-
-  En inglés el objeto se llama simplemente "mug". "Mug cup" suena redundante: una mug ya es un tipo de cup, así que a los angloparlantes la expresión les resulta rara. Además, "mug" por sí sola tiene otros significados (to mug = atracar, a mug = una cara, mug shot = foto policial) que en japonés se evitan discretamente añadiendo カップ.
+japaneseMeaning: Taza con asa para bebidas calientes
+englishMeaning: Taza con asa (mug)
 examples:
   - japanese: 新しいマグカップを買った。
     reading: あたらしい マグカップを かった。

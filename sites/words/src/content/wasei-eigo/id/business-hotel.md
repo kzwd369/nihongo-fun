@@ -13,8 +13,8 @@ tags: ['travel', 'accommodation', 'business']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: business hotel
-japaneseMeaning: Hotel kompak dan terjangkau yang dirancang untuk pelancong bisnis — kamar kecil dekat stasiun kereta, fasilitas minimal, layanan efisien
-englishMeaning: '"Business hotel" bukan kategori standar bahasa Inggris; padanan terdekatnya adalah "budget hotel" atau "economy hotel"'
+japaneseMeaning: Hotel kompak murah untuk pelancong bisnis (dekat stasiun, fasilitas minimal)
+englishMeaning: Budget hotel / economy hotel (business hotel bukan kategori baku)
 examples:
   - japanese: 出張で大阪のビジネスホテルに泊まった。
     reading: しゅっちょうで おおさかの ビジネスホテルに とまった。

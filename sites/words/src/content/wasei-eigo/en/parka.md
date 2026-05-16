@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: parka
 japaneseMeaning: A hoodie / hooded sweatshirt (casual pullover with hood)
-englishMeaning: A heavy waterproof jacket with a hood, designed for cold weather (like an Inuit parka)
+englishMeaning: A heavy hooded winter jacket
 examples:
   - japanese: 今日は寒いからパーカーを着ていこう。
     reading: きょうは さむいから パーカーを きていこう。

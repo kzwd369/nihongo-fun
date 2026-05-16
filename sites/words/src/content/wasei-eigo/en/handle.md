@@ -13,10 +13,8 @@ tags: ['transportation', 'daily-life', 'driving']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: handle
-japaneseMeaning: >-
-  The steering wheel of a car, or the handlebars of a bicycle or motorcycle. Also used in compounds like ハンドル操作 (steering) and 急ハンドル (a sudden swerve).
-englishMeaning: >-
-  In English, "handle" means the grip on a door, cup, pan, suitcase, or tool — a small thing you hold with your hand. As a verb, it means to deal with or manage something. Native speakers never call a steering wheel a "handle".
+japaneseMeaning: A steering wheel (car) or handlebars (bicycle/motorcycle)
+englishMeaning: A grip on a door, cup, pan, suitcase, or tool
 examples:
   - japanese: 彼はハンドルを握るのが好きだ。
     reading: かれは ハンドルを にぎるのが すきだ。

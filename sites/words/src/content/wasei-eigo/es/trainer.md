@@ -13,8 +13,8 @@ tags: ['moda', 'ropa', 'vida-diaria']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: trainer
-japaneseMeaning: Una sudadera de cuello redondo (jersey de algodón sin capucha)
-englishMeaning: En inglés británico, "trainer" = zapatilla deportiva. En inglés americano, "trainer" = entrenador de fitness o un accesorio de entrenamiento. Ninguno significa "sudadera"
+japaneseMeaning: Sudadera de cuello redondo (sin capucha)
+englishMeaning: Sudadera (sweatshirt)
 examples:
   - japanese: 寒くなってきたのでトレーナーを着た。
     reading: さむく なってきたので トレーナーを きた。

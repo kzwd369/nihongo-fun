@@ -6,6 +6,8 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import RelatedWords from '../../../components/RelatedWords.astro';
 import Footer from '../../../components/Footer.astro';
 import PhraseShowcase from '../../../components/PhraseShowcase.astro';
+import { pickCrossLinks } from '../../../lib/crossLinks';
+import { MIN_HUB_COUNT } from '../../../lib/categories';
 
 const illustrations = import.meta.glob('../../../components/illustrations/*Anime.astro', { eager: true });
 
@@ -63,6 +65,58 @@ const resolvedArticles = data.relatedArticles
     title: e!.data.title,
   }));
 
+// Auto-fill cross-pillar links when manual frontmatter is empty
+const source = { slug: data.slug, category: data.category, tags: data.tags };
+
+const finalWasei = resolvedWasei.length > 0
+  ? resolvedWasei
+  : pickCrossLinks(
+      source,
+      allWasei
+        .filter(e => e.data.locale === locale && !e.data.draft)
+        .map(e => ({
+          slug: e.data.slug,
+          category: e.data.category,
+          tags: e.data.tags,
+          primary: e.data.japanese,
+          secondary: `${e.data.originalEnglish} → ${e.data.japaneseMeaning}`,
+        })),
+      4,
+    );
+
+const finalOno = resolvedOno.length > 0
+  ? resolvedOno
+  : pickCrossLinks(
+      source,
+      allOno
+        .filter(e => e.data.locale === locale && !e.data.draft)
+        .map(e => ({
+          slug: e.data.slug,
+          category: e.data.category,
+          tags: e.data.tags,
+          primary: e.data.japanese,
+          secondary: e.data.meaning,
+        })),
+      3,
+    );
+
+// Auto-fill same-pillar suggestions when relatedArticles is empty
+const finalArticles = resolvedArticles.length > 0
+  ? resolvedArticles
+  : pickCrossLinks(
+      source,
+      allAnime
+        .filter(e => e.data.locale === locale && !e.data.draft && e.data.slug !== data.slug)
+        .map(e => ({
+          slug: e.data.slug,
+          category: e.data.category,
+          tags: e.data.tags,
+          primary: e.data.title,
+          secondary: '',
+        })),
+      3,
+    ).map(a => ({ slug: a.slug, title: a.japanese }));
+
 // i18n labels
 const labels: Record<string, Record<string, string>> = {
   en: { home: 'Home', anime: 'Anime Japanese', relatedWasei: 'Related Wasei-Eigo', relatedOno: 'Related Onomatopoeia', relatedArticles: 'More Anime Japanese' },
@@ -114,10 +168,16 @@ const jsonLd = {
   ],
 };
 
+const sameLocaleAnimeEntries = allAnime.filter(e => e.data.locale === locale && !e.data.draft);
+const sameCategoryCount = sameLocaleAnimeEntries.filter(e => e.data.category === data.category).length;
+const categoryHasHub = sameCategoryCount >= MIN_HUB_COUNT;
+
 const breadcrumbs = [
   { label: t.home, href: `/${locale}/` },
   { label: t.anime, href: `/${locale}/anime-japanese/` },
-  { label: tCat[data.category] || data.category },
+  categoryHasHub
+    ? { label: tCat[data.category] || data.category, href: `/${locale}/anime-japanese/category/${data.category}/` }
+    : { label: tCat[data.category] || data.category },
   { label: data.title },
 ];
 ---
@@ -165,11 +225,11 @@ const breadcrumbs = [
     </div>
 
     <!-- Cross-pillar: Related Wasei-Eigo -->
-    {resolvedWasei.length > 0 && (
+    {finalWasei.length > 0 && (
       <div class="content-card">
         <h2>{t.relatedWasei}</h2>
         <RelatedWords
-          words={resolvedWasei}
+          words={finalWasei}
           locale={locale}
           collection="wasei-eigo"
         />
@@ -177,11 +237,11 @@ const breadcrumbs = [
     )}
 
     <!-- Cross-pillar: Related Onomatopoeia -->
-    {resolvedOno.length > 0 && (
+    {finalOno.length > 0 && (
       <div class="content-card">
         <h2>{t.relatedOno}</h2>
         <RelatedWords
-          words={resolvedOno}
+          words={finalOno}
           locale={locale}
           collection="onomatopoeia"
         />
@@ -189,11 +249,11 @@ const breadcrumbs = [
     )}
 
     <!-- Related Anime Articles -->
-    {resolvedArticles.length > 0 && (
+    {finalArticles.length > 0 && (
       <div class="content-card">
         <h2>{t.relatedArticles}</h2>
         <div class="related-articles">
-          {resolvedArticles.map(a => (
+          {finalArticles.map(a => (
             <a href={`/${locale}/anime-japanese/${a.slug}/`} class="related-article-link">
               {a.title}
             </a>

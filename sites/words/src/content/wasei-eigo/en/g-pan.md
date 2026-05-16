@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: jeans pants (or possibly G.I. pants)
 japaneseMeaning: Jeans (denim pants)
-englishMeaning: English speakers just say "jeans". "G-pan" isn't used in English
+englishMeaning: Jeans
 examples:
   - japanese: ジーパンをはいて出かける。
     reading: ジーパンを はいて でかける。

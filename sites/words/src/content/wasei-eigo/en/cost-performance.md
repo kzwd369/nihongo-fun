@@ -13,10 +13,8 @@ tags: ['business', 'shopping', 'money']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: cost performance
-japaneseMeaning: >-
-  The ratio of value or satisfaction received to the amount paid. Used as "コスパがいい" (good value) or "コスパが悪い" (bad value) for virtually anything — food, gadgets, movies, trips, even relationships. A universal, everyday word in modern Japan.
-englishMeaning: >-
-  In English, "cost performance" exists only as an engineering or IT term (e.g., the price-to-performance ratio of a CPU). In everyday conversation, native speakers say "value for money," "bang for your buck," "worth the money," "good deal," or "cost-effective" — never "cost performance."
+japaneseMeaning: Value for money / cost-effectiveness (often shortened to コスパ)
+englishMeaning: Value for money / bang for your buck / cost-effective
 examples:
   - japanese: このラーメン屋、ボリュームもあってコスパ最高だよ。
     reading: この ラーメンや、ボリュームも あって コスパ さいこうだよ。

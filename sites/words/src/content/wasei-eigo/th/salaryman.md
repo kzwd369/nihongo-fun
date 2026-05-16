@@ -13,8 +13,8 @@ tags: ['work', 'business', 'culture']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: salary man
-japaneseMeaning: พนักงานออฟฟิศชาย มักเป็นพนักงานประจำของบริษัท
-englishMeaning: '"Salary man" is not a standard English expression — English speakers would say "office worker" or "white-collar worker"'
+japaneseMeaning: พนักงานออฟฟิศชาย / พนักงานบริษัท
+englishMeaning: A male office worker / white-collar employee
 examples:
   - japanese: 父はサラリーマンとして30年間働いています。
     reading: ちちは サラリーマンとして さんじゅうねんかん はたらいています。

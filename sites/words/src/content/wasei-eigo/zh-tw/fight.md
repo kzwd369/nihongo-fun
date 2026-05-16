@@ -13,10 +13,8 @@ tags: ['俚語', '加油', '運動']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: fight
-japaneseMeaning: >-
-  對著即將努力或正在吃力的人喊出的獨立加油聲。相當於中文的「加油！」「你可以的！」「撐住！」「祝你好運！」。日本人會對跑馬拉松的人、棒球隊、即將做重要簡報的同事、正要考試的朋友喊這句——從來不是叫對方去真的打架。
-englishMeaning: >-
-  在英語中「Fight!」只有字面意義的肢體衝突——拳擊賽裁判宣布開打、校園鬥毆圍觀者起鬨、教練對軟弱的球員咆哮。對著跑馬拉松的朋友喊這個字會顯得有敵意、莫名其妙，甚至帶著黑色幽默，好像在叫他去撲倒前面的跑者。
+japaneseMeaning: 加油！你可以的！（鼓勵聲）
+englishMeaning: 打架、戰鬥（fight＝肢體衝突，鼓勵時應用 you can do it / good luck）
 examples:
   - japanese: 明日の試験、ファイト！
     reading: あしたの しけん、ファイト！

@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: morning
 japaneseMeaning: A morning set / breakfast deal at a cafe (coffee + toast + egg, often for just the price of coffee)
-englishMeaning: '"Morning" in English just means the early part of the day — not a breakfast set'
+englishMeaning: The early part of the day
 examples:
   - japanese: 喫茶店でモーニングを食べよう。
     reading: きっさてんで モーニングを たべよう。

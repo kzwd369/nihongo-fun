@@ -13,8 +13,8 @@ tags: ['personality', 'daily-life', 'culture']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: my pace
-japaneseMeaning: ทำอะไรตามจังหวะของตัวเอง ไม่รีบร้อน ใช้ชีวิตในแบบของตัวเอง
-englishMeaning: '"My pace" ไม่ใช่สำนวนภาษาอังกฤษ — ในภาษาอังกฤษจะพูดว่า "going at my own pace" หรือ "marching to my own drum"'
+japaneseMeaning: ทำอะไรตามจังหวะของตัวเอง / ไม่รีบร้อนตามคนอื่น
+englishMeaning: Going at one''s own pace
 examples:
   - japanese: 彼はマイペースな人だから、急かさないで。
     reading: かれは マイペースな ひとだから、せかさないで。

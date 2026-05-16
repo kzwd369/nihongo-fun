@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: no sleeve
 japaneseMeaning: Sleeveless (clothing without sleeves)
-englishMeaning: English uses the adjective "sleeveless". "No-sleeve" isn't a natural construction in English
+englishMeaning: Sleeveless
 examples:
   - japanese: 夏はノースリーブの服が楽だ。
     reading: なつは ノースリーブの ふくが らくだ。

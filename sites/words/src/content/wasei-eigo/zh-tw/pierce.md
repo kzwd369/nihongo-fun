@@ -13,10 +13,8 @@ tags: ['時尚', '珠寶', '飾品']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: pierce
-japaneseMeaning: >-
-  名詞，意指穿洞式耳環——耳針、耳環、耳墜，任何穿過耳垂孔洞的飾品。延伸到其他穿刺式身體飾品，如 鼻ピアス（鼻環）、軟骨ピアス（軟骨釘）。關鍵在於：它與 イヤリング 截然不同，後者在日語中專指夾式耳環。
-englishMeaning: >-
-  英語中「pierce」是動詞（to pierce the ear），也可作形容詞（pierced），但絕不是飾品的名詞。名詞是「earrings」（泛指，現代英語多半預設是穿洞式），或「piercing」加 -ing 後綴，用來指非耳部的身體穿刺飾品。說「I bought a pierce」在英語母語者耳中是不合文法的。
+japaneseMeaning: 穿洞式耳環、身體穿刺飾品
+englishMeaning: 穿刺、刺穿（pierce 為動詞；飾品名詞應用 earrings / piercing）
 examples:
   - japanese: 可愛いピアスを買った。
     reading: かわいい ピアスを かった。

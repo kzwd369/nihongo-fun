@@ -13,10 +13,8 @@ tags: ['ocio', 'parques', 'modismo']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: jet coaster
-japaneseMeaning: >-
-  La atracción de emociones fuertes por la que haces una hora de cola en cualquier parque de atracciones japonés — la montaña rusa con sus loops, caídas y tirabuzones. La palabra también es enormemente productiva como metáfora: "ジェットコースターのような展開" (un giro digno de montaña rusa) es japonés estándar para cualquier cosa con altibajos vertiginosos — doramas, remontadas deportivas, trimestres empresariales, incluso relaciones.
-englishMeaning: >-
-  Los angloparlantes llaman a esta atracción "roller coaster" — universalmente, en todos los continentes. Si le dices "jet coaster" a un angloparlante, se imaginará algún tipo de trineo propulsado por cohete, quizá un concept car de parque temático que nunca llegó a construirse. La palabra sencillamente no forma parte del vocabulario inglés de parques de atracciones, aunque en japonés funcione perfectamente.
+japaneseMeaning: Montaña rusa
+englishMeaning: Montaña rusa (roller coaster)
 examples:
   - japanese: 昨日、遊園地でジェットコースターに乗った。
     reading: きのう、ゆうえんちで ジェットコースターに のった。

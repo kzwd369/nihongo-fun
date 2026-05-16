@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: fried potato
 japaneseMeaning: เฟรนช์ฟรายส์ (มันฝรั่งทอดแท่งๆ เสิร์ฟเป็นเครื่องเคียงหรือของทานเล่น)
-englishMeaning: อเมริกันเรียก "French fries" อังกฤษเรียก "chips" ส่วน "fried potato" ไม่ใช่คำมาตรฐานในภาษาอังกฤษสำหรับอาหารนี้
+englishMeaning: French fries (US) / chips (UK)
 examples:
   - japanese: マックでフライドポテトのLサイズを頼んだ。
     reading: マックで フライドポテトの エルサイズを たのんだ。

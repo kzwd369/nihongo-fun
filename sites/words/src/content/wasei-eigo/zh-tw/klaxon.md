@@ -13,9 +13,8 @@ tags: ['交通', '日常生活', '駕駛']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: klaxon
-japaneseMeaning: 汽車上的警示喇叭；駕駛按下去對其他車輛或行人發出警告的裝置。日語中一律用來指車輛的喇叭。
-englishMeaning: >-
-  在英語裡，「klaxon」通常指的是響亮的警報器——船艦、潛艇、工廠或緊急警報上的那種。汽車上的喇叭幾乎都叫做 "car horn" 或直接叫 "horn"，駕駛的動作是 "honk the horn" 或 "beep the horn"。在現代英語中用「klaxon」來指車喇叭會顯得過時或戲劇化得有點奇怪。
+japaneseMeaning: 汽車喇叭
+englishMeaning: 警報器（klaxon；汽車喇叭應用 car horn / horn）
 examples:
   - japanese: クラクションを鳴らして注意を促した。
     reading: クラクションを ならして ちゅういを うながした。

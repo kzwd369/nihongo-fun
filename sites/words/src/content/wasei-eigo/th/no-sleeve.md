@@ -13,8 +13,8 @@ tags: ['แฟชั่น', 'เสื้อผ้า', 'ชีวิตปร�
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: no sleeve
-japaneseMeaning: แบบแขนกุด (เสื้อผ้าที่ไม่มีแขน)
-englishMeaning: ภาษาอังกฤษใช้คำคุณศัพท์ "sleeveless" ส่วน "no-sleeve" ไม่ใช่โครงสร้างที่เป็นธรรมชาติในภาษาอังกฤษ
+japaneseMeaning: เสื้อผ้าแขนกุด
+englishMeaning: Sleeveless
 examples:
   - japanese: 夏はノースリーブの服が楽だ。
     reading: なつは ノースリーブの ふくが らくだ。

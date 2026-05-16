@@ -13,8 +13,8 @@ tags: ['comida', 'dulces', 'desayuno']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: hot cake
-japaneseMeaning: Un pancake grueso, dulce y esponjoso — normalmente de 2-3 cm de alto, que se come como merienda o postre, casi siempre con mantequilla, sirope o nata montada. Distinto del パンケーキ, más fino y orientado al desayuno, que se puso de moda en la década de 2010.
-englishMeaning: El inglés usa "pancake" para esta categoría de comida. "Hotcake" solo existe en el modismo "selling like hotcakes" (venderse como rosquillas) o como palabra regional anticuada. Los angloparlantes no llaman "hot cakes" a los pancakes de desayuno en el habla cotidiana.
+japaneseMeaning: Pancake grueso, dulce y esponjoso (estilo merienda)
+englishMeaning: Pancake (pancake)
 examples:
   - japanese: 日曜の朝はホットケーキを焼く。
     reading: にちようの あさは ホットケーキを やく。

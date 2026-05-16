@@ -13,10 +13,8 @@ tags: ['婚禮', '儀式', '新娘']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: virgin road
-japaneseMeaning: >-
-  西式教堂婚禮中的中央走道——新娘挽著父親的手，從座椅之間的紅毯（或白色長巾）走向站在聖壇前的新郎。在日本這是婚禮業界的標準用語，出現在各類婚禮雜誌、禮堂宣傳冊以及婚禮策劃清單中。
-englishMeaning: >-
-  「Virgin road」在英語中並不是婚禮詞彙——任何婚禮雜誌、牧師講稿或業界術語表都找不到。英語母語者使用「the aisle」，而且「to walk down the aisle」是一句固定說法，意思就是「結婚」。把「virgin」與「road」拼在一起，在英語耳朵裡既突兀又過度字面，甚至帶點微妙的不適感。
+japaneseMeaning: 婚禮中新娘走過的紅毯走道
+englishMeaning: 婚禮走道（the aisle；walk down the aisle 即「結婚」）
 examples:
   - japanese: 父と一緒にバージンロードを歩いた。
     reading: ちちと いっしょに バージンロードを あるいた。

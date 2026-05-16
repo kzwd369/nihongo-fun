@@ -13,8 +13,8 @@ tags: ['food', 'fast-food', 'daily-life']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: fried potato
-japaneseMeaning: Kentang goreng (batang kentang digoreng yang disajikan sebagai lauk atau camilan)
-englishMeaning: Orang Amerika mengatakan "French fries", orang Inggris mengatakan "chips". "Fried potato" bukan istilah standar bahasa Inggris untuk makanan ini
+japaneseMeaning: Kentang goreng (batang kentang digoreng)
+englishMeaning: French fries (US) / chips (UK)
 examples:
   - japanese: マックでフライドポテトのLサイズを頼んだ。
     reading: マックで フライドポテトの エルサイズを たのんだ。

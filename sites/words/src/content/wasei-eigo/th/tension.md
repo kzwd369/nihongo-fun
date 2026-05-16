@@ -13,8 +13,8 @@ tags: ['daily-life', 'emotion', 'conversation']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: tension
-japaneseMeaning: ระดับพลังงาน ความตื่นเต้น หรืออารมณ์ (テンション高い = มีพลัง ตื่นเต้น)
-englishMeaning: ความตึงเครียดทางจิตใจหรืออารมณ์ ความเครียด ความตึง
+japaneseMeaning: ระดับพลังงาน / อารมณ์ตื่นเต้น
+englishMeaning: ความตึงเครียดทางจิตใจหรือร่างกาย
 examples:
   - japanese: 今日はテンションが高いね！何かいいことあった？
     reading: きょうは テンションが たかいね！なにか いいこと あった？

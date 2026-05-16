@@ -13,9 +13,8 @@ tags: ['tech', 'business', 'internet']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: mail + magazine
-japaneseMeaning: A periodical email newsletter, usually sent by a company, publication, or individual creator to registered subscribers. Often shortened to メルマガ. Used for marketing, updates, paid content subscriptions, and personal opinion columns.
-englishMeaning: >-
-  English speakers say "email newsletter" or just "newsletter." The phrase "mail magazine" is almost never used and sounds like a physical magazine delivered by post. Platforms like Substack have popularized "newsletter" globally, but the word "mail magazine" remains a Japanese creation.
+japaneseMeaning: An email newsletter (often shortened to メルマガ)
+englishMeaning: An email newsletter / newsletter
 examples:
   - japanese: 会社のメルマガに登録してください。
     reading: かいしゃの メルマガに とうろくして ください。

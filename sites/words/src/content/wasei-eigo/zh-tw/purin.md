@@ -13,7 +13,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: pudding
 japaneseMeaning: 焦糖布丁（法式焦糖烤布蕾 / 烤布丁）
-englishMeaning: 廣泛的甜點類別——在英式英語中幾乎指任何甜點；在美式英語中指奶油狀的乳製品甜點
+englishMeaning: 布丁類甜點泛稱（pudding，英式幾乎指所有甜點）
 examples:
   - japanese: プリンを作るのは意外と簡単だよ。
     reading: プリンを つくるのは いがいと かんたんだよ。

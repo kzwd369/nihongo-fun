@@ -13,10 +13,8 @@ tags: ['สแลง', 'สำนวน', 'พฤติกรรม']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: one pattern
-japaneseMeaning: >-
-  คาดเดาได้ ซ้ำซาก จำเจ — มุกที่ลงท้ายเหมือนเดิมทุกครั้ง ละครที่พล็อตซ้ำทุกซีซั่น แฟนที่พาไปกินร้านเดิมทุกวันศุกร์ โทนของคำเป็นลบนิดๆ แต่บ่อยครั้งใช้อย่างเอ็นดู ใช้ได้ตั้งแต่มุกของคุณพ่อ สไตล์การแต่งตัว ไปจนถึงซีรีส์ยาวและการติดหล่มทางความคิดสร้างสรรค์
-englishMeaning: >-
-  "One pattern" ในภาษาอังกฤษไม่ใช่สำนวนและไม่ได้แปลว่าอะไรเลย คนพูดอังกฤษจะใช้ "predictable", "formulaic", "cookie-cutter", "a one-trick pony", "the same old thing" หรือ "repetitive" แทน แล้วแต่บริบท แนวคิดมีอยู่ทุกที่ แต่คำพูดนี้เป็นคำประดิษฐ์สไตล์ wasei-eigo แท้ๆ
+japaneseMeaning: คาดเดาได้ / ซ้ำซากจำเจ
+englishMeaning: Predictable / formulaic / repetitive
 examples:
   - japanese: 彼のギャグはワンパターンだ。
     reading: かれの ギャグは ワンパターンだ。

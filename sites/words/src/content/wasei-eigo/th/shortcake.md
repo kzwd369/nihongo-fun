@@ -13,8 +13,8 @@ tags: ['food', 'sweets', 'culture']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: shortcake
-japaneseMeaning: เค้กสปันจ์กับวิปครีมและสตรอว์เบอร์รี (เค้กไอคอนิกของญี่ปุ่น)
-englishMeaning: ขนมอบแบบบิสกิตร่วนที่มักเสิร์ฟกับผลไม้ (อเมริกัน) หรือเค้กเนื้อแน่น (อังกฤษ)
+japaneseMeaning: เค้กสปันจ์กับวิปครีมและสตรอว์เบอร์รี
+englishMeaning: A crumbly biscuit-style dessert served with fruit
 examples:
   - japanese: 誕生日にショートケーキを買った。
     reading: たんじょうびに ショートケーキを かった。

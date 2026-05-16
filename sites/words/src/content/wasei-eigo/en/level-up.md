@@ -13,9 +13,8 @@ tags: ['daily-life', 'work', 'improvement']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: level up
-japaneseMeaning: Improvement, upgrade, advancement to a higher level. Used as a noun for any kind of qualitative or skill upgrade — career, products, services, language ability — not just gaming.
-englishMeaning: >-
-  "Level up" originated in video games (gaining XP to advance). It has become slang for "self-improvement" in recent years, but is still informal and never used in formal English the way Japanese レベルアップ is used in business and everyday speech.
+japaneseMeaning: An improvement, upgrade, or advancement (skills, products, services)
+englishMeaning: 'To advance a level in a video game (slang: self-improvement)'
 examples:
   - japanese: このアプリのおかげで英語がレベルアップした。
     reading: この アプリの おかげで えいごが レベルアップした。

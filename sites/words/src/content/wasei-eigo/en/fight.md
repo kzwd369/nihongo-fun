@@ -13,10 +13,8 @@ tags: ['slang', 'encouragement', 'sports']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: fight
-japaneseMeaning: >-
-  A standalone cheer of encouragement shouted at someone who is about to try hard or who is currently struggling. Equivalent to English "Go for it!", "You can do it!", "Hang in there!", or "Good luck!". It's what Japanese people yell at marathon runners, baseball teams, colleagues heading into big presentations, and friends facing exams — never as a call to actual combat.
-englishMeaning: >-
-  In English, "Fight!" only ever means literal physical combat — a ring announcer starting a boxing match, a crowd egging on a schoolyard brawl, a coach barking at wavering players. Shouting "Fight!" at a friend running a marathon would sound aggressive, confusing, or darkly sarcastic, as if you were daring them to punch the next runner.
+japaneseMeaning: A cheer of encouragement ("Go for it!" / "You can do it!" / "Hang in there!")
+englishMeaning: A call to physical combat (boxing match, brawl, etc.)
 examples:
   - japanese: 明日の試験、ファイト！
     reading: あしたの しけん、ファイト！

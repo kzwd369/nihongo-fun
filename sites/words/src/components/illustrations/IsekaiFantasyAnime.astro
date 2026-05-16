@@ -1,0 +1,74 @@
+<!-- Isekai fantasy: sword planted in ground, RPG status window, slime, and magic sparkles -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" width="200" height="160" style="margin: 8px auto; display: block;">
+  <!-- Background (fantasy sky gradient) -->
+  <defs>
+    <linearGradient id="isekaiSky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#bbdefb"/>
+      <stop offset="100%" stop-color="#e1f5fe"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="160" rx="8" fill="url(#isekaiSky)"/>
+
+  <!-- Distant mountains -->
+  <polygon points="0,100 30,75 55,95 80,70 110,100 145,75 170,95 200,85 200,130 0,130" fill="#9fa8da" opacity="0.6"/>
+  <polygon points="0,115 25,95 50,110 80,90 115,115 155,95 200,108 200,130 0,130" fill="#7986cb" opacity="0.7"/>
+
+  <!-- Ground -->
+  <rect x="0" y="130" width="200" height="30" fill="#aed581"/>
+
+  <!-- Sword planted in ground (center-left) -->
+  <!-- Blade -->
+  <polygon points="55,60 60,60 58,118 57,118" fill="#eceff1" stroke="#455a64" stroke-width="0.8"/>
+  <!-- Crossguard -->
+  <rect x="47" y="116" width="24" height="5" fill="#ffb300" stroke="#e65100" stroke-width="0.8"/>
+  <!-- Grip -->
+  <rect x="55" y="121" width="8" height="12" fill="#5d4037"/>
+  <!-- Pommel -->
+  <circle cx="59" cy="135" r="3.5" fill="#ffb300" stroke="#e65100" stroke-width="0.8"/>
+  <!-- Gem on crossguard -->
+  <circle cx="59" cy="118" r="1.5" fill="#f44336"/>
+
+  <!-- Status window (right side, floating, RPG menu style) -->
+  <rect x="95" y="30" width="90" height="60" rx="4" fill="#fff" fill-opacity="0.92" stroke="#1976d2" stroke-width="1.5"/>
+  <!-- Window title bar -->
+  <rect x="95" y="30" width="90" height="12" rx="4" fill="#1976d2"/>
+  <text x="140" y="39" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#fff" font-weight="bold">STATUS</text>
+
+  <!-- Status lines -->
+  <text x="100" y="53" font-family="sans-serif" font-size="7" fill="#263238" font-weight="bold">勇者</text>
+  <text x="180" y="53" text-anchor="end" font-family="sans-serif" font-size="7" fill="#263238">Lv 99</text>
+
+  <text x="100" y="64" font-family="sans-serif" font-size="7" fill="#263238">HP</text>
+  <rect x="115" y="58" width="65" height="5" rx="1" fill="#ffcdd2"/>
+  <rect x="115" y="58" width="60" height="5" rx="1" fill="#e53935"/>
+
+  <text x="100" y="75" font-family="sans-serif" font-size="7" fill="#263238">MP</text>
+  <rect x="115" y="69" width="65" height="5" rx="1" fill="#bbdefb"/>
+  <rect x="115" y="69" width="50" height="5" rx="1" fill="#1976d2"/>
+
+  <text x="100" y="85" font-family="sans-serif" font-size="7" fill="#7b1fa2" font-weight="bold">チート: ON</text>
+
+  <!-- Slime (bottom center) -->
+  <ellipse cx="115" cy="128" rx="14" ry="5" fill="#0d47a1" opacity="0.25"/>
+  <path d="M103,130 Q103,115 115,114 Q127,115 127,130 Z" fill="#4fc3f7" stroke="#0288d1" stroke-width="1.2"/>
+  <!-- Slime eyes -->
+  <circle cx="111" cy="122" r="1.8" fill="#01579b"/>
+  <circle cx="119" cy="122" r="1.8" fill="#01579b"/>
+  <!-- Slime highlight -->
+  <ellipse cx="109" cy="119" rx="2.5" ry="1.5" fill="#fff" opacity="0.7"/>
+  <!-- Slime smile -->
+  <path d="M113,127 Q115,129 117,127" fill="none" stroke="#01579b" stroke-width="0.8" stroke-linecap="round"/>
+
+  <!-- Magic sparkles around sword -->
+  <path d="M45,55 L46,52 L47,55 L46,58Z" fill="#ffd600" opacity="0.8"/>
+  <path d="M72,48 L73,45 L74,48 L73,51Z" fill="#ffd600" opacity="0.7"/>
+  <circle cx="50" cy="75" r="1.5" fill="#ffea00" opacity="0.7"/>
+  <circle cx="70" cy="85" r="1.2" fill="#ffea00" opacity="0.6"/>
+  <circle cx="38" cy="90" r="1" fill="#fbc02d" opacity="0.5"/>
+
+  <!-- Small goblin silhouette far right -->
+  <ellipse cx="172" cy="125" rx="5" ry="8" fill="#689f38"/>
+  <circle cx="172" cy="118" r="4" fill="#7cb342"/>
+  <circle cx="170" cy="118" r="0.8" fill="#b71c1c"/>
+  <circle cx="174" cy="118" r="0.8" fill="#b71c1c"/>
+</svg>

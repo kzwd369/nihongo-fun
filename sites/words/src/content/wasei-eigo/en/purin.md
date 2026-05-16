@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: pudding
 japaneseMeaning: Caramel custard pudding (crème caramel / flan)
-englishMeaning: A broad category of desserts — in British English, almost any dessert; in American English, a creamy dairy-based dessert
+englishMeaning: A general category of dessert (especially creamy or steamed)
 examples:
   - japanese: プリンを作るのは意外と簡単だよ。
     reading: プリンを つくるのは いがいと かんたんだよ。

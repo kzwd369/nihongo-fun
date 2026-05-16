@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: shortcake
 japaneseMeaning: A sponge cake with whipped cream and strawberries (the iconic Japanese cake)
-englishMeaning: A crumbly biscuit-like pastry, often served with fruit (American) or a rich cake (British)
+englishMeaning: A crumbly biscuit-like pastry served with fruit
 examples:
   - japanese: 誕生日にショートケーキを買った。
     reading: たんじょうびに ショートケーキを かった。

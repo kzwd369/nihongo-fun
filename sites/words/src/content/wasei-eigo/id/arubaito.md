@@ -13,10 +13,8 @@ tags: ['work', 'daily-life', 'student-life']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: arbeit
-japaneseMeaning: >-
-  Pekerjaan paruh waktu, terutama untuk pelajar atau anak muda
-englishMeaning: >-
-  "Arbeit" adalah bahasa Jerman untuk "kerja/pekerjaan" — sama sekali bukan kata Inggris!
+japaneseMeaning: Pekerjaan paruh waktu (terutama untuk pelajar atau anak muda)
+englishMeaning: Part-time job (Arbeit = "kerja" dalam bahasa Jerman, bukan Inggris)
 examples:
   - japanese: 来月から新しいアルバイトを始めます。
     reading: らいげつから あたらしい アルバイトを はじめます。

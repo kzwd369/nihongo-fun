@@ -13,8 +13,8 @@ tags: ['bebidas', 'dulces', 'retro']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: cream soda
-japaneseMeaning: Un vaso alto de soda de melón verde esmeralda con una bola de helado de vainilla flotando encima, coronado casi siempre con una cereza maraschino roja y servido en copa de pie. Bebida emblemática de los kissaten (cafeterías clásicas) de la era Shōwa y favorita del actual boom retro de la era Reiwa.
-englishMeaning: En EE. UU., "cream soda" es un refresco carbonatado dulce con sabor a vainilla o zarzaparrilla, normalmente dorado pálido, ámbar o transparente (A&W Cream Soda, Dr Brown's). Viene en botella o lata, no lleva helado, y no es verde.
+japaneseMeaning: Soda de melón verde con bola de helado de vainilla (icono kissaten)
+englishMeaning: Refresco carbonatado dulce con sabor a vainilla (A&W, Dr Brown's)
 examples:
   - japanese: 喫茶店でクリームソーダを頼んだ。
     reading: きっさてんで クリームソーダを たのんだ。

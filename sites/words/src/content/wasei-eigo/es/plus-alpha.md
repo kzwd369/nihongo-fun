@@ -13,10 +13,8 @@ tags: ['negocios', 'modismo', 'matemáticas']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: plus alpha
-japaneseMeaning: >-
-  Una cantidad adicional no especificada más allá de una base declarada — un extra, un plus, ese "algo más" sin nombre que endulza una oferta. El japonés de negocios se apoya constantemente en esta expresión para sueldos ("月給25万円プラスアルファ"), precios ("基本料金プラスアルファ") y esfuerzo ("プラスアルファの努力"). La vaguedad es precisamente el punto: señala "más de lo que dice la cifra" sin comprometerse con cuánto.
-englishMeaning: >-
-  En inglés, la letra griega α vive solo en matemáticas, física y finanzas ("alpha returns"). Nunca cruza al lenguaje cotidiano ni a los modismos empresariales. Los equivalentes nativos para el sentido japonés incluyen "plus a little extra", "plus bonuses", "above and beyond", "that extra something", "the X factor" o "X and then some". Decir "25 man yen plus alpha" a un angloparlante suena a media ecuación de física.
+japaneseMeaning: Más un extra / un plus adicional no especificado
+englishMeaning: Algo extra (plus bonuses / above and beyond / the X factor)
 examples:
   - japanese: 月給25万円プラスアルファで募集しています。
     reading: げっきゅう 25まんえん プラスアルファで ぼしゅう しています。

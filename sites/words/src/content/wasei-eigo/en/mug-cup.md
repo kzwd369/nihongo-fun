@@ -13,10 +13,8 @@ tags: ['home', 'tableware', 'daily']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: mug (cup)
-japaneseMeaning: >-
-  A handled, cylindrical cup with no saucer, roughly 200-400 ml, used mainly for hot drinks like coffee, tea, cocoa, or soup. Often given as souvenirs, sold as artist pottery, or used for microwave "mug recipes."
-englishMeaning: >-
-  In English, the object is simply called a "mug." "Mug cup" is redundant — a mug is already a kind of cup, so English speakers find the phrase awkward. On top of that, "mug" alone carries other meanings (to mug = to rob, a mug = a face, mug shot = police photo) that Japanese speakers quietly sidestep by attaching カップ.
+japaneseMeaning: A mug (handled cup for hot drinks)
+englishMeaning: A mug
 examples:
   - japanese: 新しいマグカップを買った。
     reading: あたらしい マグカップを かった。

@@ -13,8 +13,8 @@ tags: ['การคมนาคม', 'ไลฟ์สไตล์', 'ชีว�
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: my car
-japaneseMeaning: รถที่เป็นของส่วนตัว — หมวดหมู่ที่ตรงข้ามกับรถของบริษัท แท็กซี่ หรือระบบขนส่งสาธารณะ
-englishMeaning: ในภาษาอังกฤษ "my car" เป็นแค่วลีแสดงความเป็นเจ้าของ ไม่ได้ใช้เป็นหมวดเชิงความคิดเกี่ยวกับการเป็นเจ้าของรถส่วนตัว
+japaneseMeaning: รถยนต์ส่วนตัว
+englishMeaning: A privately owned car
 examples:
   - japanese: マイカーで通勤している。
     reading: マイカーで つうきんしている。

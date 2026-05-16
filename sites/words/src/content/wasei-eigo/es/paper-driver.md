@@ -13,8 +13,8 @@ tags: ['vida cotidiana', 'conducción', 'cultura']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: paper driver
-japaneseMeaning: Una persona que tiene licencia de conducir pero que rara vez o nunca conduce
-englishMeaning: '"Paper driver" no existe en inglés — se diría "I have a license but I don''t drive" (tengo licencia pero no conduzco)'
+japaneseMeaning: Persona con carné que casi nunca conduce
+englishMeaning: Conductor con carné que no conduce (inactive driver)
 examples:
   - japanese: ペーパードライバーなので運転が怖いです。
     reading: ペーパードライバーなので うんてんが こわいです。

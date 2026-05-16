@@ -13,8 +13,8 @@ tags: ['food', 'cafe', 'culture']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: morning
-japaneseMeaning: เซ็ตอาหารเช้าในคาเฟ่ (กาแฟ + ขนมปังปิ้ง + ไข่ มักได้ในราคาแค่กาแฟแก้วเดียว)
-englishMeaning: '"Morning" ในภาษาอังกฤษแค่หมายถึงช่วงเวลาเช้าของวัน — ไม่ได้หมายถึงเซ็ตอาหารเช้า'
+japaneseMeaning: เซ็ตอาหารเช้าในร้านกาแฟ (กาแฟ + ขนมปังปิ้ง + ไข่)
+englishMeaning: A morning breakfast set at a café
 examples:
   - japanese: 喫茶店でモーニングを食べよう。
     reading: きっさてんで モーニングを たべよう。

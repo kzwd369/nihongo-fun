@@ -13,8 +13,8 @@ tags: ['personality', 'emotion', 'daily-life']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: naive
-japaneseMeaning: อ่อนไหว ละเอียดอ่อน อ่อนโยน (ความหมายเชิงบวก)
-englishMeaning: Showing a lack of experience or wisdom; gullible (negative connotation)
+japaneseMeaning: อ่อนไหว / ละเอียดอ่อน (ความหมายเชิงบวก)
+englishMeaning: Inexperienced or gullible
 examples:
   - japanese: 彼はナイーブな性格だから、言葉に気をつけてね。
     reading: かれは ナイーブな せいかくだから、ことばに きをつけてね。

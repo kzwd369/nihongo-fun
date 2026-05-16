@@ -13,8 +13,8 @@ tags: ['housing', 'real-estate', 'daily-life']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: one room
-japaneseMeaning: A studio apartment — a single living space combining bedroom, living room, and kitchen, typically with a separate small bathroom. Common entry-level rental for students and young workers in Japan.
-englishMeaning: In English, "one-room" is not a standard apartment category. The equivalent is "studio" or "studio apartment". British English sometimes uses "bedsit". "One-bedroom" is different — it has a separate bedroom plus a living area.
+japaneseMeaning: A studio apartment (single combined room with separate bath)
+englishMeaning: A studio apartment / studio / bedsit
 examples:
   - japanese: 大学の近くのワンルームに住んでいる。
     reading: だいがくの ちかくの ワンルームに すんでいる。

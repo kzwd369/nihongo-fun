@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: pudding
 japaneseMeaning: Puding custard karamel (crème caramel / flan)
-englishMeaning: Kategori pencuci mulut yang luas — dalam bahasa Inggris British, hampir semua pencuci mulut; dalam bahasa Inggris Amerika, pencuci mulut berbahan susu yang creamy
+englishMeaning: 'Kategori pencuci mulut secara luas (UK: hampir semua dessert / US: dessert susu creamy)'
 examples:
   - japanese: プリンを作るのは意外と簡単だよ。
     reading: プリンを つくるのは いがいと かんたんだよ。

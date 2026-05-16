@@ -13,8 +13,8 @@ tags: ['tamaño', 'jerga', 'cotidiano']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: jumbo
-japaneseMeaning: Un prefijo con valor de adjetivo que significa "extra grande", "gigante" o "mega". En japonés se pega libremente a sustantivos — no solo referido a tamaño físico (ジャンボパフェ, ジャンボ機), sino también a grandeza abstracta (ジャンボ宝くじ = lotería con premio de cientos de millones de yenes). Incluso funciona como apodo para personajes imponentes (ジャンボ尾崎, ジャンボ鶴田).
-englishMeaning: En inglés, "jumbo" es un adjetivo que se usa casi exclusivamente para cosas físicamente descomunales — jumbo jet, jumbo shrimp, jumbo size. Rara vez modifica conceptos abstractos como el dinero del premio o la fama, y no se usa como apodo personal como sí hace el japonés.
+japaneseMeaning: Enorme, gigante, mega (prefijo aplicable a casi cualquier cosa)
+englishMeaning: Enorme, descomunal (jumbo — solo para tamaño físico)
 examples:
   - japanese: 年末ジャンボ宝くじを10枚買った。
     reading: ねんまつ ジャンボ たからくじを じゅうまい かった。

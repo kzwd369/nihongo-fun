@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Nav from '../../../components/Nav.astro';
 import Footer from '../../../components/Footer.astro';
+import { categoryLabel, browseByCategoryLabel, MIN_HUB_COUNT } from '../../../lib/categories';
 
 const illustrations = import.meta.glob('../../../components/illustrations/*.astro', { eager: true });
 
@@ -31,6 +32,14 @@ const allEntries = await getCollection('wasei-eigo');
 const entries = allEntries
   .filter(e => e.data.locale === locale && !e.data.draft)
   .sort((a, b) => a.data.slug.localeCompare(b.data.slug));
+
+const catCounts: Record<string, number> = {};
+for (const e of entries) catCounts[e.data.category] = (catCounts[e.data.category] || 0) + 1;
+const hubCategories = Object.entries(catCounts)
+  .filter(([, n]) => n >= MIN_HUB_COUNT)
+  .sort((a, b) => b[1] - a[1])
+  .map(([cat, n]) => ({ cat, n, label: categoryLabel(locale!, cat) }));
+const browseLabel = browseByCategoryLabel(locale!);
 
 const labels: Record<string, Record<string, string>> = {
   en: { title: 'Wasei-Eigo — Japanese-Made English', subtitle: 'Words that look English but mean something completely different in Japanese.', home: 'Home' },
@@ -72,6 +81,20 @@ const defaultColor = { bg: 'linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%)', 
       <h1>{t.title}</h1>
       <p>{t.subtitle}</p>
     </div>
+
+    {hubCategories.length > 0 && (
+      <section class="category-nav">
+        <h2 class="category-nav-title">{browseLabel}</h2>
+        <div class="category-chips">
+          {hubCategories.map(c => (
+            <a href={`/${locale}/wasei-eigo/category/${c.cat}/`} class="cat-chip">
+              <span>{c.label}</span>
+              <span class="cat-count">{c.n}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
 
     <div class="word-grid">
       {entries.map(entry => {
@@ -123,6 +146,53 @@ const defaultColor = { bg: 'linear-gradient(135deg, #f5f5f5 0%, #eeeeee 100%)', 
     color: var(--text-light);
     margin-top: 8px;
     font-size: 16px;
+  }
+  .category-nav {
+    margin: 0 0 32px;
+  }
+  .category-nav-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  .category-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .cat-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.15s;
+  }
+  .cat-chip:hover {
+    background: var(--accent-light);
+    border-color: var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+  .cat-count {
+    background: var(--tag-bg);
+    color: var(--text-light);
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 700;
   }
   .word-grid {
     display: grid;

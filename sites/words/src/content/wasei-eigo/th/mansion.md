@@ -12,8 +12,8 @@ tags: ['housing', 'daily-life', 'real-estate']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: mansion
-japaneseMeaning: อาคารอพาร์ตเมนต์ (โดยทั่วไปเป็นคอนกรีตเสริมเหล็ก ระดับกลางถึงสูง)
-englishMeaning: A large, luxurious house or estate
+japaneseMeaning: อาคารอพาร์ตเมนต์คอนกรีตเสริมเหล็ก / คอนโดมิเนียม
+englishMeaning: A large, luxurious house
 examples:
   - japanese: 駅前の新しいマンションに引っ越しました。
     reading: えきまえの あたらしい マンションに ひっこしました。

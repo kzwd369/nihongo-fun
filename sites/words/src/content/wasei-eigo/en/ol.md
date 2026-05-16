@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: office lady
 japaneseMeaning: A female office worker (typically clerical/administrative)
-englishMeaning: '"Office lady" is not used in English — the term would be considered outdated and sexist'
+englishMeaning: A female office worker
 examples:
   - japanese: 姉はOLとして銀行で働いています。
     reading: あねは オーエルとして ぎんこうで はたらいています。

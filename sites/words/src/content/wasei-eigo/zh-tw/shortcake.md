@@ -13,7 +13,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: shortcake
 japaneseMeaning: 海綿蛋糕配鮮奶油和草莓（日本代表性蛋糕）
-englishMeaning: 酥脆的餅乾狀糕點，常配水果（美式），或奶油蛋糕（英式）
+englishMeaning: 酥脆餅乾狀糕點配水果（美式 shortcake）
 examples:
   - japanese: 誕生日にショートケーキを買った。
     reading: たんじょうびに ショートケーキを かった。

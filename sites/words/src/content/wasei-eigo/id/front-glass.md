@@ -13,10 +13,8 @@ tags: ['transportation', 'daily-life', 'driving']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: front glass
-japaneseMeaning: >-
-  Jendela depan mobil. Dipasangkan dengan リアガラス (rear glass) untuk jendela belakang. Dalam bahasa Inggris, istilah khusunya adalah windshield (AS) atau windscreen (UK).
-englishMeaning: >-
-  "Front glass" bukan istilah bahasa Inggris standar untuk jendela depan mobil. Orang Amerika mengatakan "windshield"; orang Inggris mengatakan "windscreen". Jendela belakang hanya "rear window", bukan "rear glass".
+japaneseMeaning: Kaca depan mobil
+englishMeaning: Windshield (AS) / windscreen (UK)
 examples:
   - japanese: フロントガラスに虫がついた。
     reading: フロントガラスに むしが ついた。

@@ -13,10 +13,8 @@ tags: ['music', 'entertainment', 'leisure']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: karaoke box
-japaneseMeaning: >-
-  Ruang karaoke pribadi kedap suara yang disewa per jam — biasanya menampung 2 hingga 20 orang, dihitung per 30 menit, dilengkapi bar minuman, paket free-time, diskon "morning karaoke", dan paket larut malam. Cara default untuk karaoke di Jepang.
-englishMeaning: >-
-  Penutur asli bahasa Inggris tidak mengatakan "karaoke box". Mereka berkata "karaoke room", "private karaoke room", atau cukup "karaoke". Secara historis di Barat, "karaoke" berarti menyanyi di panggung bar atau pub di depan orang asing — karaoke publik, bukan ruang pribadi sewaan.
+japaneseMeaning: Ruang karaoke pribadi kedap suara yang disewa per jam
+englishMeaning: Private karaoke room / karaoke room
 examples:
   - japanese: 週末に友達とカラオケボックスへ行った。
     reading: しゅうまつに ともだちと カラオケボックスへ いった。

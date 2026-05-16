@@ -13,8 +13,8 @@ tags: ['comida', 'cafetería', 'cultura']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: morning
-japaneseMeaning: Un set de desayuno / oferta matutina en una cafetería (café + tostada + huevo, muchas veces por el precio de solo el café)
-englishMeaning: '"Morning" en inglés simplemente significa la primera parte del día — no un set de desayuno'
+japaneseMeaning: Set de desayuno de cafetería (café + tostada + huevo)
+englishMeaning: La mañana (morning — no significa un set de desayuno)
 examples:
   - japanese: 喫茶店でモーニングを食べよう。
     reading: きっさてんで モーニングを たべよう。

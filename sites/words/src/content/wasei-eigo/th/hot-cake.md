@@ -13,8 +13,8 @@ tags: ['อาหาร', 'ของหวาน', 'อาหารเช้า'
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: hot cake
-japaneseMeaning: แพนเค้กหนา หวาน ฟู — สูงประมาณ 2-3 ซม. กินเป็นของว่างหรือของหวาน มักราดเนย น้ำเชื่อม หรือวิปครีม ต่างจาก パンケーキ ที่บางกว่าและเน้นเป็นอาหารเช้า ซึ่งฮิตขึ้นในยุค 2010
-englishMeaning: ภาษาอังกฤษใช้คำว่า "pancake" สำหรับอาหารหมวดนี้ ส่วน "hotcake" มีเฉพาะในสำนวน "selling like hotcakes" (ขายดีเทน้ำเทท่า) หรือเป็นคำท้องถิ่นโบราณ คนพูดอังกฤษไม่ได้เรียกแพนเค้กอาหารเช้าว่า "hot cakes" ในชีวิตประจำวัน
+japaneseMeaning: แพนเค้กหนา หวาน ฟู (สไตล์ของหวาน)
+englishMeaning: A pancake (the term "hotcake" is rarely used)
 examples:
   - japanese: 日曜の朝はホットケーキを焼く。
     reading: にちようの あさは ホットケーキを やく。

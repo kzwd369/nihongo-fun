@@ -13,10 +13,8 @@ tags: ['música', 'entretenimiento', 'ocio']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: karaoke box
-japaneseMeaning: >-
-  Una sala privada e insonorizada de karaoke que se alquila por horas — normalmente para 2 a 20 personas, con tarifa por bloques de 30 minutos, barra libre de bebidas, paquetes de "free time", descuentos de "karaoke matutino" y planes de madrugada. La forma habitual de cantar karaoke en Japón.
-englishMeaning: >-
-  Los angloparlantes nativos no dicen "karaoke box". Dicen "karaoke room", "private karaoke room" o simplemente "karaoke". Históricamente en Occidente, "karaoke" significaba cantar en el escenario de un bar o pub delante de desconocidos — karaoke público, no una sala privada alquilada.
+japaneseMeaning: Sala privada de karaoke alquilada por horas
+englishMeaning: Sala privada de karaoke (karaoke room / private karaoke room)
 examples:
   - japanese: 週末に友達とカラオケボックスへ行った。
     reading: しゅうまつに ともだちと カラオケボックスへ いった。

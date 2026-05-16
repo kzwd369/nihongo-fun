@@ -13,10 +13,8 @@ tags: ['business', 'service', 'tech']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: after service
-japaneseMeaning: >-
-  Post-purchase support provided by a manufacturer or retailer — including warranty repairs, regular inspections, software updates, parts replacement, and help-desk inquiries. In Japan, "手厚いアフターサービス" (generous after-service) is considered a major selling point, especially for cars, home appliances, and housing.
-englishMeaning: >-
-  Native English speakers do not say "after-service" as a standalone noun in everyday business English — it can even sound like "after military service." The standard terms are "after-sales service," "customer service," "warranty service," or "post-purchase support." So while the concept is universal, the Japanese label itself is wasei-eigo.
+japaneseMeaning: Post-purchase customer support (warranty repairs, inspections, help-desk inquiries)
+englishMeaning: After-sales service / customer service / post-purchase support
 examples:
   - japanese: この家電はアフターサービスがしっかりしている。
     reading: この かでんは アフターサービスが しっかりしている。

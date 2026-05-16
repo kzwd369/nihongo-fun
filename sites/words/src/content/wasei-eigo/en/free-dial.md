@@ -13,10 +13,8 @@ tags: ['business', 'communication', 'tech']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: free dial
-japaneseMeaning: >-
-  A toll-free phone number where the caller pays nothing and the business absorbs the cost. Japanese free-dial numbers start with 0120 (NTT's original 1985 service) or the later 0800 prefix. It is a pillar of Japanese customer-service infrastructure — printed on every product box, TV ad, and utility bill.
-englishMeaning: >-
-  In English, "free dial" is never used. The standard American term is "toll-free number" or colloquially a "1-800 number"; British English uses "freephone number." The word "dial" itself is somewhat archaic in English — rotary dials disappeared decades ago — so "free dial" sounds oddly antique to native ears.
+japaneseMeaning: A toll-free phone number (starting with 0120 or 0800)
+englishMeaning: A toll-free number / 1-800 number (US) / freephone number (UK)
 examples:
   - japanese: カスタマーサービスのフリーダイヤルに電話した。
     reading: カスタマーサービスの フリーダイヤルに でんわした。

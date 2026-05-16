@@ -13,8 +13,8 @@ tags: ['交通', '生活方式', '日常生活']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: my car
-japaneseMeaning: 自己私有的汽車——與公司配車、計程車或大眾運輸對照的類別
-englishMeaning: 在英語裡，「my car」單純是所有格用法，並不是用來指稱「私家車」這個概念類別
+japaneseMeaning: 自家私有的汽車（私家車）
+englishMeaning: 私家車（personal / private car，英語無此固定類別詞）
 examples:
   - japanese: マイカーで通勤している。
     reading: マイカーで つうきんしている。

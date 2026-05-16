@@ -13,10 +13,8 @@ tags: ['fashion', 'merchandise', 'anime', 'accessories']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: key holder
-japaneseMeaning: >-
-  A small charm, pendant, or decorative object attached to a metal ring that you use to carry keys — or, just as often these days, to decorate a bag. Covers everything from cheap wooden onsen souvenirs and brand leather straps to アクリルキーホルダー (acrylic charms of anime characters) and gacha prizes. In Japan, キーホルダー is one of the biggest merchandise categories in existence.
-englishMeaning: >-
-  In English, "key holder" usually means (1) a wall-mounted rack you hang by the front door to store house keys, (2) a leather pouch-style organizer that holds multiple keys inside, or (3) a person entrusted with a key — "the keyholder of the shop." The small charm-on-a-ring object Japanese is thinking of is called a **key chain** or **key ring** in English. (In tech, "keyring" is also a metaphor for a password store.)
+japaneseMeaning: A key chain / key ring (often a decorative charm)
+englishMeaning: A wall-mounted key rack, key pouch, or a person entrusted with a key
 examples:
   - japanese: アニメショップで可愛いキーホルダーを買った。
     reading: アニメ ショップで かわいい キーホルダーを かった。

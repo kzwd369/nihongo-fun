@@ -13,8 +13,8 @@ tags: ['transportation', 'lifestyle', 'daily-life']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: my car
-japaneseMeaning: One's own privately owned car — a category contrasted with company cars, taxis, or public transport
-englishMeaning: In English, "my car" is simply a possessive phrase. It isn't used as a conceptual category for personal car ownership
+japaneseMeaning: A privately owned car (as a lifestyle category)
+englishMeaning: A possessive phrase referring to one's own car
 examples:
   - japanese: マイカーで通勤している。
     reading: マイカーで つうきんしている。

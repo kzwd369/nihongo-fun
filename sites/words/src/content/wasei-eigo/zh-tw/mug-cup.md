@@ -13,10 +13,8 @@ tags: ['居家', '餐具', '日常']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: mug (cup)
-japaneseMeaning: >-
-  有把手、無底碟的圓筒狀杯子，容量約 200-400 毫升，主要用來裝咖啡、茶、可可、湯等熱飲。常見於土產紀念品、陶藝作家作品，以及「微波馬克杯食譜」。
-englishMeaning: >-
-  英語裡這個東西就叫「mug」。「mug cup」聽起來很冗贅——mug 本身就是 cup 的一種，英語母語者會覺得這個說法怪怪的。而且「mug」單獨使用還帶有其他意思（to mug＝行搶、a mug＝臉／面孔、mug shot＝警方大頭照），日語則乾脆加上 カップ 來繞過這些混淆。
+japaneseMeaning: 馬克杯
+englishMeaning: 馬克杯（mug）
 examples:
   - japanese: 新しいマグカップを買った。
     reading: あたらしい マグカップを かった。

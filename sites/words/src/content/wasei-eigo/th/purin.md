@@ -13,8 +13,8 @@ tags: ['food', 'sweets', 'daily-life']
 draft: false
 publishedAt: '2026-04-13'
 originalEnglish: pudding
-japaneseMeaning: พุดดิ้งคัสตาร์ดคาราเมล (เครมคาราเมล / ฟลาน)
-englishMeaning: หมวดขนมหวานในความหมายกว้าง — ในอังกฤษแบบบริติชหมายถึงขนมหวานเกือบทุกชนิด ในอังกฤษแบบอเมริกันหมายถึงขนมครีมจากนม
+japaneseMeaning: พุดดิ้งคัสตาร์ดคาราเมล / ฟลาน
+englishMeaning: A general category of sweet desserts
 examples:
   - japanese: プリンを作るのは意外と簡単だよ。
     reading: プリンを つくるのは いがいと かんたんだよ。

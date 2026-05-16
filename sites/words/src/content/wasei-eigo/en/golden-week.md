@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-13'
 originalEnglish: Golden Week
 japaneseMeaning: A cluster of national holidays from late April to early May (approx. April 29 – May 5)
-englishMeaning: '"Golden Week" is not used in English — it''s a uniquely Japanese holiday period'
+englishMeaning: A cluster of national holidays in late April to early May
 examples:
   - japanese: ゴールデンウィークに沖縄に旅行する予定です。
     reading: ゴールデンウィークに おきなわに りょこうする よていです。

@@ -13,10 +13,8 @@ tags: ['fashion', 'jewelry', 'accessories']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: pierce
-japaneseMeaning: >-
-  A noun meaning pierced earrings — studs, hooks, hoops, anything that goes through a hole in the earlobe. Extended to other body-piercing jewelry like 鼻ピアス (nose piercing) and 軟骨ピアス (cartilage piercing). Crucially distinct from イヤリング, which in Japanese means clip-on earrings only.
-englishMeaning: >-
-  In English, "pierce" is a verb ("to pierce the ear") and can be an adjective ("pierced"), but it is never a noun for the jewelry item. The noun is "earrings" (general, usually pierced by default) or "piercing" with the -ing suffix for non-ear body jewelry. "I bought a pierce" is ungrammatical to English ears.
+japaneseMeaning: Pierced earrings or body-piercing jewelry
+englishMeaning: To pierce (verb); the jewelry is "earrings" or "piercing"
 examples:
   - japanese: 可愛いピアスを買った。
     reading: かわいい ピアスを かった。

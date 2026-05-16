@@ -13,10 +13,8 @@ tags: ['business', 'service', 'tech']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: after service
-japaneseMeaning: >-
-  Dukungan purnabeli yang disediakan oleh produsen atau pengecer — meliputi perbaikan garansi, inspeksi berkala, pembaruan perangkat lunak, penggantian suku cadang, dan layanan help-desk. Di Jepang, "手厚いアフターサービス" (after-service yang melimpah) dianggap sebagai nilai jual utama, terutama untuk mobil, peralatan rumah tangga, dan perumahan.
-englishMeaning: >-
-  Penutur asli bahasa Inggris tidak mengatakan "after-service" sebagai kata benda mandiri dalam bahasa Inggris bisnis sehari-hari — bahkan bisa terdengar seperti "after military service" (setelah wajib militer). Istilah standarnya adalah "after-sales service", "customer service", "warranty service", atau "post-purchase support". Jadi meski konsepnya universal, label Jepangnya sendiri adalah wasei-eigo.
+japaneseMeaning: Layanan purnajual / dukungan purnabeli (garansi, perbaikan, suku cadang)
+englishMeaning: After-sales service / customer service / warranty service
 examples:
   - japanese: この家電はアフターサービスがしっかりしている。
     reading: この かでんは アフターサービスが しっかりしている。

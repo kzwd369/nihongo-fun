@@ -13,10 +13,8 @@ tags: ['negocios', 'trabajo', 'fabricación']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: cost down
-japaneseMeaning: >-
-  Reducir costes de fabricación u operativos; reducción de costes (se usa como sustantivo, a menudo con する como en コストダウンする)
-englishMeaning: >-
-  "Cost down" no es inglés estándar como sustantivo. Los nativos dicen "cost reduction", "cost cutting" o "reduce/lower costs". La expresión aparece ocasionalmente como verbo informal en contextos empresariales, pero nunca como sustantivo.
+japaneseMeaning: Reducción de costes
+englishMeaning: Reducción de costes (cost reduction / cost cutting)
 examples:
   - japanese: 工場のコストダウンを進めている。
     reading: こうじょうの コストダウンを すすめている。

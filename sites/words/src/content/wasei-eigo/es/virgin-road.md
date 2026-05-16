@@ -13,10 +13,8 @@ tags: ['boda', 'ceremonia', 'nupcial']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: virgin road
-japaneseMeaning: >-
-  El pasillo central en una boda estilo capilla occidental — la alfombra roja (o el camino blanco) entre los bancos por la que la novia entra del brazo de su padre hacia el novio en el altar. En Japón es vocabulario estándar del sector nupcial: aparece en revistas de bodas, folletos de capillas y en toda lista de planificación de bodas.
-englishMeaning: >-
-  "Virgin road" no existe como término nupcial en inglés — no aparece en ninguna revista de bodas, guion de oficiante ni glosario del sector. Los angloparlantes dicen "the aisle", y "to walk down the aisle" es una expresión fija que significa "casarse". Juntar "virgin" con "road" suena raro, demasiado literal y levemente inapropiado al oído inglés.
+japaneseMeaning: Pasillo nupcial por el que entra la novia
+englishMeaning: Pasillo nupcial (the aisle / wedding aisle)
 examples:
   - japanese: 父と一緒にバージンロードを歩いた。
     reading: ちちと いっしょに バージンロードを あるいた。

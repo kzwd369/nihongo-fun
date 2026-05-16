@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: sharp pencil (from "Ever-Ready Sharp Pencil")
 japaneseMeaning: A mechanical pencil (with a propelling lead refill)
-englishMeaning: English speakers say "mechanical pencil" or (in the UK) "propelling pencil". "Sharp pencil" in English just means a pencil with a sharp point
+englishMeaning: A mechanical pencil / propelling pencil
 examples:
   - japanese: シャープペンシルの芯が折れた。
     reading: シャープペンシルの しんが おれた。

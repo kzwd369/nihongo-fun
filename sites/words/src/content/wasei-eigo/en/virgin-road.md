@@ -13,10 +13,8 @@ tags: ['wedding', 'ceremony', 'bridal']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: virgin road
-japaneseMeaning: >-
-  The aisle in a Western-style chapel wedding — the strip of red carpet (or white runner) between the pews that the bride walks down on her father's arm toward the groom at the altar. In Japan, the word is standard bridal-industry vocabulary, appearing in wedding magazines, chapel brochures, and every venue planner's checklist.
-englishMeaning: >-
-  "Virgin road" does not exist as a wedding term in English — it isn't in any bridal magazine, officiant's script, or wedding-industry glossary. Native speakers say "the aisle", and "to walk down the aisle" is a fixed idiom that means "to get married". Pairing the word "virgin" with "road" sounds strange, oddly literal, and faintly inappropriate to English ears.
+japaneseMeaning: The wedding aisle (in a Western-style chapel ceremony)
+englishMeaning: The aisle (no English wedding term "virgin road" exists)
 examples:
   - japanese: 父と一緒にバージンロードを歩いた。
     reading: ちちと いっしょに バージンロードを あるいた。

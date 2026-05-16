@@ -14,7 +14,7 @@ draft: false
 publishedAt: '2026-04-22'
 originalEnglish: trainer
 japaneseMeaning: 圓領運動衫/大學T（棉質無帽套頭上衣）
-englishMeaning: 英式英語「trainer」＝運動鞋。美式英語「trainer」＝健身教練或訓練工具，兩者都不是「sweatshirt（運動衫）」
+englishMeaning: 運動鞋（英式 trainer）／健身教練（美式 trainer）
 examples:
   - japanese: 寒くなってきたのでトレーナーを着た。
     reading: さむく なってきたので トレーナーを きた。

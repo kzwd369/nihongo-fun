@@ -1,0 +1,75 @@
+<!-- Transformations: character mid-henshin with magic circle, light rays, sparkles, ribbons -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" width="200" height="160" style="margin: 8px auto; display: block;">
+  <!-- Background radial gradient -->
+  <defs>
+    <radialGradient id="henshinBg" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#fff59d"/>
+      <stop offset="60%" stop-color="#f8bbd0"/>
+      <stop offset="100%" stop-color="#ce93d8"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="160" rx="8" fill="url(#henshinBg)"/>
+
+  <!-- Radiating light rays from center -->
+  <g opacity="0.6">
+    <polygon points="100,80 98,10 102,10" fill="#fff9c4"/>
+    <polygon points="100,80 128,15 132,20" fill="#fff9c4"/>
+    <polygon points="100,80 72,15 68,20" fill="#fff9c4"/>
+    <polygon points="100,80 162,48 165,53" fill="#fff9c4"/>
+    <polygon points="100,80 38,48 35,53" fill="#fff9c4"/>
+    <polygon points="100,80 175,108 175,112" fill="#fff9c4"/>
+    <polygon points="100,80 25,108 25,112" fill="#fff9c4"/>
+    <polygon points="100,80 128,148 132,145" fill="#fff9c4"/>
+    <polygon points="100,80 72,148 68,145" fill="#fff9c4"/>
+  </g>
+
+  <!-- Magic circle (two concentric circles with dashes) -->
+  <circle cx="100" cy="130" r="28" fill="none" stroke="#ba68c8" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <circle cx="100" cy="130" r="22" fill="none" stroke="#e91e63" stroke-width="1" stroke-dasharray="2 2"/>
+  <!-- Pentagram-ish ornament -->
+  <polygon points="100,115 104,127 116,127 106,134 110,146 100,139 90,146 94,134 84,127 96,127" fill="none" stroke="#ab47bc" stroke-width="0.8" opacity="0.7"/>
+
+  <!-- Character silhouette in pose -->
+  <!-- Head -->
+  <circle cx="100" cy="55" r="11" fill="#ffe0b2"/>
+  <!-- Hair (flowing upward from transformation wind) -->
+  <path d="M90,48 Q88,30 95,22 Q100,30 100,45 Q100,30 105,22 Q112,30 110,48" fill="#ffd54f"/>
+  <!-- Eyes (closed, serene) -->
+  <path d="M94,54 Q96,52 98,54" fill="none" stroke="#5d4037" stroke-width="1.2" stroke-linecap="round"/>
+  <path d="M102,54 Q104,52 106,54" fill="none" stroke="#5d4037" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Body (torso, arms raised in V pose) -->
+  <path d="M92,66 L108,66 L110,100 L90,100 Z" fill="#e91e63"/>
+  <!-- Left arm raised -->
+  <line x1="92" y1="70" x2="75" y2="45" stroke="#ffe0b2" stroke-width="5" stroke-linecap="round"/>
+  <!-- Right arm raised -->
+  <line x1="108" y1="70" x2="125" y2="45" stroke="#ffe0b2" stroke-width="5" stroke-linecap="round"/>
+  <!-- Hands (fists) -->
+  <circle cx="75" cy="45" r="3.5" fill="#ffcc80"/>
+  <circle cx="125" cy="45" r="3.5" fill="#ffcc80"/>
+  <!-- Legs -->
+  <line x1="96" y1="100" x2="92" y2="120" stroke="#ffe0b2" stroke-width="5" stroke-linecap="round"/>
+  <line x1="104" y1="100" x2="108" y2="120" stroke="#ffe0b2" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Flowing ribbons around body -->
+  <path d="M70,70 Q55,80 50,95 Q55,105 65,100" fill="none" stroke="#f06292" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+  <path d="M130,70 Q145,80 150,95 Q145,105 135,100" fill="none" stroke="#f06292" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+  <path d="M80,85 Q65,100 70,115" fill="none" stroke="#ba68c8" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+  <path d="M120,85 Q135,100 130,115" fill="none" stroke="#ba68c8" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- Sparkles scattered -->
+  <path d="M40,40 L42,36 L44,40 L42,44Z" fill="#fff" opacity="0.9"/>
+  <path d="M160,42 L162,38 L164,42 L162,46Z" fill="#fff" opacity="0.9"/>
+  <path d="M30,90 L31,87 L33,90 L31,93Z" fill="#fff" opacity="0.8"/>
+  <path d="M170,90 L171,87 L173,90 L171,93Z" fill="#fff" opacity="0.8"/>
+  <path d="M50,130 L51,128 L53,130 L51,132Z" fill="#fff" opacity="0.7"/>
+  <path d="M148,130 L149,128 L151,130 L149,132Z" fill="#fff" opacity="0.7"/>
+
+  <!-- Tiny stars -->
+  <circle cx="50" cy="55" r="1.5" fill="#ffd600"/>
+  <circle cx="150" cy="55" r="1.5" fill="#ffd600"/>
+  <circle cx="45" cy="115" r="1.2" fill="#ffd600"/>
+  <circle cx="155" cy="115" r="1.2" fill="#ffd600"/>
+
+  <!-- Text ribbon top -->
+  <text x="100" y="20" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#c2185b" font-weight="bold">変身！</text>
+</svg>

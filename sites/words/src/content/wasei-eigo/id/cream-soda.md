@@ -13,8 +13,8 @@ tags: ['drinks', 'sweets', 'retro']
 draft: false
 publishedAt: '2026-04-23'
 originalEnglish: cream soda
-japaneseMeaning: Segelas soda melon hijau zamrud cerah dengan scoop es krim vanila mengambang di atasnya, biasanya dimahkotai dengan ceri maraschino merah terang dan disajikan dalam gelas soda berkaki. Minuman ikonik dari kissaten era Shōwa Jepang (kedai kopi gaya lama) dan kekasih ledakan retro era Reiwa.
-englishMeaning: Di AS, "cream soda" adalah minuman berkarbonasi manis yang dibumbui dengan vanila atau sarsaparilla, biasanya berwarna emas pucat, kuning kecoklatan, atau jernih (A&W Cream Soda, Dr Brown's). Datang dalam botol atau kaleng, tidak mengandung es krim, dan tidak berwarna hijau.
+japaneseMeaning: Soda melon hijau dengan scoop es krim vanila (ikon kissaten)
+englishMeaning: Minuman berkarbonasi manis rasa vanila (A&W, Dr Brown's)
 examples:
   - japanese: 喫茶店でクリームソーダを頼んだ。
     reading: きっさてんで クリームソーダを たのんだ。

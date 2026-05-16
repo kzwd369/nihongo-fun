@@ -13,10 +13,8 @@ tags: ['日常生活', '購物', '商業']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: service
-japaneseMeaning: >-
-  在日語中，サービス 常常帶有「免費」「贈送」「打折」的意思。「これサービスしときますね」意思是「這個我就免費招待你吧」。英語原本的 service（服務、業務、禮拜等）在日語中偏離成了獨特的用法。
-englishMeaning: >-
-  英語的「service」指工作、協助、宗教禮拜、兵役，或某一產業領域。它並沒有「免費」的意思。要表達「招待、免費贈送」，英語母語者會說「on the house」「complimentary」「freebie」或「free of charge」。
+japaneseMeaning: 免費招待、贈送、打折
+englishMeaning: 服務（service；招待應用 on the house / complimentary）
 examples:
   - japanese: 今日はビールを一杯サービスします。
     reading: きょうは ビールを いっぱい サービスします。

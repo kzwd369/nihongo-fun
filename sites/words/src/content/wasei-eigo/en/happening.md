@@ -13,8 +13,8 @@ tags: ['slang', 'media', 'tv']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: happening
-japaneseMeaning: An unexpected accident or mishap, usually with a comedic or embarrassing flavor. Used for on-air gaffes, wardrobe malfunctions, wedding disasters, and the kind of slapstick mess-ups Japanese variety TV loves to replay in slow motion. The word almost always carries a "something went wrong" nuance.
-englishMeaning: In English, "a happening" simply means an occurrence or event — completely neutral. It was also used in the 1960s art world for avant-garde improvisational performances (Allan Kaprow's "Happenings"). English never loads the word with the "accident" or "gaffe" meaning that Japanese does.
+japaneseMeaning: An unexpected mishap or comedic accident
+englishMeaning: An occurrence or event (neutral)
 examples:
   - japanese: 結婚式でちょっとしたハプニングがあった。
     reading: けっこんしきで ちょっとした ハプニングが あった。

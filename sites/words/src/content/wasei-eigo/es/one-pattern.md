@@ -13,10 +13,8 @@ tags: ['argot', 'expresión', 'comportamiento']
 draft: false
 publishedAt: '2026-04-22'
 originalEnglish: one pattern
-japaneseMeaning: >-
-  Previsible, repetitivo, monótono — un chiste que siempre termina igual, un drama que recicla la misma trama, un novio que siempre propone el mismo restaurante. El tono es ligeramente negativo pero muchas veces cariñoso, y se usa para todo: chistes de padre, elecciones de ropa, series longevas y estancamientos creativos.
-englishMeaning: >-
-  "One pattern" no es una expresión inglesa — por sí sola no significa nada. El inglés nativo recurre a "predictable", "formulaic", "cookie-cutter", "a one-trick pony", "the same old thing" o "repetitive" según el contexto. El concepto existe en todas partes; la frase es puro wasei-eigo.
+japaneseMeaning: Previsible / repetitivo / monótono
+englishMeaning: Previsible / monótono (predictable / formulaic / one-trick pony)
 examples:
   - japanese: 彼のギャグはワンパターンだ。
     reading: かれの ギャグは ワンパターンだ。
