@@ -15,13 +15,13 @@ type: giongo
 meaning: Gemuruh (guntur); menggelinding (sesuatu yang berat); bermalas-malasan tanpa melakukan apa-apa
 examples:
   - japanese: 雷がゴロゴロ鳴っている。
-    reading: かみなりが ゴロゴロ なっている��
+    reading: かみなりが ゴロゴロ なっている。
     translation: Guntur berguruh-guruh.
   - japanese: 休日は家でゴロゴロしている。
     reading: きゅうじつは いえで ゴロゴロしている。
     translation: Di hari libur aku cuma bermalas-malasan di rumah.
-  - japanese: 猫がゴロゴロ喉を鳴らしている���
-    reading: ねこが ゴロゴロ のどを ならし���いる。
+  - japanese: 猫がゴロゴロ喉を鳴らしている。
+    reading: ねこが ゴロゴロ のどを ならしている。
     translation: Kucing itu mendengkur.
 animeAppearances:
   - title: My Neighbor Totoro (となりのトトロ)
@@ -33,9 +33,9 @@ relatedWords: ['batabata', 'wakuwaku', 'mofumofu', 'shiin', 'zaazaa']
 
 ## Satu Kata, Tiga Makna
 
-ゴロゴロ (gorogoro) adalah contoh sempurna betapa kayanya onomatope Jepang. Satu kata ini mencakup tiga makna berbeda: gemuruh guntur, suara sesuatu yang berat menggelinding, dan kegiatan bermalas-malasan tanpa ngapa-ngapain. Kata ini diklasifikasikan sebagai **giongo** (擬���語) — kata yang meniru bunyi nyata — meskipun makna "bermalas-malasan" sudah berkembang melampaui imitasi bunyi murni.
+ゴロゴロ (gorogoro) adalah contoh sempurna betapa kayanya onomatope Jepang. Satu kata ini mencakup tiga makna berbeda: gemuruh guntur, suara sesuatu yang berat menggelinding, dan kegiatan bermalas-malasan tanpa ngapa-ngapain. Kata ini diklasifikasikan sebagai **giongo** (擬音語) — kata yang meniru bunyi nyata — meskipun makna "bermalas-malasan" sudah berkembang melampaui imitasi bunyi murni.
 
-Giongo adalah kategori onomatope Jepang yang paling intuitif. Kata-kata ini langsung meniru bunyi dunia nyata, mirip kata-kata bahasa Indonesia seperti "duk duk" atau "kecipak." Penulisan katakana (��ロゴロ) menandakan bahwa ini mewakili bunyi yang lebih berat dan kuat.
+Giongo adalah kategori onomatope Jepang yang paling intuitif. Kata-kata ini langsung meniru bunyi dunia nyata, mirip kata-kata bahasa Indonesia seperti "duk duk" atau "kecipak." Penulisan katakana (ゴロゴロ) menandakan bahwa ini mewakili bunyi yang lebih berat dan kuat.
 
 ## Koneksi dengan Kucing
 

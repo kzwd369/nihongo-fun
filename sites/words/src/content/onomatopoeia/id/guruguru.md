@@ -21,10 +21,10 @@ examples:
     reading: ほうたいを ぐるぐる まいた。
     translation: Aku melilitkan perban berputar-putar.
   - japanese: 同じ場所をぐるぐる歩き回っている。
-    reading: おなじ ばしょを ぐるぐる あるきまわ���ている。
+    reading: おなじ ばしょを ぐるぐる あるきまわっている。
     translation: Aku sudah mondar-mandir berputar-putar di tempat yang sama.
 animeAppearances:
-  - title: Naruto (ナ��ト)
+  - title: Naruto (ナルト)
     description: Serangan Rasengan adalah bola chakra yang berputar — energi ぐるぐる murni berputar di telapak tangan Naruto, salah satu serangan spiral paling ikonik di anime.
   - title: Spirited Away (千と千尋の神隠し)
     description: Dunia pemandian penuh dengan citra ぐるぐる — air yang berputar, tangga spiral, dan perasaan pusing tersesat di tempat yang tidak mengikuti logika normal.
