@@ -6,6 +6,7 @@ import Breadcrumb from '../../../components/Breadcrumb.astro';
 import RelatedWords from '../../../components/RelatedWords.astro';
 import Footer from '../../../components/Footer.astro';
 import PhraseShowcase from '../../../components/PhraseShowcase.astro';
+import AffiliateCTA from '../../../components/AffiliateCTA.astro';
 import { pickCrossLinks } from '../../../lib/crossLinks';
 import { MIN_HUB_COUNT } from '../../../lib/categories';
 
@@ -223,6 +224,9 @@ const breadcrumbs = [
     <div class="content-card content-card--prose prose">
       <Content />
     </div>
+
+    <!-- Affiliate CTA (Pimsleur / JapanesePod101) -->
+    <AffiliateCTA locale={locale} />
 
     <!-- Cross-pillar: Related Wasei-Eigo -->
     {finalWasei.length > 0 && (

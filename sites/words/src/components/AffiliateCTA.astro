@@ -1,0 +1,89 @@
+---
+import { getAffiliatesForLocale } from '../lib/affiliates';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const offers = getAffiliatesForLocale(locale);
+---
+
+{offers.length > 0 && (
+  <div class="affiliate-stack">
+    {offers.map(({ service, copy }) => (
+      <div class="affiliate-card" style={`--cta-accent: ${service.accent};`}>
+        <span class="affiliate-note">{copy.note}</span>
+        <h3 class="affiliate-heading">{copy.heading}</h3>
+        <p class="affiliate-body">{copy.body}</p>
+        <a
+          class="affiliate-btn"
+          href={service.url}
+          target="_blank"
+          rel="sponsored noopener nofollow"
+        >
+          {copy.cta}
+        </a>
+      </div>
+    ))}
+  </div>
+)}
+
+<style>
+  .affiliate-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .affiliate-card {
+    background: linear-gradient(135deg, color-mix(in srgb, var(--cta-accent) 8%, white) 0%, white 100%);
+    border: 1px solid color-mix(in srgb, var(--cta-accent) 25%, var(--border));
+    border-radius: 16px;
+    padding: 24px 28px;
+    position: relative;
+  }
+  .affiliate-note {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+    opacity: 0.7;
+  }
+  .affiliate-heading {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--cta-accent);
+    margin: 4px 0 10px;
+    line-height: 1.4;
+  }
+  .affiliate-body {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  .affiliate-btn {
+    display: inline-block;
+    background: var(--cta-accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .affiliate-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px color-mix(in srgb, var(--cta-accent) 35%, transparent);
+    text-decoration: none;
+    color: #fff;
+  }
+  @media (max-width: 600px) {
+    .affiliate-card { padding: 20px; }
+    .affiliate-btn { display: block; text-align: center; }
+  }
+</style>
