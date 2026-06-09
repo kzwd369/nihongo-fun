@@ -29,7 +29,7 @@ animeAppearances:
     description: 田中是終極的マイペース角色——他以自己昏昏欲睡的速度度過每一天，完全不受周遭世界影響。整部作品就是在歌頌マイペース的生活方式。
   - title: 四葉妹妹！（Yotsuba&!）
     description: 小岩井四葉完全按照自己的方式生活，以孩子般的好奇心和隨心所欲的速度探索世界。她是漫畫中最純粹、最快樂的マイペース角色。
-relatedWords: ['naive', 'tension', 'freeter', 'paper-driver']
+relatedWords: ['naive', 'tension', 'freeter', 'paper-driver', 'my-boom']
 ---
 
 ## 日本最愛用的性格標籤

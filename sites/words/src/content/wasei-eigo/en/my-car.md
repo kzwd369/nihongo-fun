@@ -30,7 +30,7 @@ animeAppearances:
     description: The series is a love letter to マイカー culture — Takumi's AE86 Trueno isn't just a vehicle, it's the personal machine that defines him, exemplifying the Japanese pride in owning and tuning your own car.
   - title: Crayon Shin-chan
     description: The Nohara family's weekend drives and Hiroshi's steady マイカー appear constantly, reflecting the quintessential Japanese suburban dream of family + house + personal car.
-relatedWords: ['paper-driver', 'my-pace', 'salaryman', 'gasoline-stand']
+relatedWords: ['paper-driver', 'my-pace', 'salaryman', 'gasoline-stand', 'my-boom']
 ---
 
 ## More Than Just "My Car"

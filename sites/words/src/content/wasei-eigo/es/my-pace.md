@@ -30,7 +30,7 @@ animeAppearances:
     description: Tanaka es el personaje マイペース por excelencia — se mueve por la vida a su propio ritmo somnoliento, completamente imperturbable ante el mundo. Toda la serie celebra el estilo de vida マイペース.
   - title: Yotsuba&!
     description: Yotsuba Koiwai vive la vida completamente a su manera, explorando el mundo con asombro infantil a la velocidad que le plazca. Es el personaje マイペース más puro y alegre del manga.
-relatedWords: ['naive', 'tension', 'freeter', 'paper-driver']
+relatedWords: ['naive', 'tension', 'freeter', 'paper-driver', 'my-boom']
 ---
 
 ## La etiqueta de personalidad favorita de Japón

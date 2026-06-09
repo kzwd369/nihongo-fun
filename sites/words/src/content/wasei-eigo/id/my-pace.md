@@ -32,7 +32,7 @@ animeAppearances:
   - title: Yotsuba&! (よつばと！)
     description: >-
       Yotsuba Koiwai menjalani hidup sepenuhnya dengan caranya sendiri, menjelajahi dunia dengan keajaiban kekanakan pada kecepatan apa pun yang ia inginkan. Ia adalah karakter マイペース paling murni dan paling penuh kegembiraan dalam manga.
-relatedWords: ['naive', 'tension', 'freeter', 'paper-driver']
+relatedWords: ['naive', 'tension', 'freeter', 'paper-driver', 'my-boom']
 ---
 
 ## Label Kepribadian Favorit Jepang

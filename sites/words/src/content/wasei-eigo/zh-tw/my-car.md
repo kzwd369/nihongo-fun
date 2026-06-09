@@ -30,7 +30,7 @@ animeAppearances:
     description: 這部作品是對 マイカー 文化的情書——拓海的 AE86 Trueno 不只是交通工具，而是定義他人生的私人機械，完美詮釋日本人對擁有並自己改裝愛車的自豪。
   - title: 蠟筆小新（Crayon Shin-chan）
     description: 野原家的假日兜風與廣志的忠實 マイカー 不斷出現，呈現日本郊區中產階級的典型夢想：家庭 + 房子 + 自家車。
-relatedWords: ['paper-driver', 'my-pace', 'salaryman', 'gasoline-stand']
+relatedWords: ['paper-driver', 'my-pace', 'salaryman', 'gasoline-stand', 'my-boom']
 ---
 
 ## 不只是「我的車」

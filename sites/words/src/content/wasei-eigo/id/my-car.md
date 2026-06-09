@@ -32,7 +32,7 @@ animeAppearances:
   - title: Crayon Shin-chan (クレヨンしんちゃん)
     description: >-
       Perjalanan akhir pekan keluarga Nohara dan マイカー tetap milik Hiroshi muncul terus-menerus, mencerminkan impian pinggiran kota Jepang yang paling khas dari keluarga + rumah + mobil pribadi.
-relatedWords: ['paper-driver', 'my-pace', 'salaryman', 'gasoline-stand']
+relatedWords: ['paper-driver', 'my-pace', 'salaryman', 'gasoline-stand', 'my-boom']
 ---
 
 ## Lebih dari Sekadar "Mobil Saya"

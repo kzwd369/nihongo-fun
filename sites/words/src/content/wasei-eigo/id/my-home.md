@@ -30,7 +30,7 @@ animeAppearances:
     description: Keluarga Nohara terkenal membeli マイホーム pinggiran kota mereka dengan cicilan panjang — kehidupan salaryman pemilik rumah ala Hiroshi, lengkap dengan pembayaran cicilan, adalah tema berulang yang menangkap impian マイホーム sehari-hari.
   - title: Sazae-san
     description: Rumah keluarga Isono adalah gambaran paling khas dari マイホーム kelas menengah era Showa — rumah multi-generasi yang mewujudkan cita-cita pascaperang tentang keluarga yang menetap di bawah satu atap milik sendiri.
-relatedWords: ['my-car', 'my-pace', 'salaryman', 'mansion']
+relatedWords: ['my-car', 'my-pace', 'salaryman', 'mansion', 'my-boom']
 ---
 
 ## Lebih dari Sekadar "Tempat Tinggal Saya"

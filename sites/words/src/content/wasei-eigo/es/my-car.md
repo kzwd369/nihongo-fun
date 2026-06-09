@@ -30,7 +30,7 @@ animeAppearances:
     description: La serie es una carta de amor a la cultura del マイカー — el AE86 Trueno de Takumi no es solo un vehículo, es la máquina personal que lo define, ejemplificando el orgullo japonés de poseer y tunear el propio coche.
   - title: Shin-chan
     description: Las salidas de fin de semana de la familia Nohara y el fiel マイカー de Hiroshi aparecen sin parar, reflejando el sueño japonés suburbano por excelencia — familia + casa + coche personal.
-relatedWords: ['paper-driver', 'my-pace', 'salaryman', 'gasoline-stand']
+relatedWords: ['paper-driver', 'my-pace', 'salaryman', 'gasoline-stand', 'my-boom']
 ---
 
 ## Más que "mi coche"

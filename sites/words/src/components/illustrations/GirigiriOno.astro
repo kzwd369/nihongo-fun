@@ -1,0 +1,42 @@
+<!-- Clock at the last second + tension lines — ギリギリ (just barely, by the skin of your teeth) -->
+<svg viewBox="0 0 200 160" width="200" height="160" xmlns="http://www.w3.org/2000/svg" style="margin: 8px auto; display: block;">
+  <rect width="200" height="160" fill="url(#giriBg)" rx="8"/>
+  <!-- Tension / motion lines (sweat-drop urgency) -->
+  <line x1="30" y1="40" x2="44" y2="44" stroke="#ff8a65" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <line x1="28" y1="58" x2="42" y2="58" stroke="#ff8a65" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <line x1="170" y1="40" x2="156" y2="44" stroke="#ff8a65" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <line x1="172" y1="58" x2="158" y2="58" stroke="#ff8a65" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <!-- Clock outer ring (warning glow) -->
+  <circle cx="100" cy="78" r="52" fill="#ffccbc" opacity="0.5"/>
+  <!-- Clock body -->
+  <circle cx="100" cy="78" r="44" fill="#fff3e0" stroke="#e64a19" stroke-width="4"/>
+  <!-- Tick marks -->
+  <line x1="100" y1="38" x2="100" y2="45" stroke="#bf360c" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="100" y1="111" x2="100" y2="118" stroke="#bf360c" stroke-width="2" stroke-linecap="round"/>
+  <line x1="60" y1="78" x2="67" y2="78" stroke="#bf360c" stroke-width="2" stroke-linecap="round"/>
+  <line x1="133" y1="78" x2="140" y2="78" stroke="#bf360c" stroke-width="2" stroke-linecap="round"/>
+  <!-- Hands near 12 (last second) — minute hand almost at top -->
+  <line x1="100" y1="78" x2="96" y2="44" stroke="#212121" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- hour hand -->
+  <line x1="100" y1="78" x2="118" y2="62" stroke="#212121" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- second hand at razor edge -->
+  <line x1="100" y1="78" x2="106" y2="40" stroke="#e64a19" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="100" cy="78" r="4" fill="#bf360c"/>
+  <!-- Alarm bells -->
+  <path d="M70 38 Q66 26 78 26" fill="none" stroke="#e64a19" stroke-width="4" stroke-linecap="round"/>
+  <path d="M130 38 Q134 26 122 26" fill="none" stroke="#e64a19" stroke-width="4" stroke-linecap="round"/>
+  <!-- Sweat drop (cutting it close) -->
+  <path d="M148 96 Q143 104 148 110 Q153 104 148 96 Z" fill="#4fc3f7" opacity="0.85"/>
+  <!-- Razor-thin margin gap arrows at bottom -->
+  <line x1="74" y1="142" x2="92" y2="142" stroke="#e64a19" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="92,142 86,139 86,145" fill="#e64a19"/>
+  <line x1="126" y1="142" x2="108" y2="142" stroke="#e64a19" stroke-width="2" stroke-linecap="round"/>
+  <polygon points="108,142 114,139 114,145" fill="#e64a19"/>
+  <rect x="97" y="138" width="6" height="8" fill="#e64a19" rx="1"/>
+  <defs>
+    <linearGradient id="giriBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff8e1"/>
+      <stop offset="100%" stop-color="#ffe0b2"/>
+    </linearGradient>
+  </defs>
+</svg>

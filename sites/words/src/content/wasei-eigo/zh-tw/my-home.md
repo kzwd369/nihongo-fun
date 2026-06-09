@@ -30,7 +30,7 @@ animeAppearances:
     description: 野原一家用長期房貸買下了郊區的 マイホーム——廣志身為上班族房貸戶的生活，包括持續的還款壓力，是一個反覆出現的主題，完美捕捉了日常中的 マイホーム 夢想。
   - title: 海螺小姐（Sazae-san）
     description: 磯野家的房子是昭和時代中產階級 マイホーム 的典型形象——一棟三代同堂的自有住宅，體現了戰後「一家人安居在自己屋頂下」的理想。
-relatedWords: ['my-car', 'my-pace', 'salaryman', 'mansion']
+relatedWords: ['my-car', 'my-pace', 'salaryman', 'mansion', 'my-boom']
 ---
 
 ## 不只是「我住的地方」

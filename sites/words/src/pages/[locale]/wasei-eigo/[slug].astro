@@ -10,6 +10,7 @@ import SameThingCompare from '../../../components/SameThingCompare.astro';
 import ExampleSentence from '../../../components/ExampleSentence.astro';
 import AnimeCallout from '../../../components/AnimeCallout.astro';
 import RelatedWords from '../../../components/RelatedWords.astro';
+import AffiliateCTA from '../../../components/AffiliateCTA.astro';
 import Footer from '../../../components/Footer.astro';
 import { pickCrossLinks } from '../../../lib/crossLinks';
 import { MIN_HUB_COUNT } from '../../../lib/categories';
@@ -235,6 +236,9 @@ const breadcrumbs = [
     <div class="content-card prose">
       <Content />
     </div>
+
+    <!-- Affiliate CTA (Pimsleur / JapanesePod101) -->
+    <AffiliateCTA locale={locale} />
 
     <!-- Examples -->
     {data.examples.length > 0 && (

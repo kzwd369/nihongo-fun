@@ -32,7 +32,7 @@ export const affiliateServices: AffiliateService[] = [
   {
     id: 'pimsleur',
     enabled: true,
-    url: '', // TODO: Pimsleur のアフィリエイトリンクを設定
+    url: 'https://imp.i271380.net/L045VO',
     locales: ['en', 'zh-tw', 'th', 'id'],
     accent: '#c2185b',
   },
@@ -50,32 +50,32 @@ export const affiliateCopy: Record<string, Record<AffiliateLocale, AffiliateCopy
   pimsleur: {
     en: {
       heading: 'Want to actually speak Japanese?',
-      body: "Pimsleur's audio-first method builds real conversation skills—so you learn how phrases like these are actually spoken.",
-      cta: 'Try Pimsleur Japanese free',
+      body: "Pimsleur's audio-first method builds real conversation skills—so you learn how phrases like these are actually spoken. Start with a free 7-day trial.",
+      cta: 'Start your free 7-day trial',
       note: 'Affiliate link',
     },
     'zh-tw': {
       heading: '想真正開口說日語嗎？',
-      body: 'Pimsleur 的音訊教學法專注於真實對話，讓你學會這些說法在實際情境中的發音與用法。',
-      cta: '免費試聽 Pimsleur 日語',
+      body: 'Pimsleur 的音訊教學法專注於真實對話，讓你學會這些說法在實際情境中的發音與用法。可免費試用 7 天。',
+      cta: '免費試用 7 天',
       note: '廣告・聯盟連結',
     },
     th: {
       heading: 'อยากพูดภาษาญี่ปุ่นได้จริงไหม?',
-      body: 'วิธีเรียนแบบเน้นเสียงของ Pimsleur ช่วยสร้างทักษะการสนทนาจริง ให้คุณออกเสียงและใช้สำนวนแบบนี้ได้อย่างเป็นธรรมชาติ',
-      cta: 'ทดลองเรียน Pimsleur ภาษาญี่ปุ่นฟรี',
+      body: 'วิธีเรียนแบบเน้นเสียงของ Pimsleur ช่วยสร้างทักษะการสนทนาจริง ให้คุณออกเสียงและใช้สำนวนแบบนี้ได้อย่างเป็นธรรมชาติ ทดลองใช้ฟรี 7 วัน',
+      cta: 'ทดลองใช้ฟรี 7 วัน',
       note: 'ลิงก์พันธมิตร (โฆษณา)',
     },
     id: {
       heading: 'Ingin benar-benar bisa berbicara bahasa Jepang?',
-      body: 'Metode audio Pimsleur membangun keterampilan percakapan nyata—agar kamu tahu cara ungkapan seperti ini benar-benar diucapkan.',
-      cta: 'Coba Pimsleur Jepang gratis',
+      body: 'Metode audio Pimsleur membangun keterampilan percakapan nyata—agar kamu tahu cara ungkapan seperti ini benar-benar diucapkan. Coba gratis selama 7 hari.',
+      cta: 'Coba gratis 7 hari',
       note: 'Tautan afiliasi (iklan)',
     },
     es: {
       heading: '¿Quieres hablar japonés de verdad?',
-      body: 'El método de audio de Pimsleur desarrolla habilidades de conversación reales para que aprendas cómo se dicen frases como estas.',
-      cta: 'Prueba Pimsleur Japonés gratis',
+      body: 'El método de audio de Pimsleur desarrolla habilidades de conversación reales para que aprendas cómo se dicen frases como estas. Pruébalo gratis durante 7 días.',
+      cta: 'Prueba gratis 7 días',
       note: 'Enlace de afiliado',
     },
   },

@@ -30,7 +30,7 @@ animeAppearances:
     description: La familia Nohara compró su célebre マイホーム suburbano con una hipoteca a largo plazo — la vida de Hiroshi como asalariado propietario, con sus pagos mensuales incluidos, es un tema recurrente que captura el sueño cotidiano del マイホーム.
   - title: Sazae-san
     description: La casa de la familia Isono es la imagen por excelencia del マイホーム de clase media de la era Showa — un hogar multigeneracional que encarna el ideal de posguerra de una familia asentada bajo un mismo techo propio.
-relatedWords: ['my-car', 'my-pace', 'salaryman', 'mansion']
+relatedWords: ['my-car', 'my-pace', 'salaryman', 'mansion', 'my-boom']
 ---
 
 ## Más que "el lugar donde vivo"
